@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FactoryPagamento.Pagamento">
+    <Position X="9.25" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>DAAAAAAAAAAAiIQAAAAAgACAABAAAAAAAAAAQAAACAg=</HashCode>
+      <FileName>FactoryPagamento.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Items" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="FactoryPagamento.Item">
+    <Position X="6.25" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQABAAAAAAAAAAAEAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>FactoryPagamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FactoryPagamento.SistemaPagamento" Collapsed="true">
+    <Position X="2" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryPagamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FactoryPagamento.PagSeguro" Collapsed="true">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryPagamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FactoryPagamento.PayPall" Collapsed="true">
+    <Position X="3" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryPagamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FactoryPagamento.PagamentoFactory" Collapsed="true">
+    <Position X="2" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryPagamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FactoryPagamento.PagSeguroFactory" Collapsed="true">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryPagamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FactoryPagamento.PayPallFactory" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FactoryPagamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
