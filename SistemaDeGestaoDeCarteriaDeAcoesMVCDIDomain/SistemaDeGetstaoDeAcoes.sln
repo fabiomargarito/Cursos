@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\..\..\..\Desktop\SQLAULA.sql = ..\..\..\..\Desktop\SQLAULA.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeGestaoDeAcoesMVP", "SistemaDeGestaoDeAcoesMVP\SistemaDeGestaoDeAcoesMVP.csproj", "{5D6B286A-993E-4354-9CC6-DD63AFFADD0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,16 @@ Global
 		{92FF217C-BF07-4F3A-A806-2A88F998E96C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{92FF217C-BF07-4F3A-A806-2A88F998E96C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{92FF217C-BF07-4F3A-A806-2A88F998E96C}.Release|x86.ActiveCfg = Release|Any CPU
+		{5D6B286A-993E-4354-9CC6-DD63AFFADD0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D6B286A-993E-4354-9CC6-DD63AFFADD0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D6B286A-993E-4354-9CC6-DD63AFFADD0C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5D6B286A-993E-4354-9CC6-DD63AFFADD0C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5D6B286A-993E-4354-9CC6-DD63AFFADD0C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5D6B286A-993E-4354-9CC6-DD63AFFADD0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D6B286A-993E-4354-9CC6-DD63AFFADD0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D6B286A-993E-4354-9CC6-DD63AFFADD0C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5D6B286A-993E-4354-9CC6-DD63AFFADD0C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5D6B286A-993E-4354-9CC6-DD63AFFADD0C}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
