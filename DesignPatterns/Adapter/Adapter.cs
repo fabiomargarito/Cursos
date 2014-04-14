@@ -6,6 +6,7 @@ using System.Text;
 namespace Adapter
 {
     //Target
+    //novo comentário
     public interface Pagamento
     {
         void EfetuarPagamento(double valor);
