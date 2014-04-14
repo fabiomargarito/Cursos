@@ -9,6 +9,8 @@ namespace Domain
     public class AcaoPresenter
     {
         private IAcaoView _acaoView {get;set;}
+
+
         private Infraestrutura.IRepositorio<Acao> _repositorioAcao { get; set; }
         
         public AcaoPresenter(IAcaoView acaoView,Infraestrutura.IRepositorio<Acao> repositorioAcao)
@@ -18,10 +20,7 @@ namespace Domain
         }
         public List<Acao> acoes = new List<Acao>();
         public void retornarAcoes() { 
-            List<Acao> acoes = new List<Acao>();
-            acoes.Add(new Acao{Codigo="PETR4"});
-            _acaoView.acoes = acoes;
-
+            List<Acao> acoes = new List<Acao>();            
             _acaoView.acoes = _repositorioAcao.ListarTodos().ToList();
 
         }

@@ -13,7 +13,6 @@ namespace SistemaDeGestaoDeCarteriaDeAcoes.Controllers
     public class AcaoController : Controller
     {
 
-
         private IRepositorio<Acao> _acaoRepositorio;
         private IRepositorio<Empresa> _empresaRepositorio;
 

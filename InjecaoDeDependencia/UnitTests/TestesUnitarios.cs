@@ -15,11 +15,11 @@ namespace ExemploModulo3InjecaoDeDependencia
             [TestMethod]
             public void DeveRegistrarOperacaoDeCompraUtilizandoUnityConstructorInjection()
             {           
-                var container = new UnityContainer();
-
-
+                var container = new UnityContainer();               
                 container.RegisterType<ILog, LogNovo>();
                 container.RegisterType <IRepositorio<Carteira>,RepositorioCarteiraFake>();
+                
+                
                 CarteiraService carteiraService = container.Resolve<CarteiraService>();
 
                 Assert.IsTrue(
@@ -32,6 +32,7 @@ namespace ExemploModulo3InjecaoDeDependencia
             {
                 var container = new UnityContainer();
                 container.RegisterType<IRepositorio<Corretora>, RepositorioCorretoraFake>();
+                
                 var corretora = container.Resolve<Corretora>();
                 corretora.Nome = "Corretora Teste";
                 Assert.IsTrue(corretora.Gravar());
@@ -49,6 +50,7 @@ namespace ExemploModulo3InjecaoDeDependencia
             }
 
         #endregion
+
        #region Ninject
             [TestMethod]
             public void DeveRegistrarOperacaoDeCompraUtilizandoNinjectConstructorInjection()

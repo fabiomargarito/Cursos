@@ -91,7 +91,6 @@ namespace Infraestrutura
         }
     }
 
-
     public class RepositorioAcaoNHibernate : IRepositorio<Acao>
     {
        

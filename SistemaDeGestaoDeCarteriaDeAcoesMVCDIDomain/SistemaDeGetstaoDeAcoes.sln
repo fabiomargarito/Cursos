@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeGestaoDeCarteriaDeAcoes", "SistemaDeGestaoDeCarteriaDeAcoes\SistemaDeGestaoDeCarteriaDeAcoes.csproj", "{DD6B3B90-C85A-49CB-B98A-00CB555CB5BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeGestaoDeCarteriaDeAcoesMVC", "SistemaDeGestaoDeCarteriaDeAcoes\SistemaDeGestaoDeCarteriaDeAcoesMVC.csproj", "{DD6B3B90-C85A-49CB-B98A-00CB555CB5BF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeGestaoDeCarteriaDeAcoes.Tests", "SistemaDeGestaoDeCarteriaDeAcoes.Tests\SistemaDeGestaoDeCarteriaDeAcoes.Tests.csproj", "{221F6AE7-0A13-4533-92DD-7961F761C12B}"
 EndProject

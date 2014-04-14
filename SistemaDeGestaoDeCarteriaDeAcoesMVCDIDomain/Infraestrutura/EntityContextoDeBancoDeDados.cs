@@ -8,9 +8,12 @@ using System.Threading.Tasks;
 using Domain;
 
 namespace Infraestrutura
+
+
 {
     public class GestaoDeCarteiraDBContext : DbContext
     {
+       
         public DbSet<Acao> Acao { get; set; }
         public DbSet<Carteira> Carteira { get; set; }
         public DbSet<Operacao> Operacao { get; set; }
@@ -22,7 +25,7 @@ namespace Infraestrutura
             base.OnModelCreating(modelBuilder);
 
             Database.SetInitializer<GestaoDeCarteiraDBContext>(null);
-
+           
             modelBuilder.Entity<Acao>().Property(acao => acao.Codigo).HasColumnName("CODIGO").IsRequired();
             modelBuilder.Entity<Acao>().HasKey(acao => acao.Codigo);
             modelBuilder.Entity<Acao>().HasRequired(acao => acao.Empresa).WithMany().Map(m => m.MapKey("CNPJ"));

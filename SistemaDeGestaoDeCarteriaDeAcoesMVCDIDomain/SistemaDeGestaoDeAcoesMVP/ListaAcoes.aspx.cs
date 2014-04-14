@@ -12,12 +12,13 @@ namespace SistemaDeGestaoDeAcoesMVP
         protected void Page_Load(object sender, EventArgs e)
         {
             IUnityContainer unityContainer = new UnityContainer();
-            unityContainer.RegisterType<Infraestrutura.IRepositorio<Domain.Acao>, Infraestrutura.RepositorioAcaoFake>();
+            unityContainer.RegisterType<Infraestrutura.IRepositorio<Domain.Acao>, Infraestrutura.RepositorioAcaoFake>();            
             unityContainer.RegisterInstance<Domain.IAcaoView>(this);
-            
-            
+                        
             
             Domain.AcaoPresenter acaoPresenter = unityContainer.Resolve<Domain.AcaoPresenter>();
+            
+            
             acaoPresenter.retornarAcoes();
 
             GridView1.DataSource = acoes;

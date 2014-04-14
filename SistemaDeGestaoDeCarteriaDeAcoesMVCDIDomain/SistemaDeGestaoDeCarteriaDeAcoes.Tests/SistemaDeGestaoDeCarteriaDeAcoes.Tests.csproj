@@ -123,9 +123,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SistemaDeGestaoDeCarteriaDeAcoes\SistemaDeGestaoDeCarteriaDeAcoes.csproj">
+    <ProjectReference Include="..\SistemaDeGestaoDeCarteriaDeAcoes\SistemaDeGestaoDeCarteriaDeAcoesMVC.csproj">
       <Project>{DD6B3B90-C85A-49CB-B98A-00CB555CB5BF}</Project>
-      <Name>SistemaDeGestaoDeCarteriaDeAcoes</Name>
+      <Name>SistemaDeGestaoDeCarteriaDeAcoesMVC</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
