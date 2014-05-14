@@ -13,6 +13,9 @@ namespace ExemplosModulo2
             
             Console.WriteLine(Configuracao.RetornarConfiguracao().RetornarNomeDoBancoDeDados());
             Console.WriteLine("Altere a configuração do nome do banco, no arquivo de configuração e pressione uma tecla\n\n\n");
+            
+            
+            
             Console.ReadKey();            
             Console.WriteLine(Configuracao.RetornarConfiguracao().RetornarNomeDoBancoDeDados());
             Console.WriteLine("Por ser a mesma instância, o objeto ficou na memória!!!");

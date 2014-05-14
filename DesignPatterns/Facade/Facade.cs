@@ -39,8 +39,10 @@ namespace Facade
 
   }
 
+  //Facade
   public class Hipoteca
   {
+
     private Banco _banco = new Banco();
     private SPC _spc= new SPC();
 

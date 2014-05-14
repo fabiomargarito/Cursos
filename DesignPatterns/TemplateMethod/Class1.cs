@@ -27,9 +27,12 @@ namespace TemplateMethod
         public List<T> Executar()
         {
             List<T> retorno;
+            
             var conexao = ObterConexao();
             System.Console.WriteLine("Abrindo Conexao");
+            
             DefinirComando();
+            
             retorno = TratarRetorno();
             System.Console.WriteLine("Fechando Conexao");
             return retorno;
@@ -42,6 +45,8 @@ namespace TemplateMethod
         protected override void DefinirComando()
         {
             _comando = "select * from cliente";
+            System.Console.WriteLine("Definindo o comando {0}",_comando);
+            
         }
 
         protected override List<Cliente> TratarRetorno()
@@ -52,8 +57,28 @@ namespace TemplateMethod
         }
     }
 
+    public class DALFornecedor : DALBase<Fornecedor>
+    {
+        protected override void DefinirComando()
+        {
+            _comando = "select * from fornecedor";
+        }
+
+        protected override List<Fornecedor> TratarRetorno()
+        {
+            List<Fornecedor> fornecedores = new List<Fornecedor>();
+            fornecedores.Add(new Fornecedor { cnpj = "2222222" });
+            return fornecedores;
+        }
+    }
+
     public class Cliente
     {
         public string cpf { get; set; }
+    }
+
+    public class Fornecedor
+    {
+        public string cnpj { get; set; }
     }
 }

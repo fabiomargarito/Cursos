@@ -13,6 +13,9 @@ namespace ExemplosModulo2.Adapter
             meioDePagamentoCartao.EfetuarPagamento(100);
             Console.ReadKey();
 
+
+
+
             meioDePagamentoCartao = new CartaoCreditoVisa();
             meioDePagamentoCartao.EfetuarPagamento(100);
             Console.ReadKey();

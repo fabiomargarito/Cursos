@@ -50,7 +50,7 @@ namespace FactoryMethod
         }
     }
 
-    //Factory
+    //Concrete Creator Factory
     public class FabricaDeRepositorio{
 
         public Repositorio CriarRepositorio(TipoDeRepositorio tipoDeRepositorio)
@@ -62,14 +62,14 @@ namespace FactoryMethod
             }
         }
     }
-
-    
+   
     #region Entidades    
 
     public abstract class Entidade
     {
         public int identificador;
     }
+
     public class Cliente:Entidade{
         public string nome {get;set;}
         public string sobreNome {get;set;}

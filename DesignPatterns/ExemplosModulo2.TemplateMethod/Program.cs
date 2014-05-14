@@ -13,6 +13,8 @@ namespace ExemplosModulo2.TemplateMethod
             var teste = new DALCliente();            
             var retorno = teste.Executar();
 
+            Console.ReadKey();
+
         }
     }
 }

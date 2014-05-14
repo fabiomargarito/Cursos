@@ -17,7 +17,25 @@ namespace Decorator
         }
     }
 
-   
+    //Concrete Componente
+    public class Marguerita : Pizza
+    {
+        public Marguerita()
+        {
+            preco = 40;
+        }
+    }
+
+
+    //Concrete Componente
+    public class Atum : Pizza
+    {
+        public Atum()
+        {
+            preco = 50;
+        }
+    }
+
     //Decorator
     public abstract class Cobertura : Pizza
     {        
@@ -34,14 +52,7 @@ namespace Decorator
     }
 
     
-    //Concrete Componente
-    public class Marguerita : Pizza
-    {
-        public Marguerita()
-        {
-            preco = 40;
-        }
-    }
+    
 
     
     //Concrete decorator
@@ -63,7 +74,16 @@ namespace Decorator
         }
     }
 
-    
+
+    //Concrete Decorator
+    public class Cebola : Cobertura
+    {
+        public Cebola(Pizza pizzaParaAcrescentarCobetura)
+            : base(pizzaParaAcrescentarCobetura)
+        {
+            preco = 10;
+        }
+    }
 
 
 }

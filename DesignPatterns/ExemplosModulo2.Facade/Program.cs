@@ -10,7 +10,9 @@ namespace ExemplosModulo2.Facade
     {
         static void Main(string[] args)
         {
+            //facade
             Hipoteca hipoteca = new Hipoteca();
+
             var ehElegivel = hipoteca.EhElegivel((new Cliente("Fabio Margarito")), 100);
             if (ehElegivel)
                 Console.WriteLine("\nO Cliente pode receber o empréstimo");

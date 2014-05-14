@@ -2,6 +2,7 @@
 
 namespace Singleton
 {
+    //Single
     public class Configuracao    {
         private static  Configuracao _instanciaDesteObjeto;
         private string _nomeDoBancoDeDados;
@@ -15,7 +16,7 @@ namespace Singleton
         }
 
         private Configuracao() {
-            NomeDoBancoDeDados = ConfigurationManager.AppSettings["NomeDoBancoDeDados"].ToString(); ;
+            NomeDoBancoDeDados = ConfigurationManager.AppSettings[0]; 
         }
 
         public static Configuracao RetornarConfiguracao(){            

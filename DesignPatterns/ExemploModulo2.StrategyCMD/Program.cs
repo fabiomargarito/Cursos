@@ -11,8 +11,9 @@ namespace ExemploModulo2.StrategyCMD
     {
         static void Main(string[] args)
         {
-            string cidade = "RJ";
-            ICalculoIcm calculoIcm = new CalculoICMSRioDeJaneiro();
+            string cidade = "SP";
+
+            ICalculoIcm calculoIcm = null;
 
             if (cidade=="SP")
                 calculoIcm = new CalculoICMSSaoPaulo();
