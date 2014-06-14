@@ -21,7 +21,6 @@ namespace Infraestrutura
         {
             acoes.Add(entidade);
 
-
         }
 
         public Acao RetornarPorID(int identificador)
@@ -89,6 +88,8 @@ namespace Infraestrutura
             _contextoDeBancoDeDados.Acao.Remove(RetornarPorID(entidade.Codigo));
             _contextoDeBancoDeDados.SaveChanges();
         }
+        
+
     }
 
     public class RepositorioAcaoNHibernate : IRepositorio<Acao>
@@ -121,7 +122,7 @@ namespace Infraestrutura
         {
             using (ISession session = NHibernateSessionFactory.Criar().OpenSession())
             {
-                return session.Query<Acao>().Select(acao => acao).ToList();
+                return session.Query<Acao>().Select(acao => acao).Where(aco=>aco.Codigo=="PETR3").ToList();
             }
         }
 

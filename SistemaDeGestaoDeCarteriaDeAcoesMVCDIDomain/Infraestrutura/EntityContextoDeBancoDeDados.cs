@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Domain;
 
 namespace Infraestrutura
@@ -26,11 +21,12 @@ namespace Infraestrutura
 
             Database.SetInitializer<GestaoDeCarteiraDBContext>(null);
            
+
             modelBuilder.Entity<Acao>().Property(acao => acao.Codigo).HasColumnName("CODIGO").IsRequired();
             modelBuilder.Entity<Acao>().HasKey(acao => acao.Codigo);
-            modelBuilder.Entity<Acao>().HasRequired(acao => acao.Empresa).WithMany().Map(m => m.MapKey("CNPJ"));
-            modelBuilder.Entity<Acao>();
+            modelBuilder.Entity<Acao>().HasRequired(acao => acao.Empresa).WithMany().Map(m => m.MapKey("CNPJ"));            
             modelBuilder.Entity<Acao>().ToTable("Acao");
+
 
             modelBuilder.Entity<Empresa>().ToTable("Empresa");
             modelBuilder.Entity<Empresa>().Property(empresa => empresa.CNPJEmpresa).HasColumnName("CNPJ").IsRequired();

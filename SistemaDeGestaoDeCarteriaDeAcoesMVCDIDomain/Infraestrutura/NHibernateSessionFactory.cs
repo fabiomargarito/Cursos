@@ -14,10 +14,11 @@ namespace Infraestrutura
                 .Mappings(map => map.FluentMappings.AddFromAssemblyOf<MapeamentoAcao>())
                 .Mappings(map => map.FluentMappings.AddFromAssemblyOf<MapeamentoEmpresa>())
                 .Mappings(map => map.FluentMappings.AddFromAssemblyOf<MapeamentoOperacao>())
-                .Mappings(map => map.FluentMappings.AddFromAssemblyOf<MapeamentoOperacao>())
-                .Database(
+                .Mappings(map => map.FluentMappings.AddFromAssemblyOf<MapeamentoCarteira>())
+                
+                .Database(                    
                     MsSqlConfiguration.MsSql2008.ConnectionString(
-                        "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=DBHomeBroker;Data Source=Localhost;"))
+                        c=>c.FromConnectionStringWithKey("GestaoDeCarteiraDBContext")))
                 .BuildSessionFactory();
 
             return sessionFactory;
@@ -29,13 +30,12 @@ namespace Infraestrutura
     {
         public MapeamentoEmpresa()
         {
+            
             Id(chave => chave.CNPJEmpresa).Column("CNPJ");
-            Map(campo => campo.Razaosocial).Column("RAZAOSOCIAL");
+            Map(campo => campo.Razaosocial).Column("RAZAOSOCIAL");                                    
             Not.LazyLoad();
         }
     }
-
-
     public class MapeamentoAcao : ClassMap<Acao>
     {
         public MapeamentoAcao()
@@ -46,8 +46,6 @@ namespace Infraestrutura
             Not.LazyLoad();
         }
     }
-
-
     public class MapeamentoOperacao : ClassMap<Operacao>
     {
         public MapeamentoOperacao()

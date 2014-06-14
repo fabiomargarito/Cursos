@@ -22,14 +22,20 @@ namespace SistemaDeGestaoDeCarteriaDeAcoes
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
+
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            
             AuthConfig.RegisterAuth();
-            UnityControleFactory factory = new UnityControleFactory();
-                        
-           // NinjectControleFactory factoryNinject = new NinjectControleFactory();
-            ControllerBuilder.Current.SetControllerFactory(factory);
+            
+            //UnityControleFactory factory = new UnityControleFactory();
+            //ControllerBuilder.Current.SetControllerFactory(factory);            
+           
+            NinjectControleFactory factoryNinject = new NinjectControleFactory();
+            ControllerBuilder.Current.SetControllerFactory(factoryNinject);
 
             
         }

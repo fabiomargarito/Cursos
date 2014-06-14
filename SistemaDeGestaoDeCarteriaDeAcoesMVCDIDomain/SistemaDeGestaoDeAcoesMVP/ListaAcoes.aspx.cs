@@ -13,7 +13,8 @@ namespace SistemaDeGestaoDeAcoesMVP
         {
             IUnityContainer unityContainer = new UnityContainer();
             unityContainer.RegisterType<Infraestrutura.IRepositorio<Domain.Acao>, Infraestrutura.RepositorioAcaoFake>();            
-            unityContainer.RegisterInstance<Domain.IAcaoView>(this);
+            
+unityContainer.RegisterInstance<Domain.IAcaoView>(this);
                         
             
             Domain.AcaoPresenter acaoPresenter = unityContainer.Resolve<Domain.AcaoPresenter>();
@@ -24,6 +25,7 @@ namespace SistemaDeGestaoDeAcoesMVP
             GridView1.DataSource = acoes;
             GridView1.DataBind();
         }
+
 
         public List<Domain.Acao> acoes { get; set; }
    
