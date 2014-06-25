@@ -1,3 +1,5 @@
+[MBCorp](http://www.mbcorp.com.br/wp-content/uploads/2012/09/Logo2.png)
+
 # Fundamentos de Arquitetura de Software
 
 Repositório com conteúdo e exemplos utilizados no treinamento de fundamentos de arquitetura de software.
@@ -66,3 +68,6 @@ Segundo a IEEE, “Arquitetura de Software é a organização fundamental de um siste
 * Vídeos
 
 ## Instrutores
+
+[Fábio Margarito](http://www.mbcorp.com.br/?staff=bob-dylan)
+[Leandro Ribeiro](http://www.leandroribeiro.com)
