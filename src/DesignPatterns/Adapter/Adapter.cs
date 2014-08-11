@@ -23,6 +23,9 @@ namespace Adapter
         }
     }
 
+
+
+
     //Adaptee
     public class Visa { 
         

@@ -76,26 +76,9 @@ namespace TesteFormatacao
 
             TipoFormatacao bold = new Bold(textoHTML);
             TipoFormatacao center = new Center(bold);
-            // Console.WriteLine(center.Formatar());
+            Console.WriteLine(center.Formatar());
 
-
-
-            CommandFormat.HTMLParser htmlParser = new CommandFormat.HTMLParser();
-
-
-
-            CommandFormat.Comando Bold = new CommandFormat.Formatar(htmlParser, bold);
-            CommandFormat.Comando Center = new CommandFormat.Formatar(htmlParser, center);
-
-
-            Editor editor = new Editor();
-            editor.EnviarComando(Bold);
-            editor.EnviarComando(Center);
-
-            
-            
-            
-            editor.FormatarTudo();
+            //<center><bold>Curso de Fundamentos em Arquitetura de Software</bold></center>
         }
     }
 }

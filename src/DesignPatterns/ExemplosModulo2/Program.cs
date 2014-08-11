@@ -19,7 +19,11 @@ namespace ExemplosModulo2
             Console.ReadKey();            
             Console.WriteLine(Configuracao.RetornarConfiguracao().RetornarNomeDoBancoDeDados());
             Console.WriteLine("Por ser a mesma instância, o objeto ficou na memória!!!");
-            Console.ReadKey(); 
+            Console.ReadKey();
+
+
+            var sqlConnection = Conexao.CriarConexao().RetornarConexao();
+            var sqlConnectionModelo2 = ConexaoModelo2.RetornarConexao();
         }
     }
 }

@@ -100,7 +100,7 @@ namespace Infraestrutura
         {
             using (ISession session = NHibernateSessionFactory.Criar().OpenSession())
             {
-                session.Save(entidade);
+                session.SaveOrUpdate(entidade);
                 session.Flush();
             }
         }

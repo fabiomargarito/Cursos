@@ -1,6 +1,4 @@
-﻿using System;
-using System.Runtime.Remoting.Messaging;
-using Autofac;
+﻿using Autofac;
 using Dominio;
 using Microsoft.Practices.Unity;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -18,7 +16,7 @@ namespace ExemploModulo3InjecaoDeDependencia
                 var container = new UnityContainer(); 
               
 
-                container.RegisterType<ILog, LogNovo>();
+                container.RegisterType<ILog, Log>();
                 container.RegisterType <IRepositorio<Carteira>,RepositorioCarteiraFake>();
                 
                 
@@ -41,7 +39,6 @@ namespace ExemploModulo3InjecaoDeDependencia
                 Assert.IsTrue(corretora.Gravar());
             }
 
-
             [TestMethod]
             public void DeveGravarCorretoraUtilizandoUnitySetterInjection()
             {
@@ -56,13 +53,14 @@ namespace ExemploModulo3InjecaoDeDependencia
             }
 
         #endregion
+
        #region Ninject
             [TestMethod]
             public void DeveRegistrarOperacaoDeCompraUtilizandoNinjectConstructorInjection()
             {   
                 using (IKernel kernel = new StandardKernel())
                 {
-                    kernel.Bind<ILog>().To<Log>().InTransientScope();
+                    kernel.Bind<ILog>().To<LogNovo>().InSingletonScope();
                     kernel.Bind<IRepositorio<Carteira>>().To<RepositorioCarteiraFake>().InTransientScope();
 
                     CarteiraService carteiraService = kernel.Get<CarteiraService>();
@@ -97,6 +95,7 @@ namespace ExemploModulo3InjecaoDeDependencia
             }
         
        #endregion Ninject
+
        #region Autofac
 
         [TestMethod]
@@ -124,6 +123,7 @@ namespace ExemploModulo3InjecaoDeDependencia
         public void DeveGravarClienteUtilizandoAutofacSetterInjection()
         {
             var builder = new ContainerBuilder();            
+          
             builder.RegisterType<RepositorioClienteFake>().As<IRepositorio<Cliente>>();
             builder.RegisterType<Cliente>().PropertiesAutowired();
 

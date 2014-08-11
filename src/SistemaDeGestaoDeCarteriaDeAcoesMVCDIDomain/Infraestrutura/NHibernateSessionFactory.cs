@@ -3,6 +3,7 @@ using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using FluentNHibernate.Mapping;
 using NHibernate;
+using NHibernate.Tool.hbm2ddl;
 
 namespace Infraestrutura
 {
@@ -19,7 +20,8 @@ namespace Infraestrutura
                 .Database(                    
                     MsSqlConfiguration.MsSql2008.ConnectionString(
                         c=>c.FromConnectionStringWithKey("GestaoDeCarteiraDBContext")))
-                .BuildSessionFactory();
+               // .ExposeConfiguration(config => new SchemaExport(config).SetOutputFile(@"C:\Users\Fabio\Dropbox\Treinamentos\Grupo JBS - Fundamentos Em Arquitetura de Software\AplicacaoExemplo\SchemaBancoDeDadosAula.sql").Execute(true, true, false))
+                        .BuildSessionFactory();
 
             return sessionFactory;
         }

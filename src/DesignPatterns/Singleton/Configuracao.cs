@@ -4,6 +4,8 @@ namespace Singleton {
     //Single
     public class Configuracao {
         private static Configuracao _instanciaDesteObjeto;
+
+        
         private string _nomeDoBancoDeDados;
 
         public string NomeDoBancoDeDados {

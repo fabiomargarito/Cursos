@@ -16,8 +16,6 @@ namespace SistemaDeGestaoDeCarteriaDeAcoes.Controllers
         private IRepositorio<Acao> _acaoRepositorio;
         private IRepositorio<Empresa> _empresaRepositorio;
 
-
-
         public AcaoController(IRepositorio<Acao> acaRepositorio,IRepositorio<Empresa> empresaRepositorio )
         {
             _acaoRepositorio = acaRepositorio;
@@ -25,14 +23,11 @@ namespace SistemaDeGestaoDeCarteriaDeAcoes.Controllers
 
         }
 
-
         public ActionResult Index()
         {
             return View(_acaoRepositorio.ListarTodos());
         }
-
     
-
         public ActionResult AdicionarAcao()
         {
             AcaoViewModel acaoViewModel = new AcaoViewModel();

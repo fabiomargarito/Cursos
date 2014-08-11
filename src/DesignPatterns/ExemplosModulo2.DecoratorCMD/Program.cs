@@ -12,14 +12,15 @@ namespace ExemplosModulo2.DecoratorCMD
     {
         static void Main(string[] args)
         {
-            Pizza marguerita = new Marguerita();
+            Pizza marguerita = new Marguerita();            
 
-            Cobertura queijoExtra = new QueijoExtra(marguerita);
-            Cobertura molhoExtra = new MolhoExtra(queijoExtra );
-            Cobertura cebola = new Cebola(molhoExtra);
+            Ingrediente queijoExtra = new QueijoExtra(marguerita);
+            Ingrediente molhoExtra = new MolhoExtra(queijoExtra );
+            Ingrediente cebola = new Cebola(molhoExtra);
+            
+
             Console.WriteLine(String.Format("Valor Total da Pizza: {0}",  cebola.RetornarPreco()));
-                       
-           
+                                  
             Console.ReadKey();
 
             

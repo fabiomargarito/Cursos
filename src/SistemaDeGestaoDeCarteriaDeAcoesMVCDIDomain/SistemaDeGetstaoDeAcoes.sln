@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeGestaoDeCarteriaDeAcoesMVC", "SistemaDeGestaoDeCarteriaDeAcoes\SistemaDeGestaoDeCarteriaDeAcoesMVC.csproj", "{DD6B3B90-C85A-49CB-B98A-00CB555CB5BF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeGestaoDeCarteriaDeAcoes.Tests", "SistemaDeGestaoDeCarteriaDeAcoes.Tests\SistemaDeGestaoDeCarteriaDeAcoes.Tests.csproj", "{221F6AE7-0A13-4533-92DD-7961F761C12B}"
@@ -15,6 +17,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeGestaoDeAcoesMVP", "SistemaDeGestaoDeAcoesMVP\SistemaDeGestaoDeAcoesMVP.csproj", "{5D6B286A-993E-4354-9CC6-DD63AFFADD0C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1A1145A0-BF60-4DC2-A53F-F77945F4ABE6}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

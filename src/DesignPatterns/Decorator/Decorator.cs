@@ -17,6 +17,15 @@ namespace Decorator
         }
     }
 
+    //concrete componente
+    public class Sorvete : Pizza
+    {
+        public Sorvete()
+        {
+            preco = 30;
+        }
+    }
+
     //Concrete Componente
     public class Marguerita : Pizza
     {
@@ -26,6 +35,13 @@ namespace Decorator
         }
     }
 
+    public class Alcachofrinha : Pizza
+    {
+        public Alcachofrinha()
+        {
+            preco = 55;
+        }
+    }
 
     //Concrete Componente
     public class Atum : Pizza
@@ -37,10 +53,11 @@ namespace Decorator
     }
 
     //Decorator
-    public abstract class Cobertura : Pizza
+    public abstract class Ingrediente : Pizza
     {        
         protected Pizza pizza;
-        public Cobertura(Pizza pizzaParaAcrescentarCobetura)
+
+        public Ingrediente(Pizza pizzaParaAcrescentarCobetura)
         {
             pizza = pizzaParaAcrescentarCobetura;
         }
@@ -50,13 +67,10 @@ namespace Decorator
             return (pizza.RetornarPreco() + preco);
         }
     }
-
-    
-    
-
+        
     
     //Concrete decorator
-    public class QueijoExtra : Cobertura 
+    public class QueijoExtra : Ingrediente 
     {
         public QueijoExtra(Pizza pizzaParaAcrescentarCobetura): base(pizzaParaAcrescentarCobetura)
         {
@@ -66,7 +80,7 @@ namespace Decorator
 
 
     //Concrete Decorator
-    public class MolhoExtra : Cobertura
+    public class MolhoExtra : Ingrediente
     {
         public MolhoExtra(Pizza pizzaParaAcrescentarCobetura): base(pizzaParaAcrescentarCobetura)
         {
@@ -76,7 +90,7 @@ namespace Decorator
 
 
     //Concrete Decorator
-    public class Cebola : Cobertura
+    public class Cebola : Ingrediente
     {
         public Cebola(Pizza pizzaParaAcrescentarCobetura)
             : base(pizzaParaAcrescentarCobetura)
@@ -85,5 +99,11 @@ namespace Decorator
         }
     }
 
-
+    public class Aliche:Ingrediente
+    {
+        public Aliche(Pizza pizzaParaAcrescentarCobetura) : base(pizzaParaAcrescentarCobetura)
+        {
+            preco = 30;
+        }
+    }
 }

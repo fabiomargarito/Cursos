@@ -9,9 +9,8 @@ namespace AplicacaoParaRefactoringCompraEVendaDeAcoes
     {
         static void Main(string[] args)
         {
-            var cliente = new Cliente();
-            cliente.CPF = "123.133.132-23";
-            cliente.Nome = "Cliente de teste";
+            var cliente = new Cliente("123.133.132-23","Cliente de teste");
+            
 
             //gravando operacao de compra na carteira
             var acao = new Acao {Codigo = "PETR4", PrAcao = 10, Quantidade = 12};
@@ -28,8 +27,8 @@ namespace AplicacaoParaRefactoringCompraEVendaDeAcoes
             corretora.RegistrarVendaAcao(acao2, cliente);
 
             //Mostrando a Carteira
-            DalCarteira carteira = new DalCarteira();
-            foreach (var cart in carteira.RetornCarteiras(cliente))
+            DalOperacao carteira = new DalOperacao();
+            foreach (var cart in carteira.RetornarOperacoes(cliente))
             {
                 Console.WriteLine("ACAO:{0}          VAlor:{1}      Quantidade:{2}    ValorTotal:{3}    ",cart.Acao.Codigo,cart.Acao.PrAcao,cart.Acao.Quantidade,cart.Acao.CustoOperacao);
             }
@@ -44,28 +43,25 @@ namespace AplicacaoParaRefactoringCompraEVendaDeAcoes
     //domínio amarrado com infraestrutura
     public class Cliente
     {
-        public string CPF { get; set; }
-        public string Nome { get; set; }    
-        
-        public Boolean Gravar()
+        public Cliente(string cpf, string nome)
         {
-            new RepositorioCliente().Gravar(this);
-            return true;
-        }  
+            CPF = cpf;
+            Nome = nome;
+        }
+
+        public string CPF { get; private set; }
+        public string Nome { get; private set; }    
+        
+
+
     }
 
 
     public class ServicoDeCliente
-    {
-        private RepositorioCliente _repositorioClienteCliente;
-        public ServicoDeCliente(RepositorioCliente repositorioCliente)
-        {
-            _repositorioClienteCliente = repositorioCliente;
-        }
-
+    {               
         public Boolean GravarCliente(Cliente cliente)
         {   
-            return _repositorioClienteCliente.Gravar(cliente);
+            return (new RepositorioCliente()).Gravar(cliente);
         }
     }
 
@@ -77,6 +73,19 @@ namespace AplicacaoParaRefactoringCompraEVendaDeAcoes
             Console.WriteLine("Cliente Gravado");
             return true;
         }
+    }
+
+
+    public class Cotacao
+    {
+        public Cotacao(double valor,Acao acao)
+        {
+            Valor = valor;
+        }
+
+        public double Valor { get; private set; }
+        public Acao Acao { get;  set; }
+
     }
 
 
@@ -93,17 +102,15 @@ namespace AplicacaoParaRefactoringCompraEVendaDeAcoes
         public double PrAcao;
 
         
-        private Acao RetornarCotacao(string cdAcao)
+        public Cotacao RetornarCotacao(string cdAcao)
         {
             //simulando acesso ao banco
-            return new Acao{Codigo = cdAcao,Valor = 10};
-        }
-        
-
+            return new Cotacao(10,this);
+        }        
     }
    
 
-    public class Carteira
+    public class Operacao
     {
         //carteira deveria ter conjunto de operacoes
         public Acao Acao;
@@ -113,9 +120,9 @@ namespace AplicacaoParaRefactoringCompraEVendaDeAcoes
 
     }
 
-    public class DalCarteira
+    public class DalOperacao
     {        
-        public void gravar(Carteira carteira)
+        public Boolean gravar(Operacao operacao)
         {                        
 
             DataSet dataSet = new DataSet();
@@ -131,8 +138,8 @@ namespace AplicacaoParaRefactoringCompraEVendaDeAcoes
                 dataTable.Columns.Add("Quantidade");
                 dataTable.Columns.Add("ValorTotal");
 
-                dataTable.Rows.Add(carteira.Acao.Codigo, carteira.Acao.PrAcao, carteira.Acao.Quantidade,
-                carteira.Acao.CustoOperacao);
+                dataTable.Rows.Add(operacao.Acao.Codigo, operacao.Acao.PrAcao, operacao.Acao.Quantidade,
+                operacao.Acao.CustoOperacao);
 
                 dataSet.Tables.Add(dataTable);
             }
@@ -140,27 +147,29 @@ namespace AplicacaoParaRefactoringCompraEVendaDeAcoes
             {
                 dataSet.ReadXml("carteira.xml");
                 dataTable = dataSet.Tables["carteira"];
-                dataTable.Rows.Add(carteira.Acao.Codigo, carteira.Acao.PrAcao, carteira.Acao.Quantidade,
-                carteira.Acao.CustoOperacao);
+                dataTable.Rows.Add(operacao.Acao.Codigo, operacao.Acao.PrAcao, operacao.Acao.Quantidade,
+                operacao.Acao.CustoOperacao);
             }
                      
             
             dataSet.WriteXml("carteira.xml");
 
+            return true;
+
         }
 
-        public List<Carteira> RetornCarteiras(Cliente cliente)
+        public List<Operacao> RetornarOperacoes(Cliente cliente)
         {
-            var operacoes = new List<Carteira>();
+            var operacoes = new List<Operacao>();
             DataSet dataset = new DataSet();
 
-            
 
-            dataset.ReadXml("carteira.xml");
+
+            dataset.ReadXml(@"C:\Users\Fabio\Dropbox\Treinamentos\ExemplosModulo2\carteira.xml");
 
             foreach (DataRow row in dataset.Tables[0].Rows)
             {
-               operacoes.Add( new Carteira
+               operacoes.Add( new Operacao
                 {
                     Acao = new Acao {Codigo = row[0].ToString(), PrAcao = Convert.ToDouble(row[1]), Quantidade = Convert.ToInt16(row[2]), CustoOperacao = Convert.ToDouble(row[3])}
 

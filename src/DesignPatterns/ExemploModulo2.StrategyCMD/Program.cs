@@ -11,20 +11,9 @@ namespace ExemploModulo2.StrategyCMD
     {
         static void Main(string[] args)
         {
-            string cidade = "SP";
-
-            ICalculoIcm calculoIcm = null;
-
-            if (cidade=="SP")
-                calculoIcm = new CalculoICMSSaoPaulo();
-            else 
-                if(cidade=="RJ")
-                    calculoIcm = new CalculoICMSRioDeJaneiro();
-
-
+            ICalculoIcm calculoIcm = (new FabricaICMS()).Criar(Estado.ES);
             Console.WriteLine(calculoIcm.CalcularImposto(100));
             Console.ReadKey();
-
         }
     }
 }

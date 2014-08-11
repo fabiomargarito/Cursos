@@ -8,14 +8,14 @@ using System.Data.Sql;
 namespace FactoryMethod
 {
     //Product
-    public interface Repositorio
+    public interface IRepositorio
     {
          void Salvar(Entidade Entidade);
          IList<Entidade> Retornar(Entidade Entidade);
     }
 
     //Concrete Product
-    public class RepositorioDeClientes : Repositorio {
+    public class RepositorioDeClientes : IRepositorio {
 
         public void Salvar(Entidade Entidade)
         {
@@ -32,7 +32,7 @@ namespace FactoryMethod
     }
 
     //Concrete Product
-    public class RepositorioDeFornecedores:Repositorio
+    public class RepositorioDeFornecedores:IRepositorio
     {
 
         public void Salvar(Entidade Entidade)
@@ -50,10 +50,12 @@ namespace FactoryMethod
         }
     }
 
+
+
     //Concrete Creator Factory
     public class FabricaDeRepositorio{
 
-        public Repositorio CriarRepositorio(TipoDeRepositorio tipoDeRepositorio)
+        public IRepositorio CriarRepositorio(TipoDeRepositorio tipoDeRepositorio)
         { 
             switch (tipoDeRepositorio){
                 case TipoDeRepositorio.CLIENTE: return (new RepositorioDeClientes()) ;
@@ -83,7 +85,8 @@ namespace FactoryMethod
     public enum TipoDeRepositorio
     {
         CLIENTE,
-        FORNECEDOR
+        FORNECEDOR,
+        REQUISICAO
     }
 
     #endregion    
