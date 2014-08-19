@@ -13,12 +13,19 @@ namespace HomeBrokerMBCorp.Dominio
             return new List<Operacao>();
         }
 
+
+        //*
         public void AdicionarOperacao(Operacao operacao)
         {
-            if (operacao == null) 
-                _operacoes = new List<Operacao>();
-
+            ValidarDadosOperacao(operacao);
             _operacoes.Add(operacao);
+        }
+
+
+        private void ValidarDadosOperacao(Operacao operacao)
+        {
+            if (operacao == null)
+                _operacoes = new List<Operacao>();
         }
 
         public void RemoverOperacao(Operacao operacao)

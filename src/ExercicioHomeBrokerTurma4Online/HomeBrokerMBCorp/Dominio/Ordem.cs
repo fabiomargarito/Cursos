@@ -4,9 +4,14 @@ namespace HomeBrokerMBCorp.Dominio
 {
     public class Ordem
     {
-        public Ordem(Acao acao, double valor, int quantidade, Usuario usuario, TipoOperacao tipoOperacao)
-        {
+        public Acao Acao { get; private set; }
+        public double Valor { get; private set; }
+        public int Quantidade { get; private set; }
+        public Usuario Usuario { get; private set; }
+        public TipoOperacao TipoOperacao { get; private set; }
 
+        private void ValidarDadosDaOrdem()
+        {
             if (Acao == null)
                 throw new ArgumentNullException("Favor informar uma ação");
 
@@ -22,6 +27,15 @@ namespace HomeBrokerMBCorp.Dominio
             if (TipoOperacao == null)
                 throw new ArgumentNullException("Favor informar o Tipo de Operacao");
 
+        }
+
+
+        
+        public Ordem(Acao acao, double valor, int quantidade, Usuario usuario, TipoOperacao tipoOperacao)
+        {
+
+            ValidarDadosDaOrdem();
+
             Acao = acao;
             Valor = valor;
             Quantidade = quantidade;
@@ -29,10 +43,6 @@ namespace HomeBrokerMBCorp.Dominio
             TipoOperacao = tipoOperacao;
         }
 
-        public Acao Acao { get; private set; }
-        public double Valor { get; private set; }
-        public int Quantidade { get; private set; }
-        public Usuario Usuario { get; private set; }
-        public TipoOperacao TipoOperacao {get; private set; }
+       
     }
 }

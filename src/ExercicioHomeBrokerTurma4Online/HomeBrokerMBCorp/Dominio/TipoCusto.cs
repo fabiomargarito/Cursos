@@ -8,5 +8,6 @@ namespace HomeBrokerMBCorp.Dominio
         IR=3,
         CorretagemItau = 3,
         CorretagemXPInvestimento = 4,
+        CorretagemAgora = 5,
     }
 }

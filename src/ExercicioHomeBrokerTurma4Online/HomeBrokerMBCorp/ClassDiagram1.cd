@@ -24,21 +24,21 @@
   <Class Name="HomeBrokerMBCorp.Dominio.Usuario" Collapsed="true">
     <Position X="2.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Dominio\Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="HomeBrokerMBCorp.Dominio.Custo" Collapsed="true">
+  <Class Name="HomeBrokerMBCorp.Dominio.Corretagem" Collapsed="true">
     <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAABAAAAAAAAAAAAQAAAEAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Dominio\Custo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HomeBrokerMBCorp.Dominio.Carteira">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAQAAEAAAAAAAAAAAQAAAAAAAAABAAEAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAQAAEAAAACAAAAAAQAAAAAAAAABAAEAAAAAAA=</HashCode>
       <FileName>Dominio\Carteira.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -52,7 +52,7 @@
   <Class Name="HomeBrokerMBCorp.Dominio.Ordem">
     <Position X="0.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAACUAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAACUAAgAAAA=</HashCode>
       <FileName>Dominio\Ordem.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -69,14 +69,14 @@
   <Class Name="HomeBrokerMBCorp.Dominio.Empresa">
     <Position X="4" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAEACAAAAAAAAEAAIAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAEACAAAAAAAAEAAIAAAAAAAAAAQAAAA=</HashCode>
       <FileName>Dominio\Empresa.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="HomeBrokerMBCorp.Dominio.TipoCusto">
     <Position X="0.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAgAAAAAAAAAAAAAAQACAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAAQAAAgAAAAAAACAAAAAAQACAAAAAAAAAAgAAAA=</HashCode>
       <FileName>Dominio\TipoCusto.cs</FileName>
     </TypeIdentifier>
   </Enum>

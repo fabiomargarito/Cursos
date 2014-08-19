@@ -13,13 +13,18 @@ namespace HomeBrokerMBCorp.Dominio
         public string CNPJ { get; private set; }
         public string RazaoSocial { get; private set; }
         public List<Acao> Acoes { get; private set; }
-
+        
+        
         public void AdicionarAcao(Acao acao)
-        {
-            if(Acoes==null)
-                   Acoes = new List<Acao>();
-            
+        {            
+            ValidarExistenciaDaListaDeAcoes(acao);
             Acoes.Add(acao);
+        }
+
+        private void ValidarExistenciaDaListaDeAcoes(Acao acao)
+        {
+            if (Acoes == null)
+                Acoes = new List<Acao>();
         }
     }
 }

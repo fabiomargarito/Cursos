@@ -1,6 +1,10 @@
 namespace HomeBrokerMBCorp.Dominio
 {
-    public class Acao
+    public class AcaoBase
+    {
+    }
+
+    public class Acao:AcaoBase
     {
         public string Codigo { get; private set; }
         public Empresa Empresa { get; private set; }
