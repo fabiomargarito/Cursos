@@ -10,6 +10,11 @@ namespace TesteDeDominio
         {            
             Imposto imposto = new CustoIR();
             imposto.CalcularImposto(100);
+
+
+            IEstrategiaCorretagem estrategiaCorretagem =
+                (new EstrategiaCorretagemFactory()).CriarEstrategiaCorretagem(TipoCorretora.ITAU);
+            var valorCorretagem = estrategiaCorretagem.CalcularCorretagem(1000);
         }    
     }  
 }

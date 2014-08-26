@@ -14,6 +14,7 @@ namespace FactoryMethodn
         public double ValorTotal { get; set; }
     }
 
+    //product
     public interface IHubPagamento
     {
         bool RegistrarPagamento(Pagamento pagamento);

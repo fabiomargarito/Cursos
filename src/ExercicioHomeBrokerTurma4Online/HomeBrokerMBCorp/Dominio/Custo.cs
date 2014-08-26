@@ -6,10 +6,7 @@ namespace HomeBrokerMBCorp.Dominio
         double CalcularImposto(double valorOperacao);        
     }
 
-    public abstract class Corretagem
-    {
-        public abstract double CalcularCorretagem(double valorOperacao);
-    }
+    
 
     public class CustoEmolumento : Imposto
     {
@@ -38,33 +35,41 @@ namespace HomeBrokerMBCorp.Dominio
      
     }
 
-    public class CustoCorretagemItau : Corretagem
+
+
+    public interface IEstrategiaCorretagem
     {
-        public override double CalcularCorretagem(double valorOperacao)
+        double CalcularCorretagem(double valorOperacao);
+    }
+
+
+    public class EstrategiaCustoCorretagemItau : IEstrategiaCorretagem
+    {
+        public double CalcularCorretagem(double valorOperacao)
         {
             return (valorOperacao * 0.03) + 10;
         }
     }
 
-    public class CustoCorretagemXPInvestimento : Corretagem
+    public class EstrategiaCustoCorretagemXPInvestimento : IEstrategiaCorretagem
     {
-        public override double CalcularCorretagem(double valorOperacao)
+        public double CalcularCorretagem(double valorOperacao)
         {
             return valorOperacao * 14.90;
         }
     }
 
-    public class CustoCorretagemAgora : Corretagem
+    public class EstrategiaCustoCorretagemAgora : IEstrategiaCorretagem
     {
-        public override double CalcularCorretagem(double valorOperacao)
+        public double CalcularCorretagem(double valorOperacao)
         {
             return 20;
         }
     }
 
-    public class CustoCorretagemCitiBank : Corretagem
+    public class EstrategiaCustoCorretagemCitiBank : IEstrategiaCorretagem
     {
-        public override double CalcularCorretagem(double valorOperacao)
+        public  double CalcularCorretagem(double valorOperacao)
         {
             if (valorOperacao < 100000)
                 return 15;
@@ -79,19 +84,19 @@ namespace HomeBrokerMBCorp.Dominio
 
     }
 
-    public class CustoCorretagemBancoDoBrasil : Corretagem
+    public class EstrategiaCustoCorretagemBancoDoBrasil : IEstrategiaCorretagem
     {
-        public override double CalcularCorretagem(double valorOperacao)
+        public  double CalcularCorretagem(double valorOperacao)
         {
             return 10;
         }    
     }
 
-    public class CustoCorretagemBarinsul : Corretagem
+    public class EstrategiaCustoCorretagemBarinsul : IEstrategiaCorretagem
     {
         public bool ehClienteEspecial { get; set; }
 
-        public override double CalcularCorretagem(double valorOperacao)
+        public  double CalcularCorretagem(double valorOperacao)
         {
             if(ehClienteEspecial)
                 return 5;

@@ -52,7 +52,7 @@ namespace TemplateMethod
         }
     }
 
-    
+ 
 
     public class DALCliente : DALBase<Cliente>
     {
@@ -70,22 +70,7 @@ namespace TemplateMethod
             return clientes;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
     public class DALFornecedor : DALBase<Fornecedor>
     {
         protected override void DefinirComando()
@@ -118,6 +103,27 @@ namespace TemplateMethod
         }
     }
 
+    public class DALCorretora : DALBase<Corretora>
+    {
+        protected override void DefinirComando()
+        {
+            _comando = "select * from corretora";
+            Console.WriteLine("Definindo o comando {0}",_comando);
+        }
+
+        protected override List<Corretora> TratarRetorno()
+        {
+            var corretoras= new List<Corretora>
+            {
+                new Corretora {CNPJ = "0001", Nome = "CPTO"},
+                new Corretora {CNPJ = "0002", Nome = "XPTO"}
+            };
+            System.Console.WriteLine("Retornando Corretoras");
+            return corretoras;
+        }
+    }
+
+
 
     public class Acao
     {
@@ -132,5 +138,11 @@ namespace TemplateMethod
     public class Fornecedor
     {
         public string cnpj { get; set; }
+    }
+
+    public class Corretora
+    {
+        public string CNPJ { get; set; }
+        public string Nome { get; set; }
     }
 }

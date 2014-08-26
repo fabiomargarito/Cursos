@@ -10,11 +10,18 @@ namespace ExemplosModulo2.TemplateMethod
     {
         static void Main(string[] args)
         {
+            var dalCorretora = new DALCorretora();
+            var retornoCorretora = dalCorretora.Executar();
+            
+            
             var dalCliente = new DALCliente();            
             var retorno = dalCliente.Executar();
 
             var dalAcao = new DALACAO();
             var retornoAcao = dalAcao.Executar();
+
+
+
 
             Console.ReadKey();
 

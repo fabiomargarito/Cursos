@@ -19,7 +19,7 @@ namespace ExemplosModulo2.Observer
             vale.Cadastrar(new InvestidorPessoaFisica("Marcos"));
             vale.Cadastrar(new InvestidorPessoaFisica("Leandro"));
             vale.Cadastrar(new InvestidorPessoaFisica("Marcio"));
-            vale.Cadastrar(new InvestidorPessoaJuridica("Marcio","0000", new ServicoCompraAcaoItauTrade()));
+            vale.Cadastrar(new InvestidorPessoaJuridica("Silvio","000.112.345/0001-30", new ServicoCompraAcaoItauTrade()));
 
             vale.Preco = 120;
             vale.Preco = 170;

@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 namespace Adapter
 {
-    enum TipoLog
+    public enum TipoLog
     {
         Erro,
         Warning
@@ -30,9 +31,9 @@ namespace Adapter
         {
               switch (tipoLog)
             {
-                case TipoLog.Erro: (new LOG4NET()).Write(mensagem, "Erro");
-                case TipoLog.Warning: (new LOG4NET()).Write(mensagem, "Aviso");
-                default: throw new Exception("Tipo de erro não exite");
+                //case TipoLog.Erro: (new LOG4NET()).Write(mensagem, "Erro");
+                //case TipoLog.Warning: (new LOG4NET()).Write(mensagem, "Aviso");
+                //default: throw new Exception("Tipo de erro não exite");
             }
             
         }

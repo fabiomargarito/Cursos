@@ -5,8 +5,7 @@ using System.Text;
 
 namespace Adapter
 {
-    //Target
-    //novo comentário
+    //Target    
     public interface Pagamento
     {
         void EfetuarPagamento(double valor);
@@ -33,10 +32,22 @@ namespace Adapter
 
         public void Pagar(int identificadorEmpresa, double valor){
             codigoEmpresa = identificadorEmpresa;
-            Console.WriteLine("Pagamento Efetuado Por Empresa Terceira");
+            Console.WriteLine("Pagamento Efetuado Por Empresa Terceira a Visa");
         }
     }
-    
+
+
+    //Adapter
+    public class AdaptadorCartaoVisa:Pagamento
+    {
+        public void EfetuarPagamento(double valor)
+        {
+            Visa visa = new Visa();
+            visa.Pagar(1234,valor);
+        }
+    }
+
+
     //Adapter
     public class CartaoCreditoVisa : Pagamento
     {

@@ -52,6 +52,16 @@ namespace Decorator
         }
     }
 
+   //Concrete Componente
+    public class Casteloes : Pizza
+    {
+        public Casteloes()
+        {
+            preco = 60;
+        }
+    }
+
+
     //Decorator
     public abstract class Ingrediente : Pizza
     {        
@@ -106,4 +116,14 @@ namespace Decorator
             preco = 30;
         }
     }
+
+    public class Tomate : Ingrediente
+    {
+        public Tomate(Pizza pizzaParaAcrescentarCobetura)
+            : base(pizzaParaAcrescentarCobetura)
+        {
+            preco = 12;
+        }
+    }
+
 }

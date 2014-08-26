@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
+using  FactoryMethod;
 
 namespace FactoryMethod
 {
@@ -10,7 +7,12 @@ namespace FactoryMethod
     {
         static void Main(string[] args)
         {
-            var fabricaDeRepositorio = new FactoryMethod.FabricaDeRepositorio();
+            
+
+
+            
+            
+            var fabricaDeRepositorio = new FactoryMethod.FabricaDeRepositorioEntityFramework();
                        
             
             IRepositorio repositorioDeCliente = fabricaDeRepositorio.CriarRepositorio(TipoDeRepositorio.CLIENTE);
@@ -23,6 +25,12 @@ namespace FactoryMethod
             
            
             repositorioDeFornecedor.Salvar(new Fornecedor{identificador = 1,nome = "teste", razaoSocial = "razao social"});
+
+
+            IRepositorio repositorioDeAcao = fabricaDeRepositorio.CriarRepositorio(TipoDeRepositorio.ACAO);
+
+
+            repositorioDeAcao.Salvar(new Acao{Codigo = "PETR4"});
 
             Console.ReadKey();
         }

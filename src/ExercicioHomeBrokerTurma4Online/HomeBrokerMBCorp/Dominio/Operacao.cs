@@ -10,7 +10,7 @@ namespace HomeBrokerMBCorp.Dominio
         public int Quantidade { get; private set; }
         public Usuario Usuario { get; private set; }
         public Corretora Corretora { get; private set; }
-        public Corretagem Corretagem { get; private set; }
+        public IEstrategiaCorretagem Corretagem { get; private set; }
         public IList<Imposto> Impostos{ get; private set; }
         public TipoOperacao TipoOperacao { get; private set; }
 
@@ -30,7 +30,7 @@ namespace HomeBrokerMBCorp.Dominio
             Impostos.Add(imposto);
         }
 
-        public void AdicionarCorretagem(Corretagem corretagem)
+        public void AdicionarCorretagem(IEstrategiaCorretagem corretagem)
         {
             Corretagem = corretagem;
         }
