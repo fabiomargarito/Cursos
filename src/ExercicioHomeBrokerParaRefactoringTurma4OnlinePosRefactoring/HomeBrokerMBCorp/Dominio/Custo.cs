@@ -8,7 +8,6 @@ namespace HomeBrokerMBCorp.Dominio
         double CalcularImposto(double valorOperacao);        
     }
 
-    
 
     public class CustoEmolumento : Imposto
     {
