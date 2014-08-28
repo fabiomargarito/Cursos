@@ -18,16 +18,25 @@ namespace HomeBrokerMBCorp.Dominio
         
         public void AdicionarAcao(Acao acao)
         {
-            if(String.IsNullOrEmpty(acao.Codigo))
-                throw new Exception("Acao inválida!");
-
-            if (Acoes == null)
-                Acoes = new List<Acao>();                    
-
+            ValidarAcao(acao);
+            CriarListaDeAcoesCasoNaoExista();         
             Acoes.Add(acao);
             
         }
 
-        
+        private void ValidarAcao(Acao acao)
+        {
+            if (String.IsNullOrEmpty(acao.Codigo))
+                throw new Exception("Acao inválida!");
+        }
+
+        private void CriarListaDeAcoesCasoNaoExista()
+        {
+            if (Acoes == null)
+                Acoes = new List<Acao>();                    
+        }
+
+
+
     }
 }

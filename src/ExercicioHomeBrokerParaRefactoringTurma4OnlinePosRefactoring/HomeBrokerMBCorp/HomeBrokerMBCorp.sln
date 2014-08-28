@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeBrokerMBCorp", "HomeBro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacaoHomeBroker", "..\TesteDeDominio\AplicacaoHomeBroker.csproj", "{3BF6A777-07A4-4A7D-ACC2-35F5EFF682E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeBrokerMBCorpUnitTest", "..\HomeBrokerMBCorpUnitTest\HomeBrokerMBCorpUnitTest.csproj", "{E681A193-495C-4C98-92B0-E27815930884}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "teste", "teste\teste.csproj", "{8CDA8D37-5125-496E-A244-4C8D1B8E6D1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{3BF6A777-07A4-4A7D-ACC2-35F5EFF682E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BF6A777-07A4-4A7D-ACC2-35F5EFF682E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BF6A777-07A4-4A7D-ACC2-35F5EFF682E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E681A193-495C-4C98-92B0-E27815930884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E681A193-495C-4C98-92B0-E27815930884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E681A193-495C-4C98-92B0-E27815930884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E681A193-495C-4C98-92B0-E27815930884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CDA8D37-5125-496E-A244-4C8D1B8E6D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CDA8D37-5125-496E-A244-4C8D1B8E6D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CDA8D37-5125-496E-A244-4C8D1B8E6D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CDA8D37-5125-496E-A244-4C8D1B8E6D1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

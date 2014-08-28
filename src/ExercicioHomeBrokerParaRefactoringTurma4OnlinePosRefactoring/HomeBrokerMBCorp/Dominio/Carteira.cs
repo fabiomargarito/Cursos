@@ -10,31 +10,28 @@ namespace HomeBrokerMBCorp.Dominio
 
         public IList<Operacao> ListarOperacoes()
         {
-            return new List<Operacao>();
+            return _operacoes;
         }
         
-        public void AdcOperacao(Operacao operacao)
+        public void AdicionarOperacao(Operacao operacao)
         {
-            VldDadosOperacao(operacao);
+            DeveCriarListaDeOperacoesCasoNaoExista(operacao);
             _operacoes.Add(operacao);
         }
 
 
-        private void VldDadosOperacao(Operacao operacao)
+        private void DeveCriarListaDeOperacoesCasoNaoExista(Operacao operacao)
         {
-            if (operacao == null)
+            if (_operacoes == null)
                 _operacoes = new List<Operacao>();
         }
 
-        public void rmOperacao(Operacao operacao)
+        public void RemoverOperacao(Operacao operacao)
         {
             _operacoes.Remove(operacao);
         }
 
-        public double CalcularCorretagemCorretoraAlpes(double valorOperacao)
-        {
-            return 20;
-        }
+     
                    
     }
 }

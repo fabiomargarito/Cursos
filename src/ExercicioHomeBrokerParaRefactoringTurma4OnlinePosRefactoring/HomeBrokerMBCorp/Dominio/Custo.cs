@@ -91,6 +91,15 @@ namespace HomeBrokerMBCorp.Dominio
         }    
     }
 
+    public class EstrategiaCustoCorretagemAlpes:IEstrategiaCorretagem
+    {
+        public double CalcularCorretagem(double valorOperacao)
+        {
+            return 20;
+        }
+    }
+
+
     public class EstrategiaCustoCorretagemBarinsul : IEstrategiaCorretagem
     {
         public bool ehClienteEspecial { get; set; }

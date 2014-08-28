@@ -31,7 +31,7 @@
   <Class Name="HomeBrokerMBCorp.Dominio.Carteira">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAQAAEAAAACAAAAAAQAAAAAAAAABAAEAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAwAAAAAAAAAAAAAAAAAAAAAIAABABEAAAAAgA=</HashCode>
       <FileName>Dominio\Carteira.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -52,18 +52,18 @@
       <Property Name="TipoOperacao" />
     </ShowAsAssociation>
   </Class>
+  <Class Name="HomeBrokerMBCorp.Dominio.Empresa">
+    <Position X="4" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEACAAAAAAAAEAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dominio\Empresa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="HomeBrokerMBCorp.Dominio.Cotacao" Collapsed="true">
     <Position X="9.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAACCAgAQAAAAAAAAAAAAAIEEAAAAAA=</HashCode>
-      <FileName>Dominio\Cotacao.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="HomeBrokerMBCorp.Dominio.Empresa">
-    <Position X="4" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAEACAAAAAAAAEAAIAAAAAAAAAAQAAAA=</HashCode>
-      <FileName>Dominio\Empresa.cs</FileName>
+      <FileName>Dominio\Acao.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="HomeBrokerMBCorp.Dominio.TipoCusto">

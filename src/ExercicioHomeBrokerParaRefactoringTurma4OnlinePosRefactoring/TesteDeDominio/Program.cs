@@ -10,7 +10,7 @@ namespace TesteDeDominio
 
         static void Main(string[] args)
         {
-                       
+            
         }
     }
 }
