@@ -48,6 +48,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HomeBrokerMBCorpUnitTest\HomeBrokerMBCorpUnitTest.csproj">
+      <Project>{E681A193-495C-4C98-92B0-E27815930884}</Project>
+      <Name>HomeBrokerMBCorpUnitTest</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HomeBrokerMBCorp\HomeBrokerMBCorp.csproj">
       <Project>{CCEBA22A-1DC8-490D-88F0-981FC642D6EB}</Project>
       <Name>HomeBrokerMBCorp</Name>

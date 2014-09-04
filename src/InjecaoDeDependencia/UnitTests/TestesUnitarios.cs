@@ -18,7 +18,7 @@ namespace ExemploModulo3InjecaoDeDependencia
 
                 container.RegisterType<ILog, Log>();
                 container.RegisterType <IRepositorio<Carteira>,RepositorioCarteiraFake>();
-                
+                               
                 
                 CarteiraService carteiraService = container.Resolve<CarteiraService>();
 
@@ -35,6 +35,7 @@ namespace ExemploModulo3InjecaoDeDependencia
                 container.RegisterType<IRepositorio<Corretora>, RepositorioCorretoraFake>();
                 
                 var corretora = container.Resolve<Corretora>();
+
                 corretora.Nome = "Corretora Teste";
                 Assert.IsTrue(corretora.Gravar());
             }
@@ -60,7 +61,7 @@ namespace ExemploModulo3InjecaoDeDependencia
             {   
                 using (IKernel kernel = new StandardKernel())
                 {
-                    kernel.Bind<ILog>().To<LogNovo>().InSingletonScope();
+                    kernel.Bind<ILog>().To<LogNovo>();
                     kernel.Bind<IRepositorio<Carteira>>().To<RepositorioCarteiraFake>().InTransientScope();
 
                     CarteiraService carteiraService = kernel.Get<CarteiraService>();

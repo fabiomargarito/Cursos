@@ -1,6 +1,11 @@
 ﻿using System;
 using HomeBrokerMBCorp.Dominio;
+using HomeBrokerMBCorp.Dominio.Contratos.Repositorio;
+using HomeBrokerMBCorp.Dominio.Servicos;
+using HomeBrokerMBCorp.Infraestrutura.Persistencia;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+using System.Collections.Generic;
 
 namespace HomeBrokerMBCorpUnitTest
 {
@@ -32,7 +37,7 @@ namespace HomeBrokerMBCorpUnitTest
             empresa.AdicionarAcao(new Acao{Codigo = "PETR3"});
 
             //assert
-            Assert.IsTrue(empresa.Acoes.Count>0);
+            //Assert.IsTrue(empresa.Acoes.Count>0);
 
         }
 
@@ -104,6 +109,89 @@ namespace HomeBrokerMBCorpUnitTest
 
 
         }
+
+        [TestMethod]
+        public void DeveGravarUmaEmpresaInformadaPeloUsuario() {
+
+            //Arrange
+            IRepositorio<Empresa> repositorioEmpresa = new RepositorioEmpresaFake();
+            
+            //Act
+            repositorioEmpresa.Gravar(new Empresa("1234", "RazaoSocial"));
+
+            //Assert
+            Assert.IsTrue(repositorioEmpresa.RetornarPorID("1234").RazaoSocial == "RazaoSocial");
+
+        }
+
+        [TestMethod]
+        public void DeveRetornarUmaListaDeEmpresasCadastradas() { 
+            //Arrange
+            IRepositorio<Empresa> repositorioEmpresa = new RepositorioEmpresaFake();
+
+           //act
+            var empresas = repositorioEmpresa.ListarTodos();
+
+            //Assert
+            Assert.IsTrue(empresas.Count >1);
+            
+        }
+
+
+
+        [TestMethod]
+        public void DeveRetornarUmaListaDeUsuariosCadastrados()
+        {
+            //Arrange
+            IRepositorio<Usuario> repositorioUsuario = new RepositorioUsuarioFake();
+
+            //act
+            var usuarios = repositorioUsuario.ListarTodos();
+
+            //Assert
+            Assert.IsTrue(usuarios.Count > 1);
+
+        }
+
+        [TestMethod]
+        public void DeveGravarUmUsuario()
+        {
+            
+            //Arrange
+            IRepositorio<Usuario> repositorioUsuario = new RepositorioUsuarioFake();
+
+            //Act
+            repositorioUsuario.Gravar(new Usuario("1234","Fabio Margarito"));
+
+            //Assert
+            Assert.IsTrue(repositorioUsuario.RetornarPorID("1234").Nome == "Fabio Margarito");
+
+        }
+
+        [TestMethod]
+        public void DeveGravarUmUsuarioComUsuarioDoServico()
+        {
+
+            //Arrange
+            UsuarioService usuarioService = new UsuarioService();
+            
+
+            //Act
+            usuarioService.Gravar("1234", "fabio margarito",new RepositorioUsuarioFake());
+
+            //Assert
+            Assert.IsTrue( (new RepositorioUsuarioFake()).RetornarPorID("1234").Nome == "Fabio Margarito");
+
+        }
+
+       
+
+
+      
+
+
+      
+
 
     }
 }

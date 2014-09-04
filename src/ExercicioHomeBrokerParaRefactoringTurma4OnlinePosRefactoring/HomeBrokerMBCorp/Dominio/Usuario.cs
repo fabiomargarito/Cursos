@@ -13,6 +13,11 @@ namespace HomeBrokerMBCorp.Dominio
             Nome = nome;
         }
 
+        protected Usuario()
+        {
+            throw new NotImplementedException();
+        }
+
         private void ValidarDadosDoUsuario(string cpf,string nome)
         {
              if (string.IsNullOrEmpty(cpf))
@@ -22,7 +27,19 @@ namespace HomeBrokerMBCorp.Dominio
                 throw new ArgumentNullException("Favor informar o nome");
         }
 
+
         public string CPF { get; set; }
         public string Nome { get; set; }
     }
+
+
+
+    public class UsuarioAdmin:Usuario
+    {
+        public string Setor { get; set; }
+    }
+
+
+
+
 }

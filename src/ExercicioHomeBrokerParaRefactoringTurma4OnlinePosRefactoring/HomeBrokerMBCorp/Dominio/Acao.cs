@@ -2,13 +2,14 @@ using System;
 
 namespace HomeBrokerMBCorp.Dominio
 {
-    public class AcaoBase
-    {
-    }
-
+   
 
     public class Cotacao
     {
+        public Cotacao()
+        {
+        }
+
         public double Preco { get; private set; }
         public double ValorDeAbertura { get; private set; }
         public double ValorDeFechamento { get; private set; }
@@ -33,14 +34,22 @@ namespace HomeBrokerMBCorp.Dominio
     }
 
 
-    public class Acao:AcaoBase
+    public class Acao
     {
-        public string Codigo { get;  set; }
-        public Empresa Empresa { get; private set; }
-        public Tipo Tipo { get; private set; }
+        public Acao()
+        {
+        }
 
+        public Acao(string codigo, Tipo tipo)
+        {
+            Codigo = codigo;
+            Tipo = tipo;
+            
+        }
 
-   
+        public virtual string Codigo { get;  set; }        
+        public virtual Tipo Tipo { get;  set; }
+
 
     }
 

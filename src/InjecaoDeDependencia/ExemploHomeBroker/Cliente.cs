@@ -1,4 +1,4 @@
-﻿using System.Security.Policy;
+﻿using System.Runtime.CompilerServices;
 using Microsoft.Practices.Unity;
 using Ninject;
 
@@ -11,7 +11,7 @@ namespace Dominio
         public virtual string CPF { get; set; }
         
 
-        [Dependency]
+        [Microsoft.Practices.Unity.Dependency]
         [Inject]
         public virtual IRepositorio<Cliente> RepositorioCliente { get; set; }        
 

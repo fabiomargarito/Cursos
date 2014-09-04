@@ -30,6 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>packages\FluentNHibernate.1.4.0.0\lib\net35\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,6 +51,7 @@
     <Compile Include="Dominio\Acao.cs" />
     <Compile Include="Dominio\Carteira.cs" />
     <Compile Include="Dominio\BolsaDeValores.cs" />
+    <Compile Include="Dominio\Contratos\Repositorio\IRepositorio.cs" />
     <Compile Include="Dominio\Corretora.cs" />
     <Compile Include="Dominio\Custo.cs" />
     <Compile Include="Dominio\Empresa.cs" />
@@ -50,14 +60,20 @@
     <Compile Include="Dominio\TipoCusto.cs" />
     <Compile Include="Dominio\TipoOperacao.cs" />
     <Compile Include="Dominio\Usuario.cs" />
+    <Compile Include="Dominio\Servicos\UsuarioService.cs" />
+    <Compile Include="Infraestrutura\Persistencia\ConfiguracaoNHibernate.cs" />
+    <Compile Include="Infraestrutura\Persistencia\RepositorioEmpresaNHibernate.cs" />
+    <Compile Include="Infraestrutura\Persistencia\RepositorioEmpresa.cs" />
+    <Compile Include="Infraestrutura\Persistencia\RepositorioUsuarioNHIberante.cs" />
+    <Compile Include="Infraestrutura\Persistencia\RepositorioUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Persistencia\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

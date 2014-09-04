@@ -11,12 +11,16 @@ namespace HomeBrokerMBCorp.Dominio
             RazaoSocial = razaoSocial;
         }
 
-        public string CNPJ { get; private set; }
-        public string RazaoSocial { get; private set; }
-        public List<Acao> Acoes { get; private set; }
-        
-        
-        public void AdicionarAcao(Acao acao)
+        public Empresa()
+        {
+        }
+
+        public virtual string CNPJ { get; protected set; }
+        public virtual string RazaoSocial { get; protected set; }
+       public virtual IList<Acao> Acoes { get; protected set; }
+
+
+        public  virtual void AdicionarAcao(Acao acao)
         {
             ValidarAcao(acao);
             CriarListaDeAcoesCasoNaoExista();         
@@ -24,19 +28,16 @@ namespace HomeBrokerMBCorp.Dominio
             
         }
 
-        private void ValidarAcao(Acao acao)
+        protected virtual void ValidarAcao(Acao acao)
         {
             if (String.IsNullOrEmpty(acao.Codigo))
                 throw new Exception("Acao inválida!");
         }
 
-        private void CriarListaDeAcoesCasoNaoExista()
+        protected virtual void CriarListaDeAcoesCasoNaoExista()
         {
             if (Acoes == null)
-                Acoes = new List<Acao>();                    
+               Acoes = new List<Acao>();                    
         }
-
-
-
     }
 }

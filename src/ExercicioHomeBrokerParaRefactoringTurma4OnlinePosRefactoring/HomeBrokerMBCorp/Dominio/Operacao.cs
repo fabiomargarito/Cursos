@@ -59,9 +59,9 @@ namespace HomeBrokerMBCorp.Dominio
 
     class ServicoDeOperacao
     {
-        public Operacao GerarOperacao(Acao acao, Cotacao cotacao, List<Imposto> mpostos, int quantidade,Usuario usuario,TipoOperacao tipoOperacao)
+        public Operacao GerarOperacao(Acao acao, Cotacao cotacao, List<Imposto> mpostos, int quantidade,Usuario usuario,TipoOperacao tipoOperacao, Corretora corretora)
         {
-            return new Operacao(acao,cotacao.Preco,10,quantidade,usuario,tipoOperacao);
+            return new Operacao(acao,cotacao.Preco,10,usuario,corretora,tipoOperacao);
         }
          
     }
