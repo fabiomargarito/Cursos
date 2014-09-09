@@ -10,10 +10,13 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:GridView ID="GridView1" runat="server">
+    </div>
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:Button ID="BtnGravar" runat="server" Height="29px" OnClick="BtnGravar_Click" Text="Gravar" />
+    
+        <asp:GridView ID="GridView1" runat="server" style="margin-bottom: 0px">
         </asp:GridView>
     
-    </div>
     </form>
 </body>
 </html>

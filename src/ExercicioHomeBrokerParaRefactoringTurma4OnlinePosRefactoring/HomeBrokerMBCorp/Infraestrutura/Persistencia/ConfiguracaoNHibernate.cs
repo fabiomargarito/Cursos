@@ -13,10 +13,11 @@ namespace HomeBrokerMBCorp.Infraestrutura.Persistencia
         {
             ISessionFactory sessionFactory = Fluently.Configure()
                 .Mappings(mapeamento => mapeamento.FluentMappings.AddFromAssemblyOf<MapeamentoAcao>())
-                .Mappings(mapeamento => mapeamento.FluentMappings.AddFromAssemblyOf<MapeamentoEmpresa>())                
+                .Mappings(mapeamento => mapeamento.FluentMappings.AddFromAssemblyOf<MapeamentoEmpresa>())
+                .Mappings(mapeamento => mapeamento.FluentMappings.AddFromAssemblyOf<MapeamentoUsuario>())    
                 .Database(                    
                     MsSqlConfiguration.MsSql2012.ConnectionString(conexao => conexao.FromConnectionStringWithKey("MBCORP")))
-                  //  .ExposeConfiguration(config => new SchemaExport(config).SetOutputFile(@"C:\Users\Fabio\Dropbox\SchemaBancoDeDados.sql").Execute(true, true, false))
+                   .ExposeConfiguration(config => new SchemaExport(config).SetOutputFile(@"C:\Users\Fabio\Dropbox\SchemaBancoDeDados.sql").Execute(true, true, false))
                     .BuildSessionFactory();
 
             return sessionFactory;
@@ -31,6 +32,18 @@ namespace HomeBrokerMBCorp.Infraestrutura.Persistencia
             Id(chave => chave.Codigo).Column("CODIGOACAO");
             Map(campo => campo.Tipo).Column("TIPOACAO").Not.Nullable();            
             Table("ACAO");
+        }
+    }
+
+
+
+    public class MapeamentoUsuario : ClassMap<Usuario>
+    {
+        public MapeamentoUsuario()
+        {
+            Id(chave => chave.CPF).Column("CPF");
+            Map(campo => campo.Nome).Column("NOME").Not.Nullable();
+            Table("USUARIO");
         }
     }
 

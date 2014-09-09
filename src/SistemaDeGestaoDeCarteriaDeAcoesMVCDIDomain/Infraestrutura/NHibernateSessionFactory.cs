@@ -20,7 +20,7 @@ namespace Infraestrutura
                 .Database(                    
                     MsSqlConfiguration.MsSql2008.ConnectionString(
                         c=>c.FromConnectionStringWithKey("GestaoDeCarteiraDBContext")))
-               // .ExposeConfiguration(config => new SchemaExport(config).SetOutputFile(@"C:\Users\Fabio\Dropbox\Treinamentos\Grupo JBS - Fundamentos Em Arquitetura de Software\AplicacaoExemplo\SchemaBancoDeDadosAula.sql").Execute(true, true, false))
+                //.ExposeConfiguration(config => new SchemaExport(config).SetOutputFile(@"C:\Users\Fabio\Dropbox\SchemaBancoDeDados.sql").Execute(true, true, false))
                         .BuildSessionFactory();
 
             return sessionFactory;

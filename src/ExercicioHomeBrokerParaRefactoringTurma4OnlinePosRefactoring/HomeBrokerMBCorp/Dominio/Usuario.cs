@@ -13,12 +13,12 @@ namespace HomeBrokerMBCorp.Dominio
             Nome = nome;
         }
 
-        protected Usuario()
+        public Usuario()
         {
-            throw new NotImplementedException();
+            
         }
 
-        private void ValidarDadosDoUsuario(string cpf,string nome)
+        protected virtual void ValidarDadosDoUsuario(string cpf,string nome)
         {
              if (string.IsNullOrEmpty(cpf))
                 throw new ArgumentNullException("Favor informar o cpf");
@@ -28,8 +28,8 @@ namespace HomeBrokerMBCorp.Dominio
         }
 
 
-        public string CPF { get; set; }
-        public string Nome { get; set; }
+        public virtual string CPF { get; protected set ; }
+        public virtual string Nome { get; protected set ; }
     }
 
 

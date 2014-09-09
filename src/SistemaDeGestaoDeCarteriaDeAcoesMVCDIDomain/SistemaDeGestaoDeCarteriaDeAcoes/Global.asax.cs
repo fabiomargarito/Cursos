@@ -31,11 +31,11 @@ namespace SistemaDeGestaoDeCarteriaDeAcoes
             
             AuthConfig.RegisterAuth();
             
-            UnityControleFactory factory = new UnityControleFactory();
-            ControllerBuilder.Current.SetControllerFactory(factory);            
+            //UnityControleFactory factory = new UnityControleFactory();
+            //ControllerBuilder.Current.SetControllerFactory(factory);            
            
-            //NinjectControleFactory factoryNinject = new NinjectControleFactory();
-            //ControllerBuilder.Current.SetControllerFactory(factoryNinject);
+            NinjectControleFactory factoryNinject = new NinjectControleFactory();
+            ControllerBuilder.Current.SetControllerFactory(factoryNinject);
 
             
         }

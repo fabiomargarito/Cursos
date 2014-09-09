@@ -1,5 +1,5 @@
 ﻿@using Domain
-@model  IList<Acao>
+@model  IList<UI.View.ViewModel.AcaoViewModel>
 @{
     ViewBag.Title = "Index";
 }
@@ -20,9 +20,9 @@
        
             <td>@Html.DisplayFor(model=> acao.Codigo)</td>
             <td>@Html.DisplayFor(model=> acao.Empresa.CNPJEmpresa)</td>
-            <td>@Html.DisplayFor(model=> acao.Empresa.Razaosocial)</td>
+            <td>@Html.DisplayFor(model=> acao.Empresa.Razaosocial)</td>            
             <td>
-                @Html.ActionLink("Editar","Editar",new {acao.Codigo},null)                
+                   
                 @Html.ActionLink("Excluir","ExcluirAcao",new {acao.Codigo},null)
             </td>
         </tr>

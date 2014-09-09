@@ -173,11 +173,11 @@ namespace HomeBrokerMBCorpUnitTest
         {
 
             //Arrange
-            UsuarioService usuarioService = new UsuarioService();
+            UsuarioService usuarioService = new UsuarioService(new RepositorioUsuarioFake());
             
 
             //Act
-            usuarioService.Gravar("1234", "fabio margarito",new RepositorioUsuarioFake());
+            usuarioService.Gravar("1234", "fabio margarito");
 
             //Assert
             Assert.IsTrue( (new RepositorioUsuarioFake()).RetornarPorID("1234").Nome == "Fabio Margarito");

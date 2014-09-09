@@ -6,12 +6,18 @@ namespace HomeBrokerMBCorp.Dominio.Servicos
 {
     public class UsuarioService
     {
-        
-        public void Gravar(String cpf, string Nome, IRepositorio<Usuario> repositorio )
-        {
-            var usuario = new Usuario(cpf, Nome);
+        private readonly IRepositorio<Usuario> _repositorio;
 
-            repositorio.Gravar(usuario);
+        public UsuarioService(IRepositorio<Usuario> repositorio )
+        {
+            _repositorio = repositorio;
+        }
+
+        public void Gravar(String cpf, string nome )
+        {
+            var usuario = new Usuario(cpf, nome);
+
+            _repositorio.Gravar(usuario);
         }
     }
 }

@@ -17,8 +17,8 @@ namespace Infraestrutura
 
             this.Container = new UnityContainer();
 
-            this.Container.RegisterType(typeof(IRepositorio<Acao>), typeof(RepositorioAcaoNHibernate));
-            this.Container.RegisterType(typeof(IRepositorio<Empresa>), typeof(RepositorioEmpresaNHibernate));
+            this.Container.RegisterType(typeof(IRepositorio<Acao>), typeof(RepositorioAcaoEntity));
+            this.Container.RegisterType(typeof(IRepositorio<Empresa>), typeof(RepositorioEmpresaEntity));
             
             
             this.Container.RegisterType(typeof(IController), typeof(AcaoController),"Acao");

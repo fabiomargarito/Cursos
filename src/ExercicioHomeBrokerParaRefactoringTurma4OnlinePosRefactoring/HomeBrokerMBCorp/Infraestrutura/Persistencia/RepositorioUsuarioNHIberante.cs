@@ -9,6 +9,11 @@ namespace HomeBrokerMBCorp.Infraestrutura.Persistencia
 
         public void Gravar(Usuario usuario)
         {
+            using (var session = (new ConfiguracaoNHibernate()).CriarSessionFactory().OpenSession())
+            {
+                session.SaveOrUpdate(usuario);
+                session.Flush();
+            }
         }
 
         public IList<Usuario> ListarTodos()

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public interface IAcaoView{
-        List<Acao> acoes { get; set; }        
+    public class EmpresaViewModel
+    {
+        public string CNPJEmpresa { get; set; }
+        public string Razaosocial { get; set; }
     }
 }

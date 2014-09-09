@@ -52,9 +52,9 @@ namespace Infraestrutura
     {
         private GestaoDeCarteiraDBContext _contextoDeBancoDeDados;
 
-        public RepositorioAcaoEntity(GestaoDeCarteiraDBContext contextoDeBancoDeDados)
+        public RepositorioAcaoEntity()
         {
-            _contextoDeBancoDeDados = contextoDeBancoDeDados;
+            _contextoDeBancoDeDados = new GestaoDeCarteiraDBContext();
         }
 
         public void Gravar(Acao entidade)
@@ -80,6 +80,7 @@ namespace Infraestrutura
 
         public IList<Acao> ListarTodos()
         {
+            _contextoDeBancoDeDados = new GestaoDeCarteiraDBContext();
             return _contextoDeBancoDeDados.Acao.ToList();            
         }
 
@@ -122,7 +123,7 @@ namespace Infraestrutura
         {
             using (ISession session = NHibernateSessionFactory.Criar().OpenSession())
             {
-                return session.Query<Acao>().Select(acao => acao).Where(aco=>aco.Codigo=="PETR3").ToList();
+                return session.Query<Acao>().Select(acao => acao).ToList();
             }
         }
 
