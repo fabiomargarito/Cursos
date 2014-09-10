@@ -8,8 +8,8 @@ namespace MBCORPHealthTests
         public Paciente(string nome, string cpf)
         {
 
-            if (string.IsNullOrEmpty(nome)) throw new Exception("nome inválido");
-            if (string.IsNullOrEmpty(cpf)) throw new Exception("cpf inválido");
+            //if (string.IsNullOrEmpty(nome)) throw new Exception("nome inválido");
+            //if (string.IsNullOrEmpty(cpf)) throw new Exception("cpf inválido");
 
             Nome = nome;
             CPF = cpf;

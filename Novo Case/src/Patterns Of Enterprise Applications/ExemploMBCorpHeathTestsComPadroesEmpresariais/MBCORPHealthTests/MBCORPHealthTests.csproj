@@ -71,6 +71,7 @@
     <Compile Include="Dominio\ConsultaCepCorporativo.cs" />
     <Compile Include="Dominio\ConsultaCepCorreio.cs" />
     <Compile Include="Dominio\Contratos\IServicoConsultaCoberturaPlano.cs" />
+    <Compile Include="Dominio\Contratos\IRepositorio.cs" />
     <Compile Include="Dominio\Medico.cs" />
     <Compile Include="Dominio\CredencialAcesso.cs" />
     <Compile Include="Dominio\Endereco.cs" />
@@ -79,16 +80,21 @@
     <Compile Include="Dominio\PlanoSaude.cs" />
     <Compile Include="Dominio\Resultado.cs" />
     <Compile Include="Dominio\ServicoConsultaCoberturaPlanoPortoSeguro.cs" />
+    <Compile Include="Dominio\Servico\ServicoPersistenciaPaciente.cs" />
     <Compile Include="Dominio\TipoExame.cs" />
     <Compile Include="Dominio\TipoServico.cs" />
     <Compile Include="Infraestrutura\ConfiguracaoNHibernate.cs" />
+    <Compile Include="Infraestrutura\RepositorioMedico.cs" />
+    <Compile Include="Infraestrutura\RepositorioPaciente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\PacienteDTO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Diagrama.cd" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -13,9 +13,6 @@ namespace MBCORPHealthTests
             return true;
         }
 
-        public virtual bool ConsultarTipoDePlanoDoPaciente(Paciente paciente)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBCORPHealthTests", "MBCORPHealthTests\MBCORPHealthTests.csproj", "{1B361E94-8C3A-4AEA-BA88-0F2C5018E309}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExemploMBCORPHealthTestsCommandLine", "..\ExemploMBCorpHeathTestsParaRefactoring\ExemploMBCORPHealthTestsCommandLine.csproj", "{51BD6D8D-F2E5-43CF-9E01-BEA43013083F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesUnitarios", "TestesUnitarios\TestesUnitarios.csproj", "{61A5ACAE-90F9-4302-B03C-D7487802549D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesIntegrados", "TestesIntegrados\TestesIntegrados.csproj", "{B1BE502A-8D47-471C-9806-150608BBCE7D}"
@@ -25,10 +23,6 @@ Global
 		{1B361E94-8C3A-4AEA-BA88-0F2C5018E309}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B361E94-8C3A-4AEA-BA88-0F2C5018E309}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B361E94-8C3A-4AEA-BA88-0F2C5018E309}.Release|Any CPU.Build.0 = Release|Any CPU
-		{51BD6D8D-F2E5-43CF-9E01-BEA43013083F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{51BD6D8D-F2E5-43CF-9E01-BEA43013083F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{51BD6D8D-F2E5-43CF-9E01-BEA43013083F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{51BD6D8D-F2E5-43CF-9E01-BEA43013083F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{61A5ACAE-90F9-4302-B03C-D7487802549D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{61A5ACAE-90F9-4302-B03C-D7487802549D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61A5ACAE-90F9-4302-B03C-D7487802549D}.Release|Any CPU.ActiveCfg = Release|Any CPU

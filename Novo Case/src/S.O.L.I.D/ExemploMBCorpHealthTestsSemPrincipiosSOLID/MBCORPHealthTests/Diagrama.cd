@@ -7,9 +7,9 @@
       <FileName>Dominio\Agendamento.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="MedicoSolicitante" />
-      <Property Name="Paciente" />
       <Property Name="Atendente" />
+      <Property Name="Paciente" />
+      <Property Name="MedicoSolicitante" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="Exames" />
@@ -43,8 +43,8 @@
       <FileName>Dominio\Exame.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Resultado" />
       <Property Name="TipoExame" />
+      <Property Name="Resultado" />
     </ShowAsAssociation>
   </Class>
   <Class Name="MBCORPHealthTests.Medico">
