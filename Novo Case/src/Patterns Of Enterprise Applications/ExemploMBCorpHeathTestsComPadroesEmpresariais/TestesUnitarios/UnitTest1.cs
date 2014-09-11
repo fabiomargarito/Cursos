@@ -56,11 +56,16 @@ namespace TestesUnitarios
         public void DeveGravarUmMedico()
         {
             //Arrange
-            IRepositorio<Medico> repositorioMedico = new RepositorioMedico();
+            IRepositorio<Medico> repositorioMedico = new RepositorioMedicoNHibernate();
+
+            var servicoPersistenciaMedico = new ServicoPersistenciaMedico(repositorioMedico);
 
             //Act
-            var medico= new Medico("123", "Medico");
-            var retorno = repositorioMedico.Gravar(medico);
+            var medico= new MedicoDto();
+            medico.CRM = Guid.NewGuid().ToString();
+            medico.NOME = "fabio";
+
+            var retorno = servicoPersistenciaMedico.Gravar(medico);
 
             //Assert
             Assert.IsTrue(retorno);
@@ -70,7 +75,7 @@ namespace TestesUnitarios
         public void DeveRetornarTodosOsMedicos()
         {
             //Arrange
-            IRepositorio<Medico> repositorioMedico = new RepositorioMedico();
+            IRepositorio<Medico> repositorioMedico = new RepositorioMedicoNHibernate();
 
             //Act
 

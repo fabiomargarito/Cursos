@@ -80,13 +80,18 @@
     <Compile Include="Dominio\PlanoSaude.cs" />
     <Compile Include="Dominio\Resultado.cs" />
     <Compile Include="Dominio\ServicoConsultaCoberturaPlanoPortoSeguro.cs" />
+    <Compile Include="Dominio\Servico\ServicoPersistenciaMedico.cs" />
     <Compile Include="Dominio\Servico\ServicoPersistenciaPaciente.cs" />
     <Compile Include="Dominio\TipoExame.cs" />
     <Compile Include="Dominio\TipoServico.cs" />
     <Compile Include="Infraestrutura\ConfiguracaoNHibernate.cs" />
-    <Compile Include="Infraestrutura\RepositorioMedico.cs" />
+    <Compile Include="Infraestrutura\RepositorioMedicoNHibernate.cs" />
+    <Compile Include="Infraestrutura\RepositorioMedicoMock.cs" />
     <Compile Include="Infraestrutura\RepositorioPaciente.cs" />
+    <Compile Include="Presenter\MedicoPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\IMedicoView.cs" />
+    <Compile Include="View\MedicoDto.cs" />
     <Compile Include="View\PacienteDTO.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -2,6 +2,7 @@
 using FluentNHibernate.Cfg.Db;
 using FluentNHibernate.Mapping;
 using NHibernate;
+using NHibernate.Mapping;
 using NHibernate.Tool.hbm2ddl;
 
 namespace MBCORPHealthTests.Infraestrutura
@@ -15,16 +16,16 @@ namespace MBCORPHealthTests.Infraestrutura
                 .Mappings(map => map.FluentMappings.AddFromAssemblyOf<MapeamentoCredencialDeAcesso>())
                 .Mappings(map => map.FluentMappings.AddFromAssemblyOf<MapeamentoPlanoDeSaude>())
                 .Mappings(map => map.FluentMappings.AddFromAssemblyOf<MapeamentoPaciente>())   
-                .Database(
-                    MsSqlConfiguration.MsSql2008.ConnectionString(
+                .Mappings(map=>map.FluentMappings.AddFromAssemblyOf<MapeamentoMedico>())
+                .Database(                    
+                    MsSqlConfiguration.MsSql2012.ConnectionString(
                         c => c.FromConnectionStringWithKey("MBCORPHealthDB")))
-                .ExposeConfiguration(config => new SchemaExport(config).SetOutputFile(@"C:\Users\Fabio\Dropbox\SchemaBancoDeDados.sql").Execute(true, true, false))
+                //.ExposeConfiguration(config => new SchemaExport(config).SetOutputFile(@"C:\Users\Fabio\Dropbox\SchemaBancoDeDados.sql").Execute(true, true, false))
                 .BuildSessionFactory();
 
             return sessionFactory;
         }
     }
-
 
     public class MapeamentoEndereco : ClassMap<Endereco>
     {
@@ -41,7 +42,6 @@ namespace MBCORPHealthTests.Infraestrutura
             
         }
     }
-
 
     public class MapeamentoPlanoDeSaude : ClassMap<PlanoSaude>
     {
@@ -64,19 +64,29 @@ namespace MBCORPHealthTests.Infraestrutura
         }
     }
 
-
-
     public class MapeamentoPaciente : ClassMap<Paciente>
     {
         public MapeamentoPaciente()
         {
             Id(chave => chave.CPF).Column("CPF");
-            Map(campo => campo.Nome).Column("NOME");
-            References(campo => campo.Endereco).ForeignKey("IDENDERECO").Cascade.SaveUpdate();
+            Map(campo => campo.Nome).Column("NOME");                        
+            References(campo => campo.Endereco).ForeignKey("IDENDERECO").Cascade.SaveUpdate();                        
             References(campo => campo.PlanoSaude).ForeignKey("CNPJ").Cascade.SaveUpdate();
-            References(campo => campo.CredencialAcesso).ForeignKey("IDCREDENCIALACESSO").Cascade.SaveUpdate();
+            References(campo => campo.CredencialAcesso).ForeignKey("IDCREDENCIALACESSO").Cascade.SaveUpdate();            
+            LazyLoad();
             Table("PACIENTE");
         }
     }
+
+    public class MapeamentoMedico : ClassMap<Medico>
+    {        
+        public MapeamentoMedico()
+        {
+            Id(chave => chave.CRM).Column("CRM");
+            Map(campo => campo.Nome).Column("NOME");
+            Table("MEDICO");
+        }
+    }
+
 
 }
