@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaMBCORPHealthTestsWeb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBCorpWindows", "MBCorpWindows\MBCorpWindows.csproj", "{AECABBCC-CA55-41C5-B6E0-3A8D030FE778}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC", "MVC\MVC.csproj", "{285C06A1-9306-473D-A280-1DE70D01C700}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC.Tests", "MVC.Tests\MVC.Tests.csproj", "{5B09ACF2-1888-4838-8C13-623B0BBD122F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{AECABBCC-CA55-41C5-B6E0-3A8D030FE778}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AECABBCC-CA55-41C5-B6E0-3A8D030FE778}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AECABBCC-CA55-41C5-B6E0-3A8D030FE778}.Release|Any CPU.Build.0 = Release|Any CPU
+		{285C06A1-9306-473D-A280-1DE70D01C700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{285C06A1-9306-473D-A280-1DE70D01C700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{285C06A1-9306-473D-A280-1DE70D01C700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{285C06A1-9306-473D-A280-1DE70D01C700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B09ACF2-1888-4838-8C13-623B0BBD122F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B09ACF2-1888-4838-8C13-623B0BBD122F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B09ACF2-1888-4838-8C13-623B0BBD122F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B09ACF2-1888-4838-8C13-623B0BBD122F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

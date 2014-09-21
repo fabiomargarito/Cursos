@@ -53,6 +53,7 @@
     <Compile Include="Dominio\PlanoSaude.cs" />
     <Compile Include="Dominio\Resultado.cs" />
     <Compile Include="Dominio\ServicoConsultaCoberturaPlanoPortoSeguro.cs" />
+    <Compile Include="Dominio\ServicoDeAgendamento.cs" />
     <Compile Include="Dominio\TipoExame.cs" />
     <Compile Include="Dominio\TipoServico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -17,11 +17,11 @@ namespace MBCORPHealthTests
         public Paciente Paciente { get; private set; }
         public IList<Exame> Exames { get; private set; }
         public Medico MedicoSolicitante { get; private set; }
-        
 
 
         public void AdicionarExame(Exame exame)
-        {            
+        {
+            if (exame == null) throw new ArgumentNullException("exame");
 
             if (Exames == null)
                 Exames= new List<Exame>();

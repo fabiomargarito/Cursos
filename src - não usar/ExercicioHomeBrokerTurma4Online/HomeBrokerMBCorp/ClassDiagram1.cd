@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HomeBrokerMBCorp.Dominio.BolsaDeValores">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Dominio\BolsaDeValores.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HomeBrokerMBCorp.Dominio.Acao">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Dominio\Acao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HomeBrokerMBCorp.Dominio.Corretora">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAIAAAEAAAAAEEQAgA=</HashCode>
+      <FileName>Dominio\Corretora.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HomeBrokerMBCorp.Dominio.Usuario" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Dominio\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HomeBrokerMBCorp.Dominio.Carteira">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAEAAAACAAAAAAQAAAAAAAAABAAEAAAAAAA=</HashCode>
+      <FileName>Dominio\Carteira.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HomeBrokerMBCorp.Dominio.Operacao">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAEAAAABEAAQEEAAAAAAAAAACUAAAAAAA=</HashCode>
+      <FileName>Dominio\Operacao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HomeBrokerMBCorp.Dominio.Ordem">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAACUAAgAAAA=</HashCode>
+      <FileName>Dominio\Ordem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TipoOperacao" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="HomeBrokerMBCorp.Dominio.Cotacao" Collapsed="true">
+    <Position X="9.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACCAgAQAAAAAAAAAAAAAIEEAAAAAA=</HashCode>
+      <FileName>Dominio\Cotacao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HomeBrokerMBCorp.Dominio.Empresa">
+    <Position X="4" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEACAAAAAAAAEAAIAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Dominio\Empresa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="HomeBrokerMBCorp.Dominio.TipoCusto">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAQAAAgAAAAAAACAAAAAAQACAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Dominio\TipoCusto.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="HomeBrokerMBCorp.Dominio.TipoOperacao" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Dominio\TipoOperacao.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
