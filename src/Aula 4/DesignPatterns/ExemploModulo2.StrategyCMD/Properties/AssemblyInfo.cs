@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MBCorpHealth")]
+[assembly: AssemblyTitle("ExemploModulo2.StrategyCMD")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MBCorpHealth")]
+[assembly: AssemblyProduct("ExemploModulo2.StrategyCMD")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6cccb472-6c2c-46c1-9fd2-c59e50455588")]
+[assembly: Guid("d9f552e3-cb90-4b0b-b314-1647757305da")]
 
 // Version information for an assembly consists of the following four values:
 //
