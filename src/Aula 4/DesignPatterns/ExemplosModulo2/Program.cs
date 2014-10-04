@@ -11,7 +11,7 @@ namespace ExemplosModulo2
         static void Main(string[] args)
         {
 
-            var Conexao = ConexaoBanco.Criar().DefinirStringConexao("teste").RetornarConexao();
+            var nomeDoBAnco = Configuracao.RetornarConfiguracao().RetornarNomeDoBancoDeDados();
 
 
             Console.WriteLine(Configuracao.RetornarConfiguracao().RetornarNomeDoBancoDeDados());
@@ -24,12 +24,11 @@ namespace ExemplosModulo2
             Console.WriteLine("Por ser a mesma instância, o objeto ficou na memória!!!");
             Console.ReadKey();
 
-
-
-
-
-            var sqlConnection = Conexao.CriarConexao().RetornarConexao();
-            var sqlConnectionModelo2 = ConexaoModelo2.RetornarConexao();
+            
         }
+
+
+
+
     }
 }

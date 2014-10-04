@@ -9,7 +9,7 @@ namespace ExemplosModulo2.Adapter
     {
         private static void Main(string[] args)
         {
-            Pagamento meioDePagamentoCartao = new CartaoVisa();
+            Pagamento meioDePagamentoCartao = new CartaoCredito();
             meioDePagamentoCartao.EfetuarPagamento(100);
           
             Console.ReadKey();

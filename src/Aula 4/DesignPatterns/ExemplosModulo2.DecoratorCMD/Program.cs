@@ -19,9 +19,10 @@ namespace ExemplosModulo2.DecoratorCMD
             Ingrediente tomate = new Tomate(atum);
             Ingrediente aliche = new Aliche(tomate);
             Ingrediente molhoextra = new MolhoExtra(aliche);
+            Ingrediente queijo = new QueijoExtra(molhoextra);
                                
 
-            Console.WriteLine(String.Format("Valor Total da Pizza: {0}",  molhoextra.RetornarPreco()));
+            Console.WriteLine(String.Format("Valor Total da Pizza: {0}",  queijo.RetornarPreco()));
                                   
             Console.ReadKey();
 

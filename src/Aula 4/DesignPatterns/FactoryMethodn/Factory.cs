@@ -89,9 +89,24 @@ namespace FactoryMethod
         }
     }
 
+
+    //concre Product
+    public class RepositorioDeMedicos: IRepositorio
+    {
+        public void Salvar(Entidade Entidade)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IList<Entidade> Retornar(Entidade Entidade)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
     //Creator
     public interface IFabricaDeRepositorio
-    {
+    {   
         IRepositorio CriarRepositorio(TipoDeRepositorio tipoDeRepositorio);
     }
 
@@ -108,8 +123,6 @@ namespace FactoryMethod
             }
         }
     }
-
-
 
     //Concrete Creator Factory
     public class FabricaDeRepositorioAdonet:IFabricaDeRepositorio

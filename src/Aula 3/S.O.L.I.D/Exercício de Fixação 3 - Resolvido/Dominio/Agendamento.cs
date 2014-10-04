@@ -34,30 +34,29 @@ namespace MBCorpHealth.Dominio
 
         public void AdicionarExame(Exame exame)
         {
-            if (Exames == null)
-                Exames = new HashSet<Exame>();
-
-            if (String.IsNullOrEmpty(exame.TipoExame.NomeExame))
-                throw new ArgumentException("Exame Inválido");
+            
+            ValidarDadosParaAgendamento(exame);
 
             if (Paciente.PlanoDeSaude.VerificarCobertura(exame) == true)
                 exame.InformarValorDoExame(0);
             
             Exames.Add(exame);
         }
-           
+
+        public void ValidarDadosParaAgendamento(Exame exame)
+        {
+            if (Exames == null)
+                Exames = new HashSet<Exame>();
+
+            if (String.IsNullOrEmpty(exame.TipoExame.NomeExame))
+                throw new ArgumentException("Exame Inválido");
+
+        }
+
         public double RetornarValorTotalDoAgendamento()
         {
             return double.MinValue + Exames.Sum(exame => exame.ValorDoExame);
         }
         
-    }
-
-    public enum TipoServicoDeConsulta
-    {
-        ServicoCorporativo,
-        ServicoCorreios,
-        ServicoCorporativoAtual,
-        ServicoCorporativoAtualAtualizado
     }
 }

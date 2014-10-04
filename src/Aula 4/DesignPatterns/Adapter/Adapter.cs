@@ -34,9 +34,8 @@ namespace Adapter
         }
     }
 
+
     
-
-
 
 
     //Adaptee

@@ -2,7 +2,6 @@
 {
     interface IServicoDePagamento
     {
-        bool RealizarPagamento(Cartao cartao, double valor);
-        
+        bool RealizarPagamento(Cartao cartao, double valor);        
     }
 }

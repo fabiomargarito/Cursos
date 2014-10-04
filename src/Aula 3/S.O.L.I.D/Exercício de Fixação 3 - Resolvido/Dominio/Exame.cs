@@ -42,14 +42,7 @@ namespace MBCorpHealth.Dominio
             if (resultado == null)
                 throw new ArgumentNullException("É necessário informar um resultado de exame válido!");
 
-            if (string.IsNullOrEmpty(resultado.Descricao))
-                throw new ArgumentException("É necessário informar uma descrição válida!");
 
-            if (resultado.MedicoResponsavel==null)
-                throw new ArgumentNullException("É necessário informar um médico!");
-
-            if (resultado.Data>DateTime.MinValue)
-                throw new ArgumentException(string.Format("É necessário informar uma data válida {0}!",resultado.Data));
         }
     }
 }

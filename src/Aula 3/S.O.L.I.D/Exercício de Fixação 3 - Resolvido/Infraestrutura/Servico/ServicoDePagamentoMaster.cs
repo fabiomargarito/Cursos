@@ -16,14 +16,5 @@ namespace MBCorpHealth.Infraestrutura.Servico
             return true;
         }
 
-        public bool RealizarPagamento2(Cartao cartao, double valor)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool RealizarPagamento3(Cartao cartao, double valor)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

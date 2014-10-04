@@ -12,6 +12,7 @@ namespace MBCorpHealth.Dominio
 
         public Resultado(Medico medicoResponsavel, DateTime data, string descricao)
         {
+            ValidarDadosParaCriacaoDoResultado(medicoResponsavel,data,descricao);
             MedicoResponsavel = medicoResponsavel;
             Data = data;
             Descricao = descricao;

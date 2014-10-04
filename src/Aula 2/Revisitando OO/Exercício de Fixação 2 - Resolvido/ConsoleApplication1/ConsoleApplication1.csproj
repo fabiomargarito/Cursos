@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C7CF09A9-11CD-4C93-B3D2-55871ABB64CB}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{8CC9C0B6-6DA7-409E-8952-E566FC46B54C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MBCorpHealth</RootNamespace>
-    <AssemblyName>MBCorpHealth</AssemblyName>
+    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <AssemblyName>ConsoleApplication1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -39,38 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dominio\Agendamento.cs" />
-    <Compile Include="Dominio\Atendente.cs" />
-    <Compile Include="Dominio\Cartao.cs" />
-    <Compile Include="Dominio\Contratos\IServicoDePagamento.cs" />
-    <Compile Include="Dominio\Credencial.cs" />
-    <Compile Include="Dominio\Endereco.cs" />
-    <Compile Include="Dominio\Especializacao.cs" />
-    <Compile Include="Dominio\Exame.cs" />
-    <Compile Include="Dominio\Medico.cs" />
-    <Compile Include="Dominio\Paciente.cs" />
-    <Compile Include="Dominio\Pagamento.cs" />
-    <Compile Include="Dominio\Pessoa.cs" />
-    <Compile Include="Dominio\PlanoDeSaude.cs" />
-    <Compile Include="Dominio\Resultado.cs" />
-    <Compile Include="Dominio\Contratos\ServicoConsultaEndereco.cs" />
-    <Compile Include="Infraestrutura\Servico\ServicoConsultaEnderecoCorporativo.cs" />
-    <Compile Include="Infraestrutura\Servico\ServicoConsultaEnderecoCorporativoAtual.cs" />
-    <Compile Include="Infraestrutura\Servico\ServicoConsultaEnderecoCorporativoAtualAtualizado.cs" />
-    <Compile Include="Infraestrutura\Servico\ServicoConsultaEnderecoCorreios.cs" />
-    <Compile Include="Dominio\TipoExame.cs" />
-    <Compile Include="Dominio\TipoCliente.cs" />
-    <Compile Include="Dominio\TipoServicoDeConsulta.cs" />
-    <Compile Include="Infraestrutura\Servico\ServicoDePagamentoDinners.cs" />
-    <Compile Include="Infraestrutura\Servico\ServicoDePagamentoVisa.cs" />
-    <Compile Include="Infraestrutura\Servico\ServicoDePagamentoMaster.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DiagramaDeClasses.cd" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Aplicacao\" />
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

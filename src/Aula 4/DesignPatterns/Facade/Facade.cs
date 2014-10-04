@@ -20,7 +20,7 @@ namespace Facade
     public bool PossuiRestricao(Cliente cliente)
     {
       Console.WriteLine(string.Format("Verificando se o cliente {0} não possui restrição no SERASA ", cliente.Nome ) );
-      return true;
+      return false;
     }
   }
  
@@ -56,7 +56,7 @@ namespace Facade
         ehElegivel = false;
 
 
-        if (!_spc.PossuiRestricao(cliente))
+        if (_spc.PossuiRestricao(cliente))
             ehElegivel = false;
         
 

@@ -42,6 +42,12 @@ namespace Observer
     }
 
 
+
+
+
+
+     
+
     public double Preco
     {
       get { return _preco; }
@@ -61,9 +67,9 @@ namespace Observer
   }
   
   //Concrete Subject
-  public class VALE : Acao
+  public class VALE3 : Acao
   {
-    public VALE(string codigo, double preco): base(codigo, preco)
+    public VALE3(string codigo, double preco): base(codigo, preco)
     {
     }
   }
@@ -123,7 +129,7 @@ namespace Observer
       }
       public void Atualizar(Acao acao)
       {
-          Console.WriteLine("Notificado {0}  CNPJ {1} da  mudança da ação {2}  para o valor {3:C}", _nome,_cnpj, acao.Codigo, acao.Preco);
+          Console.WriteLine("Notificado {0}  CNPJ {1} da  mudança da ação {2}  para o valor {3:C}", _nome,_cnpj, acao.Codigo, acao.Preco);          
           _servicoCompraDeAcao.Comprar(acao);
       }
   }

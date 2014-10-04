@@ -12,7 +12,7 @@ namespace FactoryMethod
 
             
             
-            var fabricaDeRepositorio = new FactoryMethod.FabricaDeRepositorioEntityFramework();
+            IFabricaDeRepositorio fabricaDeRepositorio = new FactoryMethod.FabricaDeRepositorioEntityFramework();
                        
             
             IRepositorio repositorioDeCliente = fabricaDeRepositorio.CriarRepositorio(TipoDeRepositorio.CLIENTE);

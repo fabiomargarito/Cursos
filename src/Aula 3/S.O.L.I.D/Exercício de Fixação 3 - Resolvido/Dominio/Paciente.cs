@@ -12,6 +12,7 @@ namespace MBCorpHealth.Dominio
 
         public void DefinirPlanoDeSaude(PlanoDeSaude planoDeSaude)
         {
+          ValidarPlanoDeSaude(planoDeSaude);
             PlanoDeSaude = planoDeSaude;
         }
 

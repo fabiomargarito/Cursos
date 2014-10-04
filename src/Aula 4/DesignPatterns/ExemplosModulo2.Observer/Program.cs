@@ -11,7 +11,7 @@ namespace ExemplosModulo2.Observer
         {
 
             //subject
-            Acao vale = new VALE("VALE3", 100);
+            Acao vale = new VALE3("VALE3", 100);
 
 
             vale.Cadastrar(new InvestidorPessoaFisica("Fabio Margarito"));
