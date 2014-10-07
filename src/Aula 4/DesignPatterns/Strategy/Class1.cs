@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace Strategy
 {
     public interface ICalculoIcm
     {
-        double CalcularImposto(double valor);
+        double CalcularImposto(double valor);        
     }
 
     public class CalculoICMSEspiritoSanto:ICalculoIcm
@@ -35,8 +36,20 @@ namespace Strategy
         }
     }
 
-
-
+    public class CalculoICMSPernanbuco : ICalculoIcm
+    {
+        public double CalcularImposto(double valor)
+        {
+            return valor * 0.3;
+        }
+    }
+    public class CalculoICMSParaiba : ICalculoIcm
+    {
+        public double CalcularImposto(double valor)
+        {
+            return valor * 0.6;
+        }
+    }
 
     public class FabricaICMS
     {
@@ -47,6 +60,8 @@ namespace Strategy
                     case Estado.SP:return new CalculoICMSSaoPaulo();
                     case Estado.RJ: return new CalculoICMSRioDeJaneiro();
                     case Estado.ES: return new CalculoICMSEspiritoSanto();
+                    case Estado.PE: return new CalculoICMSPernanbuco();
+                    case Estado.PB: return new CalculoICMSParaiba();
                 default: throw new Exception("Nehum estado selecionado");
             }
         }
@@ -56,7 +71,9 @@ namespace Strategy
     {
         SP,
         RJ,
-        ES
+        ES,
+        PE,
+        PB
     }
 
 
