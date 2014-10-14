@@ -15,7 +15,9 @@ namespace ExemploModulo3InjecaoDeDependencia
             [TestMethod]
             public void DeveRegistrarOperacaoDeCompraUtilizandoUnityConstructorInjection()
             {           
-                var container = new UnityContainer();               
+                var container = new UnityContainer(); 
+              
+
                 container.RegisterType<ILog, LogNovo>();
                 container.RegisterType <IRepositorio<Carteira>,RepositorioCarteiraFake>();
                 
@@ -31,6 +33,7 @@ namespace ExemploModulo3InjecaoDeDependencia
             public void DeveGravarCorretoraUtilizandoUnityMethodInjection()
             {
                 var container = new UnityContainer();
+                
                 container.RegisterType<IRepositorio<Corretora>, RepositorioCorretoraFake>();
                 
                 var corretora = container.Resolve<Corretora>();
@@ -43,14 +46,16 @@ namespace ExemploModulo3InjecaoDeDependencia
             public void DeveGravarCorretoraUtilizandoUnitySetterInjection()
             {
                 var container = new UnityContainer();
+
                 container.RegisterType<IRepositorio<Cliente>, RepositorioClienteFake>();
+                
+                
                 var cliente  = container.Resolve<Cliente>();
                 cliente.Nome = "Corretora Teste";
                 Assert.IsTrue(cliente.Gravar());
             }
 
         #endregion
-
        #region Ninject
             [TestMethod]
             public void DeveRegistrarOperacaoDeCompraUtilizandoNinjectConstructorInjection()
@@ -98,7 +103,9 @@ namespace ExemploModulo3InjecaoDeDependencia
         public void DeveRegistrarOperacaoDeCompraUtilizandoAutofacConstructorInjection()
         {
             var builder = new ContainerBuilder();
-            builder.RegisterType<CarteiraService>().AsSelf();
+
+
+            builder.RegisterType<CarteiraService>().AsSelf();                        
             builder.RegisterType<Log>().As<ILog>();
             builder.RegisterType<RepositorioCarteiraFake>().As<IRepositorio<Carteira>>();
             
@@ -138,6 +145,7 @@ namespace ExemploModulo3InjecaoDeDependencia
         {
 
             var builder = new ContainerBuilder();
+
             builder.RegisterType<RepositorioCorretoraFake>().As<IRepositorio<Corretora>>();
             builder.RegisterType<Corretora>().OnActivating(e =>
             {

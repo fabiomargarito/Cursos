@@ -18,9 +18,11 @@ namespace Domain
             _acaoView = acaoView;
             _repositorioAcao = repositorioAcao;
         }
+        
         public List<Acao> acoes = new List<Acao>();
+     
         public void retornarAcoes() { 
-            List<Acao> acoes = new List<Acao>();            
+            //List<Acao> acoes = new List<Acao>();            
             _acaoView.acoes = _repositorioAcao.ListarTodos().ToList();
 
         }

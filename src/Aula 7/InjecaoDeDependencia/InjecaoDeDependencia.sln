@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "ExemploHomeBroker\Dominio.csproj", "{032B4AA4-53CD-4E3E-8524-418329425A59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesUnitarios", "UnitTests\TestesUnitarios.csproj", "{3FB7655B-77B1-433A-B505-BABBD0CB2A8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{032B4AA4-53CD-4E3E-8524-418329425A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{032B4AA4-53CD-4E3E-8524-418329425A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{032B4AA4-53CD-4E3E-8524-418329425A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{032B4AA4-53CD-4E3E-8524-418329425A59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FB7655B-77B1-433A-B505-BABBD0CB2A8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FB7655B-77B1-433A-B505-BABBD0CB2A8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FB7655B-77B1-433A-B505-BABBD0CB2A8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FB7655B-77B1-433A-B505-BABBD0CB2A8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

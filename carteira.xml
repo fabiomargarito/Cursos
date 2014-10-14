@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <carteira>
+    <Acao>PETR4</Acao>
+    <Valor>0</Valor>
+    <Quantidade>12</Quantidade>
+    <ValorTotal>0</ValorTotal>
+  </carteira>
+  <carteira>
+    <Acao>PETR3</Acao>
+    <Valor>0</Valor>
+    <Quantidade>12</Quantidade>
+    <ValorTotal>130,43237675</ValorTotal>
+  </carteira>
+  <carteira>
+    <Acao>PETR4</Acao>
+    <Valor>0</Valor>
+    <Quantidade>12</Quantidade>
+    <ValorTotal>0</ValorTotal>
+  </carteira>
+  <carteira>
+    <Acao>PETR3</Acao>
+    <Valor>0</Valor>
+    <Quantidade>12</Quantidade>
+    <ValorTotal>130,43237675</ValorTotal>
+  </carteira>
+</NewDataSet>
