@@ -16,5 +16,10 @@ namespace MBCorpHealthUnitTest
         {
             throw new NotImplementedException();
         }
+
+        public List<Paciente> RetornarTodos()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

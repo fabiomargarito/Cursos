@@ -8,6 +8,33 @@ namespace MBCorpHealthUnitTest
     [TestClass]
     public class Infraestrutura
     {
+
+        [TestMethod]
+        public void DeveGravarUmCartao()
+        {
+            //Arrange
+            IRepositorio<Cartao> repositorioCartao = new RepositorioCartaoMock();
+            //Act
+            var retorno = repositorioCartao.Gravar(new Cartao("123", "fabio m m barros", "123"));
+            //Assert
+            Assert.IsTrue(retorno);
+        }
+
+
+        [TestMethod]
+        public void DeveRetornarTodosOsCartoes()
+        {
+            //Arrange
+            IRepositorio<Cartao> repositorioCartao = new RepositorioCartaoMock();
+            //Act
+            List<Cartao> retorno = repositorioCartao.RetornarTodos();
+            //Assert
+            Assert.IsTrue(retorno.Count >0);
+        }
+
+
+
+
         [TestMethod]
         public void DeveRetornarResultadosDeUmAgendamentoParaUmCliente()
         {
