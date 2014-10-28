@@ -1,0 +1,26 @@
+﻿@model MBCorpHealth.Dominio.Cartao
+
+@{
+    ViewBag.Title = "title";
+    
+}
+
+<h2>Cadastro de Cartões</h2>
+
+@using (Html.BeginForm()) { 
+<fieldset>
+    <legend>Cadastro de Cartões</legend>
+    
+    <div>@Html.Label("Código do Cartão")</div>
+    <div>@Html.EditorFor(model => model.NumeroDoCartao)</div>
+
+    <div>@Html.Label("Nome escrito no cartão")</div>
+    <div>@Html.EditorFor(model=>model.NomeConformeEscritoNoCartao)</div>
+    
+    <div>@Html.Label("Código de segurança")</div>
+    <div>@Html.EditorFor(model => model.CodigoDeSeguranca)</div>
+
+
+    <input type="submit" value="Criar" />
+</fieldset>
+}

@@ -1,0 +1,22 @@
+﻿@model List<MBCorpHealth.View.ViewModel.CartaoViewModel>
+
+@{
+    ViewBag.Title = "Cadastro de Cartões";
+}
+
+<h2>title</h2>
+
+
+
+@Html.ActionLink("Adicionar novo cartão", "Criar");
+
+<table>
+    @foreach (var cartao in Model)
+    {
+        <tr>            
+            <td>@Html.DisplayFor(model=>cartao.CodigoDeSeguranca)</td>
+            <td>@Html.DisplayFor(model => cartao.NomeConformeEscritoNoCartao)</td>
+            <td>@Html.ActionLink("Alterar", "Editar", new { cartao.NumeroDoCartao })</td>
+        </tr>
+    }
+</table>

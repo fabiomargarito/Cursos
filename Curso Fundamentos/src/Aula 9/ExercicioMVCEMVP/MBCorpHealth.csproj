@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7CF09A9-11CD-4C93-B3D2-55871ABB64CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MBCorpHealth</RootNamespace>
+    <AssemblyName>MBCorpHealth</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>packages\FluentNHibernate.1.4.0.0\lib\net35\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>packages\NHibernate.4.0.1.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aplicacao\Servico\IServicoDeConsultaDeDadosDePaciente.cs" />
+    <Compile Include="Aplicacao\Servico\ServicoDeConsultaDeDadosDePaciente.cs" />
+    <Compile Include="Aplicacao\Servico\ServicoDeGestaoDeDadosDeCartao.cs" />
+    <Compile Include="Dominio\Agendamento.cs" />
+    <Compile Include="Dominio\Atendente.cs" />
+    <Compile Include="Dominio\Cartao.cs" />
+    <Compile Include="Dominio\Contratos\Repositorio\IRepositorio.cs" />
+    <Compile Include="Dominio\Contratos\Repositorio\IRepositorioAgendamento.cs" />
+    <Compile Include="Dominio\Contratos\Servicos\IServicoDePagamento.cs" />
+    <Compile Include="Dominio\Credencial.cs" />
+    <Compile Include="Dominio\Endereco.cs" />
+    <Compile Include="Dominio\Especializacao.cs" />
+    <Compile Include="Dominio\Exame.cs" />
+    <Compile Include="Dominio\Medico.cs" />
+    <Compile Include="Dominio\Paciente.cs" />
+    <Compile Include="Dominio\Pagamento.cs" />
+    <Compile Include="Dominio\Pessoa.cs" />
+    <Compile Include="Dominio\PlanoDeSaude.cs" />
+    <Compile Include="Dominio\Resultado.cs" />
+    <Compile Include="Dominio\Contratos\Servicos\ServicoConsultaEndereco.cs" />
+    <Compile Include="Infraestrutura\Repositorio\ConfiguracaoNHibernate.cs" />
+    <Compile Include="Infraestrutura\Repositorio\RepositorioAgendamento.cs" />
+    <Compile Include="Infraestrutura\Repositorio\RepositorioCartao.cs" />
+    <Compile Include="Infraestrutura\Repositorio\RepositorioPaciente.cs" />
+    <Compile Include="Infraestrutura\Servico\ServicoConsultaEnderecoCorporativo.cs" />
+    <Compile Include="Infraestrutura\Servico\ServicoConsultaEnderecoCorporativoAtual.cs" />
+    <Compile Include="Infraestrutura\Servico\ServicoConsultaEnderecoCorporativoAtualAtualizado.cs" />
+    <Compile Include="Infraestrutura\Servico\ServicoConsultaEnderecoCorreios.cs" />
+    <Compile Include="Dominio\TipoExame.cs" />
+    <Compile Include="Dominio\TipoCliente.cs" />
+    <Compile Include="Dominio\TipoServicoDeConsulta.cs" />
+    <Compile Include="Infraestrutura\Servico\ServicoDePagamentoDinners.cs" />
+    <Compile Include="Infraestrutura\Servico\ServicoDePagamentoVisa.cs" />
+    <Compile Include="Infraestrutura\Servico\ServicoDePagamentoMaster.cs" />
+    <Compile Include="Presenter\CartaoPresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\IGravacaoCartao.cs" />
+    <Compile Include="View\IListagemCartaoView.cs" />
+    <Compile Include="View\ViewModel\CartaoViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DiagramaDeClasses.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
