@@ -7,7 +7,7 @@ namespace TesteUnitario
         public string Escrever(int numeroASerAvalidado)
         {
             if ((numeroASerAvalidado % 3 == 0) && (numeroASerAvalidado % 5 == 0))
-                return "";
+                return "FIZZBUZZ";
             
             if (numeroASerAvalidado%3 == 0)
                 return "FIZZ";

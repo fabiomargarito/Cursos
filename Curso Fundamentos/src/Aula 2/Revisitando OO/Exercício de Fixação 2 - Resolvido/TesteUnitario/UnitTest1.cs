@@ -29,11 +29,11 @@ namespace TesteUnitario
 
         [TestMethod]
         public void DeveRetornarFizzSeONumeroEhDivisivelPor3()
-        {
+        { 
             FizzBuzz fizzBuzz = new FizzBuzz();
             string retorno = fizzBuzz.Escrever(3);
 
-            Assert.IsTrue(retorno == "FIZZ");
+            Assert.IsTrue(retorno=="FIZZ");
         }
 
         [TestMethod]
