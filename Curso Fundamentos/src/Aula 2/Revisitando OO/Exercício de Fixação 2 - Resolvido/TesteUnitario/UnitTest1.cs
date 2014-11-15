@@ -33,7 +33,7 @@ namespace TesteUnitario
             FizzBuzz fizzBuzz = new FizzBuzz();
             string retorno = fizzBuzz.Escrever(3);
 
-            Assert.IsTrue(retorno == "FIZZzzzz");
+            Assert.IsTrue(retorno == "FIZZ");
         }
 
         [TestMethod]
