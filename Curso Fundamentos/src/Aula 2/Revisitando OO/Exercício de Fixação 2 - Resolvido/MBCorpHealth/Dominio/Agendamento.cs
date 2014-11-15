@@ -14,10 +14,13 @@ namespace MBCorpHealth.Dominio
 
         public void CriarAgendamento(Paciente paciente, Medico medicoSolicitante)
         {
+            
+          
             ValidarDadosDoAgendamento(paciente,medicoSolicitante);
 
             Paciente = paciente;
             MedicoSolicitante = medicoSolicitante;
+
         }
 
         private void ValidarDadosDoAgendamento(Paciente paciente, Medico medicoSolicitante)
