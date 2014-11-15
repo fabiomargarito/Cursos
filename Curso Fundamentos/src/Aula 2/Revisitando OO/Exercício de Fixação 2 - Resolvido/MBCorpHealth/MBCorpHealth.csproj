@@ -45,6 +45,7 @@
     <Compile Include="Dominio\Cobertura.cs" />
     <Compile Include="Dominio\Especializacao.cs" />
     <Compile Include="Dominio\Exame.cs" />
+    <Compile Include="Dominio\FizzBuzz.cs" />
     <Compile Include="Dominio\Medico.cs" />
     <Compile Include="Dominio\Paciente.cs" />
     <Compile Include="Dominio\Pessoa.cs" />
