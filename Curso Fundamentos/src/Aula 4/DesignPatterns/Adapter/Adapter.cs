@@ -36,8 +36,6 @@ namespace Adapter
 
 
     
-
-
     //Adaptee
     public class Visa { 
         
@@ -49,6 +47,7 @@ namespace Adapter
         }
     }
 
+    
 
     //Adapter
     public class AdaptadorCartaoVisa:Pagamento

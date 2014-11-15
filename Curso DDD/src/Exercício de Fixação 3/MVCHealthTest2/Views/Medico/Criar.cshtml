@@ -1,0 +1,20 @@
+﻿@model MBCorpHealth.Dominio.MedicoViewModel
+
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Cadastro de Médicos</legend>
+
+        <div>@Html.Label("CRM")</div>
+        <div>@Html.EditorFor(model => model.CRM)</div>
+
+        <div>@Html.Label("Nome")</div>
+        <div>@Html.EditorFor(model => model.Nome)</div>
+        
+        <input type="submit" value="Gravar" />
+    </fieldset>
+}

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="MBCorpHealth.Dominio.Agendamento">
+    <Position X="0.75" Y="9.75" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAABAgAAAAAAAEAAAAAAKAwAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dominio\Agendamento.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MedicoSolicitante" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Exames" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MBCorpHealth.Dominio.Atendente">
+    <Position X="1.25" Y="6.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Dominio\Atendente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MBCorpHealth.Dominio.Cobertura">
+    <Position X="12.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAAA=</HashCode>
+      <FileName>Dominio\Cobertura.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MBCorpHealth.Dominio.Credencial">
+    <Position X="7" Y="0.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAQAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dominio\Credencial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MBCorpHealth.Dominio.EspecializacaoMedica">
+    <Position X="1.75" Y="3.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQA=</HashCode>
+      <FileName>Dominio\Especializacao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MBCorpHealth.Dominio.Exame">
+    <Position X="7.25" Y="9.75" Width="5.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABgACAAAAAAAAAAEAAAAAAAAAAAAAAAAAQAIAAA=</HashCode>
+      <FileName>Dominio\Exame.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Resultado" />
+      <Property Name="TipoExame" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MBCorpHealth.Dominio.Medico">
+    <Position X="6" Y="6.5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAEAAAAAAAAAAAAAAQAAAAACAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Dominio\Medico.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Especializacoes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MBCorpHealth.Dominio.Paciente">
+    <Position X="11.75" Y="6.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAgAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dominio\Paciente.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PlanoDeSaude" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MBCorpHealth.Dominio.Pessoa">
+    <Position X="6.75" Y="3.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAACAAAQAAAAAAEAAAAEAAAA=</HashCode>
+      <FileName>Dominio\Pessoa.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Credencial" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MBCorpHealth.Dominio.PlanoDeSaude">
+    <Position X="12.25" Y="3.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAIAAAAAAAAAAAAAIAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Dominio\PlanoDeSaude.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Coberturas" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="MBCorpHealth.Dominio.Resultado">
+    <Position X="0.75" Y="13.25" Width="6.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAABAAAAAAAAAAAAgAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dominio\Resultado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MBCorpHealth.Dominio.TipoExame">
+    <Position X="8.25" Y="13.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dominio\TipoExame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

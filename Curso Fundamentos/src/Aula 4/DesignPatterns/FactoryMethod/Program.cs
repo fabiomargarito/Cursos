@@ -8,11 +8,8 @@ namespace FactoryMethod
         static void Main(string[] args)
         {
             
-
-
-            
-            
-            IFabricaDeRepositorio fabricaDeRepositorio = new FactoryMethod.FabricaDeRepositorioEntityFramework();
+                        
+            IFabricaDeRepositorio fabricaDeRepositorio = new FabricaDeRepositorioEntityFramework();
                        
             
             IRepositorio repositorioDeCliente = fabricaDeRepositorio.CriarRepositorio(TipoDeRepositorio.CLIENTE);
@@ -24,13 +21,7 @@ namespace FactoryMethod
             IRepositorio repositorioDeFornecedor = fabricaDeRepositorio.CriarRepositorio(TipoDeRepositorio.FORNECEDOR);
             
            
-            repositorioDeFornecedor.Salvar(new Fornecedor{identificador = 1,nome = "teste", razaoSocial = "razao social"});
-
-
-            IRepositorio repositorioDeAcao = fabricaDeRepositorio.CriarRepositorio(TipoDeRepositorio.ACAO);
-
-
-            repositorioDeAcao.Salvar(new Acao{Codigo = "PETR4"});
+            repositorioDeFornecedor.Salvar(new Fornecedor{identificador = 1,nome = "teste", razaoSocial = "razao social"});            
 
             Console.ReadKey();
         }

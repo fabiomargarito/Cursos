@@ -3,8 +3,7 @@
 namespace Singleton {
     //Singleton
     public class Configuracao {
-        
-        
+                
         private static Configuracao _instanciaDesteObjeto;
         
         private string _nomeDoBancoDeDados;

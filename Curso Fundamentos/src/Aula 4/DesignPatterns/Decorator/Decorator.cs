@@ -15,7 +15,7 @@ namespace Decorator
         {
             return this.preco;
         }
-    }
+    }   
 
     //concrete componente
     public class Sorvete : Pizza

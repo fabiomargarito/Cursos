@@ -1,0 +1,22 @@
+﻿@model List<MBCorpHealth.Dominio.MedicoViewModel>
+
+@{
+    ViewBag.Title = "title";
+    
+}
+
+<h2>Listagem de Médicos</h2>
+
+
+@*@Html.ActionLink("Adicionar novo Médico", "Criar");*@
+
+<table>
+    @foreach (var medico in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => medico.CRM)</td>
+            <td>@Html.DisplayFor(model => medico.Nome)</td>
+            @*<td>@Html.ActionLink("Alterar", "Editar", new { medico.CPF})</td>*@
+        </tr>
+    }
+</table>

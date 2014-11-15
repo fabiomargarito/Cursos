@@ -49,7 +49,6 @@ namespace FactoryMethod
         }
     }
 
-
     //Concrete Product
     public class RepositorioDeFornecedores:IRepositorio
     {
@@ -69,7 +68,6 @@ namespace FactoryMethod
         }
     }
 
-
     //Concrete Product
     public class RepositorioDeAcao : IRepositorio
     {
@@ -88,8 +86,7 @@ namespace FactoryMethod
             return Acoes;
         }
     }
-
-
+    
     //concre Product
     public class RepositorioDeMedicos: IRepositorio
     {
