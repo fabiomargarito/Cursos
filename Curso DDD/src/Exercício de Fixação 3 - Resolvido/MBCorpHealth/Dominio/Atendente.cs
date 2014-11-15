@@ -14,7 +14,7 @@ namespace MBCorpHealth.Dominio
 
         private void ValidarDadosDoAtendente(int  numeroDaatricula)
         {
-            if (numeroDaatricula>int.MinValue) throw new ArgumentException("É necessário informar um número de matrícula!");
+          //  if (numeroDaatricula>int.MinValue) throw new ArgumentException("É necessário informar um número de matrícula!");
         }                      
     }
 }

@@ -58,7 +58,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aplicacao\ServicoAtendente.cs" />
+    <Compile Include="View\AtendenteViewModel.cs" />
     <Compile Include="Dominio\IRepositorioAgendamento.cs" />
+    <Compile Include="Dominio\IRepositorioAtendente.cs" />
     <Compile Include="Dominio\MedicoFabrica.cs" />
     <Compile Include="Dominio\MedicoViewModel.cs" />
     <Compile Include="Infraestrutura\RepositorioAgendamento.cs" />
@@ -75,6 +78,7 @@
     <Compile Include="Dominio\PlanoDeSaude.cs" />
     <Compile Include="Dominio\Resultado.cs" />
     <Compile Include="Dominio\TipoExame.cs" />
+    <Compile Include="Infraestrutura\RepositorioAtendenteFake.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

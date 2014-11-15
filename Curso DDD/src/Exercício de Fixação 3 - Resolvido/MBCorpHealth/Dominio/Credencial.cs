@@ -2,7 +2,7 @@
 {
     public class Credencial
     {
-        public string NomeDeUsuario { get; private set{}; }
+        public string NomeDeUsuario { get; private set; }
         public string Senha { get; private set; }
 
         public Credencial GerarCredencialInicial(Pessoa pessoa)
