@@ -9,22 +9,22 @@ namespace Strategy
 {
     public interface ICalculoIcm
     {
-        double CalcularImposto(double valor);        
+        double CalcularImposto(double valor);
     }
 
-    public class CalculoICMSEspiritoSanto:ICalculoIcm
+    public class CalculoICMSEspiritoSanto : ICalculoIcm
     {
         public double CalcularImposto(double valor)
         {
-            return valor*0.13;
+            return valor * 0.13;
         }
     }
 
-    public class CalculoICMSSaoPaulo:ICalculoIcm
+    public class CalculoICMSSaoPaulo : ICalculoIcm
     {
         public double CalcularImposto(double valor)
         {
-            return valor*0.15;
+            return valor * 0.15;
         }
     }
 
@@ -43,6 +43,7 @@ namespace Strategy
             return valor * 0.3;
         }
     }
+
     public class CalculoICMSParaiba : ICalculoIcm
     {
         public double CalcularImposto(double valor)
@@ -51,23 +52,34 @@ namespace Strategy
         }
     }
 
+    public class CalculoICMSMatoGrosso : ICalculoIcm
+    {
+        public double CalcularImposto(double valor)
+        {
+            return valor * 0.4;
+        }
+    }
+
+    /// <summary>
+    /// Esta classe possui algumas dicas para documentação XML.
+    /// </summary>
     public class FabricaICMS
     {
         public ICalculoIcm Criar(Estado estado)
         {
             switch (estado)
             {
-                    case Estado.SP:return new CalculoICMSSaoPaulo();
-                    case Estado.RJ: return new CalculoICMSRioDeJaneiro();
-                    case Estado.ES: return new CalculoICMSEspiritoSanto();
-                    case Estado.PE: return new CalculoICMSPernanbuco();
-                    case Estado.PB: return new CalculoICMSParaiba();
+                case Estado.SP: return new CalculoICMSSaoPaulo();
+                case Estado.RJ: return new CalculoICMSRioDeJaneiro();
+                case Estado.ES: return new CalculoICMSEspiritoSanto();
+                case Estado.PE: return new CalculoICMSPernanbuco();
+                case Estado.PB: return new CalculoICMSParaiba();
                 default: throw new Exception("Nehum estado selecionado");
             }
         }
     }
 
-    public enum  Estado
+    public enum Estado
     {
         SP,
         RJ,

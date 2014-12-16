@@ -23,7 +23,7 @@ namespace ExemplosModulo2.Observer
 
             vale.Preco = 120;
             vale.Preco = 170;
-            vale.Preco = 220;
+                vale.Preco = 220;
             vale.Preco = 123;
 
             Console.ReadKey(); 

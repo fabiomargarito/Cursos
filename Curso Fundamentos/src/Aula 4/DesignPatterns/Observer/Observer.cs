@@ -26,7 +26,7 @@ namespace Observer
       _investidores.Add(investidor);
     }
 
-    //dattach
+    //detach
     public void RemoverDoCadastro(IInvestidor investidor)
     {
       _investidores.Remove(investidor);
@@ -40,12 +40,6 @@ namespace Observer
         investidor.Atualizar(this);
       }      
     }
-
-
-
-
-
-
      
 
     public double Preco
@@ -90,7 +84,6 @@ namespace Observer
         {
         }
     }
-
 
     //Observer
   public interface IInvestidor

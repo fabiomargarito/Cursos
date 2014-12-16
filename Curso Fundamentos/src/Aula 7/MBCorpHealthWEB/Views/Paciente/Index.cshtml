@@ -1,0 +1,21 @@
+﻿@model List<MBCorpHealth.View.ViewModel.PacienteViewModel>
+
+@{
+    ViewBag.Title = "Lista de Pacientes";
+}
+
+<h2>Lista de Pacientes</h2>
+
+
+@Html.ActionLink("Adicionar novo Paciente", "Criar");
+
+<table>
+    @foreach (var paciente in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => paciente.Cpf)</td>
+            <td>@Html.DisplayFor(model => paciente.Nome)</td>
+            <td>@Html.ActionLink("Excluir", "Excluir", new { paciente.Cpf})</td>
+        </tr>
+    }
+</table>

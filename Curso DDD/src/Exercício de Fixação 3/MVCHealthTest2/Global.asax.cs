@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using MBCorpHealth.Infraestrutura;
+using MVCHealthTest2.Controllers;
 
 namespace MVCHealthTest2
 {
@@ -16,6 +18,16 @@ namespace MVCHealthTest2
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Sessao.SessaoNHibernate =  ConfiguracaoNHibernate.Criar().OpenSession();
+            
         }
+
+
+        protected void Application_end()
+        {
+
+        }
+
     }
 }

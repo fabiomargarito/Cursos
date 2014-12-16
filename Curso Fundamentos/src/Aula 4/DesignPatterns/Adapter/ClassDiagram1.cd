@@ -9,7 +9,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Adapter.Visa">
-    <Position X="9.25" Y="0.5" Width="1.5" />
+    <Position X="9" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Adapter.cs</FileName>
@@ -24,7 +24,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Interface Name="Adapter.Pagamento">
-    <Position X="1.25" Y="0.5" Width="1.5" />
+    <Position X="0.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>Adapter.cs</FileName>

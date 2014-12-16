@@ -11,9 +11,8 @@ namespace ExemploModulo2.StrategyCMD
     {
         static void Main(string[] args)
         {
-            ICalculoIcm calculoIcm = (new FabricaICMS()).Criar(Estado.PB;
-            Console.WriteLine(calculoIcm.CalcularImposto(100));
-            Console.ReadKey();
+            ICalculoIcm calculoIcm = (new FabricaICMS()).Criar(Estado.RJ);
+            var retorno = calculoIcm.CalcularImposto(100);
         }
     }
 }

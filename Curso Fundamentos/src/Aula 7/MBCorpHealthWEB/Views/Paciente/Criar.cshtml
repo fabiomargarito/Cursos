@@ -1,0 +1,23 @@
+﻿@model MBCorpHealth.View.ViewModel.PacienteViewModel
+
+@{
+    Layout = null;
+}
+
+<h2>Cadastro de Pacientes</h2>
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Cadastro de Cartões</legend>
+
+        <div>@Html.Label("CPF")</div>
+        <div>@Html.EditorFor(model => model.Cpf)</div>
+
+        <div>@Html.Label("Nome")</div>
+        <div>@Html.EditorFor(model => model.Nome)</div>
+
+       
+        <input type="submit" value="Gravar" />
+    </fieldset>
+}

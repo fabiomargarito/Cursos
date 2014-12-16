@@ -1,0 +1,30 @@
+﻿@using Domain
+@model  IList<UI.View.ViewModel.AcaoViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista De acoes</h2>
+@Html.ActionLink("Adicionar Acao","AdicionarAcao")    
+
+<table>
+    <tr>
+        <th>Código</th>
+        <th>CNPJ Empresa</th>
+        <th>Razão Social</th>
+        <th></th>
+    </tr>
+    @foreach (var acao in Model)
+    {
+        <tr>
+       
+            <td>@Html.DisplayFor(model=> acao.Codigo)</td>
+            <td>@Html.DisplayFor(model=> acao.Empresa.CNPJEmpresa)</td>
+            <td>@Html.DisplayFor(model=> acao.Empresa.Razaosocial)</td>            
+            <td>
+                   
+                @Html.ActionLink("Excluir","ExcluirAcao",new {acao.Codigo},null)
+            </td>
+        </tr>
+    }
+</table>

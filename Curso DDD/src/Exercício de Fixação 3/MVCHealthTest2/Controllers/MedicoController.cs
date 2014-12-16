@@ -11,6 +11,16 @@ using NHibernate;
 
 namespace MVCHealthTest2.Controllers
 {
+
+    public static class Sessao
+    {
+        public static ISession SessaoNHibernate
+        {
+            get { return (HttpContext.Current.Session["SESSAO"] as ISession); }
+            set { HttpContext.Current.Session["SESSAO"] = value; }
+        }
+    }
+
     public class MedicoController : Controller
     {
         // GET: Medico
@@ -18,7 +28,7 @@ namespace MVCHealthTest2.Controllers
         {
             var container = new UnityContainer();
 
-            container.RegisterInstance<ISession>(ConfiguracaoNHibernate.Criar().OpenSession());
+            container.RegisterInstance<ISession>(Sessao.SessaoNHibernate);
             container.RegisterType<IRepositorioAgendamento, RepositorioAgendamento>();
 
             MedicoServicoDePersistencia medicoServicoDePersistencia = container.Resolve<MedicoServicoDePersistencia>();

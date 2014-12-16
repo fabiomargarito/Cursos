@@ -38,6 +38,8 @@ namespace TemplateMethod
             var conexao = ObterConexao();
                         
             DefinirComando();
+
+            retorno = ExecutarComando();
             
             retorno = TratarRetorno();
 
