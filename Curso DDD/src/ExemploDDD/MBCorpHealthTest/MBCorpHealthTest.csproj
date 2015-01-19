@@ -39,8 +39,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Dominio\Entidades\Agendamento.cs" />
+    <Compile Include="Dominio\Entidades\Atendente.cs" />
+    <Compile Include="Dominio\Entidades\Exame.cs" />
+    <Compile Include="Dominio\Fabricas\FabricaDeAgendamento.cs" />
+    <Compile Include="Dominio\Contratos\IServicoDeEnvioEmail.cs" />
+    <Compile Include="Dominio\Contratos\IServicoDeValidacaoDeCoberturaDeExame.cs" />
+    <Compile Include="Dominio\Entidades\Laudo.cs" />
+    <Compile Include="Dominio\Entidades\Medico.cs" />
+    <Compile Include="Dominio\Entidades\Paciente.cs" />
+    <Compile Include="Dominio\Entidades\PlanoDeSaude.cs" />
+    <Compile Include="Aplicacao\ServicoDeAgendamento.cs" />
+    <Compile Include="Dominio\Entidades\TipoExame.cs" />
+    <Compile Include="Infraestrutura\ServicoDeEnvioEmailCorporativo.cs" />
+    <Compile Include="Infraestrutura\ServicoDeValidacaoDeCoberturaDeExame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dominio\Servicos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
