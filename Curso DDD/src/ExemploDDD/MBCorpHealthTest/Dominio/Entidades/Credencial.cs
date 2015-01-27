@@ -14,6 +14,5 @@
 
         public string User { get; protected set; }
         public string Senha { get; protected set; }
-        public int ID { get; set; }
     }
 }

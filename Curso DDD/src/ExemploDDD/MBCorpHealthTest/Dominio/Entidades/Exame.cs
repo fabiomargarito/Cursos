@@ -2,7 +2,6 @@
 {
     public class Exame
     {
-
         public Exame(TipoExame tipoExame)
         {
             TipoExame = tipoExame;
@@ -14,12 +13,10 @@
 
         public TipoExame TipoExame { get; protected set; }
         public Laudo Laudo { get; protected set; }
-        public int ID { get; set; }
 
         public void EmitirLaudo(Laudo laudo)
         {
             Laudo = laudo;
-
         }
     }
 }

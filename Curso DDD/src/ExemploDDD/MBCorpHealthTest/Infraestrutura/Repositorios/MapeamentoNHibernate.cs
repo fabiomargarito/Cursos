@@ -55,7 +55,7 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
     {
         public MapeamentoCredencial()
         {
-            Id(chave => chave.ID).Column("IDCREDENCIAL");
+            Id().Column("IDCREDENCIAL");
             Map(campo => campo.User).Column("USUARIO");
             Map(campo => campo.Senha).Column("SENHA");            
             Table("TBCREDENCIAL");
@@ -68,7 +68,6 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
         public MapeamentoTipoExame()
         {
             Id(chave => chave.CBHPM).Column("CBHPM");
-
             Map(campo => campo.Descricao).Column("DESCRICAO");
             Table("TBTIPOEXAME");
             LazyLoad();
@@ -79,7 +78,7 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
     {
         public MapeamentoLaudo()
         {
-            Id(chave => chave.ID).Column("IDLAUDO");
+            Id().Column("IDLAUDO");
             Map(campo => campo.Descricao).Column("DESCRICAO");            
             Table("TBLAUDO");
             LazyLoad();
@@ -90,7 +89,7 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
     {
         public MapeamentoExame()
         {
-            Id(chave => chave.ID).Column("IDEXAME");            
+            Id().Column("IDEXAME");
             References(chave => chave.Laudo).Column("IDLAUDO");
             References(chave => chave.TipoExame).Column("CBHPM");            
             Table("TBEXAME");

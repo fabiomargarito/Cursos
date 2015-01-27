@@ -15,7 +15,5 @@
         protected Laudo()
         {
         }
-
-        public int ID { get; set; }
     }
 }
