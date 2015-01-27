@@ -9,7 +9,7 @@ namespace MBCorpHealthTest.Dominio.Entidades
             TipoDoPlano = tipoDoPlano;
         }
 
-        public PlanoDeSaude()
+        protected PlanoDeSaude()
         {
         }
 

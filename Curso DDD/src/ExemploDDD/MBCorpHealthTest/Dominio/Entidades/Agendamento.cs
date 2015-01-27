@@ -22,7 +22,7 @@ namespace MBCorpHealthTest.Dominio.Entidades
             ID = int.MaxValue;
         }
 
-        public Agendamento()
+        protected Agendamento()
         {
         }
 

@@ -12,7 +12,7 @@ namespace MBCorpHealthTest.Dominio.Entidades
             Estado = estado;
         }
 
-        public Medico()
+        protected Medico()
         {
         }
 

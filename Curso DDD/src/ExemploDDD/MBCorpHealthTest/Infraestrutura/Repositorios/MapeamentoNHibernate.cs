@@ -15,7 +15,6 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
         }
     }
 
-
     public class MapeamentoAtendente : ClassMap<Atendente>
     {
         public MapeamentoAtendente()
@@ -26,7 +25,6 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
             LazyLoad();
         }
     }
-
 
     public class MapeamentoPlanoDeSaude : ClassMap<PlanoDeSaude>
     {
@@ -53,7 +51,6 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
         }
     }
 
-
     public class MapeamentoCredencial : ClassMap<Credencial>
     {
         public MapeamentoCredencial()
@@ -78,9 +75,6 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
         }
     }	
 
-
-    
-
     public class MapeamentoLaudo : ClassMap<Laudo>
     {
         public MapeamentoLaudo()
@@ -91,10 +85,6 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
             LazyLoad();
         }
     }	
-
-
-    
-
 
     public class MapeamentoExame : ClassMap<Exame>
     {
@@ -107,7 +97,6 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
             LazyLoad();
         }
     }
-
 
     public class MapeamentoAgendamento : ClassMap<Agendamento>
     {
@@ -123,7 +112,4 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
             LazyLoad();
         }
     }	
-
-
-
 }

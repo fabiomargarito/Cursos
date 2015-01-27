@@ -8,7 +8,7 @@
             TipoExame = tipoExame;
         }
 
-        public Exame()
+        protected Exame()
         {
         }
 

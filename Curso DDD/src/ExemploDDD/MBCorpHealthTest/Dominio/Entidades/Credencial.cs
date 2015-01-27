@@ -8,7 +8,7 @@
             Senha = senha;
         }
 
-        public Credencial()
+        protected Credencial()
         {
         }
 

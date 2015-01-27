@@ -2,14 +2,14 @@
 {
     public class Atendente
     {
-        public Atendente()
-        {
-        }
-
         public Atendente(string cpf, string nome)
         {
             CPF = cpf;
             Nome = nome;
+        }
+
+        protected Atendente()
+        {
         }
 
         public string CPF { get; protected set; }

@@ -6,7 +6,6 @@ using NHibernate.Engine;
 
 namespace MBCorpHealthTest.Infraestrutura.Repositorios
 {
-
     public class MedicosFake : IMedicos
     {
         public Medico PesquisarMedicoPorCRMEEstado(string crm, string estado)
@@ -14,8 +13,6 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
             return new Medico(crm, "fabio", estado);
         }
     }
-
-
 
     public class Medicos : IMedicos
     {
@@ -28,11 +25,9 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
 
         public Medico PesquisarMedicoPorCRMEEstado(string crm, string estado)
         {
-            
                 return
                     _session.QueryOver<Medico>().Where(campo=>campo.CRM==crm).And(campo=>campo.Estado==estado)
                         .SingleOrDefault();
-            
         }
     }
 }

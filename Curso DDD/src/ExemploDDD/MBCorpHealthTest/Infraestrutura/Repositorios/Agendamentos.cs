@@ -24,10 +24,6 @@ namespace MBCorpHealthTestTest
         {
             return
                 _session.Query<Agendamento>().SingleOrDefault(ag => ag.Credencial.Senha == credencial.Senha && ag.Credencial.User == credencial.User);
-
-
-
-
         }
     }
 

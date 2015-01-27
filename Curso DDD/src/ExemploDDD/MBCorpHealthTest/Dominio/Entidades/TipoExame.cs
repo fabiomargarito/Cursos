@@ -12,7 +12,7 @@ namespace MBCorpHealthTest.Dominio.Entidades
             Valor = valor;
         }
 
-        public TipoExame()
+        protected TipoExame()
         {
         }
 

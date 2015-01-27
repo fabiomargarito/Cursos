@@ -12,7 +12,7 @@
 
         }
 
-        public Laudo()
+        protected Laudo()
         {
         }
 

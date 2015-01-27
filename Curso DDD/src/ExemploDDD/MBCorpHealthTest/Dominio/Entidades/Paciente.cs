@@ -9,7 +9,7 @@ namespace MBCorpHealthTest.Dominio.Entidades
             Email = email;
         }
 
-        public Paciente()
+        protected Paciente()
         {
         }
 
