@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using MBCorpHealthTest.Dominio.Contratos;
 using MBCorpHealthTest.Dominio.Entidades;
 using MBCorpHealthTest.Infraestrutura.Repositorios;
@@ -47,7 +48,7 @@ namespace MBCorpHealthTestTest
                     agendamentos.pesquisarPorPaciente((new Credencial("fabiomargarito@gmail.com", "1234")));
 
                 //Assert
-                Assert.IsTrue(agendamento.Exames[0].Laudo.Descricao == "teste");
+                Assert.IsTrue(agendamento.Exames.First().Laudo.Descricao == "teste");
             }
         }
 

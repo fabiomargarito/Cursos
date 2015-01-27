@@ -6,7 +6,7 @@ namespace MBCorpHealthTest.Dominio.Entidades
 {
     public class Agendamento
     {
-        public IList<Exame> Exames { get; protected set; }
+        public IEnumerable<Exame> Exames { get; protected set; }
         public int ID { get; set; }
         public Atendente Atendente { get; protected set; }
         public Paciente Paciente { get; protected set; }
@@ -29,7 +29,7 @@ namespace MBCorpHealthTest.Dominio.Entidades
         public void AdicionarExame(Exame tipoExame)
         {
             Exames = new List<Exame>();
-            Exames.Add(tipoExame);
+            ((IList<Exame>)Exames).Add(tipoExame);
 
         }
     

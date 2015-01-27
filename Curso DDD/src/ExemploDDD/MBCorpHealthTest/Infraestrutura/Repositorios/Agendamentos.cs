@@ -38,7 +38,7 @@ namespace MBCorpHealthTestTest
                     .Criar();
 
             agendamento.AdicionarExame(new Exame(new TipoExame("1234", "sangue", 120)));
-            agendamento.Exames[0].EmitirLaudo(new Laudo("teste"));
+            agendamento.Exames.First().EmitirLaudo(new Laudo("teste"));
 
             return agendamento;
         }

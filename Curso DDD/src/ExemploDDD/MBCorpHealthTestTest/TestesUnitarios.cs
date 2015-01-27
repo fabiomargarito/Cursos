@@ -36,7 +36,7 @@ namespace MBCorpHealthTestTest
 
             //Assert
             Assert.IsTrue(retornoAgendamento.ID != 0);
-            Assert.IsTrue(retornoAgendamento.Exames.Count > 0);
+            Assert.IsTrue(retornoAgendamento.Exames.Count() > 0);
 
         }
 
@@ -186,7 +186,7 @@ namespace MBCorpHealthTestTest
                 agendamentos.pesquisarPorPaciente((new Credencial("fabiomargarito@gmail.com", "1234")));
 
             //Assert
-            Assert.IsTrue(agendamento.Exames[0].Laudo.Descricao == "teste");
+            Assert.IsTrue(agendamento.Exames.First().Laudo.Descricao == "teste");
 
         }
 
