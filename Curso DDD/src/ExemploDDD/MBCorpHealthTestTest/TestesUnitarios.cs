@@ -13,10 +13,10 @@ using IMedicos = MBCorpHealthTest.Dominio.Contratos.IMedicos;
 namespace MBCorpHealthTestTest
 {
     [TestClass]
-    public   class TestesUnitarios
+    public class TestesUnitarios
     {
         [TestMethod]
-        public virtual  void ComoAtendenteQueroRealizarCadastrarUmAgendamento()
+        public void ComoAtendenteQueroRealizarCadastrarUmAgendamento()
         {
 
             //Arrage
@@ -41,7 +41,7 @@ namespace MBCorpHealthTestTest
         }
 
         [TestMethod]
-        public virtual  void ComoAtendenteQueroPesquisarUmPacientePorNome()
+        public void ComoAtendenteQueroPesquisarUmPacientePorNome()
         {
             //Arrange
             IPacientes pacientes = new Pacientes();
@@ -56,7 +56,7 @@ namespace MBCorpHealthTestTest
         }
 
         [TestMethod]
-        public virtual  void ComoAtendenteQueroPesquisarUmPacientePorCPF()
+        public void ComoAtendenteQueroPesquisarUmPacientePorCPF()
         {
             //Arrange
             IPacientes pacientes = new Pacientes();
@@ -71,7 +71,7 @@ namespace MBCorpHealthTestTest
         }
 
         [TestMethod]
-        public virtual  void ComoAtendenteQuandoOPacienteNaoExistirQueroCadastrar()
+        public void ComoAtendenteQuandoOPacienteNaoExistirQueroCadastrar()
         {
             //Arrange
             IPacientes pacientes = new Pacientes();
@@ -85,7 +85,7 @@ namespace MBCorpHealthTestTest
         }
     
         [TestMethod]
-        public virtual  void ComoAtendenteQueroVerificarSeOPlanoDeSaudeCobreOExame()
+        public void ComoAtendenteQueroVerificarSeOPlanoDeSaudeCobreOExame()
         {
             //arrange
             IServicoDeValidacaoDeCoberturaDeExame servicoDeValidacaoDeCoberturaDeExame = new ServicoDeValidacaoDeCoberturaDeExame();
@@ -95,7 +95,7 @@ namespace MBCorpHealthTestTest
         }
 
         [TestMethod]
-        public virtual  void ComoAtendenteQueroVerificarOValorTotalDoAgendamento()
+        public void ComoAtendenteQueroVerificarOValorTotalDoAgendamento()
         {
             //Arrage
             Agendamento agendamento =
@@ -117,7 +117,7 @@ namespace MBCorpHealthTestTest
         }
 
         [TestMethod]
-        public virtual  void ComoAtendenteQueroConsultarUmMedicoPorCRMEEstado()
+        public void ComoAtendenteQueroConsultarUmMedicoPorCRMEEstado()
         {
             //Arrange
             IMedicos medicos = new MedicosFake();
@@ -132,13 +132,13 @@ namespace MBCorpHealthTestTest
         }
 
         [TestMethod]
-        public virtual  void ComoAtendenteQueroConsultarAAgendaDasUnidadesDeDiagnosticoPorTipoDeExame()
+        public void ComoAtendenteQueroConsultarAAgendaDasUnidadesDeDiagnosticoPorTipoDeExame()
         {
             //iremos utilizar serviço externo
         }
 
         [TestMethod]
-        public virtual  void ComoMedicoDeDiagnosticoQueroEmitirUmLaudoParaUmExame()
+        public void ComoMedicoDeDiagnosticoQueroEmitirUmLaudoParaUmExame()
         {
             //Arrage
             Agendamento agendamento =
@@ -161,7 +161,7 @@ namespace MBCorpHealthTestTest
         }
 
         [TestMethod]
-        public virtual  void DeveGerarUmaCredencialParaOPaciente()
+        public void DeveGerarUmaCredencialParaOPaciente()
         {
            //Arrange
             IServicoDeGeracaoCredencial servicoDeGeracaoDeCredencial = new ServicoDeGeracaoCredencial();
@@ -176,7 +176,7 @@ namespace MBCorpHealthTestTest
         }
 
         [TestMethod]
-        public virtual  void ComoPacienteQueroConsultarOResultadoDosMeusExames()
+        public void ComoPacienteQueroConsultarOResultadoDosMeusExames()
         {
             //Assert
             IAgendamentos agendamentos = new AgendamentosFake();
@@ -191,12 +191,12 @@ namespace MBCorpHealthTestTest
         }
 
         [TestMethod]
-        public virtual  void ComoAtendenteQueroSolicitarEmissaoDeFAturaParaUmAgendamento()
+        public void ComoAtendenteQueroSolicitarEmissaoDeFAturaParaUmAgendamento()
         {
         }
 
         [TestMethod]
-        public virtual  void DeveCriarUmAgendamento()
+        public void DeveCriarUmAgendamento()
         {
             //Arrange
             FabricaDeAgendamento fabricaDeAgendamento = new FabricaDeAgendamento();

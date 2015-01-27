@@ -3,7 +3,7 @@ using MBCorpHealthTest.Dominio.Entidades;
 
 namespace MBCorpHealthTest.Dominio.Contratos
 {
-    public   interface IPacientes
+    public interface IPacientes
     {
         IList<Paciente> PesquisarPacientePorTrechoDoNome(string nome);
         Paciente pesquisarPacientePorCPF(string cpf);

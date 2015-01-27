@@ -2,7 +2,7 @@
 
 namespace MBCorpHealthTest.Infraestrutura.Repositorios
 {
-    public   class Repositorio
+    public class Repositorio
     {
 
         internal Paciente ObterPacientePeloCPF(string cpfPaciente)

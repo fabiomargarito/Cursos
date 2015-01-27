@@ -8,11 +8,11 @@ using IMedicos = MBCorpHealthTest.Dominio.Contratos.IMedicos;
 namespace MBCorpHealthTestTest
 {
     [TestClass]
-    public   class TestesIntegrados
+    public class TestesIntegrados
     {
 
         [TestMethod]
-        public virtual  void ComoAtendenteQueroConsultarUmMedicoPorCRMEEstadoIntegrado()
+        public void ComoAtendenteQueroConsultarUmMedicoPorCRMEEstadoIntegrado()
         {
             //Arrange
 
@@ -34,7 +34,7 @@ namespace MBCorpHealthTestTest
 
 
         [TestMethod]
-        public virtual void ComoPacienteQueroConsultarOResultadoDosMeusExamesIntegrado()
+        public void ComoPacienteQueroConsultarOResultadoDosMeusExamesIntegrado()
         {
             using (var session = NHibernateSessionFactory.Criar().OpenSession())
             {

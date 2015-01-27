@@ -6,23 +6,21 @@ using NHibernate.Linq;
 
 namespace MBCorpHealthTestTest
 {
-
-   public   interface IAgendamentos
+    public interface IAgendamentos
     {
         Agendamento pesquisarPorPaciente(Credencial credencial);
     }
 
-
-    public   class Agendamentos:IAgendamentos
+    public class Agendamentos : IAgendamentos
     {
-        protected readonly ISession _session;
+        private readonly ISession _session;
 
-        public   Agendamentos(ISession session)
+        public Agendamentos(ISession session)
         {
             _session = session;
         }
 
-        public virtual  Agendamento pesquisarPorPaciente(Credencial credencial)
+        public Agendamento pesquisarPorPaciente(Credencial credencial)
         {
             return
                 _session.Query<Agendamento>().SingleOrDefault(ag => ag.Credencial.Senha == credencial.Senha && ag.Credencial.User == credencial.User);
@@ -33,11 +31,9 @@ namespace MBCorpHealthTestTest
         }
     }
 
-
-    public   class AgendamentosFake:IAgendamentos
+    public class AgendamentosFake : IAgendamentos
     {
-        
-        public virtual  Agendamento pesquisarPorPaciente(Credencial credencial)
+        public Agendamento pesquisarPorPaciente(Credencial credencial)
         {
             Agendamento agendamento =
                 (new FabricaDeAgendamento()).InformarPaciente("123")
@@ -45,10 +41,10 @@ namespace MBCorpHealthTestTest
                     .InformarAtendente("12345")
                     .Criar();
 
-            agendamento.AdicionarExame(new Exame(new TipoExame("1234","sangue",120)));
+            agendamento.AdicionarExame(new Exame(new TipoExame("1234", "sangue", 120)));
             agendamento.Exames[0].EmitirLaudo(new Laudo("teste"));
 
             return agendamento;
         }
-    }    
+    }
 }

@@ -3,9 +3,9 @@ using MBCorpHealthTest.Dominio.Entidades;
 
 namespace MBCorpHealthTest.Infraestrutura
 {
-    public   class ServicoDeValidacaoDeCoberturaDeExame : IServicoDeValidacaoDeCoberturaDeExame
+    public class ServicoDeValidacaoDeCoberturaDeExame : IServicoDeValidacaoDeCoberturaDeExame
     {
-        public virtual  bool VerificarCoberturaDoExame(TipoExame tipoExame, Paciente paciente)
+        public bool VerificarCoberturaDoExame(TipoExame tipoExame, Paciente paciente)
         {
             return true;
         }

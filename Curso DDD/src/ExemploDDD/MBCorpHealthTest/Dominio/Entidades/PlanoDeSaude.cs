@@ -1,8 +1,8 @@
 namespace MBCorpHealthTest.Dominio.Entidades
 {
-    public   class PlanoDeSaude
+    public class PlanoDeSaude
     {
-        public   PlanoDeSaude(string cnpj, string nome, string tipoDoPlano)
+        public PlanoDeSaude(string cnpj, string nome, string tipoDoPlano)
         {
             CNPJ = cnpj;
             Nome = nome;
@@ -13,9 +13,9 @@ namespace MBCorpHealthTest.Dominio.Entidades
         {
         }
 
-        public virtual  string CNPJ { get; protected set; }
-        public virtual  string Nome { get; protected set; }
-        public virtual  string TipoDoPlano { get; protected set; }
+        public string CNPJ { get; protected set; }
+        public string Nome { get; protected set; }
+        public string TipoDoPlano { get; protected set; }
 
         //todo incluir validação
     }
