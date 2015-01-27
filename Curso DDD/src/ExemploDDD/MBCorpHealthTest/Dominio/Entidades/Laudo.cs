@@ -1,18 +1,25 @@
-﻿public class Laudo
+﻿namespace MBCorpHealthTest.Dominio.Entidades
 {
-
-
-    public readonly string Descricao;
-
-    public Laudo(string descricao)
+    public   class Laudo
     {
 
+        
 
-        Descricao = descricao;
+        public virtual  string Descricao { get; protected set; }
 
+        public   Laudo(string descricao)
+        {
+
+
+            Descricao = descricao;
+
+        }
+
+
+        public Laudo()
+        {
+        }
+
+        public virtual  int ID { get; set; }
     }
-
-
-
-
 }

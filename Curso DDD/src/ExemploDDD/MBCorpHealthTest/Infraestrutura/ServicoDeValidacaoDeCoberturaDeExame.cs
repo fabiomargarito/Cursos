@@ -1,7 +1,13 @@
-﻿public class ServicoDeValidacaoDeCoberturaDeExame : IServicoDeValidacaoDeCoberturaDeExame
+﻿using MBCorpHealthTest.Dominio.Contratos;
+using MBCorpHealthTest.Dominio.Entidades;
+
+namespace MBCorpHealthTest.Infraestrutura
 {
-    public bool VerificarCoberturaDoExame(TipoExame tipoExame, Paciente paciente)
+    public   class ServicoDeValidacaoDeCoberturaDeExame : IServicoDeValidacaoDeCoberturaDeExame
     {
-        return true;
+        public virtual  bool VerificarCoberturaDoExame(TipoExame tipoExame, Paciente paciente)
+        {
+            return true;
+        }
     }
 }

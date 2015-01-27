@@ -30,6 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>packages\FluentNHibernate.2.0.1.0\lib\net40\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>packages\NHibernate.4.0.3.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,9 +48,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Contratos\IServicoDeGeracaoCredencial.cs" />
+    <Compile Include="Dominio\Entidades\Credencial.cs" />
+    <Compile Include="Dominio\Servicos\ServicoDeGeracaoCredencial.cs" />
+    <Compile Include="Dominio\Contratos\IMedicos.cs" />
     <Compile Include="Dominio\Entidades\Agendamento.cs" />
     <Compile Include="Dominio\Entidades\Atendente.cs" />
     <Compile Include="Dominio\Entidades\Exame.cs" />
+    <Compile Include="Dominio\Contratos\IPacientes.cs" />
     <Compile Include="Dominio\Fabricas\FabricaDeAgendamento.cs" />
     <Compile Include="Dominio\Contratos\IServicoDeEnvioEmail.cs" />
     <Compile Include="Dominio\Contratos\IServicoDeValidacaoDeCoberturaDeExame.cs" />
@@ -51,12 +65,18 @@
     <Compile Include="Dominio\Entidades\PlanoDeSaude.cs" />
     <Compile Include="Aplicacao\ServicoDeAgendamento.cs" />
     <Compile Include="Dominio\Entidades\TipoExame.cs" />
+    <Compile Include="Infraestrutura\Repositorios\Agendamentos.cs" />
+    <Compile Include="Infraestrutura\Repositorios\MapeamentoNHibernate.cs" />
+    <Compile Include="Infraestrutura\Repositorios\Medicos.cs" />
+    <Compile Include="Infraestrutura\Repositorios\NHibernateSessionFactory.cs" />
+    <Compile Include="Infraestrutura\Repositorios\Pacientes.cs" />
+    <Compile Include="Infraestrutura\Repositorios\Repositorio.cs" />
     <Compile Include="Infraestrutura\ServicoDeEnvioEmailCorporativo.cs" />
     <Compile Include="Infraestrutura\ServicoDeValidacaoDeCoberturaDeExame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Dominio\Servicos\" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

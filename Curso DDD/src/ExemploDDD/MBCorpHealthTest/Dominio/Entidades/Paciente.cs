@@ -1,15 +1,23 @@
-public class Paciente
+namespace MBCorpHealthTest.Dominio.Entidades
 {
-    public Paciente(string cpf, string nome, string email)
+    public   class Paciente
     {
-        CPF = cpf;
-        Nome = nome;
+        public   Paciente(string cpf, string nome, string email)
+        {
+            CPF = cpf;
+            Nome = nome;
+            Email = email;
+        }
+
+        public Paciente()
+        {
+        }
+
+        public virtual  string CPF { get; protected set; }
+        public virtual  string Nome { get; protected set; }
+        public virtual  PlanoDeSaude PlanoDeSaude { get; protected set; }
+        public virtual  string Email { get; protected set; }
+
+        //TODO: Criar método de validação
     }
-
-    public string CPF { get; private set; }
-    public string Nome { get; private set; }
-    public PlanoDeSaude PlanoDeSaude { get; private set; }
-    public string Email { get; private set; }
-
-    //TODO: Criar método de validação
 }

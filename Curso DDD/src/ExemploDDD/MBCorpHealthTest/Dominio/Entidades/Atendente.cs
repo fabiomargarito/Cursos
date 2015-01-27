@@ -1,13 +1,20 @@
-﻿public class Atendente
+﻿namespace MBCorpHealthTest.Dominio.Entidades
 {
-    public Atendente(string cpf, string nome)
+    public   class Atendente
     {
-        CPF = cpf;
-        Nome = nome;
+        public   Atendente(string cpf, string nome)
+        {
+            CPF = cpf;
+            Nome = nome;
+        }
+
+        public Atendente()
+        {
+        }
+
+        public virtual  string CPF { get; protected set; }
+        public virtual  string Nome { get; protected set; }
+
+        //todo Criar validação
     }
-
-    public string CPF { get; private set; }
-    public string Nome { get; private set; }
-
-    //todo Criar validação
 }

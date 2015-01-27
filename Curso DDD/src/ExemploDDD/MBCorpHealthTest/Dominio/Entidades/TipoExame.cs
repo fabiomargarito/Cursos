@@ -1,18 +1,25 @@
 ﻿using System;
 
-public class TipoExame
+namespace MBCorpHealthTest.Dominio.Entidades
 {
-    //Classificação Brasileira Hierarquizada de Procedimentos Médicos
-    public TipoExame(string cbhpm, string descricao, Double valor)
+    public   class TipoExame
     {
-        CBHPM = cbhpm;
-        Descricao = descricao;
-        Valor = valor;
+        //Classificação Brasileira Hierarquizada de Procedimentos Médicos
+        public   TipoExame(string cbhpm, string descricao, Double valor)
+        {
+            CBHPM = cbhpm;
+            Descricao = descricao;
+            Valor = valor;
+        }
+
+        public TipoExame()
+        {
+        }
+
+        public virtual  string CBHPM { get; protected set; }
+        public virtual  string Descricao { get; protected set; }
+        public virtual  double Valor { get; set; }
+
+        //Todo Criar método de validação
     }
-
-    public string CBHPM { get; private set; }
-    public string Descricao { get; private set; }
-    public double Valor { get; set; }
-
-    //Todo Criar método de validação
 }

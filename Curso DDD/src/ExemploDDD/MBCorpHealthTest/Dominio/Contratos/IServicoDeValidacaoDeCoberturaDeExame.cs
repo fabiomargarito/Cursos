@@ -1,4 +1,9 @@
-﻿public interface IServicoDeValidacaoDeCoberturaDeExame
+﻿using MBCorpHealthTest.Dominio.Entidades;
+
+namespace MBCorpHealthTest.Dominio.Contratos
 {
-    bool VerificarCoberturaDoExame(TipoExame tipoExame, Paciente paciente);
+    public   interface IServicoDeValidacaoDeCoberturaDeExame
+    {
+        bool VerificarCoberturaDoExame(TipoExame tipoExame, Paciente paciente);
+    }
 }

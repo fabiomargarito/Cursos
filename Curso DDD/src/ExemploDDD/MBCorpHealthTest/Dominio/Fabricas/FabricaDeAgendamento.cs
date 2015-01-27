@@ -1,17 +1,17 @@
 ﻿using System;
+using MBCorpHealthTest.Dominio.Entidades;
+using MBCorpHealthTest.Infraestrutura.Repositorios;
 
-namespace MBCorpHealthTestTest
+namespace MBCorpHealthTest.Dominio.Fabricas
 {
-    public class FabricaDeAgendamento
+    public   class FabricaDeAgendamento
     {
 
-        private String cpfPaciente;
+        protected String cpfPaciente;
+        protected String crmMedico;
+        protected String cpfAtendente;
 
-        private String crmMedico;
-
-        private String cpfAtendente;
-
-        public FabricaDeAgendamento InformarPaciente(String cpf)
+        public virtual  FabricaDeAgendamento InformarPaciente(String cpf)
         {
 
             cpfPaciente = cpf;
@@ -20,7 +20,7 @@ namespace MBCorpHealthTestTest
 
         }
 
-        public FabricaDeAgendamento InformarMedicoSolicitante(String crm)
+        public virtual  FabricaDeAgendamento InformarMedicoSolicitante(String crm)
         {
 
             crmMedico = crm;
@@ -29,7 +29,7 @@ namespace MBCorpHealthTestTest
 
         }
 
-        public FabricaDeAgendamento InformarAtendente(String cpf)
+        public virtual  FabricaDeAgendamento InformarAtendente(String cpf)
         {
 
             cpfAtendente = cpf;
@@ -38,7 +38,7 @@ namespace MBCorpHealthTestTest
 
         }
 
-        public Agendamento Criar()
+        public virtual  Agendamento Criar()
         {
 
             var repositorio = new Repositorio();
@@ -54,31 +54,4 @@ namespace MBCorpHealthTestTest
         }
 
     }
-
-    public class Repositorio
-    {
-
-        internal Paciente ObterPacientePeloCPF(string cpfPaciente)
-        {
-
-            return new Paciente(cpfPaciente,"teste","teste");
-
-        }
-
-        internal Medico ObterMedicoPeloCrm(string crmMedico)
-        {
-
-            return new Medico(crmMedico, "teste", "SP");
-
-        }
-
-        internal Atendente ObterAtendentePeloCPF(string cfpAtendente)
-        {
-
-            return new Atendente(cfpAtendente, "teste");
-
-        }
-
-    }
-
 }

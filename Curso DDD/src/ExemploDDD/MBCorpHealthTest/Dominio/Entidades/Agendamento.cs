@@ -2,35 +2,43 @@
 using System.Collections.Generic;
 using System.Linq;
 
-public class Agendamento
+namespace MBCorpHealthTest.Dominio.Entidades
 {
-    public ISet<Exame> Exames { get; private set; }
-    public int ID { get; set; }
-    public Atendente Atendente { get; private set; }
-    public Paciente Paciente { get; private set; }
-    public Medico MedicoSolicitante { get; private set; }
-
-
-
-    public Agendamento(Paciente paciente, Medico medico, Atendente atendente)
+    public   class Agendamento
     {
-        Paciente = paciente;
-        MedicoSolicitante = medico;
-        Atendente = atendente;
+        public Agendamento()
+        {
+        }
 
-        ID = int.MaxValue;
-    }
+        public virtual  IList<Exame> Exames { get; protected set; }
+        public virtual  int ID { get; set; }
+        public virtual  Atendente Atendente { get; protected set; }
+        public virtual  Paciente Paciente { get; protected set; }
+        public virtual  Medico MedicoSolicitante { get; protected set; }
+        public virtual  Credencial Credencial{ get;  set; }
+        
 
-    public void AdicionarExame(Exame tipoExame)
-    {
-        Exames = new HashSet<Exame>();
-        Exames.Add(tipoExame);
 
-    }
+        public   Agendamento(Paciente paciente, Medico medico, Atendente atendente)
+        {
+            Paciente = paciente;
+            MedicoSolicitante = medico;
+            Atendente = atendente;
+
+            ID = int.MaxValue;
+        }
+
+        public virtual  void AdicionarExame(Exame tipoExame)
+        {
+            Exames = new List<Exame>();
+            Exames.Add(tipoExame);
+
+        }
     
-    public Double CalcularValorTotal()
-    {
-        Double valorTotal = Exames.Sum(exame => exame.TipoExame.Valor);
-        return valorTotal;
+        public virtual  Double CalcularValorTotal()
+        {
+            Double valorTotal = Exames.Sum(exame => exame.TipoExame.Valor);
+            return valorTotal;
+        }
     }
 }

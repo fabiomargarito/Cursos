@@ -1,17 +1,25 @@
-﻿public class Exame
+﻿namespace MBCorpHealthTest.Dominio.Entidades
 {
-
-    public Exame(TipoExame tipoExame)
+    public   class Exame
     {
-        TipoExame = tipoExame;
-    }
 
-    public TipoExame TipoExame { get; private set; }
-    public Laudo Laudo { get; private set; }
+        public   Exame(TipoExame tipoExame)
+        {
+            TipoExame = tipoExame;
+        }
 
-    public void EmitirLaudo(Laudo laudo)
-    {
-        Laudo = laudo;
+        public Exame()
+        {
+        }
 
+        public virtual  TipoExame TipoExame { get; protected set; }
+        public virtual  Laudo Laudo { get; protected set; }
+        public virtual  int ID { get; set; }
+
+        public virtual  void EmitirLaudo(Laudo laudo)
+        {
+            Laudo = laudo;
+
+        }
     }
 }

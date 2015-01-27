@@ -1,4 +1,7 @@
-public interface IServicoDeEnvioEmail
+namespace MBCorpHealthTest.Dominio.Contratos
 {
-    void Enviar(string de, string para, string asssunto, string mensagem);
+    public   interface IServicoDeEnvioEmail
+    {
+        void Enviar(string de, string para, string asssunto, string mensagem);
+    }
 }
