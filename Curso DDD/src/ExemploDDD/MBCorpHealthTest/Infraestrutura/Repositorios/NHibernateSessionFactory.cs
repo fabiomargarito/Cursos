@@ -10,9 +10,9 @@ using NHibernate.Tool.hbm2ddl;
 
 namespace MBCorpHealthTest.Infraestrutura.Repositorios
 {
-    public   class NHibernateSessionFactory
+    public class NHibernateSessionFactory
     {
-        public   static ISessionFactory Criar()
+        public static ISessionFactory Criar()
         {
             ISessionFactory sessionFactory = Fluently.Configure()
                 .Mappings(map => map.FluentMappings.AddFromAssemblyOf<MapeamentoMedico>())                                

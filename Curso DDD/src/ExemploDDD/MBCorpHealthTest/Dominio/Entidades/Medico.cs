@@ -2,9 +2,9 @@ using System;
 
 namespace MBCorpHealthTest.Dominio.Entidades
 {
-    public   class Medico
+    public class Medico
     {
-        public   Medico(string crm, string nome, string estado)
+        public Medico(string crm, string nome, string estado)
         {
             ValidarMedico(crm, nome, estado);
             CRM = crm;
@@ -12,11 +12,11 @@ namespace MBCorpHealthTest.Dominio.Entidades
             Estado = estado;
         }
 
-        public   Medico()
+        protected Medico()
         {
         }
 
-        protected   virtual void ValidarMedico(string crm, string nome, string estado)
+        private void ValidarMedico(string crm, string nome, string estado)
         {
             if (String.IsNullOrEmpty(crm))
                 throw new Exception("CRM inválido");
@@ -28,9 +28,9 @@ namespace MBCorpHealthTest.Dominio.Entidades
                 throw new Exception("Estado inválido");
         }
 
-        public   virtual string CRM { get; protected set; }//Identificador
-        public   virtual string Nome { get; protected set; }
-        public   virtual string Estado { get; protected set; }
+        public string CRM { get; protected set; }//Identificador
+        public string Nome { get; protected set; }
+        public string Estado { get; protected set; }
 
 
     }

@@ -1,13 +1,10 @@
 ﻿namespace MBCorpHealthTest.Dominio.Entidades
 {
-    public   class Laudo
+    public class Laudo
     {
+        public string Descricao { get; protected set; }
 
-        
-
-        public virtual  string Descricao { get; protected set; }
-
-        public   Laudo(string descricao)
+        public Laudo(string descricao)
         {
 
 
@@ -15,11 +12,8 @@
 
         }
 
-
-        public Laudo()
+        protected Laudo()
         {
         }
-
-        public virtual  int ID { get; set; }
     }
 }

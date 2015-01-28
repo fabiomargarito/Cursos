@@ -4,14 +4,14 @@ using MBCorpHealthTest.Infraestrutura.Repositorios;
 
 namespace MBCorpHealthTest.Dominio.Fabricas
 {
-    public   class FabricaDeAgendamento
+    public class FabricaDeAgendamento
     {
 
         protected String cpfPaciente;
         protected String crmMedico;
         protected String cpfAtendente;
 
-        public virtual  FabricaDeAgendamento InformarPaciente(String cpf)
+        public FabricaDeAgendamento InformarPaciente(String cpf)
         {
 
             cpfPaciente = cpf;
@@ -20,7 +20,7 @@ namespace MBCorpHealthTest.Dominio.Fabricas
 
         }
 
-        public virtual  FabricaDeAgendamento InformarMedicoSolicitante(String crm)
+        public FabricaDeAgendamento InformarMedicoSolicitante(String crm)
         {
 
             crmMedico = crm;
@@ -29,7 +29,7 @@ namespace MBCorpHealthTest.Dominio.Fabricas
 
         }
 
-        public virtual  FabricaDeAgendamento InformarAtendente(String cpf)
+        public FabricaDeAgendamento InformarAtendente(String cpf)
         {
 
             cpfAtendente = cpf;
@@ -38,7 +38,7 @@ namespace MBCorpHealthTest.Dominio.Fabricas
 
         }
 
-        public virtual  Agendamento Criar()
+        public Agendamento Criar()
         {
 
             var repositorio = new Repositorio();

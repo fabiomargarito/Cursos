@@ -2,7 +2,7 @@
 
 namespace MBCorpHealthTest.Dominio.Contratos
 {
-    public   interface IServicoDeGeracaoCredencial
+    public interface IServicoDeGeracaoCredencial
     {
         Credencial Gerar(Paciente paciente);
     }

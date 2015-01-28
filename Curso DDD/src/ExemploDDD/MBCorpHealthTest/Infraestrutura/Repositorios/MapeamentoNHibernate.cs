@@ -3,9 +3,9 @@ using MBCorpHealthTest.Dominio.Entidades;
 
 namespace MBCorpHealthTest.Infraestrutura.Repositorios
 {
-    public   class MapeamentoMedico : ClassMap<Medico>
+    public class MapeamentoMedico : ClassMap<Medico>
     {
-        public   MapeamentoMedico()
+        public MapeamentoMedico()
         {
             Id(chave => chave.CRM).Column("CRM");                        
             Map(campo => campo.Nome).Column("NOME");
@@ -15,10 +15,9 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
         }
     }
 
-
-    public   class MapeamentoAtendente : ClassMap<Atendente>
+    public class MapeamentoAtendente : ClassMap<Atendente>
     {
-        public   MapeamentoAtendente()
+        public MapeamentoAtendente()
         {
             Id(chave => chave.CPF).Column("CPF");
             Map(campo => campo.Nome).Column("NOME");            
@@ -27,10 +26,9 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
         }
     }
 
-
-    public   class MapeamentoPlanoDeSaude : ClassMap<PlanoDeSaude>
+    public class MapeamentoPlanoDeSaude : ClassMap<PlanoDeSaude>
     {
-        public   MapeamentoPlanoDeSaude()
+        public MapeamentoPlanoDeSaude()
         {
             Id(chave => chave.CNPJ).Column("CNPJ");
             Map(campo => campo.Nome).Column("NOME");
@@ -40,9 +38,9 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
         }
     }	
 
-    public   class MapeamentoPaciente : ClassMap<Paciente>
+    public class MapeamentoPaciente : ClassMap<Paciente>
     {
-        public   MapeamentoPaciente()
+        public MapeamentoPaciente()
         {
             Id(chave => chave.CPF).Column("CPF");
             Map(campo => campo.Email).Column("EMAIL");
@@ -53,12 +51,11 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
         }
     }
 
-
-    public   class MapeamentoCredencial : ClassMap<Credencial>
+    public class MapeamentoCredencial : ClassMap<Credencial>
     {
-        public   MapeamentoCredencial()
+        public MapeamentoCredencial()
         {
-            Id(chave => chave.ID).Column("IDCREDENCIAL");
+            Id().Column("IDCREDENCIAL");
             Map(campo => campo.User).Column("USUARIO");
             Map(campo => campo.Senha).Column("SENHA");            
             Table("TBCREDENCIAL");
@@ -66,41 +63,33 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
         }
     }
 
-    public   class MapeamentoTipoExame : ClassMap<TipoExame>
+    public class MapeamentoTipoExame : ClassMap<TipoExame>
     {
-        public   MapeamentoTipoExame()
+        public MapeamentoTipoExame()
         {
             Id(chave => chave.CBHPM).Column("CBHPM");
-
             Map(campo => campo.Descricao).Column("DESCRICAO");
             Table("TBTIPOEXAME");
             LazyLoad();
         }
     }	
 
-
-    
-
-    public   class MapeamentoLaudo : ClassMap<Laudo>
+    public class MapeamentoLaudo : ClassMap<Laudo>
     {
-        public   MapeamentoLaudo()
+        public MapeamentoLaudo()
         {
-            Id(chave => chave.ID).Column("IDLAUDO");
+            Id().Column("IDLAUDO");
             Map(campo => campo.Descricao).Column("DESCRICAO");            
             Table("TBLAUDO");
             LazyLoad();
         }
     }	
 
-
-    
-
-
-    public   class MapeamentoExame : ClassMap<Exame>
+    public class MapeamentoExame : ClassMap<Exame>
     {
-        public   MapeamentoExame()
+        public MapeamentoExame()
         {
-            Id(chave => chave.ID).Column("IDEXAME");            
+            Id().Column("IDEXAME");
             References(chave => chave.Laudo).Column("IDLAUDO");
             References(chave => chave.TipoExame).Column("CBHPM");            
             Table("TBEXAME");
@@ -108,10 +97,9 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
         }
     }
 
-
-    public   class MapeamentoAgendamento : ClassMap<Agendamento>
+    public class MapeamentoAgendamento : ClassMap<Agendamento>
     {
-        public   MapeamentoAgendamento()
+        public MapeamentoAgendamento()
         {
             Id(chave => chave.ID).Column("IDAGENDAMENTO");            
             References(chave => chave.Atendente).Column("CPF");
@@ -123,7 +111,4 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
             LazyLoad();
         }
     }	
-
-
-
 }

@@ -4,22 +4,16 @@ using System.Linq;
 
 namespace MBCorpHealthTest.Dominio.Entidades
 {
-    public   class Agendamento
+    public class Agendamento
     {
-        public Agendamento()
-        {
-        }
+        public IEnumerable<Exame> Exames { get; protected set; }
+        public int ID { get; set; }
+        public Atendente Atendente { get; protected set; }
+        public Paciente Paciente { get; protected set; }
+        public Medico MedicoSolicitante { get; protected set; }
+        public Credencial Credencial{ get;  set; }
 
-        public virtual  IList<Exame> Exames { get; protected set; }
-        public virtual  int ID { get; set; }
-        public virtual  Atendente Atendente { get; protected set; }
-        public virtual  Paciente Paciente { get; protected set; }
-        public virtual  Medico MedicoSolicitante { get; protected set; }
-        public virtual  Credencial Credencial{ get;  set; }
-        
-
-
-        public   Agendamento(Paciente paciente, Medico medico, Atendente atendente)
+        public Agendamento(Paciente paciente, Medico medico, Atendente atendente)
         {
             Paciente = paciente;
             MedicoSolicitante = medico;
@@ -28,14 +22,18 @@ namespace MBCorpHealthTest.Dominio.Entidades
             ID = int.MaxValue;
         }
 
-        public virtual  void AdicionarExame(Exame tipoExame)
+        protected Agendamento()
+        {
+        }
+
+        public void AdicionarExame(Exame tipoExame)
         {
             Exames = new List<Exame>();
-            Exames.Add(tipoExame);
+            ((IList<Exame>)Exames).Add(tipoExame);
 
         }
     
-        public virtual  Double CalcularValorTotal()
+        public Double CalcularValorTotal()
         {
             Double valorTotal = Exames.Sum(exame => exame.TipoExame.Valor);
             return valorTotal;
