@@ -9,6 +9,7 @@ namespace MBCorpHealthTestTest
     public interface IAgendamentos
     {
         Agendamento pesquisarPorPaciente(Credencial credencial);
+        bool Gravar(Agendamento agendamento);
     }
 
     public class Agendamentos : IAgendamentos
@@ -23,7 +24,16 @@ namespace MBCorpHealthTestTest
         public Agendamento pesquisarPorPaciente(Credencial credencial)
         {
             return
-                _session.Query<Agendamento>().SingleOrDefault(ag => ag.Credencial.Senha == credencial.Senha && ag.Credencial.User == credencial.User);
+                _session.Query<Agendamento>().FirstOrDefault(ag => ag.Credencial.Senha == credencial.Senha && ag.Credencial.User == credencial.User);
+        }
+
+        public bool Gravar(Agendamento agendamento)
+        {
+      
+                _session.SaveOrUpdate(agendamento);
+                _session.Flush();
+          
+            return true;
         }
     }
 
@@ -41,6 +51,11 @@ namespace MBCorpHealthTestTest
             agendamento.Exames.First().EmitirLaudo(new Laudo("teste"));
 
             return agendamento;
+        }
+
+        public bool Gravar(Agendamento agendamento)
+        {
+            return true;
         }
     }
 }

@@ -12,6 +12,7 @@ using IMedicos = MBCorpHealthTest.Dominio.Contratos.IMedicos;
 
 namespace MBCorpHealthTestTest
 {
+
     [TestClass]
     public class TestesUnitarios
     {
@@ -34,9 +35,33 @@ namespace MBCorpHealthTestTest
 
 
 
-            //Assert
-            Assert.IsTrue(retornoAgendamento.ID != 0);
+            //Assert            
             Assert.IsTrue(retornoAgendamento.Exames.Count() > 0);
+
+        }
+
+
+        [TestMethod]
+        public void DevePersistirOAgendamento()
+        {
+            //Arrage
+            Agendamento agendamento =
+                (new FabricaDeAgendamento()).InformarPaciente("123")
+                    .InformarMedicoSolicitante("1234")
+                    .InformarAtendente("1234")
+                    .Criar();
+
+            agendamento.AdicionarExame(new Exame(new TipoExame("10101012", "Hemograma", 100)));
+
+            IAgendamentos agendamentos = new AgendamentosFake();
+
+            //Act
+            var retorno = agendamentos.Gravar(agendamento);
+
+            //Assert
+            Assert.IsTrue(retorno);
+
+
 
         }
 
@@ -213,5 +238,22 @@ namespace MBCorpHealthTestTest
             Assert.IsTrue(agendamento.MedicoSolicitante.CRM == "CRM");
             Assert.IsTrue(agendamento.Atendente.CPF == "1234");
         }
+
+
+        [TestMethod]
+        public void TestarEventoDeCriacaoDoAgendamento()
+        {
+            var agendamento =
+                (new FabricaDeAgendamento()).InformarAtendente("123")
+                    .InformarMedicoSolicitante("123")
+                    .InformarPaciente("123")
+                    .Criar();
+            var eventoAgendamento = new AgendamentoCriado(agendamento);
+
+            EventosDeDominio.Disparar(eventoAgendamento);
+
+
+        }
+
     }
 }

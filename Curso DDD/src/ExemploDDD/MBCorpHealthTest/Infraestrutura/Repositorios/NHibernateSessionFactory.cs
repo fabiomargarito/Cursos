@@ -19,7 +19,7 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
                 .Database(                
                     MsSqlConfiguration.MsSql2008.ConnectionString(
                         c => c.FromConnectionStringWithKey("MBCORPHEALTH")))
-                //.ExposeConfiguration(config => new SchemaExport(config).SetOutputFile(@"C:\Users\Fabio\Dropbox\Projetos\ArquivoSQLAulaDDD.sql").Execute(true, true, false))
+               // .ExposeConfiguration(config => new SchemaExport(config).SetOutputFile(@"C:\Users\Fabio\Dropbox\Projetos\ArquivoSQLAulaDDD.sql").Execute(true, true, false))
                 .BuildSessionFactory();
 
             return sessionFactory;

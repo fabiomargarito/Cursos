@@ -19,8 +19,7 @@ namespace MBCorpHealthTest.Dominio.Entidades
             MedicoSolicitante = medico;
             Atendente = atendente;
 
-            ID = int.MaxValue;
-        }
+            }
 
         protected Agendamento()
         {

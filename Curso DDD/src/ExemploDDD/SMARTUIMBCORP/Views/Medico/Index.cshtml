@@ -1,0 +1,22 @@
+﻿@model MBCorpHealthTest.ViewModel.MedicoViewModel
+
+@{
+    ViewBag.Title = "title";
+    
+}
+
+<h2>Pesquisa de Médicos</h2>
+@using (Html.BeginForm("Pesquisar","Medico"))
+{
+    <fieldset>
+        <table>
+            <tr>
+                <td>CRM: @Html.EditorFor(model => model.CRM)</td>
+                <td>ESTADO: @Html.EditorFor(model => model.Estado)</td>
+                <td></td>
+            </tr>
+            <input type="submit" value="Pesquisar"/>
+        </table>
+      
+    </fieldset>
+}

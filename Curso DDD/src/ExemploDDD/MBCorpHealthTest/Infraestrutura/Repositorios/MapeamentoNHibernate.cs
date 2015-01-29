@@ -19,9 +19,9 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
     {
         public MapeamentoAtendente()
         {
-            Id(chave => chave.CPF).Column("CPF");
+            Id(chave => chave.CPF).Column("CPFATENDENTE");
             Map(campo => campo.Nome).Column("NOME");            
-            Table("TBPACIENTE");
+            Table("TBATENDENTE");
             LazyLoad();
         }
     }
@@ -42,7 +42,7 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
     {
         public MapeamentoPaciente()
         {
-            Id(chave => chave.CPF).Column("CPF");
+            Id(chave => chave.CPF).Column("CPFPACIENTE");
             Map(campo => campo.Email).Column("EMAIL");
             Map(campo => campo.Nome).Column("NOME");
             References(chave => chave.PlanoDeSaude).Column("CNPJ");
@@ -55,7 +55,7 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
     {
         public MapeamentoCredencial()
         {
-            Id().Column("IDCREDENCIAL");
+            Id().Column("IDCREDENCIAL").GeneratedBy.Increment();
             Map(campo => campo.User).Column("USUARIO");
             Map(campo => campo.Senha).Column("SENHA");            
             Table("TBCREDENCIAL");
@@ -88,8 +88,8 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
     public class MapeamentoExame : ClassMap<Exame>
     {
         public MapeamentoExame()
-        {
-            Id().Column("IDEXAME");
+        {            
+            Id().Column("IDEXAME").GeneratedBy.Increment();
             References(chave => chave.Laudo).Column("IDLAUDO");
             References(chave => chave.TipoExame).Column("CBHPM");            
             Table("TBEXAME");
@@ -101,12 +101,12 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
     {
         public MapeamentoAgendamento()
         {
-            Id(chave => chave.ID).Column("IDAGENDAMENTO");            
-            References(chave => chave.Atendente).Column("CPF");
-            References(chave => chave.Credencial).Column("IDCREDENCIAL");            
+            Id(chave => chave.ID).Column("IDAGENDAMENTO");
+            HasMany(chave => chave.Exames).KeyColumn("IDAGENDAMENTO").Cascade.SaveUpdate();
+            References(chave => chave.Atendente).Column("CPFATENDENTE");
+            References(chave => chave.Credencial).Column("IDCREDENCIAL").Cascade.SaveUpdate();            
             References(chave => chave.MedicoSolicitante).Column("CRM");
-            References(chave => chave.Paciente).Column("CPF");
-            HasMany(chave => chave.Exames).KeyColumn("IDAGENDAMENTO");
+            References(chave => chave.Paciente).Column("CPFPACIENTE");            
             Table("TBAGENDAMENTO");
             LazyLoad();
         }

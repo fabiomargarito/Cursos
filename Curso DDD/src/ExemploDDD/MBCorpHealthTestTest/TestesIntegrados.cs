@@ -2,6 +2,8 @@
 using System.Linq;
 using MBCorpHealthTest.Dominio.Contratos;
 using MBCorpHealthTest.Dominio.Entidades;
+using MBCorpHealthTest.Dominio.Fabricas;
+using MBCorpHealthTest.Dominio.Servicos;
 using MBCorpHealthTest.Infraestrutura.Repositorios;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using IMedicos = MBCorpHealthTest.Dominio.Contratos.IMedicos;
@@ -52,8 +54,32 @@ namespace MBCorpHealthTestTest
             }
         }
 
+        [TestMethod]
+        public void DevePersistirOAgendamentoIntegrado()
+        {
+            using (var session = NHibernateSessionFactory.Criar().OpenSession())
+            {
+                //Arrage
+                Agendamento agendamento =
+                    (new FabricaDeAgendamento()).InformarPaciente("1234")
+                        .InformarMedicoSolicitante("123")
+                        .InformarAtendente("222")
+                        .Criar();
+
+                agendamento.AdicionarExame(new Exame(new TipoExame("1", "Hemograma", 100)));
+                agendamento.Credencial = (new ServicoDeGeracaoCredencial()).Gerar(agendamento.Paciente);
+
+                IAgendamentos agendamentos = new Agendamentos(session);
+
+                //Act
+                var retorno = agendamentos.Gravar(agendamento);
+
+                //Assert
+                Assert.IsTrue(retorno);
+            }
 
 
+        }
 
     }
     
