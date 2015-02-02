@@ -240,20 +240,7 @@ namespace MBCorpHealthTestTest
         }
 
 
-        [TestMethod]
-        public void TestarEventoDeCriacaoDoAgendamento()
-        {
-            var agendamento =
-                (new FabricaDeAgendamento()).InformarAtendente("123")
-                    .InformarMedicoSolicitante("123")
-                    .InformarPaciente("123")
-                    .Criar();
-            var eventoAgendamento = new AgendamentoCriado(agendamento);
-
-            EventosDeDominio.Disparar(eventoAgendamento);
-
-
-        }
+     
 
     }
 }
