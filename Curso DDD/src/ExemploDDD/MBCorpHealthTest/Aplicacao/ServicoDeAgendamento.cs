@@ -1,16 +1,16 @@
 ﻿using MBCorpHealthTest.Dominio.Contratos;
 using MBCorpHealthTest.Dominio.Entidades;
+using MBCorpHealthTest.Dominio.EventosDeDominio;
 
 namespace MBCorpHealthTest.Aplicacao
 {
     public   class ServicoDeAgendamento
-    {
-        protected readonly IServicoDeEnvioEmail _servicoDeEnvioEmail;
+    {        
         protected readonly IServicoDeGeracaoCredencial _servicoDeGeracaoCredencial;
 
-        public   ServicoDeAgendamento(IServicoDeEnvioEmail servicoDeEnvioEmail,IServicoDeGeracaoCredencial servicoDeGeracaoCredencial)
+        public   ServicoDeAgendamento(IServicoDeGeracaoCredencial servicoDeGeracaoCredencial)
         {
-            _servicoDeEnvioEmail = servicoDeEnvioEmail;
+     
             _servicoDeGeracaoCredencial = servicoDeGeracaoCredencial;
         }
 
@@ -20,9 +20,8 @@ namespace MBCorpHealthTest.Aplicacao
             agendamento.Credencial = _servicoDeGeracaoCredencial.Gerar(agendamento.Paciente);
             
 
-            //Enviar Email
-            _servicoDeEnvioEmail.Enviar("mbcorp@mbcorp.com.br", agendamento.Paciente.Email, "Agendamento Confirmado", "Mensagem para o paciente + dados da Credenical");
-
+            //Disparar Eventos
+            EventosDoDominio.Disparar(new AgendamentoCriado(agendamento));
             
 
             return agendamento;

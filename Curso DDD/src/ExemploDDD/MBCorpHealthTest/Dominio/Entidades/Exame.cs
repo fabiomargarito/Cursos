@@ -1,4 +1,7 @@
-﻿namespace MBCorpHealthTest.Dominio.Entidades
+﻿using MBCorpHealthTest.Dominio.Contratos;
+using MBCorpHealthTest.Dominio.EventosDeDominio;
+
+namespace MBCorpHealthTest.Dominio.Entidades
 {
     public class Exame
     {
@@ -17,6 +20,7 @@
         public void EmitirLaudo(Laudo laudo)
         {
             Laudo = laudo;
+            EventosDoDominio.Disparar(new LaudoEmitido(this));
         }
     }
 }

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using MBCorpHealthTest.Aplicacao;
 using MBCorpHealthTest.Dominio.Contratos;
-using MBCorpHealthTest.Dominio.Entidades;
-using MBCorpHealthTest.Infraestrutura.Repositorios;
 using MBCorpHealthTest.ViewModel;
 using NHibernate;
 

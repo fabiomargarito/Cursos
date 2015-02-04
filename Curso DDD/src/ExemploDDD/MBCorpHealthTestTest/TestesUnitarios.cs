@@ -30,7 +30,7 @@ namespace MBCorpHealthTestTest
             agendamento.AdicionarExame(new Exame(new TipoExame("10101012", "Hemograma", 100)));
 
             //Act
-            ServicoDeAgendamento servicoDeAgendamento = new ServicoDeAgendamento(new ServicoDeEnvioEmailCorporativo(),new ServicoDeGeracaoCredencial());
+            ServicoDeAgendamento servicoDeAgendamento = new ServicoDeAgendamento(new ServicoDeGeracaoCredencial());
             var retornoAgendamento = servicoDeAgendamento.CadastrarAgendamento(agendamento);
 
 
@@ -132,7 +132,7 @@ namespace MBCorpHealthTestTest
             agendamento.AdicionarExame(new Exame(new TipoExame("10101012", "Hemograma", 100)));
 
             //Act
-            ServicoDeAgendamento servicoDeAgendamento = new ServicoDeAgendamento(new ServicoDeEnvioEmailCorporativo(),new ServicoDeGeracaoCredencial());
+            ServicoDeAgendamento servicoDeAgendamento = new ServicoDeAgendamento(new ServicoDeGeracaoCredencial());
             var retornoAgendamento = servicoDeAgendamento.CadastrarAgendamento(agendamento);
 
 
@@ -175,7 +175,7 @@ namespace MBCorpHealthTestTest
             agendamento.AdicionarExame(new Exame(new TipoExame("10101012", "Hemograma", 100)));
 
             //Act
-            ServicoDeAgendamento servicoDeAgendamento = new ServicoDeAgendamento(new ServicoDeEnvioEmailCorporativo(),new ServicoDeGeracaoCredencial());
+            ServicoDeAgendamento servicoDeAgendamento = new ServicoDeAgendamento(new ServicoDeGeracaoCredencial());
             var retornoAgendamento = servicoDeAgendamento.CadastrarAgendamento(agendamento);
 
             agendamento.Exames.FirstOrDefault().EmitirLaudo(new Laudo("bla bla bla bla"));

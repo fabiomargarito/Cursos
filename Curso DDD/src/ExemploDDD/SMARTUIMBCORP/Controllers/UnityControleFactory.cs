@@ -19,7 +19,8 @@ namespace SMARTUIMBCORP.Controllers
 
             var session = NHibernateSessionFactory.Criar().OpenSession();
             this.Container.RegisterInstance<ISession>(session);
-            Container.RegisterType<IMedicos, MedicosFake>();                    
+            Container.RegisterType<IMedicos, MedicosFake>();     
+               
             this.Container.RegisterType(typeof(IController), typeof(MedicoController),"Medico");
             this.Container.RegisterType(typeof(IController), typeof(HomeController), "Home");
             this.Container.RegisterType(typeof(IController), typeof(AccountController), "Account");            
