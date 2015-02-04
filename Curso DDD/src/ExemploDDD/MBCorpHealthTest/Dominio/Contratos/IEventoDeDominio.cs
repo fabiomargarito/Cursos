@@ -2,5 +2,6 @@
 {
     public interface IEventoDeDominio
     {
+        //fabio margarito
     }
 }
