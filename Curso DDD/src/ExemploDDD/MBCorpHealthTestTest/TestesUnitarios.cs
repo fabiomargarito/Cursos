@@ -36,7 +36,7 @@ namespace MBCorpHealthTestTest
 
 
             //Assert            
-            Assert.IsTrue(retornoAgendamento.Exames.Count() == 0);
+            Assert.IsTrue(retornoAgendamento.Exames.Count() > 0);
 
         }
 
