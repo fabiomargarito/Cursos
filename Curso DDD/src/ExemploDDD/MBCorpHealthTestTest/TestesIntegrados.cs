@@ -4,6 +4,7 @@ using MBCorpHealthTest.Dominio.Contratos;
 using MBCorpHealthTest.Dominio.Entidades;
 using MBCorpHealthTest.Dominio.Fabricas;
 using MBCorpHealthTest.Dominio.Servicos;
+using MBCorpHealthTest.Infraestrutura;
 using MBCorpHealthTest.Infraestrutura.Repositorios;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using IMedicos = MBCorpHealthTest.Dominio.Contratos.IMedicos;
@@ -77,8 +78,13 @@ namespace MBCorpHealthTestTest
             //    Assert.IsTrue(retorno);
             }
 
-
+        [TestMethod]
+        public void DeveConsultarServicoDeAgendaDasUnidadesDeDiagnostico()
+        {
+            
         }
+
+    }
 
     }
     

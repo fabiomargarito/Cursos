@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBCorpHealthTest", "MBCorpH
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBCorpHealthTestTest", "..\MBCorpHealthTestTest\MBCorpHealthTestTest.csproj", "{9D711AE3-5050-4632-868E-516E91720656}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMARTUIMBCORP", "..\SMARTUIMBCORP\SMARTUIMBCORP.csproj", "{1D6209FE-8614-4F2B-B8AF-2C4781CB2C64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBCORP", "..\SMARTUIMBCORP\MBCORP.csproj", "{1D6209FE-8614-4F2B-B8AF-2C4781CB2C64}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{2D0BD962-9A8E-45F5-BFE8-1D6ED927CB00}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishSc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{2B6252D8-91DD-41D3-95FC-A00B7284D156}"
 	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\ServicosCorporativos-WAWS-dev.json = PublishScripts\Configurations\ServicosCorporativos-WAWS-dev.json
 		PublishScripts\Configurations\SMARTUIMBCORP-WAWS-dev.json = PublishScripts\Configurations\SMARTUIMBCORP-WAWS-dev.json
 	EndProjectSection
 EndProject
