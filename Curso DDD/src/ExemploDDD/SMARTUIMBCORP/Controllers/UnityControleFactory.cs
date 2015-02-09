@@ -1,8 +1,9 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.SessionState;
-using MBCorpHealthTest.Dominio.Contratos;
-using MBCorpHealthTest.Infraestrutura.Repositorios;
+using MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.Contratos;
+using MBCorpHealthTest.Infraestrutura.ContextoAdministracaoDeAgendamentosDeExame.Repositorios;
+using MBCorpHealthTest.Infraestrutura.ContextoCadastrosCorporativos;
 using Microsoft.Practices.Unity;
 using NHibernate;
 

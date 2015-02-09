@@ -1,5 +1,6 @@
-﻿using MBCorpHealthTest.Dominio.Contratos;
-using MBCorpHealthTest.Dominio.Entidades;
+﻿using MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.Contratos;
+using MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.Entidades;
+using MBCorpHealthTest.Dominio.ContextoCadastrosCorporativos.Entidades;
 
 namespace MBCorpHealthTest.Infraestrutura
 {

@@ -74,9 +74,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="TestesUnitarios.cs" />
+    <Compile Include="TestesUnitariosContextoAdministracaoDeAgendamentosDeExame.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestesIntegrados.cs" />
+    <Compile Include="TestesIntegradosContextoAdministracaoDeAgendamentosDeExame.cs" />
+    <Compile Include="TestesUnitariosContextoCadastrosCorporativos.cs" />
+    <Compile Include="TestesIntegradosContextoCadastrosCorporativos.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

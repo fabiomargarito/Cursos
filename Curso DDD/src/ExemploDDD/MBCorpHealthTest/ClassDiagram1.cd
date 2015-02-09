@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="MBCorpHealthTest.Dominio.Entidades.TipoExame">
+  <Class Name="MBCorpHealthTest.Dominio.ContextoCadastrosCorporativos.Entidades.TipoExame">
     <Position X="2.25" Y="0.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAABAAAAAAEAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Dominio\Entidades\TipoExame.cs</FileName>
+      <FileName>Dominio\ContextoCadastrosCorporativos\Entidades\TipoExame.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MBCorpHealthTest.Dominio.Entidades.Agendamento">
+  <Class Name="MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.Entidades.Agendamento">
     <Position X="9" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAABAggAAAIAAQAAAAAAAAQAAAAAIAAAAAAAA=</HashCode>
-      <FileName>Dominio\Entidades\Agendamento.cs</FileName>
+      <FileName>Dominio\ContextoAdministracaoDeAgendamentosDeExame\Entidades\Agendamento.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Exames" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="MBCorpHealthTest.Dominio.Entidades.Exame">
+  <Class Name="MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.Entidades.Exame">
     <Position X="6" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAEAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
-      <FileName>Dominio\Entidades\Exame.cs</FileName>
+      <FileName>Dominio\ContextoAdministracaoDeAgendamentosDeExame\Entidades\Exame.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="TipoExame" />

@@ -1,4 +1,4 @@
-﻿using MBCorpHealthTest.Dominio.Contratos;
+﻿using MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.Contratos;
 
 namespace MBCorpHealthTest.Infraestrutura
 {

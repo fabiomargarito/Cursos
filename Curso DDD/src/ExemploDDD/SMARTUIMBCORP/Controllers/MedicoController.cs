@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 using MBCorpHealthTest.Aplicacao;
-using MBCorpHealthTest.Dominio.Contratos;
+using MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.Contratos;
 using MBCorpHealthTest.ViewModel;
 using NHibernate;
 

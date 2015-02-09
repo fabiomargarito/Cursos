@@ -1,6 +1,7 @@
-﻿using MBCorpHealthTest.Dominio.Contratos;
-using MBCorpHealthTest.Dominio.Entidades;
-using MBCorpHealthTest.Dominio.EventosDeDominio;
+﻿using MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.Contratos;
+using MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.Entidades;
+using MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.EventosDeDominio;
+using MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.EventosDeDominio.EventosAgendamentoCriado;
 
 namespace MBCorpHealthTest.Aplicacao
 {

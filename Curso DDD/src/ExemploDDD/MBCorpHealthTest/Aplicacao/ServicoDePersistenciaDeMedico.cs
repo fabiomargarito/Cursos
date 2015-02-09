@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MBCorpHealthTest.Dominio.Contratos;
-using MBCorpHealthTest.Dominio.Entidades;
-using MBCorpHealthTest.Infraestrutura.Repositorios;
+using MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.Contratos;
+using MBCorpHealthTest.Dominio.ContextoCadastrosCorporativos.Entidades;
 using MBCorpHealthTest.ViewModel;
 using NHibernate;
 
