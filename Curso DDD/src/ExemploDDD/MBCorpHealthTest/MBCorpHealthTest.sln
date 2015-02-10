@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishSc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{2B6252D8-91DD-41D3-95FC-A00B7284D156}"
 	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\ServicoDeBooking-WAWS-dev.json = PublishScripts\Configurations\ServicoDeBooking-WAWS-dev.json
 		PublishScripts\Configurations\ServicosCorporativos-WAWS-dev.json = PublishScripts\Configurations\ServicosCorporativos-WAWS-dev.json
 		PublishScripts\Configurations\SMARTUIMBCORP-WAWS-dev.json = PublishScripts\Configurations\SMARTUIMBCORP-WAWS-dev.json
 	EndProjectSection
@@ -27,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E0B066
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicoDeBooking", "ServicoDeBooking\ServicoDeBooking.csproj", "{3A562B51-9EC1-40A6-BF91-3B8123801E0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +49,10 @@ Global
 		{1D6209FE-8614-4F2B-B8AF-2C4781CB2C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D6209FE-8614-4F2B-B8AF-2C4781CB2C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D6209FE-8614-4F2B-B8AF-2C4781CB2C64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A562B51-9EC1-40A6-BF91-3B8123801E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A562B51-9EC1-40A6-BF91-3B8123801E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A562B51-9EC1-40A6-BF91-3B8123801E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A562B51-9EC1-40A6-BF91-3B8123801E0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

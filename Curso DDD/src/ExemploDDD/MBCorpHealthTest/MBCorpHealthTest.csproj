@@ -108,6 +108,8 @@
     <Compile Include="Aplicacao\ServicoDeAgendamento.cs" />
     <Compile Include="Dominio\ContextoCadastrosCorporativos\Entidades\TipoExame.cs" />
     <Compile Include="Infraestrutura\ContextoAdministracaoDeAgendamentosDeExame\Repositorios\Agendamentos.cs" />
+    <Compile Include="Infraestrutura\ContextoBooking\IServicoDeBooking.cs" />
+    <Compile Include="Infraestrutura\ContextoBooking\ServicoDeBookingFake.cs" />
     <Compile Include="Infraestrutura\ContextoCadastrosCorporativos\AtendentesFake.cs" />
     <Compile Include="Infraestrutura\ContextoAdministracaoDeAgendamentosDeExame\Repositorios\MapeamentoNHibernate.cs" />
     <Compile Include="Infraestrutura\ContextoCadastrosCorporativos\Medicos.cs" />
