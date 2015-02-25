@@ -1,2 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MBCorpHealthTestTests.Agendamento">
+    <Position X="3.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IgAAAAAAARAgAAAAIAAAAAAAQAAAAAAAAAIAAAABAEA=</HashCode>
+      <FileName>Agendamento.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Medico" />
+      <Property Name="Paciente" />
+      <Property Name="Atendente" />
+      <Property Name="CID" />
+      <Property Name="Exames" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MBCorpHealthTestTests.Atendente">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Atendente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MBCorpHealthTestTests.CentroDiagnostico" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CentroDiagnostico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MBCorpHealthTestTests.CID">
+    <Position X="6.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CID.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MBCorpHealthTestTests.Exame" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgACAAAAAAAEAAAAAAAAAAAAAAAgAAEAIAAAAA=</HashCode>
+      <FileName>Exame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MBCorpHealthTestTests.Laudo" Collapsed="true">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAIAAA=</HashCode>
+      <FileName>Laudo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MBCorpHealthTestTests.Medico">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Medico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MBCorpHealthTestTests.Paciente">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Paciente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MBCorpHealthTestTests.ServicoDeAgendamento" Collapsed="true">
+    <Position X="9" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ServicoDeAgendamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MBCorpHealthTestTests.TipoExame" Collapsed="true">
+    <Position X="10.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>TipoExame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="System.Collections.Generic.IEnumerable&lt;T&gt;" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

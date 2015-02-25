@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using MBCorpHealthTest;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MBCorpHealthTestTests
@@ -41,10 +42,10 @@ namespace MBCorpHealthTestTests
         {
             //Arrange
             
-            Medico medico = new Medico("1234", "Mario Peres");            
-            Atendente atendente = new Atendente("000.000.000-10", "Victor Cleber");    
+            
             Paciente paciente = new Paciente("000.000.000-12","Fabio Margarito Martins de Barros");
-            Agendamento agendamento = new Agendamento(atendente,medico);
+
+            Agendamento agendamento = (new FabricaDeAgendamento()).InformarMedico("1234", "Fabio").InformarAtendente("12345", "Joao").Criar();
 
             //Act
             agendamento.InformarPaciente(paciente);
@@ -73,9 +74,8 @@ namespace MBCorpHealthTestTests
             //Arrange
             //Arrange
 
-            Medico medico = new Medico("1234", "Mario Peres");
-            Atendente atendente = new Atendente("000.000.000-10", "Victor Cleber");
-            Agendamento agendamento = new Agendamento(atendente, medico);
+            Agendamento agendamento = (new FabricaDeAgendamento()).InformarAtendente("12345", "Joao").InformarMedico("1234", "Fabio").Criar();
+
             CID cid = new CID ("A00 - Cólera");
 
 
@@ -93,9 +93,8 @@ namespace MBCorpHealthTestTests
         {
             //Arrange
 
-            Medico medico = new Medico("1234", "Mario Peres");
-            Atendente atendente = new Atendente("000.000.000-10", "Victor Cleber");
-            Agendamento agendamento = new Agendamento(atendente, medico);
+            Agendamento agendamento = (new FabricaDeAgendamento()).InformarMedico("1234", "Fabio").InformarAtendente("12345", "Joao").Criar();
+
             TipoExame tipoExame = new TipoExame("0001110000111212",10);
             CentroDiagnostico centroDiagnostico = new CentroDiagnostico("111.222.333/00001-11");
             Exame exame = new Exame(tipoExame,centroDiagnostico,new DateTime(2015,02,20));
@@ -122,9 +121,7 @@ namespace MBCorpHealthTestTests
         {
             //Arrange
 
-            Medico medico = new Medico("1234", "Mario Peres");
-            Atendente atendente = new Atendente("000.000.000-10", "Victor Cleber");
-            Agendamento agendamento = new Agendamento(atendente, medico);
+            Agendamento agendamento = (new FabricaDeAgendamento()).InformarMedico("1234", "Fabio").InformarAtendente("12345", "Joao").Criar();
             TipoExame tipoExame = new TipoExame("0001110000111212", 10);
             CentroDiagnostico centroDiagnostico = new CentroDiagnostico("111.222.333/00001-11");
             Exame exame = new Exame(tipoExame, centroDiagnostico, new DateTime(2015, 02, 20));
@@ -144,10 +141,9 @@ namespace MBCorpHealthTestTests
         public void ComoMedicoQueroEmitirUmLaudoParaUmTipoExameRealizado()
         {
             //Arrange
+            Agendamento agendamento = (new FabricaDeAgendamento()).InformarMedico("1234","Fabio").InformarAtendente("12345","Joao").Criar();
 
-            Medico medico = new Medico("1234", "Mario Peres");
-            Atendente atendente = new Atendente("000.000.000-10", "Victor Cleber");
-            Agendamento agendamento = new Agendamento(atendente, medico);
+
             TipoExame tipoExame = new TipoExame("0001110000111212",10);
             CentroDiagnostico centroDiagnostico = new CentroDiagnostico("111.222.333/00001-11");
             Exame exame = new Exame(tipoExame,centroDiagnostico,new DateTime(2015,02,20));
@@ -161,6 +157,4 @@ namespace MBCorpHealthTestTests
 
         }
     }
-
-    
 }

@@ -39,7 +39,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agendamento.cs" />
+    <Compile Include="Atendente.cs" />
+    <Compile Include="CentroDiagnostico.cs" />
+    <Compile Include="CID.cs" />
+    <Compile Include="Exame.cs" />
+    <Compile Include="FabricaDeAgendamento.cs" />
+    <Compile Include="Laudo.cs" />
+    <Compile Include="Medico.cs" />
+    <Compile Include="Paciente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicoDeAgendamento.cs" />
+    <Compile Include="TipoExame.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
