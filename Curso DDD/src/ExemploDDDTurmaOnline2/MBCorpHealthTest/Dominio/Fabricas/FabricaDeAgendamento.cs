@@ -1,7 +1,7 @@
 ﻿using System;
-using MBCorpHealthTestTests;
+using MBCorpHealthTest.Dominio.Entidades;
 
-namespace MBCorpHealthTest
+namespace MBCorpHealthTest.Dominio.Fabricas
 {
     public class FabricaDeAgendamento
     {

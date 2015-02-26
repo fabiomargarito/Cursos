@@ -1,4 +1,6 @@
-namespace MBCorpHealthTestTests
+using MBCorpHealthTest.Dominio.Entidades;
+
+namespace MBCorpHealthTest.Aplicacao.Servicos
 {
     public class ServicoDeAgendamento
     {

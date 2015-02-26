@@ -30,6 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>packages\FluentNHibernate.2.0.1.0\lib\net40\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>packages\NHibernate.4.0.3.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,21 +48,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agendamento.cs" />
-    <Compile Include="Atendente.cs" />
-    <Compile Include="CentroDiagnostico.cs" />
-    <Compile Include="CID.cs" />
-    <Compile Include="Exame.cs" />
-    <Compile Include="FabricaDeAgendamento.cs" />
-    <Compile Include="Laudo.cs" />
-    <Compile Include="Medico.cs" />
-    <Compile Include="Paciente.cs" />
+    <Compile Include="Dominio\Entidades\Agendamento.cs" />
+    <Compile Include="Dominio\Entidades\Atendente.cs" />
+    <Compile Include="Dominio\Entidades\CentroDiagnostico.cs" />
+    <Compile Include="Dominio\ObjetosDeValor\CID.cs" />
+    <Compile Include="Dominio\Entidades\Exame.cs" />
+    <Compile Include="Dominio\Fabricas\FabricaDeAgendamento.cs" />
+    <Compile Include="Dominio\Entidades\Laudo.cs" />
+    <Compile Include="Dominio\Entidades\Medico.cs" />
+    <Compile Include="Dominio\Entidades\Paciente.cs" />
+    <Compile Include="Infraestrutura\MapeamentoNHibernate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServicoDeAgendamento.cs" />
-    <Compile Include="TipoExame.cs" />
+    <Compile Include="Aplicacao\Servicos\ServicoDeAgendamento.cs" />
+    <Compile Include="Dominio\Entidades\TipoExame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dominio\Servicos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

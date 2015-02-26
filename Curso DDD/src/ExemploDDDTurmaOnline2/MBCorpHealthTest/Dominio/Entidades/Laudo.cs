@@ -1,4 +1,4 @@
-﻿namespace MBCorpHealthTestTests
+﻿namespace MBCorpHealthTest.Dominio.Entidades
 {
     public class Laudo
     {
@@ -6,6 +6,10 @@
         {
             MedicoAnalise = medicoAnalise;
             Resultado = resultado;
+        }
+
+        public Laudo()
+        {
         }
 
         public Medico MedicoAnalise { get; private set; }

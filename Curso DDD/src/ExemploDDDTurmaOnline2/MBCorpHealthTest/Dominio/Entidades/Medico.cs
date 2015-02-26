@@ -1,4 +1,4 @@
-namespace MBCorpHealthTestTests
+namespace MBCorpHealthTest.Dominio.Entidades
 {
     public class Medico
     {
@@ -7,6 +7,11 @@ namespace MBCorpHealthTestTests
             CRM = crm;
         }
 
+        public Medico()
+        {
+        }
+
         public string CRM { get; set; }
+        public string Nome { get; set; }
     }
 }

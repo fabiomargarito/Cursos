@@ -1,7 +1,11 @@
-namespace MBCorpHealthTestTests
+namespace MBCorpHealthTest.Dominio.Entidades
 {
     public class TipoExame
     {
+        public TipoExame()
+        {
+        }
+
         public string CBHPM { get; private set; }
         public double Preco { get; private set; }
 

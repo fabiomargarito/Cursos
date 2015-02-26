@@ -1,9 +1,13 @@
 ﻿using System;
 
-namespace MBCorpHealthTestTests
+namespace MBCorpHealthTest.Dominio.Entidades
 {
     public class Exame
     {
+        public Exame()
+        {
+        }
+
         public TipoExame TipoExame { get; private set; }
         public CentroDiagnostico CentroDiagnostico { get; private set; }
         public DateTime DataDoAgendamento { get; private set; }

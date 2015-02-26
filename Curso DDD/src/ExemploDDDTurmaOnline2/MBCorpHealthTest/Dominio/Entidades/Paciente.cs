@@ -1,4 +1,4 @@
-﻿namespace MBCorpHealthTestTests
+﻿namespace MBCorpHealthTest.Dominio.Entidades
 {
     public class Paciente
     {
@@ -7,6 +7,11 @@
             CPF = cpf;
         }
 
+        public Paciente()
+        {
+        }
+
         public string CPF { get; set; }
+        public string Nome { get; set; }
     }
 }

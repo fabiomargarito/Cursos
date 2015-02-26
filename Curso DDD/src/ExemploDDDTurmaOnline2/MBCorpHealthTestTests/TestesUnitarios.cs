@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Linq;
 using MBCorpHealthTest;
+using MBCorpHealthTest.Aplicacao;
+using MBCorpHealthTest.Aplicacao.Servicos;
+using MBCorpHealthTest.Dominio.Entidades;
+using MBCorpHealthTest.Dominio.Fabricas;
+using MBCorpHealthTest.Dominio.ObjetosDeValor;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MBCorpHealthTestTests

@@ -1,4 +1,4 @@
-﻿namespace MBCorpHealthTestTests
+﻿namespace MBCorpHealthTest.Dominio.ObjetosDeValor
 {
     public class CID
     {

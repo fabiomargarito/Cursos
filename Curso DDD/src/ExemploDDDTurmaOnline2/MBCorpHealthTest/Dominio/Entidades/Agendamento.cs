@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using MBCorpHealthTest.Dominio.ObjetosDeValor;
 
-namespace MBCorpHealthTestTests
+namespace MBCorpHealthTest.Dominio.Entidades
 {
     public class Agendamento
     {
         //Identificador da Entidade
+        public Agendamento()
+        {
+        }
+
         public string Numero { get; private set; }
 
         public Agendamento(Atendente atendente, Medico medico)
