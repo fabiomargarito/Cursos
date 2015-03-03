@@ -1,9 +1,8 @@
-﻿using System.Threading;
-using FluentNHibernate.Mapping;
+﻿using FluentNHibernate.Mapping;
 using MBCorpHealthTest.Dominio.Entidades;
 using MBCorpHealthTest.Dominio.ObjetosDeValor;
 
-namespace MBCorpHealthTest.Infraestrutura
+namespace MBCorpHealthTest.Infraestrutura.Repositorios
 {
     
 

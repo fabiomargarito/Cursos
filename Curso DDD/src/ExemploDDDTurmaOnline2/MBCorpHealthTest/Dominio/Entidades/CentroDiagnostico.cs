@@ -6,8 +6,8 @@
         {
         }
 
-        public string CNPJ { get; private set; }
-        public string RazaoSocial { get; set; }
+        public virtual string CNPJ { get; protected set; }
+        public virtual string RazaoSocial { get; protected set; }
 
         public CentroDiagnostico(string cnpj)
         {

@@ -7,7 +7,11 @@
             Descricao = descricao;
         }
 
-        public string Descricao { get; private set; }
+        public CID()
+        {
+        }
+
+        public virtual string Descricao { get; protected set; }
 
 
     }

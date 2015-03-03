@@ -12,8 +12,9 @@
         {
         }
 
-        public Medico MedicoAnalise { get; private set; }
-        public string Resultado { get; private set; }
+        public virtual Medico MedicoAnalise { get; protected set; }
+        public virtual string Resultado { get; protected set; }
         
     }
 }
+

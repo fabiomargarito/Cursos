@@ -11,7 +11,7 @@ namespace MBCorpHealthTest.Dominio.Entidades
         {
         }
 
-        public string CRM { get; set; }
-        public string Nome { get; set; }
+        public virtual string CRM { get; protected set; }
+        public virtual string Nome { get; protected set; }
     }
 }

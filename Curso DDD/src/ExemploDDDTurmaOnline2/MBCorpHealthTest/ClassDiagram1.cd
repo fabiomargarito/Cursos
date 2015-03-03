@@ -7,7 +7,6 @@
       <FileName>Dominio\Entidades\Agendamento.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Medico" />
       <Property Name="Paciente" />
       <Property Name="Atendente" />
       <Property Name="CID" />
@@ -15,16 +14,16 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="MBCorpHealthTest.Dominio.Entidades.Atendente">
-    <Position X="0.5" Y="5.75" Width="1.5" />
+    <Position X="0.5" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Dominio\Entidades\Atendente.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MBCorpHealthTest.Dominio.Entidades.CentroDiagnostico" Collapsed="true">
     <Position X="9" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Dominio\Entidades\CentroDiagnostico.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -52,14 +51,14 @@
   <Class Name="MBCorpHealthTest.Dominio.Entidades.Medico">
     <Position X="0.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Dominio\Entidades\Medico.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MBCorpHealthTest.Dominio.Entidades.Paciente">
-    <Position X="0.5" Y="3.75" Width="1.5" />
+    <Position X="0.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Dominio\Entidades\Paciente.cs</FileName>
     </TypeIdentifier>
   </Class>

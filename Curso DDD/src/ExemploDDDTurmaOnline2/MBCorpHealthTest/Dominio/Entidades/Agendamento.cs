@@ -5,41 +5,41 @@ using MBCorpHealthTest.Dominio.ObjetosDeValor;
 
 namespace MBCorpHealthTest.Dominio.Entidades
 {
-    public class Agendamento
+    public  class Agendamento
     {
         //Identificador da Entidade
         public Agendamento()
         {
         }
 
-        public string Numero { get; private set; }
+        public virtual string Numero { get; protected set; }
 
         public Agendamento(Atendente atendente, Medico medico)
         {
             Atendente = atendente;            
             Medico = medico;
-
             Exames = new List<Exame>();
+            Numero = Guid.NewGuid().ToString();
         }
 
-        public Medico Medico { get; private set; }
-        public Paciente Paciente { get; private set; }
-        public Atendente Atendente { get; private set; }
-        public CID CID { get; set; }
-        public IEnumerable<Exame> Exames
+        public virtual Medico Medico { get; protected set; }
+        public virtual Paciente Paciente { get; protected set; }
+        public virtual Atendente Atendente { get; protected set; }
+        public virtual CID CID { get; protected set; }
+        public virtual IEnumerable<Exame> Exames
         { get; set; }
 
-        public void InformarPaciente(Paciente paciente)
+        public virtual void InformarPaciente(Paciente paciente)
         {
             Paciente = paciente;
         }
 
-        public void InformarCID(CID cid)
+        public virtual void InformarCID(CID cid)
         {
             CID = cid;
         }
 
-        public void AdicionarExame(Exame exame)
+        public virtual void AdicionarExame(Exame exame)
         {
             if(exame ==null)
                 throw new Exception("É necessário informar um exame válido");
@@ -47,7 +47,7 @@ namespace MBCorpHealthTest.Dominio.Entidades
             (Exames as IList<Exame>).Add(exame);
         }
 
-        public double CalcularValorTotal()
+        public virtual double CalcularValorTotal()
         {
             return Exames.Sum(exame => exame.TipoExame.Preco);
         }

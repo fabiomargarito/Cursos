@@ -11,7 +11,7 @@
         {
         }
 
-        public string CPF { get; private set; }
-        public string Nome { get; set; }
+        public virtual string CPF { get; protected set; }
+        public virtual string Nome { get; protected set; }
     }
 }

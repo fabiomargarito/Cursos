@@ -8,11 +8,11 @@ namespace MBCorpHealthTest.Dominio.Entidades
         {
         }
 
-        public TipoExame TipoExame { get; private set; }
-        public CentroDiagnostico CentroDiagnostico { get; private set; }
-        public DateTime DataDoAgendamento { get; private set; }
-        public Laudo Laudo { get; set; }
-        public Double Preco { get; set; }
+        public virtual TipoExame TipoExame { get; protected set; }
+        public virtual CentroDiagnostico CentroDiagnostico { get; protected set; }
+        public virtual DateTime DataDoAgendamento { get; protected set; }
+        public virtual Laudo Laudo { get; protected set; }
+        public virtual Double Preco { get; protected set; }
 
         public Exame(TipoExame tipoExame, CentroDiagnostico centroDiagnostico, DateTime dataDoAgendamento)
         {
@@ -21,7 +21,7 @@ namespace MBCorpHealthTest.Dominio.Entidades
             DataDoAgendamento = dataDoAgendamento;
         }
 
-        public void EmitirLaudo(string resultado, Medico medicoAnalise)
+        public virtual void EmitirLaudo(string resultado, Medico medicoAnalise)
         {
             Laudo = new Laudo(medicoAnalise,resultado);
         }

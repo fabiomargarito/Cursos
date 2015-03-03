@@ -6,8 +6,8 @@ namespace MBCorpHealthTest.Dominio.Entidades
         {
         }
 
-        public string CBHPM { get; private set; }
-        public double Preco { get; private set; }
+        public virtual string CBHPM { get; protected set; }
+        public virtual double Preco { get; protected set; }
 
         public TipoExame(string cbhpm, double preco)
         {
