@@ -224,10 +224,4 @@ namespace MBCorpHealthTestTests
             return listagemDeMedicos;
         }
     }
-
-    public interface IMedicos
-    {
-        Medico ConsultarPorCRM(string CRM);
-        IList<Medico> ConsultarPorTrechoDoNome(string Nome);
-    }
 }

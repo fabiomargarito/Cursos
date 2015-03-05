@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.EventosDeDominio.EventosDoDominio">
+    <Position X="0.5" Y="4.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dominio\ContextoAdministracaoDeAgendamentosDeExame\EventosDeDominio\EventosDoDominio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.EventosDeDominio.EventosAgendamentoCriado.AgendamentoCriado">
+    <Position X="0.5" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Dominio\ContextoAdministracaoDeAgendamentosDeExame\EventosDeDominio\EventosAgendamentoCriado\AgendamentoCriado.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.EventosDeDominio.EventosAgendamentoCriado.EnviarEmailParaOPacienteQuandoAgendamentoCriado">
+    <Position X="4.5" Y="3.25" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Dominio\ContextoAdministracaoDeAgendamentosDeExame\EventosDeDominio\EventosAgendamentoCriado\EnviarEmailParaOPacienteQuandoAgendamentoCriado.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.Contratos.IEventoDeDominio">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dominio\ContextoAdministracaoDeAgendamentosDeExame\Contratos\IEventoDeDominio.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MBCorpHealthTest.Dominio.ContextoAdministracaoDeAgendamentosDeExame.Contratos.IManipuladorDeEvento&lt;T&gt;">
+    <Position X="4.25" Y="0.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dominio\ContextoAdministracaoDeAgendamentosDeExame\Contratos\IManipuladorDeEvento.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

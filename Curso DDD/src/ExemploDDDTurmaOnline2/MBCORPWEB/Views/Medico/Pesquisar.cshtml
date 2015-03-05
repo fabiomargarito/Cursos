@@ -1,0 +1,28 @@
+﻿@model IList<MBCorpHealthTest.GUI.ViewModels.MedicoViewModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>title</title>
+    </head>
+    <body>
+        <div>
+            <h2>title</h2>
+            <table>
+                @foreach (var medico in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => medico.Nome)</td>
+                        <td>@Html.DisplayFor(model => medico.CRM)</td>
+                        
+                    </tr>
+                }
+            </table>
+        </div>
+    </body>
+</html>

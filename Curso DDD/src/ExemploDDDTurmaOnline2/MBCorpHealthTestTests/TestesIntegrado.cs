@@ -9,7 +9,6 @@ using MBCorpHealthTest.Infraestrutura;
 using MBCorpHealthTest.Infraestrutura.Repositorios;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NHibernate;
-using NHibernate.Linq;
 using NHibernate.Linq.Functions;
 
 namespace MBCorpHealthTestTests
@@ -125,44 +124,5 @@ namespace MBCorpHealthTestTests
 
         }
 
-    }
-
-    public class Agendamentos : IAgendamentos
-    {
-        private readonly ISession _session;
-
-        public Agendamentos(ISession session)
-        {
-            _session = session;
-        }
-
-        public bool Gravar(Agendamento agendamento)
-        {
-            _session.SaveOrUpdate(agendamento);
-            _session.Flush();
-            return true;
-        }
-    }
-
-    public class Medicos : IMedicos
-    {
-        private readonly ISession _session;
-
-        public Medicos(ISession session)
-        {
-            _session = session;
-        }
-
-        public Medico ConsultarPorCRM(string CRM)
-        {
-            return _session.Query<Medico>().SingleOrDefault(campo => campo.CRM == CRM);
-
-        }
-
-        public IList<Medico> ConsultarPorTrechoDoNome(string Nome)
-        {
-
-            return _session.Query<Medico>().Where(campo => campo.Nome.Contains(Nome)).ToList();
-        }
     }
 }

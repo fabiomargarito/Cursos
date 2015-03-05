@@ -1,0 +1,19 @@
+﻿@model MBCorpHealthTest.GUI.ViewModels.MedicoViewModel  
+
+@{
+    ViewBag.Title = "Página de Pesquisa de Médico por Trecho Nome";
+    
+}
+
+<h2>Pesquisa de Médicos</h2>
+@using (Html.BeginForm("Pesquisar", "Medico"))
+{
+    <fieldset>
+        <table>
+            <tr>
+                <td>Trecho do nome: @Html.EditorFor(model => model.Nome)</td>                               
+            </tr>            
+        </table>
+        <input type="submit" value="Pesquisar" />
+    </fieldset>
+}

@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aplicacao\Servicos\ServicoCRUDMedico.cs" />
+    <Compile Include="Dominio\Contratos\Repositorios\IMedicos.cs" />
     <Compile Include="Dominio\Contratos\Repositorios\IPacientes.cs" />
     <Compile Include="Dominio\Entidades\Agendamento.cs" />
     <Compile Include="Dominio\Entidades\Atendente.cs" />
@@ -61,8 +63,11 @@
     <Compile Include="Dominio\Entidades\Laudo.cs" />
     <Compile Include="Dominio\Entidades\Medico.cs" />
     <Compile Include="Dominio\Entidades\Paciente.cs" />
+    <Compile Include="GUI\ViewModels\MedicoViewModel.cs" />
+    <Compile Include="Infraestrutura\Repositorios\Agendamentos.cs" />
     <Compile Include="Infraestrutura\Repositorios\ConfiguracaoNHibernate.cs" />
     <Compile Include="Infraestrutura\Repositorios\MapeamentoNHibernate.cs" />
+    <Compile Include="Infraestrutura\Repositorios\Medicos.cs" />
     <Compile Include="Infraestrutura\Repositorios\Pacientes.cs" />
     <Compile Include="Infraestrutura\Repositorios\PacientesFake.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
