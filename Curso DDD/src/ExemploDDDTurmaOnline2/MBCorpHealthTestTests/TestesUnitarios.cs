@@ -6,7 +6,9 @@ using MBCorpHealthTest.Dominio.Contratos.Repositorios;
 using MBCorpHealthTest.Dominio.Entidades;
 using MBCorpHealthTest.Dominio.Fabricas;
 using MBCorpHealthTest.Dominio.ObjetosDeValor;
+using MBCorpHealthTest.Infraestrutura.Contratos;
 using MBCorpHealthTest.Infraestrutura.Repositorios;
+using MBCorpHealthTest.Infraestrutura.Servicos;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MBCorpHealthTestTests
@@ -14,6 +16,38 @@ namespace MBCorpHealthTestTests
     [TestClass]
     public class MBCorpHealthTestTestsTestesUnitarios
     {
+        [TestMethod]
+        public void ComoUsuarioQueroEnviarUmSMS()
+        {
+
+            //Arrange
+            IServicoDeEnvioDeSMS servicoDeEnvioDeSms = new ServicoDeEnvioDeSmsCorporativoFake();
+
+            //Act
+            bool retorno = servicoDeEnvioDeSms.Enviar("011", "994242342", "Agendamento Criado");
+
+            //Assert
+            Assert.IsTrue(retorno);
+
+        }
+
+
+        [TestMethod]
+        public void ComoUsuarioQueroEnviarUmEmail()
+        {
+            //Arrange
+            IServicoDeEnvioDeEmail servicoDeEnvioDeEmail = new ServicoDeEnvioDeEmailCorporativoFake();
+
+            //Act
+
+            bool retorno = servicoDeEnvioDeEmail.EnviarEmail("FabioMargarito@gmail.com", "paciente@gmail.com",
+                "Agendamento Realizado", "Meu texto da Mensagem");
+            
+            //Assert
+
+            Assert.IsTrue(retorno);
+        }
+
         [TestMethod]
         public void ComoAtendenteEuQueroCadastrarUmAgendamento()
         {           

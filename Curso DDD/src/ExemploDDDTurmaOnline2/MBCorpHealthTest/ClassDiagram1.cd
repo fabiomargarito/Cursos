@@ -4,7 +4,7 @@
     <Position X="3.5" Y="2" Width="2" />
     <TypeIdentifier>
       <HashCode>IgAAAAAAARAgAAAAIAAAAAAAQAAAAAAAAAIAAAABAEA=</HashCode>
-      <FileName>Dominio\Entidades\Agendamento.cs</FileName>
+      <FileName>Dominio\ContextoGestaoDeExames\Entidades\Agendamento.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Paciente" />
@@ -17,63 +17,63 @@
     <Position X="0.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAA=</HashCode>
-      <FileName>Dominio\Entidades\Atendente.cs</FileName>
+      <FileName>Dominio\ContextoGestaoDeExames\Entidades\Atendente.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MBCorpHealthTest.Dominio.Entidades.CentroDiagnostico" Collapsed="true">
     <Position X="9" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Dominio\Entidades\CentroDiagnostico.cs</FileName>
+      <FileName>Dominio\ContextoGestaoDeExames\Entidades\CentroDiagnostico.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MBCorpHealthTest.Dominio.ObjetosDeValor.CID">
     <Position X="6.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Dominio\ObjetosDeValor\CID.cs</FileName>
+      <FileName>Dominio\ContextoGestaoDeExames\ObjetosDeValor\CID.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MBCorpHealthTest.Dominio.Entidades.Exame" Collapsed="true">
     <Position X="10.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAgACAAAAAAAEAAAAAAAAAAAAAAAgAAEAIAAAAA=</HashCode>
-      <FileName>Dominio\Entidades\Exame.cs</FileName>
+      <FileName>Dominio\ContextoGestaoDeExames\Entidades\Exame.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MBCorpHealthTest.Dominio.Entidades.Laudo" Collapsed="true">
     <Position X="12.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAIAAA=</HashCode>
-      <FileName>Dominio\Entidades\Laudo.cs</FileName>
+      <FileName>Dominio\ContextoGestaoDeExames\Entidades\Laudo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MBCorpHealthTest.Dominio.Entidades.Medico">
     <Position X="0.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAEAAAA=</HashCode>
-      <FileName>Dominio\Entidades\Medico.cs</FileName>
+      <FileName>Dominio\ContextoGestaoDeExames\Entidades\Medico.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MBCorpHealthTest.Dominio.Entidades.Paciente">
     <Position X="0.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAA=</HashCode>
-      <FileName>Dominio\Entidades\Paciente.cs</FileName>
+      <HashCode>AAAAAAAAgCAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Dominio\ContextoGestaoDeExames\Entidades\Paciente.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MBCorpHealthTest.Aplicacao.Servicos.ServicoDeAgendamento" Collapsed="true">
     <Position X="9" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Aplicacao\Servicos\ServicoDeAgendamento.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Aplicacao\ContextoGestaoDeExames\Servicos\ServicoDeAgendamento.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MBCorpHealthTest.Dominio.Entidades.TipoExame" Collapsed="true">
     <Position X="10.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
-      <FileName>Dominio\Entidades\TipoExame.cs</FileName>
+      <FileName>Dominio\ContextoGestaoDeExames\Entidades\TipoExame.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="System.Collections.Generic.IEnumerable&lt;T&gt;" Collapsed="true">
