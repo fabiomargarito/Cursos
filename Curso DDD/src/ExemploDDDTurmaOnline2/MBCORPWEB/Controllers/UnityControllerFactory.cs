@@ -27,7 +27,7 @@ namespace MBCORPWEB.Controllers
             var session = ConfiguracaoNHibernate.NHibernateSessionFactory.Criar().OpenSession();
 
             _container.RegisterInstance<ISession>(session);
-            _container.RegisterType(typeof(IMedicos), typeof(MedicosFake));
+            _container.RegisterType(typeof(IMedicos), typeof(Medicos));
             _container.RegisterType(typeof (IController), typeof (MedicoController), "Medico");            
             _container.RegisterType(typeof(IController), typeof(AccountController), "Account");
             _container.RegisterType(typeof (IController), typeof (HomeController), "Home");

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using MBCorpHealthTest.Dominio.Entidades;
 using MBCorpHealthTest.GUI.ViewModels;
@@ -24,7 +25,12 @@ namespace MBCorpHealthTest.Aplicacao.Servicos
 
             IList<Medico> listagemDeMedicos = _repositorioDeMedicos.ConsultarPorTrechoDoNome(trechoDoNome);
 
+          
+
+
             return listagemDeMedicos.Select(med => new MedicoViewModel {CRM = med.CRM, Nome = med.Nome}).ToList();
+
+
         }
     }
 }
