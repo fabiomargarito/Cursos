@@ -28,7 +28,7 @@ namespace MBCorpHealthTest.Aplicacao.Servicos
           
 
 
-            return listagemDeMedicos.Select(med => new MedicoViewModel {CRM = med.CodigoCRM, Nome = med.Nome}).ToList();
+            return listagemDeMedicos.Select(med => new MedicoViewModel {CRM = med.CRM, Nome = med.Nome}).ToList();
 
             //teste
         }

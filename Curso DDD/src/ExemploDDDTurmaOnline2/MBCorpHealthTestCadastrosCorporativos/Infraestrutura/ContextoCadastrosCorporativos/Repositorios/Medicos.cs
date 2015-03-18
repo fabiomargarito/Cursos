@@ -17,7 +17,7 @@ namespace MBCorpHealthTestTests
 
         public Medico ConsultarPorCRM(string CRM)
         {
-            return _session.Query<Medico>().SingleOrDefault(campo => campo.CodigoCRM == CRM);
+            return _session.Query<Medico>().SingleOrDefault(campo => campo.CRM == CRM);
 
         }
 

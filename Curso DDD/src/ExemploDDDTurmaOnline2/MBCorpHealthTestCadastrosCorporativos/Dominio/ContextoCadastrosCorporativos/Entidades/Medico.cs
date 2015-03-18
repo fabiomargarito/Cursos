@@ -4,14 +4,14 @@ namespace MBCorpHealthTest.Dominio.Entidades
     {
         public Medico(string crm, string nome)
         {
-            CodigoCRM = crm;
+            CRM = crm;
         }
 
         public Medico()
         {
         }
 
-        public virtual string CodigoCRM { get; protected set; }
+        public virtual string CRM { get; protected set; }
         public virtual string Nome { get; protected set; }
     }
 }
