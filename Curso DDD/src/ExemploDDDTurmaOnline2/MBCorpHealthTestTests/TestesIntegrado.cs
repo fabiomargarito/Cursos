@@ -34,8 +34,7 @@ namespace MBCorpHealthTestTests
             //IList<Paciente> listaDePacientes = pacientes.ConsultarPacientesPorTrechoDoNome("Fabio");
 
             ////Assert
-            //Assert.IsTrue(listaDePacientes.Count > 0);
-            sdsdafdsf
+            //Assert.IsTrue(listaDePacientes.Count > 0);            
         }
 
         [TestMethod]

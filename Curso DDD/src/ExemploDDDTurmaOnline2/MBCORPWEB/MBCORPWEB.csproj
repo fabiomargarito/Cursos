@@ -257,6 +257,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MBCorpHealthTestCadastrosCorporativos\MBCorpHealthTestCadastrosCorporativos.csproj">
+      <Project>{370846a6-2a05-4ed4-8bf2-11d3f1a8e71c}</Project>
+      <Name>MBCorpHealthTestCadastrosCorporativos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MBCorpHealthTestTests\MBCorpHealthTestTests.csproj">
       <Project>{DD10B739-93A3-4422-BA5E-55CE09C15BD7}</Project>
       <Name>MBCorpHealthTestTests</Name>

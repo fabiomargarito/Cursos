@@ -55,29 +55,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aplicacao\ContextoGestaoDeExames\Servicos\ServicoCRUDMedico.cs" />
-    <Compile Include="Dominio\ContextoGestaoDeExames\Contratos\Repositorios\IMedicos.cs" />
-    <Compile Include="Dominio\ContextoGestaoDeExames\Contratos\Repositorios\IPacientes.cs" />
     <Compile Include="Dominio\ContextoGestaoDeExames\Entidades\Agendamento.cs" />
-    <Compile Include="Dominio\ContextoGestaoDeExames\Entidades\Atendente.cs" />
     <Compile Include="Dominio\ContextoGestaoDeExames\Entidades\CentroDiagnostico.cs" />
-    <Compile Include="Dominio\ContextoGestaoDeExames\Entidades\Telefone.cs" />
+    <Compile Include="Dominio\ContextoGestaoDeExames\Entidades\Exame.cs" />
+    <Compile Include="Dominio\ContextoGestaoDeExames\Entidades\Laudo.cs" />
     <Compile Include="Dominio\ContextoGestaoDeExames\EventosDeDominio\Class1.cs" />
     <Compile Include="Dominio\ContextoGestaoDeExames\ObjetosDeValor\CID.cs" />
-    <Compile Include="Dominio\ContextoGestaoDeExames\Entidades\Exame.cs" />
     <Compile Include="Dominio\ContextoGestaoDeExames\Fabricas\FabricaDeAgendamento.cs" />
-    <Compile Include="Dominio\ContextoGestaoDeExames\Entidades\Laudo.cs" />
-    <Compile Include="Dominio\ContextoGestaoDeExames\Entidades\Medico.cs" />
-    <Compile Include="Dominio\ContextoGestaoDeExames\Entidades\Paciente.cs" />
-    <Compile Include="GUI\ContextoGestaoDeExames\ViewModels\MedicoViewModel.cs" />
     <Compile Include="Infraestrutura\ContextoGestaoDeExames\Contratos\IServicoDeEnvioDeEmail.cs" />
     <Compile Include="Infraestrutura\ContextoGestaoDeExames\Contratos\IServicoDeEnvioDeSMS.cs" />
     <Compile Include="Infraestrutura\ContextoGestaoDeExames\Repositorios\Agendamentos.cs" />
     <Compile Include="Infraestrutura\ContextoGestaoDeExames\Repositorios\ConfiguracaoNHibernate.cs" />
     <Compile Include="Infraestrutura\ContextoGestaoDeExames\Repositorios\MapeamentoNHibernate.cs" />
-    <Compile Include="Infraestrutura\ContextoGestaoDeExames\Repositorios\Medicos.cs" />
-    <Compile Include="Infraestrutura\ContextoGestaoDeExames\Repositorios\Pacientes.cs" />
-    <Compile Include="Infraestrutura\ContextoGestaoDeExames\Repositorios\PacientesFake.cs" />
     <Compile Include="Infraestrutura\ContextoGestaoDeExames\Servicos\ServicoDeEnvioDeEmailCorporativo.cs" />
     <Compile Include="Infraestrutura\ContextoGestaoDeExames\Servicos\ServicoDeEnvioDeSmsCorporativo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,7 +80,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Dominio\ContextoGestaoDeExames\Contratos\Repositorios\" />
     <Folder Include="Dominio\ContextoGestaoDeExames\Servicos\" />
+    <Folder Include="GUI\ContextoGestaoDeExames\ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MBCorpHealthTestCadastrosCorporativos\MBCorpHealthTestCadastrosCorporativos.csproj">
+      <Project>{370846a6-2a05-4ed4-8bf2-11d3f1a8e71c}</Project>
+      <Name>MBCorpHealthTestCadastrosCorporativos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

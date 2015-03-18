@@ -1,4 +1,4 @@
-﻿using MBCorpHealthTest.Dominio.EventosDeDominio;
+﻿
 
 namespace MBCorpHealthTest.Dominio.Entidades
 {
