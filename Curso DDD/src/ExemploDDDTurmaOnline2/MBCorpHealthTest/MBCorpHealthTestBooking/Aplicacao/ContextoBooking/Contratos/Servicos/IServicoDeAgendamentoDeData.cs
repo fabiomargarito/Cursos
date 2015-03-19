@@ -8,6 +8,6 @@ namespace MBCorpHealthTestBooking.Aplicacao.ContextoBooking.Contratos.Servicos
 {
     public interface IServicoDeAgendamentoDeData
     {
-        IList<DateTime> retornarAgenda(string cbhpm, string cnpjUnidadeDeDiagnostico);
+        IList<DateTime> retornarAgendaDisponivel(string cbhpm, string cnpjUnidadeDeDiagnostico);
     }
 }
