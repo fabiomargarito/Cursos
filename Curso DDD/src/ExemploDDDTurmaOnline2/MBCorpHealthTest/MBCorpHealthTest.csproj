@@ -89,6 +89,10 @@
       <Project>{370846a6-2a05-4ed4-8bf2-11d3f1a8e71c}</Project>
       <Name>MBCorpHealthTestCadastrosCorporativos</Name>
     </ProjectReference>
+    <ProjectReference Include="MBCorpHealthTestBooking\MBCorpHealthTestBooking.csproj">
+      <Project>{fc278a38-73d9-42c0-bf7d-5df50bc91585}</Project>
+      <Name>MBCorpHealthTestBooking</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

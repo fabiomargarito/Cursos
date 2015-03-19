@@ -29,6 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configura
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBCorpHealthTestCadastrosCorporativos", "..\MBCorpHealthTestCadastrosCorporativos\MBCorpHealthTestCadastrosCorporativos.csproj", "{370846A6-2A05-4ED4-8BF2-11D3F1A8E71C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MBCorpHealthTestBooking", "MBCorpHealthTestBooking\MBCorpHealthTestBooking.csproj", "{FC278A38-73D9-42C0-BF7D-5DF50BC91585}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{370846A6-2A05-4ED4-8BF2-11D3F1A8E71C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{370846A6-2A05-4ED4-8BF2-11D3F1A8E71C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{370846A6-2A05-4ED4-8BF2-11D3F1A8E71C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC278A38-73D9-42C0-BF7D-5DF50BC91585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC278A38-73D9-42C0-BF7D-5DF50BC91585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC278A38-73D9-42C0-BF7D-5DF50BC91585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC278A38-73D9-42C0-BF7D-5DF50BC91585}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

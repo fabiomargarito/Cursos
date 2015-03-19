@@ -74,6 +74,10 @@
       <Project>{fb8913b9-bdb2-407f-8d3c-9605fac6faf5}</Project>
       <Name>MBCorpHealthTest</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MBCorpHealthTest\MBCorpHealthTestBooking\MBCorpHealthTestBooking.csproj">
+      <Project>{fc278a38-73d9-42c0-bf7d-5df50bc91585}</Project>
+      <Name>MBCorpHealthTestBooking</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -9,6 +9,7 @@ using MBCorpHealthTest.Dominio.ObjetosDeValor;
 using MBCorpHealthTest.Infraestrutura.Contratos;
 using MBCorpHealthTest.Infraestrutura.Repositorios;
 using MBCorpHealthTest.Infraestrutura.Servicos;
+using MBCorpHealthTestBooking.Aplicacao.ContextoBooking.Contratos.Servicos;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MBCorpHealthTestTests
@@ -16,6 +17,24 @@ namespace MBCorpHealthTestTests
     [TestClass]
     public class MBCorpHealthTestTestsTestesUnitarios
     {
+
+        [TestMethod]
+        public void ComoAtendenteQueroConsultarAAgendaDeUmaUnidadeDeDiagnosticoParaUmDeterminadoTipoDeExame()
+        {
+            //Arrange
+            IServicoDeAgendamentoDeData servicoDeAgendamentoDeData = new ServicoDeAgendamentoDeDataFake();
+
+            //Act
+            IList<DateTime> datasDisponiveis = servicoDeAgendamentoDeData.retornarAgenda("1234", "000.1111.333/0001-23");
+
+            //Assert
+            Assert.IsTrue(datasDisponiveis.Count>1);
+
+
+        }
+
+
+
         [TestMethod]
         public void ComoUsuarioQueroEnviarUmSMS()
         {
@@ -231,6 +250,18 @@ namespace MBCorpHealthTestTests
             //Assert
             Assert.IsTrue(agendamento.Exames.FirstOrDefault().Laudo.Resultado == "Resultado XPTO");
 
+        }
+    }
+
+    public class ServicoDeAgendamentoDeDataFake : IServicoDeAgendamentoDeData
+    {
+        public IList<DateTime> retornarAgenda(string cbhpm, string cnpjUnidadeDeDiagnostico)
+        {
+            IList<DateTime> datasDisponiveis = new List<DateTime>();
+            datasDisponiveis.Add(new DateTime(2015,03,20));
+            datasDisponiveis.Add(new DateTime(2015, 03, 23));
+
+            return datasDisponiveis;
         }
     }
 
