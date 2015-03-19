@@ -10,6 +10,7 @@ using MBCorpHealthTest.Infraestrutura.Contratos;
 using MBCorpHealthTest.Infraestrutura.Repositorios;
 using MBCorpHealthTest.Infraestrutura.Servicos;
 using MBCorpHealthTestBooking.Aplicacao.ContextoBooking.Contratos.Servicos;
+using MBCorpHealthTestTests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MBCorpHealthTestTests
@@ -55,11 +56,13 @@ namespace MBCorpHealthTestTests
         public void ComoUsuarioQueroEnviarUmEmail()
         {
             //Arrange
-            IServicoDeEnvioDeEmail servicoDeEnvioDeEmail = new ServicoDeEnvioDeEmailCorporativoFake();
 
+            IServicoDeEnvioDeEmailWrapper servicoDeEnvioDeEmailWrapper = new ServicoDeEnvioDeEmailWrapperFake();
+
+           
             //Act
 
-            bool retorno = servicoDeEnvioDeEmail.EnviarEmail("FabioMargarito@gmail.com", "paciente@gmail.com",
+            bool retorno = servicoDeEnvioDeEmailWrapper.EnviarEmail("FabioMargarito@gmail.com", "paciente@gmail.com",
                 "Agendamento Realizado", "Meu texto da Mensagem");
             
             //Assert
@@ -252,6 +255,22 @@ namespace MBCorpHealthTestTests
 
         }
     }
+    }
+
+    public class ServicoDeEnvioDeEmailWrapperFake : IServicoDeEnvioDeEmailWrapper
+    {
+        public bool EnviarEmail(string de, string para, string assunto, string mensagem)
+        {
+            IServicoDeEnvioDeEmail servicoDeEnvioDeEmail = new ServicoDeEnvioDeEmailCorporativoFake();
+            return servicoDeEnvioDeEmail.EnviarEmail(de, para, assunto, mensagem);
+        }
+    }
+
+    public interface IServicoDeEnvioDeEmailWrapper
+    {
+        bool EnviarEmail(string de, string para, string assunto, string mensagem);
+    }
+
 
     public class ServicoDeAgendamentoDeDataFake : IServicoDeAgendamentoDeData
     {
@@ -289,4 +308,6 @@ namespace MBCorpHealthTestTests
             return listagemDeMedicos;
         }
     }
-}
+
+
+
