@@ -6,7 +6,7 @@ namespace MBCorpHealthTestTests
 {
     public class Agendamentos : IAgendamentos
     {
-        private readonly ISession _session;
+        public ISession _session { get; set; }
 
         public Agendamentos(ISession session)
         {

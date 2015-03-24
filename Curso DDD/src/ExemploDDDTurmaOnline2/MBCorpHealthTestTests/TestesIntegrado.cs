@@ -19,36 +19,36 @@ namespace MBCorpHealthTestTests
         private ISession _session;
         public TestesIntegrado()
         {
-            //_session = ConfiguracaoNHibernate.NHibernateSessionFactory.Criar().OpenSession();
+            _session = ConfiguracaoNHibernate.NHibernateSessionFactory.Criar().OpenSession();
         }
 
         [TestMethod]
         public void ComoAtendenteQueroConsultarUmPacientePorTrechoDoNomeIntegrado()
         {
 
-            ////Arrange
-            //IPacientes pacientes = new Pacientes(_session);
+            //Arrange
+            IPacientes pacientes = new Pacientes(_session);
 
-            ////Act
+            //Act
 
-            //IList<Paciente> listaDePacientes = pacientes.ConsultarPacientesPorTrechoDoNome("Fabio");
+            IList<Paciente> listaDePacientes = pacientes.ConsultarPacientesPorTrechoDoNome("Fabio");
 
-            ////Assert
-            //Assert.IsTrue(listaDePacientes.Count > 0);            
+            //Assert
+            Assert.IsTrue(listaDePacientes.Count > 0);            
         }
 
         [TestMethod]
         public void ComoAtendenteQueroConsultarUmPacientePorCPFIntegrado()
         {
-            ////Arrange
-            //IPacientes pacientes = new Pacientes(_session);
+            //Arrange
+            IPacientes pacientes = new Pacientes(_session);
 
-            ////Act
+            //Act
 
-            //Paciente paciente = pacientes.ConsultarPacientesPorCPF("1234");
+            Paciente paciente = pacientes.ConsultarPacientesPorCPF("1234");
 
-            ////Assert
-            //Assert.IsTrue(paciente.CPF == "1234");
+            //Assert
+            Assert.IsTrue(paciente.CPF == "1234");
 
         }
 
@@ -56,13 +56,13 @@ namespace MBCorpHealthTestTests
         public void ComoAtendenteQueroConsultarUmMedicoPorCRMIntegrado()
         {
 
-            ////Arrange
-            //IMedicos medicos = new Medicos(_session);
-            ////Act
-            //Medico medico = medicos.ConsultarPorCRM("1234");
+            //Arrange
+            IMedicos medicos = new Medicos(_session);
+            //Act
+            Medico medico = medicos.ConsultarPorCRM("1234");
 
-            ////Assert
-            //Assert.IsTrue(medico.CRM == "1234");
+            //Assert
+            Assert.IsTrue(medico.CRM == "1234");
 
         }
 
@@ -71,13 +71,13 @@ namespace MBCorpHealthTestTests
         public void ComoAtendenteQueroConsultarUmMedicoPorTrechoDoNomeIntegrado()
         {
 
-            ////Arrange
-            //IMedicos medicos = new Medicos(_session);
-            ////Act
-            //IList<Medico> listagemDeMedicos = medicos.ConsultarPorTrechoDoNome("Fabio");
+            //Arrange
+            IMedicos medicos = new Medicos(_session);
+            //Act
+            IList<Medico> listagemDeMedicos = medicos.ConsultarPorTrechoDoNome("Fabio");
 
-            ////Assert
-            //Assert.IsTrue(listagemDeMedicos.Count > 0);
+            //Assert
+            Assert.IsTrue(listagemDeMedicos.Count > 0);
 
         }
 
@@ -85,20 +85,20 @@ namespace MBCorpHealthTestTests
         [TestMethod]
         public void ComoAtendenteEuQueroCadastrarUmAgendamentoIntegrado()
         {
-            ////Arrange
+            //Arrange
 
-            //ServicoDeAgendamento servicoDeAgendamento = new ServicoDeAgendamento(new Agendamentos(_session));
-            //Medico medico = new Medico("1234", "Mario Peres");
-            //Atendente atendente = new Atendente("000.000.000-10", "Victor Cleber");
-            //Agendamento agendamento = (new FabricaDeAgendamento()).InformarMedico("1234", "Fabio").InformarAtendente("12345", "Joao").Criar();            
-            //agendamento.InformarPaciente(new Paciente("1234","Fabio Margarito"));            
+            ServicoDeAgendamento servicoDeAgendamento = new ServicoDeAgendamento(new Agendamentos(_session));
+            Medico medico = new Medico("1234", "Mario Peres");
+            Atendente atendente = new Atendente("000.000.000-10", "Victor Cleber");
+            Agendamento agendamento = (new FabricaDeAgendamento()).InformarMedico("1234", "Fabio").InformarAtendente("12345", "Joao").Criar();
+            agendamento.InformarPaciente(new Paciente("1234", "Fabio Margarito"));
 
-            ////Act            
-            //bool retorno = servicoDeAgendamento.CadastrarAgendamento(agendamento);
+            //Act            
+            bool retorno = servicoDeAgendamento.CadastrarAgendamento(agendamento);
 
-            ////Assert
+            //Assert
 
-            //Assert.IsTrue(retorno);
+            Assert.IsTrue(retorno);
 
         }
 
@@ -107,19 +107,19 @@ namespace MBCorpHealthTestTests
         {
             //Arrange
 
-            //Agendamento agendamento = (new FabricaDeAgendamento()).InformarMedico("1234", "Fabio").InformarAtendente("12345", "Joao").Criar();
+            Agendamento agendamento = (new FabricaDeAgendamento()).InformarMedico("1234", "Fabio").InformarAtendente("12345", "Joao").Criar();
 
-            //TipoExame tipoExame = new TipoExame("0001110000111212", 10);
-            //CentroDiagnostico centroDiagnostico = new CentroDiagnostico("111.222.333/00001-11");
-            //Exame exame = new Exame(tipoExame, centroDiagnostico, new DateTime(2015, 02, 20));
+            TipoExame tipoExame = new TipoExame("0001110000111212", 10);
+            CentroDiagnostico centroDiagnostico = new CentroDiagnostico("111.222.333/00001-11");
+            Exame exame = new Exame(tipoExame, centroDiagnostico, new DateTime(2015, 02, 20));
 
-            ////Act
-            //agendamento.AdicionarExame(exame);
-            //(new ServicoDeAgendamento(new Agendamentos(_session))).CadastrarAgendamento(agendamento);
+            //Act
+            agendamento.AdicionarExame(exame);
+            (new ServicoDeAgendamento(new Agendamentos(_session))).CadastrarAgendamento(agendamento);
 
 
-            ////Assert
-            //Assert.IsTrue(agendamento.Exames.FirstOrDefault().TipoExame.CBHPM == "0001110000111212");
+            //Assert
+            Assert.IsTrue(agendamento.Exames.FirstOrDefault().TipoExame.CBHPM == "0001110000111212");
 
         }
 

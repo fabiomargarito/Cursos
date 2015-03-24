@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using MBCorpHealthTest.Dominio.Entidades;
 using Microsoft.Practices.Unity;
+using NHibernate;
 
 namespace MBCorpHealthTest.Dominio.EventosDeDominio
 {
@@ -16,14 +17,15 @@ namespace MBCorpHealthTest.Dominio.EventosDeDominio
     //Concrete Subject
     public class LaudoEmitido:IEventoDeDomino
     {
+
         public string NomeDoEvento { get; set; }
     }
 
     //Concrete Subject
     public class AgendamentoCriado:IEventoDeDomino
-    {
+    {        
         public AgendamentoCriado(Agendamento agendamento)
-        {
+        {            
             NomeDoEvento = "Agendamento Criado";
             Agendamento = agendamento;
         }
@@ -35,7 +37,7 @@ namespace MBCorpHealthTest.Dominio.EventosDeDominio
 
     //Observer
     public interface IManipuladorDeEvento<T> where T : IEventoDeDomino
-    {
+    {        
         //update
         void ManipularEvento(T evento);
     }
@@ -46,7 +48,7 @@ namespace MBCorpHealthTest.Dominio.EventosDeDominio
     {
         //update    
         public void ManipularEvento(AgendamentoCriado evento)
-        {
+        {            
             Console.WriteLine("Evento Disparado e Email enviado");
         }
     }

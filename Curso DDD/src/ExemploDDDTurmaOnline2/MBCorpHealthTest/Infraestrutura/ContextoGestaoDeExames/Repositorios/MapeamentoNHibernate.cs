@@ -89,6 +89,7 @@ namespace MBCorpHealthTest.Infraestrutura.Repositorios
             Id().Column("IDTelefone").GeneratedBy.Identity();
             Map(campo => campo.DDD).Column("DDD");
             Map(campo => campo.Numero).Column("Numero");
+            Table("TBTELEFONE");
 }
     }
 
