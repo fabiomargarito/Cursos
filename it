@@ -1,0 +1,222 @@
+[1mdiff --git a/.gitattributes b/.gitattributes[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1ff0c42[m
+[1m--- /dev/null[m
+[1m+++ b/.gitattributes[m
+[36m@@ -0,0 +1,63 @@[m
+[32m+[m[32m###############################################################################[m
+[32m+[m[32m# Set default behavior to automatically normalize line endings.[m
+[32m+[m[32m###############################################################################[m
+[32m+[m[32m* text=auto[m
+[32m+[m
+[32m+[m[32m###############################################################################[m
+[32m+[m[32m# Set default behavior for command prompt diff.[m
+[32m+[m[32m#[m
+[32m+[m[32m# This is need for earlier builds of msysgit that does not have it on by[m
+[32m+[m[32m# default for csharp files.[m
+[32m+[m[32m# Note: This is only used by command line[m
+[32m+[m[32m###############################################################################[m
+[32m+[m[32m#*.cs     diff=csharp[m
+[32m+[m
+[32m+[m[32m###############################################################################[m
+[32m+[m[32m# Set the merge driver for project and solution files[m
+[32m+[m[32m#[m
+[32m+[m[32m# Merging from the command prompt will add diff markers to the files if there[m
+[32m+[m[32m# are conflicts (Merging from VS is not affected by the settings below, in VS[m
+[32m+[m[32m# the diff markers are never inserted). Diff markers may cause the following[m[41m [m
+[32m+[m[32m# file extensions to fail to load in VS. An alternative would be to treat[m
+[32m+[m[32m# these files as binary and thus will always conflict and require user[m
+[32m+[m[32m# intervention with every merge. To do so, just uncomment the entries below[m
+[32m+[m[32m###############################################################################[m
+[32m+[m[32m#*.sln       merge=binary[m
+[32m+[m[32m#*.csproj    merge=binary[m
+[32m+[m[32m#*.vbproj    merge=binary[m
+[32m+[m[32m#*.vcxproj   merge=binary[m
+[32m+[m[32m#*.vcproj    merge=binary[m
+[32m+[m[32m#*.dbproj    merge=binary[m
+[32m+[m[32m#*.fsproj    merge=binary[m
+[32m+[m[32m#*.lsproj    merge=binary[m
+[32m+[m[32m#*.wixproj   merge=binary[m
+[32m+[m[32m#*.modelproj merge=binary[m
+[32m+[m[32m#*.sqlproj   merge=binary[m
+[32m+[m[32m#*.wwaproj   merge=binary[m
+[32m+[m
+[32m+[m[32m###############################################################################[m
+[32m+[m[32m# behavior for image files[m
+[32m+[m[32m#[m
+[32m+[m[32m# image files are treated as binary by default.[m
+[32m+[m[32m###############################################################################[m
+[32m+[m[32m#*.jpg   binary[m
+[32m+[m[32m#*.png   binary[m
+[32m+[m[32m#*.gif   binary[m
+[32m+[m
+[32m+[m[32m###############################################################################[m
+[32m+[m[32m# diff behavior for common document formats[m
+[32m+[m[32m#[m[41m [m
+[32m+[m[32m# Convert binary document formats to text before diffing them. This feature[m
+[32m+[m[32m# is only available from the command line. Turn it on by uncommenting the[m[41m [m
+[32m+[m[32m# entries below.[m
+[32m+[m[32m###############################################################################[m
+[32m+[m[32m#*.doc   diff=astextplain[m
+[32m+[m[32m#*.DOC   diff=astextplain[m
+[32m+[m[32m#*.docx  diff=astextplain[m
+[32m+[m[32m#*.DOCX  diff=astextplain[m
+[32m+[m[32m#*.dot   diff=astextplain[m
+[32m+[m[32m#*.DOT   diff=astextplain[m
+[32m+[m[32m#*.pdf   diff=astextplain[m
+[32m+[m[32m#*.PDF   diff=astextplain[m
+[32m+[m[32m#*.rtf   diff=astextplain[m
+[32m+[m[32m#*.RTF   diff=astextplain[m
+[1mdiff --git a/Curso Fundamentos/src/Turma4Sabado/OO/ClassLibrary1/ClassLibrary1.sln b/Curso Fundamentos/src/Turma4Sabado/OO/ClassLibrary1/ClassLibrary1.sln[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b502fff[m
+[1m--- /dev/null[m
+[1m+++ b/Curso Fundamentos/src/Turma4Sabado/OO/ClassLibrary1/ClassLibrary1.sln[m	
+[36m@@ -0,0 +1,22 @@[m
+[32m+[m[32m﻿[m
+[32m+[m[32mMicrosoft Visual Studio Solution File, Format Version 12.00[m
+[32m+[m[32m# Visual Studio 14[m
+[32m+[m[32mVisualStudioVersion = 14.0.22823.1[m
+[32m+[m[32mMinimumVisualStudioVersion = 10.0.40219.1[m
+[32m+[m[32mProject("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroBasico", "ClassLibrary1\CadastroBasico.csproj", "{A4B771E7-9BB1-4305-B5E0-D78FB0B75188}"[m
+[32m+[m[32mEndProject[m
+[32m+[m[32mGlobal[m
+[32m+[m	[32mGlobalSection(SolutionConfigurationPlatforms) = preSolution[m
+[32m+[m		[32mDebug|Any CPU = Debug|Any CPU[m
+[32m+[m		[32mRelease|Any CPU = Release|Any CPU[m
+[32m+[m	[32mEndGlobalSection[m
+[32m+[m	[32mGlobalSection(ProjectConfigurationPlatforms) = postSolution[m
+[32m+[m		[32m{A4B771E7-9BB1-4305-B5E0-D78FB0B75188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU[m
+[32m+[m		[32m{A4B771E7-9BB1-4305-B5E0-D78FB0B75188}.Debug|Any CPU.Build.0 = Debug|Any CPU[m
+[32m+[m		[32m{A4B771E7-9BB1-4305-B5E0-D78FB0B75188}.Release|Any CPU.ActiveCfg = Release|Any CPU[m
+[32m+[m		[32m{A4B771E7-9BB1-4305-B5E0-D78FB0B75188}.Release|Any CPU.Build.0 = Release|Any CPU[m
+[32m+[m	[32mEndGlobalSection[m
+[32m+[m	[32mGlobalSection(SolutionProperties) = preSolution[m
+[32m+[m		[32mHideSolutionNode = FALSE[m
+[32m+[m	[32mEndGlobalSection[m
+[32m+[m[32mEndGlobal[m
+[1mdiff --git a/Curso Fundamentos/src/Turma4Sabado/OO/ClassLibrary1/ClassLibrary1/CadastroBasico.csproj b/Curso Fundamentos/src/Turma4Sabado/OO/ClassLibrary1/ClassLibrary1/CadastroBasico.csproj[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6139b10[m
+[1m--- /dev/null[m
+[1m+++ b/Curso Fundamentos/src/Turma4Sabado/OO/ClassLibrary1/ClassLibrary1/CadastroBasico.csproj[m	
+[36m@@ -0,0 +1,54 @@[m
+[32m+[m[32m﻿<?xml version="1.0" encoding="utf-8"?>[m
+[32m+[m[32m<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">[m
+[32m+[m[32m  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />[m
+[32m+[m[32m  <PropertyGroup>[m
+[32m+[m[32m    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>[m
+[32m+[m[32m    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>[m
+[32m+[m[32m    <ProjectGuid>{A4B771E7-9BB1-4305-B5E0-D78FB0B75188}</ProjectGuid>[m
+[32m+[m[32m    <OutputType>Library</OutputType>[m
+[32m+[m[32m    <AppDesignerFolder>Properties</AppDesignerFolder>[m
+[32m+[m[32m    <RootNamespace>ClassLibrary1</RootNamespace>[m
+[32m+[m[32m    <AssemblyName>ClassLibrary1</AssemblyName>[m
+[32m+[m[32m    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>[m
+[32m+[m[32m    <FileAlignment>512</FileAlignment>[m
+[32m+[m[32m  </PropertyGroup>[m
+[32m+[m[32m  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">[m
+[32m+[m[32m    <DebugSymbols>true</DebugSymbols>[m
+[32m+[m[32m    <DebugType>full</DebugType>[m
+[32m+[m[32m    <Optimize>false</Optimize>[m
+[32m+[m[32m    <OutputPath>bin\Debug\</OutputPath>[m
+[32m+[m[32m    <DefineConstants>DEBUG;TRACE</DefineConstants>[m
+[32m+[m[32m    <ErrorReport>prompt</ErrorReport>[m
+[32m+[m[32m    <WarningLevel>4</WarningLevel>[m
+[32m+[m[32m  </PropertyGroup>[m
+[32m+[m[32m  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">[m
+[32m+[m[32m    <DebugType>pdbonly</DebugType>[m
+[32m+[m[32m    <Optimize>true</Optimize>[m
+[32m+[m[32m    <OutputPath>bin\Release\</OutputPath>[m
+[32m+[m[32m    <DefineConstants>TRACE</DefineConstants>[m
+[32m+[m[32m    <ErrorReport>prompt</ErrorReport>[m
+[32m+[m[32m    <WarningLevel>4</WarningLevel>[m
+[32m+[m[32m  </PropertyGroup>[m
+[32m+[m[32m  <ItemGroup>[m
+[32m+[m[32m    <Reference Include="System" />[m
+[32m+[m[32m    <Reference Include="System.Core" />[m
+[32m+[m[32m    <Reference Include="System.Xml.Linq" />[m
+[32m+[m[32m    <Reference Include="System.Data.DataSetExtensions" />[m
+[32m+[m[32m    <Reference Include="Microsoft.CSharp" />[m
+[32m+[m[32m    <Reference Include="System.Data" />[m
+[32m+[m[32m    <Reference Include="System.Net.Http" />[m
+[32m+[m[32m    <Reference Include="System.Xml" />[m
+[32m+[m[32m  </ItemGroup>[m
+[32m+[m[32m  <ItemGroup>[m
+[32m+[m[32m    <Compile Include="Pessoa.cs" />[m
+[32m+[m[32m    <Compile Include="Properties\AssemblyInfo.cs" />[m
+[32m+[m[32m  </ItemGroup>[m
+[32m+[m[32m  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />[m
+[32m+[m[32m  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.[m[41m [m
+[32m+[m[32m       Other similar extension points exist, see Microsoft.Common.targets.[m
+[32m+[m[32m  <Target Name="BeforeBuild">[m
+[32m+[m[32m  </Target>[m
+[32m+[m[32m  <Target Name="AfterBuild">[m
+[32m+[m[32m  </Target>[m
+[32m+[m[32m  -->[m
+[32m+[m[32m</Project>[m
+\ No newline at end of file[m
+[1mdiff --git a/Curso Fundamentos/src/Turma4Sabado/OO/ClassLibrary1/ClassLibrary1/Pessoa.cs b/Curso Fundamentos/src/Turma4Sabado/OO/ClassLibrary1/ClassLibrary1/Pessoa.cs[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0c80065[m
+[1m--- /dev/null[m
+[1m+++ b/Curso Fundamentos/src/Turma4Sabado/OO/ClassLibrary1/ClassLibrary1/Pessoa.cs[m	
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32m﻿using System;[m
+[32m+[m
+[32m+[m[32mnamespace CadastroBasico[m
+[32m+[m[32m{[m
+[32m+[m[32m    class Pessoa[m
+[32m+[m[32m    {[m
+[32m+[m[32m        public string Nome { get; set; }[m
+[32m+[m[32m        public DateTime DataNascimento { get; set; }[m
+[32m+[m
+[32m+[m[32m        public int CalcularIdade()[m
+[32m+[m[32m        {[m
+[32m+[m[32m            return DateTime.Now.Year - DataNascimento.Year;[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[1mdiff --git a/Curso Fundamentos/src/Turma4Sabado/OO/ClassLibrary1/ClassLibrary1/Properties/AssemblyInfo.cs b/Curso Fundamentos/src/Turma4Sabado/OO/ClassLibrary1/ClassLibrary1/Properties/AssemblyInfo.cs[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f00eadb[m
+[1m--- /dev/null[m
+[1m+++ b/Curso Fundamentos/src/Turma4Sabado/OO/ClassLibrary1/ClassLibrary1/Properties/AssemblyInfo.cs[m	
+[36m@@ -0,0 +1,36 @@[m
+[32m+[m[32m﻿using System.Reflection;[m
+[32m+[m[32musing System.Runtime.CompilerServices;[m
+[32m+[m[32musing System.Runtime.InteropServices;[m
+[32m+[m
+[32m+[m[32m// General Information about an assembly is controlled through the following[m[41m [m
+[32m+[m[32m// set of attributes. Change these attribute values to modify the information[m
+[32m+[m[32m// associated with an assembly.[m
+[32m+[m[32m[assembly: AssemblyTitle("ClassLibrary1")][m
+[32m+[m[32m[assembly: AssemblyDescription("")][m
+[32m+[m[32m[assembly: AssemblyConfiguration("")][m
+[32m+[m[32m[assembly: AssemblyCompany("")][m
+[32m+[m[32m[assembly: AssemblyProduct("ClassLibrary1")][m
+[32m+[m[32m[assembly: AssemblyCopyright("Copyright ©  2015")][m
+[32m+[m[32m[assembly: AssemblyTrademark("")][m
+[32m+[m[32m[assembly: AssemblyCulture("")][m
+[32m+[m
+[32m+[m[32m// Setting ComVisible to false makes the types in this assembly not visible[m[41m [m
+[32m+[m[32m// to COM components.  If you need to access a type in this assembly from[m[41m [m
+[32m+[m[32m// COM, set the ComVisible attribute to true on that type.[m
+[32m+[m[32m[assembly: ComVisible(false)][m
+[32m+[m
+[32m+[m[32m// The following GUID is for the ID of the typelib if this project is exposed to COM[m
+[32m+[m[32m[assembly: Guid("a4b771e7-9bb1-4305-b5e0-d78fb0b75188")][m
+[32m+[m
+[32m+[m[32m// Version information for an assembly consists of the following four values:[m
+[32m+[m[32m//[m
+[32m+[m[32m//      Major Version[m
+[32m+[m[32m//      Minor Version[m[41m [m
+[32m+[m[32m//      Build Number[m
+[32m+[m[32m//      Revision[m
+[32m+[m[32m//[m
+[32m+[m[32m// You can specify all the values or you can default the Build and Revision Numbers[m[41m [m
+[32m+[m[32m// by using the '*' as shown below:[m
+[32m+[m[32m// [assembly: AssemblyVersion("1.0.*")][m
+[32m+[m[32m[assembly: AssemblyVersion("1.0.0.0")][m
+[32m+[m[32m[assembly: AssemblyFileVersion("1.0.0.0")][m
