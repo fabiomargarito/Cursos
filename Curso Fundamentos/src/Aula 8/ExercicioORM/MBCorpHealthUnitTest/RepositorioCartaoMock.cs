@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using MBCorpHealth.Dominio;
 using MBCorpHealth.Dominio.Contratos.Repositorio;
+using NHibernate;
 
 namespace MBCorpHealthUnitTest
 {
@@ -24,6 +25,16 @@ namespace MBCorpHealthUnitTest
 
             return cartoes;
 
+        }
+
+        public void InjetarDependencia(ISession isSession)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Dispose()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

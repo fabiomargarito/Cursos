@@ -1,4 +1,6 @@
-﻿using ClassLibrary1;
+﻿using System;
+using System.Security.Cryptography.X509Certificates;
+using ClassLibrary1;
 
 namespace AplicacaoTeste
 {
@@ -6,10 +8,25 @@ namespace AplicacaoTeste
     {
         static void Main(string[] args)
         {
+            string estado = "RJ";
+            ICalculoFrete calculoFrete;
+            IFabricaDeFretes fabricaDeFretes = new FabricaDeFretes();
 
-            Agendamento agendamento = new Agendamento(123,new Paciente("123","Fabio"),new Atendente("1234","fabio")); 
-            agendamento.AdicionarExame(new Exame());
+            if (estado == "SP")
+            {
+                calculoFrete = fabricaDeFretes.CriarCalculoDeFrete(TipoDeFrete.SP);
 
+
+            }
+            else
+            {
+                calculoFrete = fabricaDeFretes.CriarCalculoDeFrete(TipoDeFrete.RJ);
+                
+            }
+
+
+            Console.WriteLine(calculoFrete.CalcularFrente(200));
+            Console.ReadKey();
         }
     }
 }

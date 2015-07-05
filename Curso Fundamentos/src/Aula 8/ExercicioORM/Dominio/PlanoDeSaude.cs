@@ -4,11 +4,16 @@ namespace MBCorpHealth.Dominio
 {
     public class PlanoDeSaude
     {
-        public string CNPJ { get; private set; }
-        public string NomePlano { get; private set; }
-        public string TipoDoPlano { get; private set; }
 
-        public bool VerificarCobertura(Exame exame)
+        public PlanoDeSaude()
+        {
+        }
+
+        public virtual string CNPJ { get; protected set; }
+        public virtual string NomePlano { get; protected set; }
+        public virtual string TipoDoPlano { get; protected set; }
+
+        public virtual bool VerificarCobertura(Exame exame)
         {
             //CNPJ Porto Seguro Saúde
             if (CNPJ == "001.001.0001/00001-10")

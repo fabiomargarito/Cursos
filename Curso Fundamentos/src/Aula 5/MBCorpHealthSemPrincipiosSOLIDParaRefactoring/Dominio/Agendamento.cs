@@ -7,6 +7,8 @@ using MBCorpHealth.Infraestrutura.Servico;
 
 namespace MBCorpHealth.Dominio
 {
+
+    
     public class Agendamento
     {
 

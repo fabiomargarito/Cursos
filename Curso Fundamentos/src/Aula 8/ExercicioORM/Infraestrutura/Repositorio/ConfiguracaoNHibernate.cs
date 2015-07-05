@@ -18,11 +18,11 @@ namespace MBCorpHealth.Infraestrutura.Repositorio
         public static ISessionFactory Criar()
         {
             ISessionFactory sessionFactory = Fluently.Configure()
-                .Mappings(map=>map.FluentMappings.AddFromAssemblyOf<MapeamentoCartao>())                                
-                .Database(
-                    MsSqlConfiguration.MsSql2008.ConnectionString(
+                .Mappings(map=>map.FluentMappings.AddFromAssemblyOf<MapeamentoCartao>())                
+                .Database(                    
+                    MsSqlConfiguration.MsSql2012.ConnectionString(
                         c => c.FromConnectionStringWithKey("MBCorpDatabase")))
-                 .ExposeConfiguration(config => new SchemaExport(config).SetOutputFile(@"C:\Users\Fabio\Dropbox\SchemaBancoDeDados.sql").Execute(true, true, false))
+                // .ExposeConfiguration(config => new SchemaExport(config).SetOutputFile(@"C:\Users\Fabio\Dropbox\SchemaBancoDeDados.sql").Execute(true, true, false))
                         .BuildSessionFactory();
 
             return sessionFactory;
@@ -40,5 +40,38 @@ namespace MBCorpHealth.Infraestrutura.Repositorio
         }
     }
 
+    public class MapeamentoPaciente : ClassMap<Paciente>
+    {
+        public MapeamentoPaciente()
+        {
+            Id(chave => chave.CPF).Column("IDCPF");
+            Map(campo => campo.Nome);
+            References(chave => chave.Credencial).Column("IDCREDENCIAL");
+            References(chave => chave.PlanoDeSaude).Column("IDPLANOSAUDE");
+            Table("TBPACIENTE");            
+        }
+    }
+
+    public class MapeamentoCredencial : ClassMap<Credencial>
+    {
+        public MapeamentoCredencial()
+        {
+            Id(chave => chave.ID).Column("IDCredencial");
+            Map(campo => campo.NomeDeUsuario);
+            Map(campo => campo.Senha);
+            Table("TBCREDENCIAL");            
+        }
+    }
+
+    public class MapeamentoPlanoDeSaude : ClassMap<PlanoDeSaude>
+    {
+        public MapeamentoPlanoDeSaude()
+        {
+            Id(chave => chave.CNPJ);
+            Map(campo => campo.NomePlano);
+            Map(campo => campo.TipoDoPlano);
+            Table("TBPLANODESAUDE");
+        }
+    }
 
 }

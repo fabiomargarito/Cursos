@@ -23,7 +23,7 @@ namespace MBCorpHealthUI
             UnityContainer unity = new UnityContainer();
 
             unity.RegisterType<IRepositorioAgendamento, Agendamentos>();
-            unity.RegisterType<IRepositorio<Paciente>, Pacientes>();
+            unity.RegisterType<IRepositorio<Paciente>, PacientesSQL>();
             unity.RegisterType<IServicoDePagamento, ServicoDePagamentoMaster>();
 
 

@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MBCorpHealth.Aplicacao.Servico;
 using MBCorpHealth.Dominio;
 using MBCorpHealth.Dominio.Contratos.Repositorio;
-using MBCorpHealth.Dominio.Contratos.Servicos;
 using MBCorpHealth.Infraestrutura.Repositorio;
-using MBCorpHealth.Infraestrutura.Servico;
 using MBCorpHealthUnitTest;
 using Microsoft.Practices.Unity;
-using NHibernate;
 
 namespace MBCorpHealthUI
 {
@@ -20,38 +11,31 @@ namespace MBCorpHealthUI
     {
         static void Main(string[] args)
         {
-      
-            using (ISession session = ConfiguracaoNHibernate.Criar().OpenSession())
-            {
+            ISessaoORM<ISessionFake> sessao = new SessaoFake();
 
-                IRepositorio<Cartao> cartaoRepositorio = new RepositorioCartao(session);
+            //Cria a caixa d'agua, que chamamos de container
+            UnityContainer unityContainer = new UnityContainer();
 
-                cartaoRepositorio.Gravar(new Cartao("12345", "fabio margarito", "1234"));
+            //encher a caixa d'agua, que chamados de registrar os componentes
 
-                cartaoRepositorio.Gravar(new Cartao("bbb", "fabio barros", "123"));
-
-            }
-
-            //    UnityContainer unity = new UnityContainer();
-
-            //    unity.RegisterType<IRepositorioAgendamento, Agendamentos>();
-            //    unity.RegisterType<IRepositorio<Paciente>, Pacientes>();
-            //    unity.RegisterType<IServicoDePagamento, ServicoDePagamentoMaster>();
+            unityContainer.RegisterInstance(sessao);            
+            unityContainer.RegisterType<IRepositorio<Paciente>, PacientesFake>();
+            unityContainer.RegisterType<IRepositorio<Cartao>, RepositorioCartao>();
 
 
-            //    ServicoDeConsultaDeDadosDePaciente servicoDeConsultaDeDadosDePaciente = unity.Resolve<ServicoDeConsultaDeDadosDePaciente>();
 
+            Paciente paciente = new Paciente("fabio","123456s466");
+            IRepositorio<Paciente> pacientes = unityContainer.Resolve<IRepositorio<Paciente>>();            
+            pacientes.Gravar(paciente);
 
-            //    var retorno = servicoDeConsultaDeDadosDePaciente.RetornarResultadosDeExame("284434343434334");
+            var retorno = pacientes.RetornarTodos();
 
+            IRepositorio<Cartao> cartoes = unityContainer.Resolve<IRepositorio<Cartao>>();
 
-            //    foreach (ResultadoViewModel resultado in retorno)
-            //    {
-            //        Console.Write(resultado.Descricao);
-            //    }
+            pacientes.Dispose();
 
             
-            Console.Write("Cartoes Gravados!!!!");
+            Console.Write("Consultas e gravações!!!!");
             Console.ReadKey();
 
             //

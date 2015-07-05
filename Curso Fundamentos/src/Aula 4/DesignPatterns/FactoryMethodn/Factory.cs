@@ -114,7 +114,7 @@ namespace FactoryMethod
         {
             switch (tipoDeRepositorio)
             {
-                case TipoDeRepositorio.CLIENTE: return (new RepositorioDeClientesEntityFramework());
+                case TipoDeRepositorio.CLIENTE: return (new RepositorioDeClientes());
                 case TipoDeRepositorio.FORNECEDOR: return (new RepositorioDeFornecedores());                
                 default: throw new Exception("Repositório não Existe");
             }

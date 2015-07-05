@@ -35,14 +35,19 @@ namespace TemplateMethod
         {
             List<T> retorno;
             
+            //passo 1
             var conexao = ObterConexao();
-                        
+                     
+            //passo 2   
             DefinirComando();
 
+            //passo 3
             retorno = ExecutarComando();
             
+            //passo 4
             retorno = TratarRetorno();
 
+            //passo 5
             FecharConexao();
 
 
@@ -133,7 +138,6 @@ namespace TemplateMethod
             return pacientes;
         }
     }
-
 
     public class Paciente
     {

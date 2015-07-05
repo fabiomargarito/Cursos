@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Singleton.Configuracao">
-    <Position X="0.5" Y="0.5" Width="3.5" />
+    <Position X="4.5" Y="1" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAhAAAAAAAABAgCAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAhAAAAAAAABAgCAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>Configuracao.cs</FileName>
     </TypeIdentifier>
   </Class>

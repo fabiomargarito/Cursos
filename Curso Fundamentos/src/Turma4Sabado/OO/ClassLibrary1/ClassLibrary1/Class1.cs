@@ -106,38 +106,49 @@ namespace ClassLibrary1
         public string Senha { get; set; }
 
 
-        public abstract void GerarCredencial(string cpf);
+        public abstract Credencial GerarCredencial(string cpf);
 
     }
 
+    public abstract class CredencialBaseAvancada : CredencialBase
+    {
+        public abstract Credencial GerarCredencialToken(string cpf, string token);
+    }
+
+
+
+
     public class Credencial : CredencialBase
     {
-        public override void GerarCredencial(string cpf)
+        public override Credencial GerarCredencial(string cpf)
         {
          
                 Usuario = cpf;
             Senha = string.Format("{0}{1}", cpf, Guid.NewGuid());
+            return new Credencial { Usuario = Usuario, Senha = Senha };
         }
     }
 
     public class CredencialSuperComplexo : CredencialBase
     {
-        public override void GerarCredencial(string cpf)
+        public override Credencial GerarCredencial(string cpf)
         {
             Usuario = string.Format("{0}{1}", cpf, DateTime.Now.ToString());
             Senha = string.Format("{0}{1}{1}", cpf, DateTime.Now.ToString(), Guid.NewGuid());
-        }
 
+            return new Credencial {Usuario = Usuario, Senha = Senha};
+        }
 
     }
 }
     public class CredencialComplexo : CredencialBase
     {
-        public override void GerarCredencial(string cpf)
+        public override Credencial GerarCredencial(string cpf)
         {
                 Usuario = cpf;
                 Senha = string.Format("{0}{1}{1}", cpf, DateTime.Now.ToString(), Guid.NewGuid());
 
+            return new Credencial {Usuario = Usuario, Senha = Senha};
         }
 
 
@@ -213,11 +224,155 @@ namespace ClassLibrary1
 
     public class CredencialSimples:CredencialBase
     {
-        public override void GerarCredencial(string cpf)
+        public override Credencial GerarCredencial(string cpf)
         {
             Usuario = cpf;
             Senha = cpf;
+        return new Credencial { Usuario = Usuario, Senha = Senha };
+    }
+    }
+
+public class CredencialMaster:CredencialBase
+{
+    public string Token { get; set; }
+
+    public override Credencial GerarCredencial(string cpf)
+    {
+        Usuario = cpf;
+        Senha = string.Format("{0}{1}{2}", cpf, DateTime.Now.ToString(), Guid.NewGuid());
+
+        return new Credencial { Usuario = Usuario, Senha = Senha };
+    }
+
+    
+}
+
+public class Retangulo
+{
+    public int lado1 { get; set; }
+    public int lado2 { get; set; }
+
+    public virtual int CalcularArea()
+    {
+        return lado1*lado2;
+    }
+}
+
+public class Quadrado : Retangulo
+{
+    public override int CalcularArea()
+    {
+        return lado1 * lado1;
+    }
+}
+
+
+public class S:T
+{
+    public int calcular()
+    {
+        return 1;
+    }
+
+}
+
+public class T
+{
+    public int calcular()
+    {
+        return 1;
+    }
+}
+
+
+public interface IContratoDeTrabalho
+{
+    
+    double EntregarLinhaDeCodigo2(int qtdLinhasDeCodigo);
+
+    
+}
+
+
+public interface IMinutaDeContrato
+{
+    string GerarClausulaDeContrato();
+}
+
+public class MeuContratoDeTrabalho:IContratoDeTrabalho
+{
+
+    public double EntregarLinhaDeCodigo2(int qtdLinhasDeCodigo)
+    {
+        return qtdLinhasDeCodigo*1;
+    }
+
+}
+
+public interface ICalculoFrete
+{
+     double CalcularFrente(double peso);
+}
+
+public class CalculoFreteSp:ICalculoFrete
+{
+    public double CalcularFrente(double peso)
+    {
+        return peso*0.10;
+    }
+}
+
+public class CalculoFrenteSpNovo:ICalculoFrete
+{
+    public double CalcularFrente(double peso)
+    {
+        return peso*1.5;
+    }
+}
+
+public class CalculoFreteRj:ICalculoFrete
+{
+    public double CalcularFrente(double peso)
+    {
+        return peso * 0.20;
+    }
+}
+
+
+public class CalculoFreteMg : ICalculoFrete
+{
+    public double CalcularFrente(double peso)
+    {
+        return peso * 0.30;
+    }
+}
+
+public interface IFabricaDeFretes
+{
+    ICalculoFrete CriarCalculoDeFrete(TipoDeFrete tipoDeFrete);
+}
+
+public class FabricaDeFretes:IFabricaDeFretes
+{
+    public ICalculoFrete CriarCalculoDeFrete(TipoDeFrete tipoDeFrete)
+    {
+        switch (tipoDeFrete)
+        {
+                case TipoDeFrete.RJ:return new CalculoFreteRj();
+                case TipoDeFrete.MG:return new CalculoFreteMg();
+                case TipoDeFrete.SP:return new CalculoFrenteSpNovo();
+                default:   throw new Exception("frente não existe para este estado!!!!!");
         }
     }
+}
+
+public enum TipoDeFrete
+{
+    RJ,
+    SP,
+    MG
+}
+
+
 
 

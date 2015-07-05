@@ -17,6 +17,7 @@ namespace Decorator
         }
     }   
 
+
     //concrete componente
     public class Sorvete : Pizza
     {
@@ -61,6 +62,13 @@ namespace Decorator
         }
     }
 
+    public class Abobrinha : Pizza
+    {
+        public Abobrinha()
+        {
+            preco = 10;
+        }
+    }
 
     //Decorator
     public abstract class Ingrediente : Pizza

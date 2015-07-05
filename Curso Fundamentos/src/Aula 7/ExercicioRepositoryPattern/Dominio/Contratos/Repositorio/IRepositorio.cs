@@ -4,7 +4,16 @@ namespace MBCorpHealth.Dominio.Contratos.Repositorio
 {
     public interface IRepositorio<T>
     {
+
+        //server como atualização ou inclusão
         bool Gravar(T entidade);
-        IList<T> retornarPorCPF(string CPF);             
+
+        bool Excluir(T entidade);
+
+        IList<T> ConsultarPorID(int identificador);
+
+        IList<T> ConsultarPorTrechoNome(string nome);
+
+        //   IList<T> retornarPorCPF(string CPF);             
     }
 }

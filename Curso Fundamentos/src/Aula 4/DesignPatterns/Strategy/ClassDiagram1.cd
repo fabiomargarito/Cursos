@@ -17,7 +17,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="Strategy.ICalculoIcm">
-    <Position X="5.25" Y="0.5" Width="1.5" />
+    <Position X="5.25" Y="0.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
       <FileName>Class1.cs</FileName>

@@ -10,7 +10,7 @@ namespace ExemplosModulo2.TemplateMethod
     {
         static void Main(string[] args)
         {
-            var dalCorretora = new DALCorretora();
+            DALBase<Corretora> dalCorretora = new DALCorretora();
             var retornoCorretora = dalCorretora.Executar();
             
             

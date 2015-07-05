@@ -4,13 +4,17 @@ namespace MBCorpHealth.Dominio
 {
     public class Paciente:Pessoa
     {
-        public Paciente(string nome, string cpf) : base(nome, cpf)
+        public Paciente()
         {
         }
 
-        public  PlanoDeSaude PlanoDeSaude { get; private set; }
+        public  Paciente(string nome, string cpf) : base(nome, cpf)
+        {
+        }
 
-        public void DefinirPlanoDeSaude(PlanoDeSaude planoDeSaude)
+        public virtual  PlanoDeSaude PlanoDeSaude { get; protected set; }
+
+        public virtual void DefinirPlanoDeSaude(PlanoDeSaude planoDeSaude)
         {
           ValidarPlanoDeSaude(planoDeSaude);
             PlanoDeSaude = planoDeSaude;

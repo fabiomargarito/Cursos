@@ -81,7 +81,7 @@ namespace ObserverBlog
     {
         public void InformarSobreNovoPost(Post post)
         {
-            Console.WriteLine("Novo Post {0} ", post.Titulo);
+            Console.WriteLine("Novo Post recebido pela JBS: {0} ", post.Titulo);
         }
     }
 
@@ -89,7 +89,7 @@ namespace ObserverBlog
     {
         public void InformarSobreNovoPost(Post post)
         {
-            Console.WriteLine("Novo Post {0} Descricao {1} ", post.Titulo, post.Texto);
+            Console.WriteLine("Novo Post recebido pelo itáu {0} Descricao {1} ", post.Titulo, post.Texto);
         }
     }
 
@@ -97,7 +97,7 @@ namespace ObserverBlog
     {
         public void InformarSobreNovoPost(Post post)
         {
-            Console.WriteLine("Novo Post {0} Descricao {1} ", post.Titulo, post.Texto);
+            Console.WriteLine("Novo Post recebido pelo Marfrig {0} Descricao {1} ", post.Titulo, post.Texto);
         }
     }
 }

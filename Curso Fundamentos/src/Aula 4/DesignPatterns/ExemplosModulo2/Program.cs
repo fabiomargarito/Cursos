@@ -26,9 +26,5 @@ namespace ExemplosModulo2
 
             
         }
-
-
-
-
     }
 }

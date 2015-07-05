@@ -58,6 +58,15 @@ namespace Adapter
         }
     }
 
+    //Adapter
+    public class CartaoAdaptado:Pagamento
+    {
+        public void EfetuarPagamento(double valor)
+        {
+           Visa visa = new Visa();
+            visa.Pagar(1234,valor);
+        }
+    }
 
     //Adapter
     public class CartaoCreditoVisa : Pagamento

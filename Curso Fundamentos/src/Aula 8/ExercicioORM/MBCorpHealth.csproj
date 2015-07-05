@@ -74,6 +74,7 @@
     <Compile Include="Dominio\Resultado.cs" />
     <Compile Include="Dominio\Contratos\Servicos\ServicoConsultaEndereco.cs" />
     <Compile Include="Infraestrutura\Repositorio\ConfiguracaoNHibernate.cs" />
+    <Compile Include="Infraestrutura\Repositorio\ISession.cs" />
     <Compile Include="Infraestrutura\Repositorio\RepositorioAgendamento.cs" />
     <Compile Include="Infraestrutura\Repositorio\RepositorioCartao.cs" />
     <Compile Include="Infraestrutura\Repositorio\RepositorioPaciente.cs" />

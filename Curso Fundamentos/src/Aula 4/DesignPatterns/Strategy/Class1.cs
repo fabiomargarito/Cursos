@@ -63,7 +63,7 @@ namespace Strategy
     /// <summary>
     /// Esta classe possui algumas dicas para documentação XML.
     /// </summary>
-    public class FabricaICMS
+    public class FabricaIcms
     {
         public ICalculoIcm Criar(Estado estado)
         {
