@@ -4,6 +4,7 @@ using MBCorpHealth.Dominio.Contratos.Repositorio;
 using MBCorpHealth.Infraestrutura.Repositorio;
 using MBCorpHealthUnitTest;
 using Microsoft.Practices.Unity;
+using NHibernate;
 
 namespace MBCorpHealthUI
 {
@@ -11,7 +12,7 @@ namespace MBCorpHealthUI
     {
         static void Main(string[] args)
         {
-            ISessaoORM<ISessionFake> sessao = new SessaoFake();
+            ISessaoORM<ISession> sessao = new SessaoNHibernate();
 
             //Cria a caixa d'agua, que chamamos de container
             UnityContainer unityContainer = new UnityContainer();
@@ -19,19 +20,18 @@ namespace MBCorpHealthUI
             //encher a caixa d'agua, que chamados de registrar os componentes
 
             unityContainer.RegisterInstance(sessao);            
-            unityContainer.RegisterType<IRepositorio<Paciente>, PacientesFake>();
+            unityContainer.RegisterType<IRepositorio<Paciente>, Pacientes>();
             unityContainer.RegisterType<IRepositorio<Cartao>, RepositorioCartao>();
 
 
 
-            Paciente paciente = new Paciente("fabio","123456s466");
+            Paciente paciente = new Paciente("fabio",Guid.NewGuid().ToString());
+            paciente.Apelido = "teste";
             IRepositorio<Paciente> pacientes = unityContainer.Resolve<IRepositorio<Paciente>>();            
             pacientes.Gravar(paciente);
 
             var retorno = pacientes.RetornarTodos();
-
-            IRepositorio<Cartao> cartoes = unityContainer.Resolve<IRepositorio<Cartao>>();
-
+     
             pacientes.Dispose();
 
             

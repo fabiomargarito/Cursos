@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentNHibernate.Cfg;
+﻿using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using FluentNHibernate.Mapping;
 using MBCorpHealth.Dominio;
 using NHibernate;
-using NHibernate.Mapping;
 using NHibernate.Tool.hbm2ddl;
 
 namespace MBCorpHealth.Infraestrutura.Repositorio
@@ -18,13 +12,12 @@ namespace MBCorpHealth.Infraestrutura.Repositorio
         public static ISessionFactory Criar()
         {
             ISessionFactory sessionFactory = Fluently.Configure()
-                .Mappings(map=>map.FluentMappings.AddFromAssemblyOf<MapeamentoCartao>())                
-                .Database(                    
+                .Mappings(map => map.FluentMappings.AddFromAssemblyOf<MapeamentoCartao>())
+                .Database(
                     MsSqlConfiguration.MsSql2012.ConnectionString(
                         c => c.FromConnectionStringWithKey("MBCorpDatabase")))
-                // .ExposeConfiguration(config => new SchemaExport(config).SetOutputFile(@"C:\Users\Fabio\Dropbox\SchemaBancoDeDados.sql").Execute(true, true, false))
-                        .BuildSessionFactory();
-
+                //.ExposeConfiguration(config => new SchemaExport(config).SetOutputFile(@"C:\Users\Fabio\Dropbox\SchemaBancoDeDados.sql").Execute(true, true, false))
+                .ExposeConfiguration(config => new SchemaUpdate(config).Execute(true,true)).BuildSessionFactory();
             return sessionFactory;
         }
     }
@@ -43,9 +36,11 @@ namespace MBCorpHealth.Infraestrutura.Repositorio
     public class MapeamentoPaciente : ClassMap<Paciente>
     {
         public MapeamentoPaciente()
-        {
+        {            
+
             Id(chave => chave.CPF).Column("IDCPF");
             Map(campo => campo.Nome);
+            Map(campo => campo.Apelido);
             References(chave => chave.Credencial).Column("IDCREDENCIAL");
             References(chave => chave.PlanoDeSaude).Column("IDPLANOSAUDE");
             Table("TBPACIENTE");            

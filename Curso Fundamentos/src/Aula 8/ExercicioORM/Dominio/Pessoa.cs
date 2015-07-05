@@ -7,6 +7,9 @@ namespace MBCorpHealth.Dominio
         public virtual string Nome { get; protected set; }
         public virtual Credencial Credencial { get; protected set; }
         public virtual string CPF { get; protected set; }
+
+        public virtual string Apelido { get;  set; }
+
         protected  Pessoa()
         {
         }
