@@ -9,7 +9,6 @@ namespace MBCorpHealth.Dominio.Contratos.Repositorio
         bool Gravar(T entidade);
         IList<T> retornarPorCPF(string CPF);
         List<T> RetornarTodos();
-
-        void InjetarDependencia(ISession isSession);
+        
     }
 }

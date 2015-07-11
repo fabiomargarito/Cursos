@@ -22,7 +22,7 @@ namespace MBCorpHealth.Infraestrutura.Repositorio
                 .Database(
                     MsSqlConfiguration.MsSql2012.ConnectionString(
                         c => c.FromConnectionStringWithKey("MBCorpDatabase")))
-                // .ExposeConfiguration(config => new SchemaExport(config).SetOutputFile(@"C:\Users\Fabio\Dropbox\SchemaBancoDeDados.sql").Execute(true, true, false))
+                 .ExposeConfiguration(config => new SchemaUpdate(config).Execute(true,true))
                         .BuildSessionFactory();
 
             return sessionFactory;

@@ -10,41 +10,13 @@ using NHibernate;
 
 namespace MBCorpHealthUnitTest
 {
-    public interface ISessaoORM<T>
-    {
-        T RetornarSessao();
-    }
-
-    public class SessaoFake:ISessaoORM<ISessionFake>
-    {
-        public ISessionFake RetornarSessao()
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-    public interface ISessionFake
-    {
-    }
-
-    public class SessaoNHibernate : ISessaoORM<ISession>
-    {
-        public ISession sessao { get; set; }
-
-        public ISession  RetornarSessao()
-        {
-            return ConfiguracaoNHibernate.Criar().OpenSession();            
-        }
-    }
-
     public class Pacientes:IRepositorio<Paciente>
     {
-        private ISession _iSession;
-        
+        private ISession _iSession;                
 
         public Pacientes(ISessaoORM<ISession> iSession)
         {
-            _iSession = iSession.RetornarSessao();
+                _iSession = iSession.RetornarSessao();
         }      
 
         public bool Gravar(Paciente paciente)
@@ -65,10 +37,6 @@ namespace MBCorpHealthUnitTest
            return _iSession.QueryOver<Paciente>().List().ToList();            
         }
 
-        public void InjetarDependencia(ISession isSession)
-        {
-            throw new NotImplementedException();
-        }
 
         public void Dispose()
         {
@@ -78,23 +46,19 @@ namespace MBCorpHealthUnitTest
 
     public class PacientesFake : IRepositorio<Paciente>
     {
-        private ISession _iSession;
+        private ISessaoORM<ISessionFake> _iSession;
 
 
-        public void Pacientes(ISessaoORM<ISessionFake> sessao)
+        public PacientesFake(ISessaoORM<ISessionFake> sessao)
         {
-            
+            _iSession = sessao;
         }
 
-        public void InjetarDependencia(ISession isSession)
-        {
-            
-        }
 
         public bool Gravar(Paciente paciente)
         {
-            
 
+            Console.Write("Paciente Fake, passei por aqui!!!!");
             return true;
         }
 

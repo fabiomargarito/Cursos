@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MBCorpHealthUnitTest.SessaoFake">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Infraestrutura\Repositorio\SessaoFake.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.192" />
+  </Class>
+  <Class Name="MBCorpHealthUnitTest.SessaoNHibernate">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Infraestrutura\Repositorio\SessaoNHibernate.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MBCorpHealthUnitTest.Pacientes">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAACAAAAAAAAAABAAAAAAAAAAABAAAAAAEAAA=</HashCode>
+      <FileName>Infraestrutura\Repositorio\RepositorioPaciente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MBCorpHealthUnitTest.PacientesFake">
+    <Position X="3" Y="3.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAADAAAAAAAAAABAAAAAAAAAAABAAAAAAEAAA=</HashCode>
+      <FileName>Infraestrutura\Repositorio\RepositorioPaciente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="MBCorpHealthUnitTest.ISessaoORM&lt;T&gt;" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Infraestrutura\Repositorio\ISessaoORM.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MBCorpHealthUnitTest.ISessionFake" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infraestrutura\Repositorio\ISessionFake.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
