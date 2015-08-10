@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBSHealthCare", "JBSHealthCare.csproj", "{257BBCD5-8ABE-47A0-80C9-212942346850}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesUnitarios", "..\TestesUnitarios\TestesUnitarios.csproj", "{A77E5818-0DFE-4D7A-B708-0DA77BCD6AFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{257BBCD5-8ABE-47A0-80C9-212942346850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{257BBCD5-8ABE-47A0-80C9-212942346850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{257BBCD5-8ABE-47A0-80C9-212942346850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{257BBCD5-8ABE-47A0-80C9-212942346850}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A77E5818-0DFE-4D7A-B708-0DA77BCD6AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A77E5818-0DFE-4D7A-B708-0DA77BCD6AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A77E5818-0DFE-4D7A-B708-0DA77BCD6AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A77E5818-0DFE-4D7A-B708-0DA77BCD6AFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

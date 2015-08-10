@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -172,7 +173,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Criar.aspx" />
+    <Content Include="Criar2.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="ListagemDeCartoes2.aspx" />
     <Content Include="ListarCartoes.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -315,6 +318,13 @@
     <Compile Include="Criar.aspx.designer.cs">
       <DependentUpon>Criar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Criar2.aspx.cs">
+      <DependentUpon>Criar2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Criar2.aspx.designer.cs">
+      <DependentUpon>Criar2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -324,6 +334,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ListagemDeCartoes2.aspx.cs">
+      <DependentUpon>ListagemDeCartoes2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListagemDeCartoes2.aspx.designer.cs">
+      <DependentUpon>ListagemDeCartoes2.aspx</DependentUpon>
     </Compile>
     <Compile Include="ListarCartoes.aspx.cs">
       <DependentUpon>ListarCartoes.aspx</DependentUpon>

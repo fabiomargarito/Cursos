@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JBSHealthCare.Dominio.Entidade.Agendamento">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAARAAAAAABAAAAAAAQAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Dominio\Entidade\Agendamento.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cid" />
+      <Property Name="Medico" />
+      <Property Name="Paciente" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="JBSHealthCare.Dominio.Entidade.CID">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Dominio\Entidade\CID.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JBSHealthCare.Dominio.Entidade.Medico">
+    <Position X="6" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAEAAAA=</HashCode>
+      <FileName>Dominio\Entidade\Medico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JBSHealthCare.Dominio.Entidade.Paciente">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAA=</HashCode>
+      <FileName>Dominio\Entidade\Paciente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

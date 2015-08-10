@@ -12,22 +12,22 @@ using NHibernate;
 namespace MBCorpHealth.Presenter
 {
    public  class CartaoPresenter
-    {
-
-       
+    {       
         private readonly IGravacaoCartao _gravacaoCartao;
         private readonly IListagemCartaoView _listagemCartaoView;
 
         public CartaoPresenter(IGravacaoCartao gravacaoCartao, IListagemCartaoView listagemCartaoView)
         {
-            if (gravacaoCartao != null) gravacaoCartao.Gravar += gravacaoCartao_Gravar;  
+            if (gravacaoCartao != null) gravacaoCartao.Gravar += gravacaoCartao_Gravar;
+
+            
             _gravacaoCartao = gravacaoCartao;
             _listagemCartaoView = listagemCartaoView;
             
             
             
         }
-
+        
         void gravacaoCartao_Gravar(CartaoViewModel cartao)
         {
             var servicoDeGestaoDeDadosDeCartao = new ServicoDeGestaoDeDadosDeCartao(new RepositorioCartao(ConfiguracaoNHibernate.Criar().OpenSession()));

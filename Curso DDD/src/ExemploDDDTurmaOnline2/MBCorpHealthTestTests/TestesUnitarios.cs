@@ -149,7 +149,6 @@ namespace MBCorpHealthTestTests
 
         }
 
-
         [TestMethod]
         public void ComoAtendenteQueroConsultarUmMedicoPorTrechoDoNome()
         {
