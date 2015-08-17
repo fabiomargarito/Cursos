@@ -2,10 +2,14 @@
 {
     public class CID
     {
-        public string Descricao { get; private set; }
-        public string Numero { get; private set; }
+        public CID()
+        {
+        }
 
-        public CID(string numero, string descricao)
+        public virtual string Descricao { get; protected set; }
+        public virtual string Numero { get; protected set; }
+
+        public  CID(string numero, string descricao)
         {
             Descricao = descricao;
             this.Numero = numero;

@@ -2,10 +2,14 @@
 {
     public class Medico
     {
-        public string Crm { get; }
-        public string Nome { get; set; }
+        public Medico()
+        {
+        }
 
-        public Medico(string crm, string nome)
+        public virtual string Crm { get; protected set; }
+        public virtual string Nome { get; protected set ; }
+
+        public  Medico(string crm, string nome)
         {
             this.Crm = crm;
             Nome = nome;

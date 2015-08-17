@@ -2,8 +2,12 @@
 {
     public class Paciente
     {
-        public string Cpf { get; }
-        public string Nome { get; set; }
+        public Paciente()
+        {
+        }
+
+        public virtual string Cpf { get; protected set; }
+        public virtual string Nome { get; protected set; }
 
         public Paciente(string cpf, string nome)
         {

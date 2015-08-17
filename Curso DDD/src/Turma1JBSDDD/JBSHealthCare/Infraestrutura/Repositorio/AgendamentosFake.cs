@@ -1,7 +1,7 @@
 ﻿using JBSHealthCare.Dominio.Entidade;
 using JBSHealthCare.Dominio.Interface.Repositorio;
 
-namespace TestesUnitarios
+namespace JBSHealthCare.Infraestrutura.Repositorio
 {
     public class AgendamentosFake:IAgendamentos
     {

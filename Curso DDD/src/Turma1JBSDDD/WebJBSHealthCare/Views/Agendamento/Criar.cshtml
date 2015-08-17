@@ -1,0 +1,24 @@
+﻿@model JBSHealthCare.View.ViewModels.AgendamentoViewModel     
+
+@{
+    ViewBag.Title = "Criar Agendamento";
+    
+}
+
+<h2>Criar Agendamento</h2>
+
+@using (Html.BeginForm("Criar", "Agendamento"))
+{
+    <fieldset>
+        <table>
+            <tr>                
+                <td>CRM Médico: @Html.EditorFor(model => model.crm)</td>
+                <td>CPF Paciente: @Html.EditorFor(model => model.cpf)</td>
+                <td>CID: @Html.EditorFor(model => model.numeroCID)</td>
+            </tr>
+        </table>
+        <input type="submit" value="Criar" />
+    </fieldset>
+}
+
+

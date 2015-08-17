@@ -1,4 +1,5 @@
 ﻿using System;
+using WindowsFormsApplication1;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Fizzbuzz

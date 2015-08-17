@@ -1,15 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.Linq;
 using JBSHealthCare.Aplicacao.Servico;
 using JBSHealthCare.Dominio.Entidade;
 using JBSHealthCare.Dominio.Fabrica;
 using JBSHealthCare.Dominio.Interface.Repositorio;
+using JBSHealthCare.Infraestrutura.Repositorio;
+using JBSHealthCare.View.ViewModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestesUnitarios
 {
     [TestClass]
-    public class UnitTest1
+    public class TestesUnitarios
     {
         [TestMethod]
 
@@ -60,25 +64,20 @@ namespace TestesUnitarios
 
         }
 
-
         [TestMethod]
         public void ComoAtendenteEuQueroCriarUmAgendamento()
         {
 
             //Arrange
-            Agendamento agendamento = new Agendamento();
-            Medico medico = new Medico("12345", "Fabio");
-            Paciente paciente = new Paciente("2345", "Joao");
-            CID cid = new CID("21-9", "Virose");
+            
+
+            AgendamentoViewModel  agendamentoViewModel = new AgendamentoViewModel {crm= "2345", cpf= "2345", numeroCID = "21-9" };
 
 
             //Act
-            agendamento.InformarMedico(medico);
-            agendamento.InformarCID(cid);
-            agendamento.InformarPaciente(paciente);
-
-            ServicoDeAgendamento servicoDeAgendamento = new ServicoDeAgendamento();
-            var retorno = servicoDeAgendamento.CriarAgendamento(agendamento);
+        
+            ServicoDeAgendamento servicoDeAgendamento = new ServicoDeAgendamento(new AgendamentosFake());
+            var retorno = servicoDeAgendamento.CriarAgendamento(agendamentoViewModel);
 
             Assert.IsTrue(retorno);
 
@@ -110,7 +109,33 @@ namespace TestesUnitarios
 
         }
 
+        [TestMethod]
+        public void ComoAtendenteQueroIncluirUmExameDoPaciente()
+        {
 
+            //Arrange
+            Agendamento agendamento = new Agendamento();
+            Medico medico = new Medico("12345", "Fabio");
+            Paciente paciente = new Paciente("2345", "Joao");
+            CID cid = new CID("21-9", "Virose");
+
+            Exame exame = new Exame("12342323232");
+
+
+            //Act
+            agendamento.InformarMedico(medico);
+            agendamento.InformarCID(cid);
+            agendamento.InformarPaciente(paciente);
+            agendamento.AdicionarExame(exame);
+
+
+            //Assert
+            Assert.IsTrue(agendamento.Medico.Crm == "12345");
+            Assert.IsTrue(agendamento.Paciente.Cpf == "2345");
+            Assert.IsTrue(agendamento.Cid.Numero == "21-9");
+            Assert.IsTrue(agendamento.Exames.Any());
+
+        }        
     }
 }
 
