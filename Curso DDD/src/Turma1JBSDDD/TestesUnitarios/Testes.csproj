@@ -79,14 +79,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JBSHealthCare\JBSHealthCare.csproj">
-      <Project>{257BBCD5-8ABE-47A0-80C9-212942346850}</Project>
-      <Name>JBSHealthCare</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JBSHealthCare\JBSHealthCare.csproj">
+      <Project>{257bbcd5-8abe-47a0-80c9-212942346850}</Project>
+      <Name>JBSHealthCare</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
