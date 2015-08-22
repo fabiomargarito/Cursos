@@ -1,0 +1,9 @@
+﻿1>------ Rebuild All started: Project: JBSHealthCare, Configuration: Debug Any CPU ------
+1>  JBSHealthCare -> C:\Users\Fabio\Dropbox\Treinamentos\ExemplosModulo2\Curso DDD\src\Turma1JBSDDD\JBSHealthCare\bin\Debug\JBSHealthCare.dll
+2>------ Rebuild All started: Project: Testes, Configuration: Debug Any CPU ------
+3>------ Rebuild All started: Project: WebJBSHealthCare, Configuration: Debug Any CPU ------
+4>------ Rebuild All started: Project: WindowsJBSHealthCare, Configuration: Debug Any CPU ------
+2>  Testes -> C:\Users\Fabio\Dropbox\Treinamentos\ExemplosModulo2\Curso DDD\src\Turma1JBSDDD\TestesUnitarios\bin\Debug\TestesUnitarios.dll
+4>  WindowsJBSHealthCare -> C:\Users\Fabio\Dropbox\Treinamentos\ExemplosModulo2\Curso DDD\src\Turma1JBSDDD\JBSHealthCare\WindowsJBSHealthCare\bin\Debug\WindowsJBSHealthCare.exe
+3>  WebJBSHealthCare -> C:\Users\Fabio\Dropbox\Treinamentos\ExemplosModulo2\Curso DDD\src\Turma1JBSDDD\WebJBSHealthCare\bin\WebJBSHealthCare.dll
+========== Rebuild All: 4 succeeded, 0 failed, 0 skipped ==========
