@@ -35,7 +35,7 @@ namespace TestesUnitarios
 
 
             
-            ServicoDeAgendamento servicoDeAgendamento = new ServicoDeAgendamento(new Agendamentos());
+            ServicoDeAgendamento servicoDeAgendamento = new ServicoDeAgendamento(new AgendamentosFake());
             var retorno = servicoDeAgendamento.CriarAgendamento(agendamentoViewModel);
                       
             
