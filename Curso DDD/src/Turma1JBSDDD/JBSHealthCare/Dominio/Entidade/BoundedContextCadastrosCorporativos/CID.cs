@@ -1,4 +1,4 @@
-﻿namespace JBSHealthCare.Dominio.Entidade
+﻿namespace JBSHealthCare.Dominio.Entidade.BoundedContextCadastrosCorporativos
 {
     public class CID
     {

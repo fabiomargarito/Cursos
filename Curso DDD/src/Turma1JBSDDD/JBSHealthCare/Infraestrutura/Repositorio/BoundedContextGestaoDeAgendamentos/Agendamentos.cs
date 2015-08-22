@@ -1,10 +1,9 @@
-using FluentNHibernate.Mapping;
-using JBSHealthCare.Dominio.Entidade;
-using JBSHealthCare.Dominio.Interface.Repositorio;
+using System;
+using JBSHealthCare.Dominio.Entidade.BoundedContextGestaoDeAgendamentos;
+using JBSHealthCare.Dominio.Interface.Repositorio.BoundedContextGestaoDeAgendamentos;
 using NHibernate;
-using TestesUnitarios;
 
-namespace JBSHealthCare.Infraestrutura.Repositorio
+namespace JBSHealthCare.Infraestrutura.Repositorio.BoundedContextGestaoDeAgendamentos
 {
     public class Agendamentos : IAgendamentos
     {
@@ -15,6 +14,7 @@ namespace JBSHealthCare.Infraestrutura.Repositorio
                 session.SaveOrUpdate(agendamento);
             }
 
+            throw new Exception("Erro proposital");
             return true;
         }
     }

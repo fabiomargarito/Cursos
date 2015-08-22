@@ -1,4 +1,4 @@
-namespace TestesUnitarios
+namespace JBSHealthCare.Dominio.Entidade.BoundedContextGestaoDeAgendamentos
 {
     public class Exame
     {

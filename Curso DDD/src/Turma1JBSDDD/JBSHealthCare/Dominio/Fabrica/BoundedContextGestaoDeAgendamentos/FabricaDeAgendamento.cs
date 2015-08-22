@@ -1,6 +1,7 @@
-﻿using JBSHealthCare.Dominio.Entidade;
+﻿using JBSHealthCare.Dominio.Entidade.BoundedContextCadastrosCorporativos;
+using JBSHealthCare.Dominio.Entidade.BoundedContextGestaoDeAgendamentos;
 
-namespace JBSHealthCare.Dominio.Fabrica
+namespace JBSHealthCare.Dominio.Fabrica.BoundedContextGestaoDeAgendamentos
 {
     public class FabricaDeAgendamento
     {

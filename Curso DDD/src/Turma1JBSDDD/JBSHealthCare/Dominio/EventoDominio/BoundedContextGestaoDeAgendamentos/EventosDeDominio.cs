@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using JBSHealthCare.Dominio.Entidade;
 using JBSHealthCare.View.ViewModels;
+using JBSHealthCare.View.ViewModels.BoundedContextGestaoDeAgendamentos;
 using Microsoft.Practices.Unity;
 
-namespace JBSHealthCare.Dominio.EventoDominio
+namespace JBSHealthCare.Dominio.EventoDominio.BoundedContextGestaoDeAgendamentos
 {
 
     //Subject

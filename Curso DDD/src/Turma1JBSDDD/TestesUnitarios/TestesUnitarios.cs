@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
 using JBSHealthCare.Aplicacao.Servico;
+using JBSHealthCare.Aplicacao.Servico.BoundedContextGestaoDeAgendamentos;
 using JBSHealthCare.Dominio.Entidade;
+using JBSHealthCare.Dominio.Entidade.BoundedContextCadastrosCorporativos;
+using JBSHealthCare.Dominio.Entidade.BoundedContextGestaoDeAgendamentos;
 using JBSHealthCare.Dominio.Fabrica;
+using JBSHealthCare.Dominio.Fabrica.BoundedContextGestaoDeAgendamentos;
 using JBSHealthCare.Dominio.Interface.Repositorio;
+using JBSHealthCare.Dominio.Interface.Repositorio.BoundedContextGestaoDeAgendamentos;
 using JBSHealthCare.Infraestrutura.Repositorio;
+using JBSHealthCare.Infraestrutura.Repositorio.BoundedContextGestaoDeAgendamentos;
 using JBSHealthCare.View.ViewModels;
+using JBSHealthCare.View.ViewModels.BoundedContextGestaoDeAgendamentos;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestesUnitarios

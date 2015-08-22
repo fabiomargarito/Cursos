@@ -2,10 +2,14 @@
 using System.Text;
 using System.Collections.Generic;
 using JBSHealthCare.Aplicacao.Servico;
+using JBSHealthCare.Aplicacao.Servico.BoundedContextGestaoDeAgendamentos;
 using JBSHealthCare.Dominio.Entidade;
 using JBSHealthCare.Dominio.Fabrica;
+using JBSHealthCare.Dominio.Fabrica.BoundedContextGestaoDeAgendamentos;
 using JBSHealthCare.Infraestrutura.Repositorio;
+using JBSHealthCare.Infraestrutura.Repositorio.BoundedContextGestaoDeAgendamentos;
 using JBSHealthCare.View.ViewModels;
+using JBSHealthCare.View.ViewModels.BoundedContextGestaoDeAgendamentos;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestesUnitarios
@@ -18,7 +22,7 @@ namespace TestesUnitarios
     public class TestesIntegrados
     {
 
-
+        [ExpectedException(typeof(Exception))]
         [TestMethod]
         public void ComoAtendenteEuQueroCriarUmAgendamento()
         {
@@ -30,12 +34,12 @@ namespace TestesUnitarios
             AgendamentoViewModel agendamentoViewModel = new AgendamentoViewModel { cpf = "2345", crm = "1234", numeroCID = "21-9" };
 
 
-
-
-            ServicoDeAgendamento servicoDeAgendamento = new ServicoDeAgendamento(new AgendamentosFake());
+            
+            ServicoDeAgendamento servicoDeAgendamento = new ServicoDeAgendamento(new Agendamentos());
             var retorno = servicoDeAgendamento.CriarAgendamento(agendamentoViewModel);
-
-            Assert.IsTrue(retorno);
+                      
+            
+            
 
         }
 

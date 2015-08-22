@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using NHibernate.Mapping;
-using TestesUnitarios;
+using JBSHealthCare.Dominio.Entidade.BoundedContextCadastrosCorporativos;
 
-namespace JBSHealthCare.Dominio.Entidade
+namespace JBSHealthCare.Dominio.Entidade.BoundedContextGestaoDeAgendamentos
 {
     public class Agendamento
     {

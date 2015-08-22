@@ -8,8 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using JBSHealthCare.Aplicacao.Servico;
+using JBSHealthCare.Aplicacao.Servico.BoundedContextGestaoDeAgendamentos;
 using JBSHealthCare.Infraestrutura.Repositorio;
+using JBSHealthCare.Infraestrutura.Repositorio.BoundedContextGestaoDeAgendamentos;
 using JBSHealthCare.View.ViewModels;
+using JBSHealthCare.View.ViewModels.BoundedContextGestaoDeAgendamentos;
 
 namespace WindowsJBSHealthCare
 {

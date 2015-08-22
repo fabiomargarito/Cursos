@@ -1,6 +1,7 @@
 ﻿using FluentNHibernate.Mapping;
 using JBSHealthCare.Dominio.Entidade;
-using TestesUnitarios;
+using JBSHealthCare.Dominio.Entidade.BoundedContextCadastrosCorporativos;
+using JBSHealthCare.Dominio.Entidade.BoundedContextGestaoDeAgendamentos;
 
 namespace JBSHealthCare.Infraestrutura.Repositorio
 {

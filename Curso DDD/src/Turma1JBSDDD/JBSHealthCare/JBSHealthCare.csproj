@@ -56,27 +56,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aplicacao\Servico\ServicoDeAgendamento.cs" />
-    <Compile Include="Dominio\Entidade\Agendamento.cs" />
-    <Compile Include="Dominio\Entidade\CID.cs" />
-    <Compile Include="Dominio\Entidade\Exame.cs" />
-    <Compile Include="Dominio\Entidade\Medico.cs" />
-    <Compile Include="Dominio\Entidade\Paciente.cs" />
-    <Compile Include="Dominio\EventoDominio\EventosDeDominio.cs" />
-    <Compile Include="Dominio\Fabrica\FabricaDeAgendamento.cs" />
-    <Compile Include="Dominio\Interface\Repositorio\IAgendamentos.cs" />
-    <Compile Include="Infraestrutura\Repositorio\Agendamentos.cs" />
-    <Compile Include="Infraestrutura\Repositorio\AgendamentosFake.cs" />
+    <Compile Include="Aplicacao\Servico\BoundedContextGestaoDeAgendamentos\ServicoDeAgendamento.cs" />
+    <Compile Include="Aplicacao\Servico\BoundedContextCalendarios\ServicoDeCalendario.cs" />
+    <Compile Include="Dominio\Entidade\BoundedContextGestaoDeAgendamentos\Agendamento.cs" />
+    <Compile Include="Dominio\Entidade\BoundedContextCadastrosCorporativos\CID.cs" />
+    <Compile Include="Dominio\Entidade\BoundedContextGestaoDeAgendamentos\Exame.cs" />
+    <Compile Include="Dominio\Entidade\BoundedContextCadastrosCorporativos\Medico.cs" />
+    <Compile Include="Dominio\Entidade\BoundedContextCadastrosCorporativos\Paciente.cs" />
+    <Compile Include="Dominio\EventoDominio\BoundedContextGestaoDeAgendamentos\EventosDeDominio.cs" />
+    <Compile Include="Dominio\Fabrica\BoundedContextGestaoDeAgendamentos\FabricaDeAgendamento.cs" />
+    <Compile Include="Dominio\Interface\Repositorio\BoundedContextGestaoDeAgendamentos\IAgendamentos.cs" />
+    <Compile Include="Infraestrutura\Repositorio\BoundedContextGestaoDeAgendamentos\Agendamentos.cs" />
+    <Compile Include="Infraestrutura\Repositorio\BoundedContextGestaoDeAgendamentos\AgendamentosFake.cs" />
     <Compile Include="Infraestrutura\Repositorio\MapeamentosNHibernate.cs" />
     <Compile Include="Infraestrutura\Repositorio\NHibernateSessionFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\ViewModels\AgendamentoViewModel.cs" />
+    <Compile Include="View\ViewModels\BoundedContextGestaoDeAgendamentos\AgendamentoViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Aplicacao\Servico\BoundedContextCadastrosCorporativos\" />
+    <Folder Include="Dominio\EventoDominio\BoundedContextCadastrosCorporativos\" />
+    <Folder Include="Dominio\Fabrica\BoundedContextCadastrosCorporativos\" />
+    <Folder Include="Dominio\Interface\Repositorio\BoundedContextCadastrosCorporativos\" />
+    <Folder Include="Infraestrutura\Repositorio\BoundedContextCadastrosCorporativos\" />
+    <Folder Include="View\ViewModels\BoundedContextCadastrosCorporativos\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
