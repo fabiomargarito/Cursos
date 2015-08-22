@@ -13,7 +13,6 @@ namespace JBSHealthCare.Infraestrutura.Repositorio.BoundedContextGestaoDeAgendam
             {
                 session.SaveOrUpdate(agendamento);
             }
-
             
             return true;
         }

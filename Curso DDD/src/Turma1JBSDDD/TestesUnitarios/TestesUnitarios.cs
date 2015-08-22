@@ -4,6 +4,7 @@ using System.ComponentModel.Design;
 using System.Linq;
 using JBSHealthCare.Aplicacao.Servico;
 using JBSHealthCare.Aplicacao.Servico.BoundedContextGestaoDeAgendamentos;
+using JBSHealthCare.Aplicacao.Servico.BoundedContextGestaoPlanoSaude;
 using JBSHealthCare.Dominio.Entidade;
 using JBSHealthCare.Dominio.Entidade.BoundedContextCadastrosCorporativos;
 using JBSHealthCare.Dominio.Entidade.BoundedContextGestaoDeAgendamentos;
@@ -142,7 +143,32 @@ namespace TestesUnitarios
             Assert.IsTrue(agendamento.Cid.Numero == "21-9");
             Assert.IsTrue(agendamento.Exames.Any());
 
-        }        
+        }
+
+
+        [TestMethod]
+        public void ComoAtendenteQueroConsultarACoberturadeUmTipoDeExame()
+        {
+            //Arrange
+            Exame exame = new Exame();
+            exame.InformarTipoExame(new TipoExame("1023"));
+
+            IServicoDeConsultaAPlanoDeSaude servicoDeConsultaAPlanoDeSaude = new ServicoDeConsultaAPlanoDeSaudeFake();
+            
+
+            //Act
+            var retorno = servicoDeConsultaAPlanoDeSaude.ConsultarCobertura(exame.TipoExame, new PlanoSaude("PortoMaster"));
+
+
+            //Assert
+
+            Assert.IsTrue(retorno);
+
+        }
+
+
+
+
     }
 }
 

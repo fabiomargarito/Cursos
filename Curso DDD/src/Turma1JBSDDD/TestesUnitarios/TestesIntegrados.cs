@@ -22,7 +22,7 @@ namespace TestesUnitarios
     public class TestesIntegrados
     {
 
-        [ExpectedException(typeof(Exception))]
+        
         [TestMethod]
         public void ComoAtendenteEuQueroCriarUmAgendamento()
         {

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
+using JBSHealthCare.Aplicacao.Servico.BoundedContextGestaoPlanoSaude;
 using JBSHealthCare.Dominio.Entidade.BoundedContextCadastrosCorporativos;
+using TestesUnitarios;
 
 namespace JBSHealthCare.Dominio.Entidade.BoundedContextGestaoDeAgendamentos
 {
@@ -45,9 +48,17 @@ namespace JBSHealthCare.Dominio.Entidade.BoundedContextGestaoDeAgendamentos
             if(exame.ID ==null)
                 throw new Exception("ID inválido");
 
+            IServicoDeConsultaAPlanoDeSaude servicoDeConsultaAPlanoDeSaude = new ServicoDeConsultaAPlanoDeSaudeFake();
+
+            var retorno = servicoDeConsultaAPlanoDeSaude.ConsultarCobertura(exame.TipoExame, this.PlanoDeSaude);
+            //incluir regra para zerar ou não o valor do exame
+
+
             ((IList<Exame>) Exames).Add(exame);
            
         }
+
+        public PlanoSaude PlanoDeSaude { get; set; }
     }
 
 

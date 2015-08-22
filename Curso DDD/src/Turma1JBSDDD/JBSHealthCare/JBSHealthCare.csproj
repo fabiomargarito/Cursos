@@ -58,11 +58,15 @@
   <ItemGroup>
     <Compile Include="Aplicacao\Servico\BoundedContextGestaoDeAgendamentos\ServicoDeAgendamento.cs" />
     <Compile Include="Aplicacao\Servico\BoundedContextCalendarios\ServicoDeCalendario.cs" />
+    <Compile Include="Aplicacao\Servico\BoundedContextGestaoPlanoSaude\IServicoDeConsultaAPlanoDeSaude.cs" />
+    <Compile Include="Aplicacao\Servico\BoundedContextGestaoPlanoSaude\ServicoDeConsultaAPlanoDeSaudeFake.cs" />
+    <Compile Include="Dominio\Entidade\BoundedContextCadastrosCorporativos\PlanoSaude.cs" />
     <Compile Include="Dominio\Entidade\BoundedContextGestaoDeAgendamentos\Agendamento.cs" />
     <Compile Include="Dominio\Entidade\BoundedContextCadastrosCorporativos\CID.cs" />
     <Compile Include="Dominio\Entidade\BoundedContextGestaoDeAgendamentos\Exame.cs" />
     <Compile Include="Dominio\Entidade\BoundedContextCadastrosCorporativos\Medico.cs" />
     <Compile Include="Dominio\Entidade\BoundedContextCadastrosCorporativos\Paciente.cs" />
+    <Compile Include="Dominio\Entidade\BoundedContextCadastrosCorporativos\TipoExame.cs" />
     <Compile Include="Dominio\EventoDominio\BoundedContextGestaoDeAgendamentos\EventosDeDominio.cs" />
     <Compile Include="Dominio\Fabrica\BoundedContextGestaoDeAgendamentos\FabricaDeAgendamento.cs" />
     <Compile Include="Dominio\Interface\Repositorio\BoundedContextGestaoDeAgendamentos\IAgendamentos.cs" />
