@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBSHealthCare", "JBSHealthC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testes", "..\TestesUnitarios\Testes.csproj", "{A77E5818-0DFE-4D7A-B708-0DA77BCD6AFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJBSHealthCare", "..\WebJBSHealthCare\WebJBSHealthCare.csproj", "{014BFED0-64A3-43B9-8ECC-91E42A7CDBAE}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{505A6515-6942-41C8-B479-AD2486834302}"
 	ProjectSection(SolutionItems) = preProject
 		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
@@ -36,10 +34,6 @@ Global
 		{A77E5818-0DFE-4D7A-B708-0DA77BCD6AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A77E5818-0DFE-4D7A-B708-0DA77BCD6AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A77E5818-0DFE-4D7A-B708-0DA77BCD6AFD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{014BFED0-64A3-43B9-8ECC-91E42A7CDBAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{014BFED0-64A3-43B9-8ECC-91E42A7CDBAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{014BFED0-64A3-43B9-8ECC-91E42A7CDBAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{014BFED0-64A3-43B9-8ECC-91E42A7CDBAE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0441AD36-7A80-470D-95CC-D77E1BC52142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0441AD36-7A80-470D-95CC-D77E1BC52142}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0441AD36-7A80-470D-95CC-D77E1BC52142}.Release|Any CPU.ActiveCfg = Release|Any CPU
