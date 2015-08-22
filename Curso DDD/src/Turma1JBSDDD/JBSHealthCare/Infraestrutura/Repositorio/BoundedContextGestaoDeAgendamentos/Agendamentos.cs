@@ -14,7 +14,7 @@ namespace JBSHealthCare.Infraestrutura.Repositorio.BoundedContextGestaoDeAgendam
                 session.SaveOrUpdate(agendamento);
             }
 
-            throw new Exception("Erro proposital");
+            
             return true;
         }
     }
