@@ -76,14 +76,10 @@ namespace TestesUnitarios
         public void ComoAtendenteEuQueroCriarUmAgendamento()
         {
 
-            //Arrange
-            
-
+            //Arrange            
             AgendamentoViewModel  agendamentoViewModel = new AgendamentoViewModel {crm= "2345", cpf= "2345", numeroCID = "21-9" };
 
-
-            //Act
-        
+            //Act        
             ServicoDeAgendamento servicoDeAgendamento = new ServicoDeAgendamento(new AgendamentosFake());
             var retorno = servicoDeAgendamento.CriarAgendamento(agendamentoViewModel);
 

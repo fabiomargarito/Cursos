@@ -1,0 +1,38 @@
+﻿Attempting to gather dependencies information for package 'Unity.3.5.1404' with respect to project 'JBSMedical', targeting '.NETFramework,Version=v4.5.2'
+Attempting to resolve dependencies for package 'Unity.3.5.1404' with DependencyBehavior 'Lowest'
+Resolving actions to install package 'Unity.3.5.1404'
+Resolved actions to install package 'Unity.3.5.1404'
+Attempting to gather dependencies information for package 'Unity.3.5.1404' with respect to project 'SistemaJBSHealth', targeting '.NETFramework,Version=v4.5.2'
+Attempting to resolve dependencies for package 'Unity.3.5.1404' with DependencyBehavior 'Lowest'
+Resolving actions to install package 'Unity.3.5.1404'
+Resolved actions to install package 'Unity.3.5.1404'
+Attempting to gather dependencies information for package 'Unity.3.5.1404' with respect to project 'SistemaJBSMedical', targeting '.NETFramework,Version=v4.5.2'
+Attempting to resolve dependencies for package 'Unity.3.5.1404' with DependencyBehavior 'Lowest'
+Resolving actions to install package 'Unity.3.5.1404'
+Resolved actions to install package 'Unity.3.5.1404'
+For adding package 'Unity.3.5.1404' to project 'JBSMedical' that targets 'net452'.
+For adding package 'Unity.3.5.1404' to project 'JBSMedical' that targets 'net452'.
+Adding package 'Unity.3.5.1404' to folder 'C:\Users\Fabio\Dropbox\Treinamentos\ExemplosModulo2\Curso DDD\src\Turma2JBSDDD\SistemaJBSHealth\packages'
+Added package 'Unity.3.5.1404' to folder 'C:\Users\Fabio\Dropbox\Treinamentos\ExemplosModulo2\Curso DDD\src\Turma2JBSDDD\SistemaJBSHealth\packages'
+Added reference 'Microsoft.Practices.Unity.Configuration' to project 'JBSMedical'.
+Added reference 'Microsoft.Practices.Unity' to project 'JBSMedical'.
+Added reference 'Microsoft.Practices.Unity.RegistrationByConvention' to project 'JBSMedical'.
+Added package 'Unity.3.5.1404' to 'packages.config'
+Successfully installed 'Unity 3.5.1404' to JBSMedical
+For adding package 'Unity.3.5.1404' to project 'SistemaJBSHealth' that targets 'net452'.
+For adding package 'Unity.3.5.1404' to project 'SistemaJBSHealth' that targets 'net452'.
+Package 'Unity.3.5.1404' already exists in folder 'C:\Users\Fabio\Dropbox\Treinamentos\ExemplosModulo2\Curso DDD\src\Turma2JBSDDD\SistemaJBSHealth\packages'
+Added reference 'Microsoft.Practices.Unity.Configuration' to project 'SistemaJBSHealth'.
+Added reference 'Microsoft.Practices.Unity' to project 'SistemaJBSHealth'.
+Added reference 'Microsoft.Practices.Unity.RegistrationByConvention' to project 'SistemaJBSHealth'.
+Added package 'Unity.3.5.1404' to 'packages.config'
+Successfully installed 'Unity 3.5.1404' to SistemaJBSHealth
+For adding package 'Unity.3.5.1404' to project 'SistemaJBSMedical' that targets 'net452'.
+For adding package 'Unity.3.5.1404' to project 'SistemaJBSMedical' that targets 'net452'.
+Package 'Unity.3.5.1404' already exists in folder 'C:\Users\Fabio\Dropbox\Treinamentos\ExemplosModulo2\Curso DDD\src\Turma2JBSDDD\SistemaJBSHealth\packages'
+Added reference 'Microsoft.Practices.Unity.Configuration' to project 'SistemaJBSMedical'.
+Added reference 'Microsoft.Practices.Unity' to project 'SistemaJBSMedical'.
+Added reference 'Microsoft.Practices.Unity.RegistrationByConvention' to project 'SistemaJBSMedical'.
+Added package 'Unity.3.5.1404' to 'packages.config'
+Successfully installed 'Unity 3.5.1404' to SistemaJBSMedical
+========== Finished ==========

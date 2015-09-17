@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaJBSHealth", "SistemaJBSHealth.csproj", "{D8AE1D07-92C2-460B-BEFD-DBA695BD9EF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBSMedical", "..\JBSMedical\JBSMedical.csproj", "{57E32040-3660-4010-B9E9-83CA59421CCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaJBSMedical", "..\SistemaJBSMedical\SistemaJBSMedical.csproj", "{89C24399-E98E-4B30-81C2-2277F605930F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8AE1D07-92C2-460B-BEFD-DBA695BD9EF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8AE1D07-92C2-460B-BEFD-DBA695BD9EF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8AE1D07-92C2-460B-BEFD-DBA695BD9EF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8AE1D07-92C2-460B-BEFD-DBA695BD9EF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57E32040-3660-4010-B9E9-83CA59421CCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E32040-3660-4010-B9E9-83CA59421CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E32040-3660-4010-B9E9-83CA59421CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E32040-3660-4010-B9E9-83CA59421CCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89C24399-E98E-4B30-81C2-2277F605930F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89C24399-E98E-4B30-81C2-2277F605930F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89C24399-E98E-4B30-81C2-2277F605930F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89C24399-E98E-4B30-81C2-2277F605930F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
