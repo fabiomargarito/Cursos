@@ -66,8 +66,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Paciente.cs" />
-    <Compile Include="PlanoDeSaude.cs" />
+    <Compile Include="Aplicacacao\Contratos\IServicoDeCadastramentoDeAgendamento.cs" />
+    <Compile Include="Aplicacacao\Servicos\ServicoDeCadastramentoDeAgendamento.cs" />
+    <Compile Include="Aplicacacao\Servicos\ServicoDeCadastramentoDeAgendamentoFake.cs" />
+    <Compile Include="Aplicacacao\Servicos\ServicoDeGravacaoDePaciente.cs" />
+    <Compile Include="Apresentacao\DTOS\DTOPaciente.cs" />
+    <Compile Include="Dominio\Contratos\Repositorios\IAgendamentos.cs" />
+    <Compile Include="Dominio\Eventos\EventoDeDominio.cs" />
+    <Compile Include="Infraestrutura\Contratos\ISessionORM.cs" />
+    <Compile Include="Infraestrutura\Repositorios\Agendamentos.cs" />
+    <Compile Include="Dominio\Contratos\Repositorios\IDALPACIENTE.cs" />
+    <Compile Include="Dominio\Entidades\Agendamento.cs" />
+    <Compile Include="Dominio\Entidades\Exame.cs" />
+    <Compile Include="Dominio\Entidades\Medico.cs" />
+    <Compile Include="Dominio\Entidades\Paciente.cs" />
+    <Compile Include="Dominio\Entidades\PlanoDeSaude.cs" />
+    <Compile Include="Dominio\Entidades\TipoExame.cs" />
+    <Compile Include="Dominio\Fabricas\FabricaDeAgendamento.cs" />
+    <Compile Include="Infraestrutura\Repositorios\AgendamentosFake.cs" />
+    <Compile Include="Infraestrutura\Repositorios\ConfiguracaoNHibernate.cs" />
+    <Compile Include="Infraestrutura\Repositorios\DalPacienteFake.cs" />
+    <Compile Include="Infraestrutura\Repositorios\MapeamentoNHibernate.cs" />
+    <Compile Include="Infraestrutura\Repositorios\Pacientes.cs" />
+    <Compile Include="Infraestrutura\Repositorios\SessionORM.cs" />
+    <Compile Include="Infraestrutura\Repositorios\SessionORMNHibernate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +98,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\SistemaJBSHealth\packages\Fody.1.29.2\build\portable-net+sl+win+wpa+wp\Fody.targets" Condition="Exists('..\SistemaJBSHealth\packages\Fody.1.29.2\build\portable-net+sl+win+wpa+wp\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

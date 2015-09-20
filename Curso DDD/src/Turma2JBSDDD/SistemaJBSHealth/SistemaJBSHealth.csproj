@@ -71,21 +71,16 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Agendamento.cs" />
-    <Compile Include="DalPacienteFake.cs" />
-    <Compile Include="Exame.cs" />
-    <Compile Include="FabricaDeAgendamento.cs" />
-    <Compile Include="IDALPACIENTE.cs" />
-    <Compile Include="Medico.cs" />
-    <Compile Include="ServicoDeGravacaoDePaciente.cs" />
-    <Compile Include="TipoExame.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="TestesUnitarios\UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestesIntegrados\TestesIntegrados.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JBSMedical\JBSMedical.csproj">
@@ -94,6 +89,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
