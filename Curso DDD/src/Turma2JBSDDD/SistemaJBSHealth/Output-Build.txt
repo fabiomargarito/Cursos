@@ -1,0 +1,54 @@
+﻿1>------ Rebuild All started: Project: JBSMedical, Configuration: Debug Any CPU ------
+1>    Fody: Fody (version 1.29.2.0) Executing
+1>      Fody/Virtuosity:   	JBSMedical.Infraestrutura.Repositorios.Agendamentos
+1>      Fody/Virtuosity:   	JBSMedical.Infraestrutura.Repositorios.AgendamentosFake
+1>      Fody/Virtuosity:   	JBSMedical.Infraestrutura.Repositorios.NHibernateSessionFactory
+1>      Fody/Virtuosity:   	JBSMedical.Infraestrutura.Repositorios.DalPacienteFake
+1>      Fody/Virtuosity:   	JBSMedical.Infraestrutura.Repositorios.MapeamentoAgendamento
+1>      Fody/Virtuosity:   	JBSMedical.Infraestrutura.Repositorios.MapeamentoPaciente
+1>      Fody/Virtuosity:   	JBSMedical.Infraestrutura.Repositorios.MapeamentoPlanoDeSaude
+1>      Fody/Virtuosity:   	JBSMedical.Infraestrutura.Repositorios.MapeamentoMedico
+1>      Fody/Virtuosity:   	JBSMedical.Infraestrutura.Repositorios.MapeamentoTipoExame
+1>      Fody/Virtuosity:   	JBSMedical.Infraestrutura.Repositorios.MapeamentoExame
+1>      Fody/Virtuosity:   	JBSMedical.Infraestrutura.Repositorios.Pacientes
+1>      Fody/Virtuosity:   	JBSMedical.Infraestrutura.Repositorios.SessionORM
+1>      Fody/Virtuosity:   	JBSMedical.Infraestrutura.Repositorios.SessionORMNHibernate
+1>      Fody/Virtuosity:   	JBSMedical.Dominio.Fabricas.FabricaDeAgendamento
+1>      Fody/Virtuosity:   	JBSMedical.Dominio.Entidades.Agendamento
+1>      Fody/Virtuosity:   	JBSMedical.Dominio.Entidades.Exame
+1>      Fody/Virtuosity:   	JBSMedical.Dominio.Entidades.Medico
+1>      Fody/Virtuosity:   	JBSMedical.Dominio.Entidades.Paciente
+1>      Fody/Virtuosity:   	JBSMedical.Dominio.Entidades.PlanoDeSaude
+1>      Fody/Virtuosity:   	JBSMedical.Dominio.Entidades.TipoExame
+1>      Fody/Virtuosity:   	JBSMedical.Dominio.Eventos.PacienteCadastrado
+1>      Fody/Virtuosity:   	JBSMedical.Dominio.Eventos.AgendamentoCriado
+1>      Fody/Virtuosity:   	JBSMedical.Dominio.Eventos.EnviarEmailQuandoAgendamentoCriado
+1>      Fody/Virtuosity:   	JBSMedical.Dominio.Eventos.EnviarMsgWhatsappQuandoAgendamentoCriado
+1>      Fody/Virtuosity:   	JBSMedical.Dominio.Eventos.EnviarSMSQuandoAgendamentoCriado
+1>      Fody/Virtuosity:   	JBSMedical.Dominio.Eventos.EnviarSMSQuandoPacienteCadastrado
+1>      Fody/Virtuosity:   	JBSMedical.Dominio.Eventos.EventosDoDominio
+1>      Fody/Virtuosity:   	JBSMedical.Apresentacao.DTOS.DTOPaciente
+1>      Fody/Virtuosity:   	JBSMedical.Aplicacacao.Servicos.ServicoDeCadastramentoDeAgendamento
+1>      Fody/Virtuosity:   	JBSMedical.Aplicacacao.Servicos.ServicoDeCadastramentoDeAgendamentoFake
+1>      Fody/Virtuosity:   	JBSMedical.Aplicacacao.Servicos.ServicoDeGravacaoDePaciente
+1>    Fody:   Finished Fody 506ms.
+1>  JBSMedical -> C:\Dropbox\Treinamentos\Cursos\Curso DDD\src\Turma2JBSDDD\release\JBSMedical.dll
+1>    Fody:   Skipped Verifying assembly since it is disabled in configuration
+1>    Fody:   Finished verification in 3ms.
+2>------ Rebuild All started: Project: SistemaJBSHealth, Configuration: Debug Any CPU ------
+3>------ Rebuild All started: Project: SistemaJBSMedical, Configuration: Debug Any CPU ------
+2>    Fody: Fody (version 1.29.2.0) Executing
+2>      Fody/Virtuosity:   	SistemaJBSHealth.TestesIntegrados.TestesIntegrados
+2>      Fody/Virtuosity:   	SistemaJBSHealth.TestesUnitarios.TestesUnitariosJbs
+2>    Fody:   Finished Fody 26ms.
+2>  SistemaJBSHealth -> C:\Dropbox\Treinamentos\Cursos\Curso DDD\src\Turma2JBSDDD\release\SistemaJBSHealth.dll
+2>    Fody:   Skipped Verifying assembly since it is disabled in configuration
+2>    Fody:   Finished verification in 1ms.
+3>    Fody: Fody (version 1.29.2.0) Executing
+3>      Fody/Virtuosity:   	SistemaJBSMedical.Form1
+3>      Fody/Virtuosity:   	SistemaJBSMedical.Properties.Resources
+3>    Fody:   Finished Fody 27ms.
+3>  SistemaJBSMedical -> C:\Dropbox\Treinamentos\Cursos\Curso DDD\src\Turma2JBSDDD\release\SistemaJBSMedical.exe
+3>    Fody:   Skipped Verifying assembly since it is disabled in configuration
+3>    Fody:   Finished verification in 0ms.
+========== Rebuild All: 3 succeeded, 0 failed, 0 skipped ==========
