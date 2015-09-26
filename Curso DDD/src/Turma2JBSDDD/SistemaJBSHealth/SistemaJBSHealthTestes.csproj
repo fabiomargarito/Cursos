@@ -94,6 +94,7 @@
     <ProjectReference Include="..\JBSMedical\JBSMedical.csproj">
       <Project>{57e32040-3660-4010-b9e9-83ca59421cce}</Project>
       <Name>JBSMedical</Name>
+      <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
   <Choose>
