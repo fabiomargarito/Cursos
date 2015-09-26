@@ -83,18 +83,18 @@
     <Compile Include="TestesIntegrados\TestesIntegrados.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JBSMedical\JBSMedical.csproj">
-      <Project>{57E32040-3660-4010-B9E9-83CA59421CCE}</Project>
-      <Name>JBSMedical</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JBSMedical\JBSMedical.csproj">
+      <Project>{57e32040-3660-4010-b9e9-83ca59421cce}</Project>
+      <Name>JBSMedical</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
