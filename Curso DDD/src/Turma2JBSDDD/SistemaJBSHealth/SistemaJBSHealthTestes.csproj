@@ -23,7 +23,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>.\</OutputPath>
+    <OutputPath>..\release\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -31,7 +31,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>.\</OutputPath>
+    <OutputPath>..\release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -95,10 +95,6 @@
       <Project>{57e32040-3660-4010-b9e9-83ca59421cce}</Project>
       <Name>JBSMedical</Name>
       <Private>True</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\Pagseguro\Pagseguro.csproj">
-      <Project>{157343a5-5cfd-4ef2-803d-d7e8f2305c32}</Project>
-      <Name>Pagseguro</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
