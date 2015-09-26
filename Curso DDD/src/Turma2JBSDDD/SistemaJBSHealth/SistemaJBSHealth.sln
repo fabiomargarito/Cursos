@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaJBSHealth", "SistemaJBSHealth.csproj", "{D8AE1D07-92C2-460B-BEFD-DBA695BD9EF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaJBSHealthTestes", "SistemaJBSHealthTestes.csproj", "{D8AE1D07-92C2-460B-BEFD-DBA695BD9EF6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBSMedical", "..\JBSMedical\JBSMedical.csproj", "{57E32040-3660-4010-B9E9-83CA59421CCE}"
 EndProject
