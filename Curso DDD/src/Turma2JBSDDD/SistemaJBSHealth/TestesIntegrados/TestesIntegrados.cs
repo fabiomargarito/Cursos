@@ -13,7 +13,7 @@ namespace SistemaJBSHealth.TestesIntegrados
     [TestClass]
     public class TestesIntegrados
     {
-        [TestMethod]
+        //[TestMethod]
         public void TesteIntegradoComoAtendenteQueroCadastrarUmAgendamento()
         {
             //Arrange
