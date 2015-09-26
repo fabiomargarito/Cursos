@@ -26,11 +26,11 @@ namespace SistemaJBSHealth.TestesIntegrados
                     .Criar();
 
             bool retorno;
-            ISessionORM sessaoNHibernate = new SessionORMNHibernate();
+            ISessionORM sessaoNHibernate = new SessionORM();
             using (var sessao = NHibernateSessionFactory.Criar().OpenSession())
             {
-                ((SessionORMNHibernate)sessaoNHibernate).Sessao = sessao;
-                IServicoDeCadastramentoDeAgendamento servicoDeCadastramentoDeAgendamento = new ServicoDeCadastramentoDeAgendamento(sessaoNHibernate);
+                //((SessionORM)sessaoNHibernate).Sessao = sessao;
+                IServicoDeCadastramentoDeAgendamento servicoDeCadastramentoDeAgendamento = new ServicoDeCadastramentoDeAgendamentoFake(sessaoNHibernate);
                 retorno = servicoDeCadastramentoDeAgendamento.Cadastrar(agendamento);
                 sessao.Flush();
             }
