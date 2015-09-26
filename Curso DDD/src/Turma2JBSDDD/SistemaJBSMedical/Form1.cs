@@ -7,10 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using JBSMedical.Aplicacacao.Servicos;
-using JBSMedical.Apresentacao.DTOS;
-using JBSMedical.Dominio.Entidades;
-using JBSMedical.Infraestrutura.Repositorios;
+using JBSMedical.CadastrosBoundedContext.Aplicacacao.Servicos;
+using JBSMedical.CadastrosBoundedContext.Apresentacao.DTOS;
+using JBSMedical.CadastrosBoundedContext.Infraestrutura.Repositorios;
 
 namespace SistemaJBSMedical
 {

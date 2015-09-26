@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections;
-using JBSMedical.Aplicacacao.Contratos;
-using JBSMedical.Aplicacacao.Servicos;
-using JBSMedical.Apresentacao.DTOS;
-using JBSMedical.Dominio.Contratos.Repositorios;
-using JBSMedical.Dominio.Entidades;
-using JBSMedical.Dominio.Fabricas;
-using JBSMedical.Infraestrutura.Contratos;
-using JBSMedical.Infraestrutura.Repositorios;
+using System.Collections.Generic;
+using JBSMedical.AgendamentoBoundedContext.Aplicacacao.Contratos;
+using JBSMedical.AgendamentoBoundedContext.Aplicacacao.Servicos;
+using JBSMedical.AgendamentoBoundedContext.Dominio.Entidades;
+using JBSMedical.AgendamentoBoundedContext.Dominio.Fabricas;
+using JBSMedical.AgendamentoBoundedContext.Infraestrutura.Contratos;
+using JBSMedical.CadastrosBoundedContext.Aplicacacao.Servicos;
+using JBSMedical.CadastrosBoundedContext.Apresentacao.DTOS;
+using JBSMedical.CadastrosBoundedContext.Dominio.Contratos.Repositorios;
+using JBSMedical.CadastrosBoundedContext.Dominio.Entidades;
+using JBSMedical.CadastrosBoundedContext.Infraestrutura.Repositorios;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Pagseguro;
 
 namespace SistemaJBSHealth.TestesUnitarios
 {
@@ -50,7 +54,7 @@ namespace SistemaJBSHealth.TestesUnitarios
                     .InformarExame("1234", "Exame Sangue Completo", 100)
                     .Criar();
 
-            ISessionORM sessaoNHibernate = new SessionORM();
+            SessionORM sessaoNHibernate = new SessionORM();
 
             IServicoDeCadastramentoDeAgendamento servicoDeCadastramentoDeAgendamento = new ServicoDeCadastramentoDeAgendamentoFake(sessaoNHibernate);            
 
@@ -88,5 +92,68 @@ namespace SistemaJBSHealth.TestesUnitarios
             Assert.IsTrue(retorno2.PlanoDeSaude.RazaoSocial == "JBS Medical Services");
 
         }
+
+        [TestMethod]
+        private void ComoAtendenteQueroUmServicoQueRetorneUmaAgendaParaUmTipoDeExameNoCDDesejado()
+        {
+            //Arrange
+            IServicoBooking servicoBooking = new ServicoBooking();
+     
+            //Act
+            IList<DateTime> datas = servicoBooking.ConsultarDisponibilidade("1234", "123" );
+
+            //Assert
+            Assert.IsTrue(datas.Count>0);
+
+        }
+
+
+        [TestMethod]
+        public void ComoAtendenteQueroEnviarFatura()
+        {
+
+            //Arrange
+            IServicoDePagamento servicoDePagamento = new ServicoDePagamentoPagSeguro();
+
+            //Act
+            var retorno = servicoDePagamento.SolicitarCobranca(100, "fabiomargarito@gmail.com");
+
+            //assert
+            Assert.IsTrue(retorno=="1234");
+        }
+
+
+    }
+
+    public class ServicoDePagamentoPagSeguro : IServicoDePagamento
+    {
+        public string SolicitarCobranca(double valorDaFatura, string emailCliente)
+        {
+            Pagseguro.ServicoDePagamento pagseguro = new Pagseguro.ServicoDePagamento();
+            return pagseguro.SolicitarCobranca(valorDaFatura, emailCliente,"meucodigodecliente");
+        }
+    }
+
+    public interface IServicoDePagamento
+    {
+        string SolicitarCobranca(double valorDaFatura, string emailCliente);
+    }
+
+    internal class ServicoBooking : IServicoBooking
+    {
+        public IList<DateTime> ConsultarDisponibilidade(string codigoTipoExame, string codigoCentroDiagnostico)
+        {
+            List<DateTime> datas = new List<DateTime>();
+
+            datas.Add(new DateTime(2015,09,25));
+            datas.Add(new DateTime(2015, 09, 26));
+
+            return datas;
+        }
+    }
+
+    interface IServicoBooking
+    {
+        IList<DateTime> ConsultarDisponibilidade(string s, string s1);
     }
 }

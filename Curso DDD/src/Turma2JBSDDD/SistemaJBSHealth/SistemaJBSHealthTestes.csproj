@@ -96,6 +96,10 @@
       <Name>JBSMedical</Name>
       <Private>True</Private>
     </ProjectReference>
+    <ProjectReference Include="..\Pagseguro\Pagseguro.csproj">
+      <Project>{157343a5-5cfd-4ef2-803d-d7e8f2305c32}</Project>
+      <Name>Pagseguro</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JBSMedical", "..\JBSMedical
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaJBSMedical", "..\SistemaJBSMedical\SistemaJBSMedical.csproj", "{89C24399-E98E-4B30-81C2-2277F605930F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pagseguro", "..\Pagseguro\Pagseguro.csproj", "{157343A5-5CFD-4EF2-803D-D7E8F2305C32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{89C24399-E98E-4B30-81C2-2277F605930F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89C24399-E98E-4B30-81C2-2277F605930F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89C24399-E98E-4B30-81C2-2277F605930F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{157343A5-5CFD-4EF2-803D-D7E8F2305C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{157343A5-5CFD-4EF2-803D-D7E8F2305C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{157343A5-5CFD-4EF2-803D-D7E8F2305C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{157343A5-5CFD-4EF2-803D-D7E8F2305C32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

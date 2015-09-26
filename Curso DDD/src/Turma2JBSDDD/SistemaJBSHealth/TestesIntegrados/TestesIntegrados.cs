@@ -1,10 +1,4 @@
 ﻿using System.Collections;
-using JBSMedical.Aplicacacao.Contratos;
-using JBSMedical.Aplicacacao.Servicos;
-using JBSMedical.Dominio.Entidades;
-using JBSMedical.Dominio.Fabricas;
-using JBSMedical.Infraestrutura.Contratos;
-using JBSMedical.Infraestrutura.Repositorios;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SistemaJBSHealth.TestesUnitarios;
 
