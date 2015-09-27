@@ -19,6 +19,21 @@ namespace SistemaJBSHealth.TestesUnitarios
     [TestClass]
     public class TestesUnitariosJbs
     {
+
+        [TestMethod]
+        public void ComoAtendenteQueroUmServicoQueRetorneUmaAgendaParaUmTipoDeExameNoCdDesejado()
+        {
+            //Arrange
+            IServicoBooking servicoBooking = new ServicoBooking();
+
+            //Act
+            IList<DateTime> datas = servicoBooking.ConsultarDisponibilidade("1234", "123");
+
+            //Assert
+            Assert.IsTrue(datas.Count > 0);
+
+        }
+
         [TestMethod]
         public void ComoAtendenteQueroCadastrarUmPaciente()
         {
@@ -94,21 +109,6 @@ namespace SistemaJBSHealth.TestesUnitarios
         }
 
         [TestMethod]
-        private void ComoAtendenteQueroUmServicoQueRetorneUmaAgendaParaUmTipoDeExameNoCDDesejado()
-        {
-            //Arrange
-            IServicoBooking servicoBooking = new ServicoBooking();
-     
-            //Act
-            IList<DateTime> datas = servicoBooking.ConsultarDisponibilidade("1234", "123" );
-
-            //Assert
-            Assert.IsTrue(datas.Count>0);
-
-        }
-
-
-        [TestMethod]
         public void ComoAtendenteQueroEnviarFatura()
         {
 
@@ -120,7 +120,7 @@ namespace SistemaJBSHealth.TestesUnitarios
 
             //assert
             Assert.IsTrue(retorno=="1234");
-        }
+        }        
 
 
     }
