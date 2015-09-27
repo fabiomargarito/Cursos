@@ -1,6 +1,5 @@
 ﻿using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
-using JBSMedical.Infraestrutura.Repositorios;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
 

@@ -6,6 +6,7 @@ using JBSMedical.AgendamentoBoundedContext.Aplicacacao.Servicos;
 using JBSMedical.AgendamentoBoundedContext.Dominio.Entidades;
 using JBSMedical.AgendamentoBoundedContext.Dominio.Fabricas;
 using JBSMedical.AgendamentoBoundedContext.Infraestrutura.Contratos;
+using JBSMedical.AgendamentoBoundedContext.Infraestrutura.Servicos;
 using JBSMedical.CadastrosBoundedContext.Aplicacacao.Servicos;
 using JBSMedical.CadastrosBoundedContext.Apresentacao.DTOS;
 using JBSMedical.CadastrosBoundedContext.Dominio.Contratos.Repositorios;
@@ -19,7 +20,6 @@ namespace SistemaJBSHealth.TestesUnitarios
     [TestClass]
     public class TestesUnitariosJbs
     {
-
         [TestMethod]
         public void ComoAtendenteQueroUmServicoQueRetorneUmaAgendaParaUmTipoDeExameNoCdDesejado()
         {
@@ -123,37 +123,5 @@ namespace SistemaJBSHealth.TestesUnitarios
         }        
 
 
-    }
-
-    public class ServicoDePagamentoPagSeguro : IServicoDePagamento
-    {
-        public string SolicitarCobranca(double valorDaFatura, string emailCliente)
-        {
-            Pagseguro.ServicoDePagamento pagseguro = new Pagseguro.ServicoDePagamento();
-            return pagseguro.SolicitarCobranca(valorDaFatura, emailCliente,"meucodigodecliente");
-        }
-    }
-
-    public interface IServicoDePagamento
-    {
-        string SolicitarCobranca(double valorDaFatura, string emailCliente);
-    }
-
-    internal class ServicoBooking : IServicoBooking
-    {
-        public IList<DateTime> ConsultarDisponibilidade(string codigoTipoExame, string codigoCentroDiagnostico)
-        {
-            List<DateTime> datas = new List<DateTime>();
-
-            datas.Add(new DateTime(2015,09,25));
-            datas.Add(new DateTime(2015, 09, 26));
-
-            return datas;
-        }
-    }
-
-    interface IServicoBooking
-    {
-        IList<DateTime> ConsultarDisponibilidade(string s, string s1);
     }
 }

@@ -73,9 +73,13 @@
     <Compile Include="AgendamentoBoundedContext\Dominio\Entidades\Agendamento.cs" />
     <Compile Include="AgendamentoBoundedContext\Dominio\Entidades\Exame.cs" />
     <Compile Include="AgendamentoBoundedContext\Dominio\Fabricas\FabricaDeAgendamento.cs" />
+    <Compile Include="AgendamentoBoundedContext\Infraestrutura\Contratos\IServicoBooking.cs" />
+    <Compile Include="AgendamentoBoundedContext\Infraestrutura\Contratos\IServicoDePagamento.cs" />
     <Compile Include="AgendamentoBoundedContext\Infraestrutura\Contratos\ISessionORM.cs" />
     <Compile Include="AgendamentoBoundedContext\Infraestrutura\Repositorios\Agendamentos.cs" />
     <Compile Include="AgendamentoBoundedContext\Infraestrutura\Repositorios\AgendamentosFake.cs" />
+    <Compile Include="AgendamentoBoundedContext\Infraestrutura\Servicos\ServicoBooking.cs" />
+    <Compile Include="AgendamentoBoundedContext\Infraestrutura\Servicos\ServicoDePagamentoPagSeguro.cs" />
     <Compile Include="CadastrosBoundedContext\Aplicacacao\Servicos\ServicoDeGravacaoDePaciente.cs" />
     <Compile Include="CadastrosBoundedContext\Apresentacao\DTOS\DTOPaciente.cs" />
     <Compile Include="CadastrosBoundedContext\Dominio\Eventos\EventoDeDominio.cs" />
@@ -107,6 +111,12 @@
     <Folder Include="BookingBoundedContext\Infraestrutura\" />
     <Folder Include="CadastrosBoundedContext\Aplicacacao\Contratos\" />
     <Folder Include="CadastrosBoundedContext\Dominio\Fabricas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pagseguro\Pagseguro.csproj">
+      <Project>{157343a5-5cfd-4ef2-803d-d7e8f2305c32}</Project>
+      <Name>Pagseguro</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\SistemaJBSHealth\packages\Fody.1.29.2\build\portable-net+sl+win+wpa+wp\Fody.targets" Condition="Exists('..\SistemaJBSHealth\packages\Fody.1.29.2\build\portable-net+sl+win+wpa+wp\Fody.targets')" />

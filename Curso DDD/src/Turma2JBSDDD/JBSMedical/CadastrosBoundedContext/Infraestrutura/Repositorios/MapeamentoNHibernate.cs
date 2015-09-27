@@ -2,8 +2,7 @@
 using JBSMedical.AgendamentoBoundedContext.Dominio.Entidades;
 using JBSMedical.CadastrosBoundedContext.Dominio.Entidades;
 
-
-namespace JBSMedical.Infraestrutura.Repositorios
+namespace JBSMedical.CadastrosBoundedContext.Infraestrutura.Repositorios
 {
 
     public class MapeamentoAgendamento : ClassMap<Agendamento>
