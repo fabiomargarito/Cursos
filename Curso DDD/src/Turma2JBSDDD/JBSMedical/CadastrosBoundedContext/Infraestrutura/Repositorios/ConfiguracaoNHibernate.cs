@@ -11,7 +11,7 @@ namespace JBSMedical.CadastrosBoundedContext.Infraestrutura.Repositorios
         {
             ISessionFactory sessionFactory = Fluently.Configure()
                 .Mappings(map => map.FluentMappings.AddFromAssemblyOf<MapeamentoAgendamento>())
-                .Database(                 
+                .Database(                                 
                     MsSqlConfiguration.MsSql2012.ConnectionString(
                         conexao => conexao.FromConnectionStringWithKey("JBSTurma2")))
                 .ExposeConfiguration(config => new SchemaExport(config).SetOutputFile(@"jbsturma2.sql").Execute(true, true, false))
