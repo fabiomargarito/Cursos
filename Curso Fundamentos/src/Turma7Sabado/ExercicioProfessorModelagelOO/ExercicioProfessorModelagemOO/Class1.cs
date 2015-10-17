@@ -9,7 +9,7 @@ namespace ExercicioProfessorModelagemOO
         public Atendente(string nome, string cpf)
         {
             Nome = nome;
-            CPf = cPf;
+            CPf = cpf;
         }
 
         public string Nome { get; }
@@ -24,14 +24,14 @@ namespace ExercicioProfessorModelagemOO
             Endereco = endereco;
         }
 
-        
+
     }
 
     public class Endereco
     {
         public Endereco(string logradouro, string cep)
         {
-            if (string.IsNullOrWhiteSpace(logradouro))  throw  new ArgumentNullException("Logradoutro inválido");
+            if (string.IsNullOrWhiteSpace(logradouro)) throw new ArgumentNullException("Logradoutro inválido");
             if (string.IsNullOrWhiteSpace(cep)) throw new ArgumentNullException("CEP inválido");
 
             Logradouro = logradouro;
@@ -44,30 +44,34 @@ namespace ExercicioProfessorModelagemOO
 
 
     public class Paciente
-    {                 
+    {
+        public string Nome { get; }
+        public string CPf { get; }
     }
 
     public class Medico
-    {                
+    {
+        public string Nome { get; }
+        public string CPf { get; }
     }
 
 
     public class PlanoDeSaude
-    {                             
+    {
     }
 
     public class Agendamento
     {
         public Agendamento()
-        {            
+        {
             Exames = new List<Exame>();
         }
 
         public int Codigo { get; private set; }
         public Medico Medico { get; private set; }
         public Paciente Paciente { get; private set; }
-        public Atendente Atendente{ get; private set; }
-        private IEnumerable<Exame> Exames { get;}
+        public Atendente Atendente { get; private set; }
+        private IEnumerable<Exame> Exames { get; }
 
 
         public void InformarMedico(Medico medico)
@@ -95,17 +99,17 @@ namespace ExercicioProfessorModelagemOO
         public void AdicionarExame(Exame exame)
         {
             if (exame == null) throw new ArgumentNullException(nameof(exame));
-            (Exames as IList<Exame>).Add( exame);
+            (Exames as IList<Exame>).Add(exame);
         }
 
-        public Agendamento AgendarExame(Atendente atendente, Paciente paciente, Medico medico, IList<Exame> exames )
+        public Agendamento AgendarExame(Atendente atendente, Paciente paciente, Medico medico, IList<Exame> exames)
         {
             InformarAtendente(atendente);
             InformarMedico(medico);
             InformarPaciente(paciente);
             foreach (var exame in exames)
             {
-                (Exames as List<Exame>).Add(exame);                
+                ((List<Exame>)Exames).Add(exame);
             }
 
             return this;
@@ -114,22 +118,27 @@ namespace ExercicioProfessorModelagemOO
 
 
     public class Exame
-    {         
+    {
+        public TipoExame TipoExame { get; private set; }
+
     }
 
     public class TipoExame
-    {                
+    {
+        
+        /// <summary>
+        /// Classificação Brasileira Hierrquizada de Procedimentos Médicos 
+        /// </summary>
+        public string CBHPM { get; private set; }
+
+        public string Descrição { get; private set; }
     }
 
 
     public class ResultadoExame
-    {                 
+    {
     }
 
-    
-
-
-         
-    }
+}
 
 
