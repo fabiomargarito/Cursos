@@ -4,57 +4,142 @@ using System.Collections.Generic;
 namespace ExercicioProfessorModelagemOO
 {
 
-    public class Atendente
+
+    public class Pessoa
     {
-        public Atendente(string nome, string cpf)
-        {
+        public Pessoa(string nome, string cPf)
+        {           
             Nome = nome;
-            CPf = cpf;
+            CPf = cPf;
+
+            ValidarDados();
         }
 
-        public string Nome { get; }
-        public string CPf { get; }
+
+        public virtual void  ValidarDados()
+        {
+            if (string.IsNullOrWhiteSpace(this.CPf)) throw new ArgumentNullException("Nome não pode ser nulo ou branco!");
+            if (string.IsNullOrWhiteSpace(this.Nome)) throw new ArgumentNullException("Nome não pode ser nulo ou branco!");
+        }
+
+        public string Nome { get; protected set; }
+        public string CPf { get; protected set; }
+    }
+
+    public class Atendente:Pessoa
+    {
+
+        public Atendente(string nome, string cPf) : base(nome, cPf)
+        {
+        }
 
         public Endereco Endereco { get; private set; }
 
         public void DefinirEndereco(Endereco endereco)
         {
-            if (endereco == null) throw new ArgumentNullException(nameof(endereco));
+            if (endereco == null) throw new ArgumentNullException("Endereço não pode ser nulo!");
 
             Endereco = endereco;
         }
 
+        
 
     }
+
+    public class Paciente:Pessoa
+    {
+        public Paciente(string nome, string cPf) : base(nome, cPf)
+        {
+        }
+    }
+
+    public class Medico:Pessoa
+    {
+        public Medico(string nome, string cPf) : base(nome, cPf)
+        {
+        }
+
+        public override void ValidarDados()
+        {
+            base.ValidarDados();
+            if(string.IsNullOrWhiteSpace(CRM)) throw  new ArgumentNullException("CRM não pode ser nulo ou branco!");
+
+        }
+
+        public void ValidarCrm()
+        {            
+        }
+
+        public string CRM { get; private set; }
+        
+    }
+
+    public class MedicoLaudo:Medico
+    {
+        public MedicoLaudo(string nome, string cPf) : base(nome, cPf)
+        {
+        }
+    }
+
 
     public class Endereco
     {
+
         public Endereco(string logradouro, string cep)
         {
-            if (string.IsNullOrWhiteSpace(logradouro)) throw new ArgumentNullException("Logradoutro inválido");
-            if (string.IsNullOrWhiteSpace(cep)) throw new ArgumentNullException("CEP inválido");
+           
+           ValidarIntegridadeDosDados(logradouro,cep);
 
-            Logradouro = logradouro;
-            CEP = cep;
+           Logradouro = logradouro;
+           CEP = cep;
         }
 
+        private void ValidarIntegridadeDosDados(string logradouro, string cep)
+        {
+            if (string.IsNullOrWhiteSpace(logradouro)) throw new ArgumentNullException("Logradoutro inválido");
+            if (string.IsNullOrWhiteSpace(cep)) throw new ArgumentNullException("CEP inválido");            
+        }
+       
         public string Logradouro { get; }
         public string CEP { get; }
+
+
+
     }
 
 
-    public class Paciente
+    public abstract class ServicoDeConsultaDeEndereco
     {
-        public string Nome { get; }
-        public string CPf { get; }
+        public abstract Endereco ConsultarEndereco(string cep);
     }
 
-    public class Medico
+    public class ServicoDeConsultaDeEnderecoNosCorreios : ServicoDeConsultaDeEndereco
     {
-        public string Nome { get; }
-        public string CPf { get; }
+        public override Endereco ConsultarEndereco(string cep)
+        {
+            // Realiza uma requisição no site dos correios
+            return new Endereco("logradouro", "cep");
+        }
     }
 
+
+    public class ServicoDeConsultaDeEnderecoNoCorparativo:ServicoDeConsultaDeEndereco
+    {
+        public override Endereco ConsultarEndereco(string cep)
+        {
+            //REaliza a consulta no serviço interno 
+            return new Endereco("logradouro", "cep");
+        }
+    }
+
+    public class ServicoDeConsultaDeEnderecoNoCorparativoV2 : ServicoDeConsultaDeEndereco
+    {
+        public override Endereco ConsultarEndereco(string cep)
+        {
+            //REaliza a consulta no serviço interno V2 
+            return new Endereco("logradouro", "cep");
+        }
+    }
 
     public class PlanoDeSaude
     {
@@ -116,7 +201,6 @@ namespace ExercicioProfessorModelagemOO
         }
     }
 
-
     public class Exame
     {
         public TipoExame TipoExame { get; private set; }
@@ -133,12 +217,32 @@ namespace ExercicioProfessorModelagemOO
 
         public string Descrição { get; private set; }
     }
-
-
     public class ResultadoExame
     {
     }
 
+
+    public interface IServicoDeConsultaDeEndereco
+    {
+        Endereco ConsultarEndereco(string cep);
+        
+
+    }
+
+    public interface IServicoDeConsultaDeEnderecoCorporativo
+    {
+        Endereco ConsultarEndereco2(string cep);
+     
+
+    }
+
+    public class Consultar:IServicoDeConsultaDeEndereco
+    {
+        public Endereco ConsultarEndereco(string cep)
+        {
+            return new Endereco("fabio", "34343");
+        }
+    }
 }
 
 

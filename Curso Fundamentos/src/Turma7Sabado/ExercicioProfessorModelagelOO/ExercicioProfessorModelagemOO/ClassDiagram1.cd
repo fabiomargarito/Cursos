@@ -1,76 +1,111 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="ExercicioProfessorModelagemOO.Atendente">
-    <Position X="3.5" Y="0.5" Width="1.5" />
+  <Class Name="ExercicioProfessorModelagemOO.Pessoa">
+    <Position X="3.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAABCAAAAAAAAAAAAAAAEAEAA=</HashCode>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAACAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Class1.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ExercicioProfessorModelagemOO.Endereco" Collapsed="true">
-    <Position X="9" Y="0.5" Width="1.5" />
+  <Class Name="ExercicioProfessorModelagemOO.Atendente">
+    <Position X="0.75" Y="6.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAABAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Class1.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Endereco" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ExercicioProfessorModelagemOO.Paciente">
-    <Position X="6.5" Y="4" Width="1.5" />
+    <Position X="3.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Class1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExercicioProfessorModelagemOO.Medico">
-    <Position X="0.5" Y="4" Width="1.5" />
+    <Position X="6" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExercicioProfessorModelagemOO.Endereco">
+    <Position X="0.5" Y="9" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAIAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Class1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExercicioProfessorModelagemOO.PlanoDeSaude" Collapsed="true">
-    <Position X="10.75" Y="0.5" Width="1.5" />
+    <Position X="13.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Class1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExercicioProfessorModelagemOO.Agendamento">
-    <Position X="3.5" Y="3.75" Width="1.75" />
+    <Position X="4.5" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IgAAAAAAARAgAAAAAAAAAAAAAAAAAAAAAAIAABAAEAA=</HashCode>
       <FileName>Class1.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Atendente" />
-      <Property Name="Paciente" />
       <Property Name="Medico" />
+      <Property Name="Paciente" />
+      <Property Name="Atendente" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="Exames" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="ExercicioProfessorModelagemOO.Exame">
-    <Position X="0.5" Y="6.25" Width="1.5" />
+    <Position X="7.5" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Class1.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="TipoExame" />
-    </ShowAsAssociation>
   </Class>
-  <Class Name="ExercicioProfessorModelagemOO.TipoExame">
-    <Position X="0.5" Y="8.25" Width="1.5" />
+  <Class Name="ExercicioProfessorModelagemOO.TipoExame" Collapsed="true">
+    <Position X="13.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Class1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExercicioProfessorModelagemOO.ResultadoExame" Collapsed="true">
-    <Position X="9" Y="1.5" Width="1.5" />
+    <Position X="15" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExercicioProfessorModelagemOO.ServicoDeConsultaDeEndereco">
+    <Position X="5.5" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExercicioProfessorModelagemOO.ServicoDeConsultaDeEnderecoNoCorparativo">
+    <Position X="5.25" Y="1.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExercicioProfessorModelagemOO.ServicoDeConsultaDeEnderecoNoCorparativoV2">
+    <Position X="1" Y="1.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExercicioProfessorModelagemOO.ServicoDeConsultaDeEnderecoNosCorreios">
+    <Position X="9.25" Y="1.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Class1.cs</FileName>
     </TypeIdentifier>
   </Class>
