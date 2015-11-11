@@ -13,7 +13,7 @@ namespace ExemplosModulo2.Adapter
 
         private static void Main(string[] args)
         {
-            Pagamento meioDePagamentoCartao = new CartaoAdaptado();
+            Pagamento meioDePagamentoCartao = new AdaptadorCartaoNuBank();
             meioDePagamentoCartao.EfetuarPagamento(100);
           
             Console.ReadKey();

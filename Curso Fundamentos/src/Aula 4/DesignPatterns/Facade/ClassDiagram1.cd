@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Facade.Banco">
-    <Position X="0.5" Y="0.75" Width="2" />
+    <Position X="4.5" Y="2.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Facade.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Facade.SPC">
-    <Position X="6.75" Y="0.5" Width="1.5" />
+    <Position X="7" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Facade.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Facade.Cliente">
-    <Position X="3.75" Y="0.5" Width="1.5" />
+    <Position X="11" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Facade.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Facade.Hipoteca">
-    <Position X="3.5" Y="3" Width="1.5" />
+  <Class Name="Facade.ServicoDeAvaliacaoDeCreditoImobiliario">
+    <Position X="4.75" Y="0.5" Width="4.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAABAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>Facade.cs</FileName>

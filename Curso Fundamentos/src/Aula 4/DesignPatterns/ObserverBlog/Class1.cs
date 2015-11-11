@@ -100,4 +100,13 @@ namespace ObserverBlog
             Console.WriteLine("Novo Post recebido pelo Marfrig {0} Descricao {1} ", post.Titulo, post.Texto);
         }
     }
+
+
+    public class AssinanteSergio : Assinante
+    {
+        public void InformarSobreNovoPost(Post post)
+        {
+            Console.WriteLine("Novo Post recebido pelo Sergio {0} Descricao {1} ", post.Titulo, post.Texto);
+        }
+    }
 }

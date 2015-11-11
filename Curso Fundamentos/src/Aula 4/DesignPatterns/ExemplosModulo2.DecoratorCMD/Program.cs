@@ -16,6 +16,7 @@ namespace ExemplosModulo2.DecoratorCMD
             Pizza atum = new Atum();
 
 
+            //princípio da inversão de dependencia
             Ingrediente tomate = new Tomate(atum);
             Ingrediente aliche = new Aliche(tomate);
             

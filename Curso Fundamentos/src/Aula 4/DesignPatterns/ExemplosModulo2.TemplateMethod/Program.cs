@@ -1,4 +1,4 @@
-﻿ using System;
+﻿     using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +10,11 @@ namespace ExemplosModulo2.TemplateMethod
     {
         static void Main(string[] args)
         {
+
+            DALBase<BLOG> dalBlog = new DALBlog();
+            var retornoBlog = dalBlog.Executar();
+
+
             DALBase<Corretora> dalCorretora = new DALCorretora();
             var retornoCorretora = dalCorretora.Executar();
             

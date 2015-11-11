@@ -1,30 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Adapter.CartaoCredito" BaseTypeListCollapsed="true">
-    <Position X="4.75" Y="0.5" Width="3" />
+    <Position X="2.75" Y="2.5" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>Adapter.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Adapter.Visa">
-    <Position X="10.5" Y="4" Width="1.5" />
+    <Position X="11" Y="2.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAABAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Adapter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Adapter.CartaoCreditoVisa" BaseTypeListCollapsed="true">
-    <Position X="5" Y="2.75" Width="2.5" />
+    <Position X="6.5" Y="2.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>Adapter.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="Adapter.Pagamento">
-    <Position X="1.75" Y="0.5" Width="1.5" />
+    <Position X="5.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>Adapter.cs</FileName>

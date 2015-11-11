@@ -29,7 +29,6 @@ namespace TemplateMethod
         {
             System.Console.WriteLine("Fechando Conexao");
         }
-
         //Template Method
         public List<T> Executar()
         {
@@ -54,6 +53,24 @@ namespace TemplateMethod
             return retorno;
 
         }
+    }
+
+    public class DALBlog:DALBase<BLOG>
+    {
+        protected override void DefinirComando()
+        {
+            Console.WriteLine("select * from tb_blog");
+        }
+
+        protected override List<BLOG> TratarRetorno()
+        {
+            IList<BLOG> blogs = new List<BLOG>();
+            return (List<BLOG>) blogs;
+        }
+    }
+
+    public class BLOG
+    {
     }
 
     public class DALCliente : DALBase<Cliente>

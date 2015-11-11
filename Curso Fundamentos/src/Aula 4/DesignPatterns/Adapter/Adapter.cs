@@ -47,6 +47,14 @@ namespace Adapter
     }
 
     
+    public class AdaptadorCartaoNuBank:Pagamento
+    {
+        public void EfetuarPagamento(double valor)
+        {
+            //realiza a transformação necessária
+            Console.WriteLine("Pagamento Efetuado Por Empresa NuBank");
+        }
+    }
 
     //Adapter
     public class AdaptadorCartaoVisa:Pagamento

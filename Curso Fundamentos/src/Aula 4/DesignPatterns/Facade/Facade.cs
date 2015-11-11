@@ -40,7 +40,7 @@ namespace Facade
   }
 
   //Facade
-  public class Hipoteca
+  public class ServicoDeAvaliacaoDeCreditoImobiliario
   {
 
     private Banco _banco = new Banco();

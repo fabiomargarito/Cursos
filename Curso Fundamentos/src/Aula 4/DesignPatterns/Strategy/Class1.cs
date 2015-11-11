@@ -38,9 +38,11 @@ namespace Strategy
 
     public class CalculoICMSPernanbuco : ICalculoIcm
     {
+
         public double CalcularImposto(double valor)
         {
             return valor * 0.3;
+
         }
     }
 
@@ -63,9 +65,10 @@ namespace Strategy
     /// <summary>
     /// Esta classe possui algumas dicas para documentação XML.
     /// </summary>
-    public class FabricaIcms
+
+    public static class FabricaIcms
     {
-        public ICalculoIcm Criar(Estado estado)
+        public static ICalculoIcm Criar(Estado estado)
         {
             switch (estado)
             {

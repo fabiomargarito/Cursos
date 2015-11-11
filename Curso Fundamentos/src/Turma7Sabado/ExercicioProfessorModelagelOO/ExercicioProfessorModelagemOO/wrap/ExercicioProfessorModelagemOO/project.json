@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net452": {
+      "wrappedProject": "../../ExercicioProfessorModelagemOO.csproj",
+      "bin": {
+        "assembly": "../../obj/{configuration}/ExercicioProfessorModelagemOO.dll",
+        "pdb": "../../obj/{configuration}/ExercicioProfessorModelagemOO.pdb"
+      }
+    }
+  }
+}

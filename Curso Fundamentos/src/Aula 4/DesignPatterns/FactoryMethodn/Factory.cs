@@ -22,6 +22,8 @@ namespace FactoryMethod
             Console.WriteLine("Cliente salvo com sucesso");
         }
 
+
+
         public IList<Entidade> Retornar(Entidade Entidade)
         {
             IList<Entidade> Clientes = new List<Entidade>();
@@ -30,6 +32,24 @@ namespace FactoryMethod
             return Clientes;
         }
     }
+
+
+    public class RepositorioDeClientesNovo : IRepositorio
+    {
+        public void Salvar(Entidade Entidade)
+        {
+            Console.WriteLine("Cliente salvo com sucesso com código novo");
+        }
+
+        public IList<Entidade> Retornar(Entidade Entidade)
+        {
+            IList<Entidade> Clientes = new List<Entidade>();
+            Clientes.Add(new Cliente { identificador = 1, nome = "Fabio", sobreNome = "Margarito" } as Entidade);
+            Clientes.Add(new Cliente { identificador = 2, nome = "Flávio", sobreNome = "Margarito" } as Entidade);
+            return Clientes;
+        }
+    }
+
 
     //Concrete Product
     public class RepositorioDeClientesEntityFramework : IRepositorio
@@ -114,7 +134,7 @@ namespace FactoryMethod
         {
             switch (tipoDeRepositorio)
             {
-                case TipoDeRepositorio.CLIENTE: return (new RepositorioDeClientes());
+                case TipoDeRepositorio.CLIENTE: return (new RepositorioDeClientesNovo());
                 case TipoDeRepositorio.FORNECEDOR: return (new RepositorioDeFornecedores());                
                 default: throw new Exception("Repositório não Existe");
             }

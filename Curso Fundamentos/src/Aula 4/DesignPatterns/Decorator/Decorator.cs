@@ -97,6 +97,15 @@ namespace Decorator
     }
 
 
+    //Concrete decorator
+    public class Pimenta : Ingrediente
+    {
+        public Pimenta(Pizza pizzaParaAcrescentarCobetura) : base(pizzaParaAcrescentarCobetura)
+        {
+            preco = 1;
+        }
+    }
+
     //Concrete Decorator
     public class MolhoExtra : Ingrediente
     {
