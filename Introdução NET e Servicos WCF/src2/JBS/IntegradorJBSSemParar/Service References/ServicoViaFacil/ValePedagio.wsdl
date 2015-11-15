@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="http://cgmp.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns1="http://ws.dto.model.cgmp.com" xmlns:impl="http://cgmp.com" targetNamespace="http://cgmp.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://cgmp.com">
+      <xsd:import namespace="http://ws.dto.model.cgmp.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="ArrayOf_xsd_int">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="xsd:int[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_PracaRota">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:PracaRota[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_InfoRota">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:InfoRota[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_Veiculo">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:Veiculo[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_StatusViagem">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:StatusViagem[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_InfoPracaPedagio">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:InfoPracaPedagio[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_tns1_ExtratoCredito">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns1:ExtratoCredito[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ws.dto.model.cgmp.com">
+      <xsd:import namespace="http://cgmp.com" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="PracaRota">
+        <xsd:sequence>
+          <xsd:element name="nomeConcessionaria" nillable="true" type="xsd:string" />
+          <xsd:element name="nomePraca" nillable="true" type="xsd:string" />
+          <xsd:element name="nomeRodovia" nillable="true" type="xsd:string" />
+          <xsd:element name="placa" nillable="true" type="xsd:string" />
+          <xsd:element name="tag" nillable="true" type="xsd:string" />
+          <xsd:element name="tarifa" nillable="true" type="xsd:decimal" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="InfoRota">
+        <xsd:sequence>
+          <xsd:element name="id" type="xsd:int" />
+          <xsd:element name="nome" nillable="true" type="xsd:string" />
+          <xsd:element name="pracas" nillable="true" type="impl:ArrayOf_tns1_PracaRota" />
+          <xsd:element name="status" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustoRota">
+        <xsd:sequence>
+          <xsd:element name="status" type="xsd:int" />
+          <xsd:element name="valor" nillable="true" type="xsd:decimal" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Veiculo">
+        <xsd:sequence>
+          <xsd:element name="descricao" nillable="true" type="xsd:string" />
+          <xsd:element name="eixos" type="xsd:int" />
+          <xsd:element name="placa" nillable="true" type="xsd:string" />
+          <xsd:element name="proprietario" nillable="true" type="xsd:string" />
+          <xsd:element name="status" type="xsd:int" />
+          <xsd:element name="tag" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Viagem">
+        <xsd:sequence>
+          <xsd:element name="numero" type="xsd:long" />
+          <xsd:element name="status" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Recibo">
+        <xsd:sequence>
+          <xsd:element name="catVeiculo" nillable="true" type="xsd:string" />
+          <xsd:element name="cnpjEmissor" nillable="true" type="xsd:string" />
+          <xsd:element name="cnpjTransp" nillable="true" type="xsd:string" />
+          <xsd:element name="dataCompra" nillable="true" type="xsd:dateTime" />
+          <xsd:element name="dataExp" nillable="true" type="xsd:dateTime" />
+          <xsd:element name="dataViagem" nillable="true" type="xsd:dateTime" />
+          <xsd:element name="logo" nillable="true" type="xsd:string" />
+          <xsd:element name="nomeEmissor" nillable="true" type="xsd:string" />
+          <xsd:element name="nomeRota" nillable="true" type="xsd:string" />
+          <xsd:element name="nomeTransp" nillable="true" type="xsd:string" />
+          <xsd:element name="obs" nillable="true" type="xsd:string" />
+          <xsd:element name="pracas" nillable="true" type="impl:ArrayOf_tns1_PracaRota" />
+          <xsd:element name="status" type="xsd:int" />
+          <xsd:element name="tipo" nillable="true" type="xsd:string" />
+          <xsd:element name="total" nillable="true" type="xsd:decimal" />
+          <xsd:element name="viagem" type="xsd:long" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StatusViagem">
+        <xsd:sequence>
+          <xsd:element name="numero" type="xsd:long" />
+          <xsd:element name="status" type="xsd:int" />
+          <xsd:element name="statusViagem" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="InfoPracaPedagio">
+        <xsd:sequence>
+          <xsd:element name="concessionaria" nillable="true" type="xsd:string" />
+          <xsd:element name="id" type="xsd:long" />
+          <xsd:element name="km" type="xsd:float" />
+          <xsd:element name="praca" nillable="true" type="xsd:string" />
+          <xsd:element name="rodovia" nillable="true" type="xsd:string" />
+          <xsd:element name="status" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Identificador">
+        <xsd:sequence>
+          <xsd:element name="sessao" type="xsd:long" />
+          <xsd:element name="status" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Observacoes">
+        <xsd:sequence>
+          <xsd:element name="observacao1" nillable="true" type="xsd:string" />
+          <xsd:element name="observacao2" nillable="true" type="xsd:string" />
+          <xsd:element name="observacao3" nillable="true" type="xsd:string" />
+          <xsd:element name="observacao4" nillable="true" type="xsd:string" />
+          <xsd:element name="observacao5" nillable="true" type="xsd:string" />
+          <xsd:element name="observacao6" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ExtratoCredito">
+        <xsd:sequence>
+          <xsd:element name="acao" nillable="true" type="xsd:string" />
+          <xsd:element name="cnpjCpfTransp" nillable="true" type="xsd:string" />
+          <xsd:element name="dataCompra" nillable="true" type="xsd:dateTime" />
+          <xsd:element name="dataFatura" nillable="true" type="xsd:dateTime" />
+          <xsd:element name="dataFimVigencia" nillable="true" type="xsd:dateTime" />
+          <xsd:element name="dataInicioVigencia" nillable="true" type="xsd:dateTime" />
+          <xsd:element name="dataOperacao" nillable="true" type="xsd:dateTime" />
+          <xsd:element name="dataPassagem" nillable="true" type="xsd:dateTime" />
+          <xsd:element name="descricao" nillable="true" type="xsd:string" />
+          <xsd:element name="fatura" nillable="true" type="xsd:int" />
+          <xsd:element name="itemFinanceiro1" nillable="true" type="xsd:string" />
+          <xsd:element name="itemFinanceiro2" nillable="true" type="xsd:string" />
+          <xsd:element name="itemFinanceiro3" nillable="true" type="xsd:string" />
+          <xsd:element name="nomeConcessionaria" nillable="true" type="xsd:string" />
+          <xsd:element name="nomePraca" nillable="true" type="xsd:string" />
+          <xsd:element name="nomeRodovia" nillable="true" type="xsd:string" />
+          <xsd:element name="nomeRota" nillable="true" type="xsd:string" />
+          <xsd:element name="nomeTransp" nillable="true" type="xsd:string" />
+          <xsd:element name="numero" type="xsd:long" />
+          <xsd:element name="numeroViagem" type="xsd:long" />
+          <xsd:element name="placa" nillable="true" type="xsd:string" />
+          <xsd:element name="saldoDia" nillable="true" type="xsd:decimal" />
+          <xsd:element name="status" type="xsd:int" />
+          <xsd:element name="tag" nillable="true" type="xsd:string" />
+          <xsd:element name="tipoVP" type="xsd:int" />
+          <xsd:element name="valorOperacao" nillable="true" type="xsd:decimal" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Rota">
+        <xsd:sequence>
+          <xsd:element name="codigo" nillable="true" type="xsd:long" />
+          <xsd:element name="nome" nillable="true" type="xsd:string" />
+          <xsd:element name="pracas" nillable="true" type="impl:ArrayOf_tns1_PracaRota" />
+          <xsd:element name="status" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CategoriaVeiculo">
+        <xsd:sequence>
+          <xsd:element name="descricao" nillable="true" type="xsd:string" />
+          <xsd:element name="eixos" type="xsd:int" />
+          <xsd:element name="status" type="xsd:int" />
+          <xsd:element name="tipoRodagem" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TipoVeiculo">
+        <xsd:sequence>
+          <xsd:element name="codigo" nillable="true" type="xsd:long" />
+          <xsd:element name="descricao" nillable="true" type="xsd:string" />
+          <xsd:element name="status" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ValoresPracasRota">
+        <xsd:sequence>
+          <xsd:element name="categoria" nillable="true" type="tns1:CategoriaVeiculo" />
+          <xsd:element name="dataConsulta" nillable="true" type="xsd:dateTime" />
+          <xsd:element name="rota" nillable="true" type="tns1:Rota" />
+          <xsd:element name="status" type="xsd:int" />
+          <xsd:element name="tipoVeiculo" nillable="true" type="tns1:TipoVeiculo" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ValoresPracas">
+        <xsd:sequence>
+          <xsd:element name="categoria" nillable="true" type="tns1:CategoriaVeiculo" />
+          <xsd:element name="dataConsulta" nillable="true" type="xsd:dateTime" />
+          <xsd:element name="pracaRota" nillable="true" type="impl:ArrayOf_tns1_PracaRota" />
+          <xsd:element name="status" type="xsd:int" />
+          <xsd:element name="tipoVeiculo" nillable="true" type="tns1:TipoVeiculo" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="obterValoresPracasRotaResponse">
+    <wsdl:part name="obterValoresPracasRotaReturn" type="tns1:ValoresPracasRota" />
+  </wsdl:message>
+  <wsdl:message name="listaPracasPedagioResponse">
+    <wsdl:part name="listaPracasPedagioReturn" type="impl:ArrayOf_tns1_InfoPracaPedagio" />
+  </wsdl:message>
+  <wsdl:message name="obterReciboViagemRequest">
+    <wsdl:part name="viagem" type="xsd:long" />
+    <wsdl:part name="sessao" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="consultarStatusViagemRequest">
+    <wsdl:part name="rota" type="xsd:string" />
+    <wsdl:part name="idSolicit" type="xsd:string" />
+    <wsdl:part name="sessao" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="cadastrarRotaTemporariaResponse">
+    <wsdl:part name="cadastrarRotaTemporariaReturn" type="tns1:InfoRota" />
+  </wsdl:message>
+  <wsdl:message name="obterExtratoCreditosResponse">
+    <wsdl:part name="obterExtratoCreditosReturn" type="impl:ArrayOf_tns1_ExtratoCredito" />
+  </wsdl:message>
+  <wsdl:message name="autenticarUsuarioRequest">
+    <wsdl:part name="cnpj" type="xsd:string" />
+    <wsdl:part name="login" type="xsd:string" />
+    <wsdl:part name="senha" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="comprarViagemComObservacoesRequest">
+    <wsdl:part name="rota" type="xsd:string" />
+    <wsdl:part name="placa" type="xsd:string" />
+    <wsdl:part name="nEixos" type="xsd:int" />
+    <wsdl:part name="inicioVigencia" type="xsd:date" />
+    <wsdl:part name="fimVigencia" type="xsd:date" />
+    <wsdl:part name="observacoes" type="tns1:Observacoes" />
+    <wsdl:part name="sessao" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="reemitirViagemResponse">
+    <wsdl:part name="reemitirViagemReturn" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="autenticarUsuarioResponse">
+    <wsdl:part name="autenticarUsuarioReturn" type="tns1:Identificador" />
+  </wsdl:message>
+  <wsdl:message name="obterValoresPracasResponse">
+    <wsdl:part name="obterValoresPracasReturn" type="tns1:ValoresPracas" />
+  </wsdl:message>
+  <wsdl:message name="obterValoresPracasRotaRequest">
+    <wsdl:part name="rota" type="tns1:Rota" />
+    <wsdl:part name="categoria" type="tns1:CategoriaVeiculo" />
+    <wsdl:part name="tipoVeiculo" type="tns1:TipoVeiculo" />
+    <wsdl:part name="sessao" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="comprarViagemComObservacoesResponse">
+    <wsdl:part name="comprarViagemComObservacoesReturn" type="tns1:Viagem" />
+  </wsdl:message>
+  <wsdl:message name="obterCustoRotaResponse">
+    <wsdl:part name="obterCustoRotaReturn" type="tns1:CustoRota" />
+  </wsdl:message>
+  <wsdl:message name="cancelarViagemRequest">
+    <wsdl:part name="viagem" type="xsd:long" />
+    <wsdl:part name="sessao" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="obterExtratoCreditosRequest">
+    <wsdl:part name="inicio" type="xsd:dateTime" />
+    <wsdl:part name="fim" type="xsd:dateTime" />
+    <wsdl:part name="sessao" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="obterStatusVeiculoRequest">
+    <wsdl:part name="placa" type="xsd:string" />
+    <wsdl:part name="sessao" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="listarRotasResponse">
+    <wsdl:part name="listarRotasReturn" type="impl:ArrayOf_tns1_InfoRota" />
+  </wsdl:message>
+  <wsdl:message name="listarRotasRequest">
+    <wsdl:part name="sessao" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="cadastrarRotaTemporariaRequest">
+    <wsdl:part name="pracas" type="impl:ArrayOf_xsd_int" />
+    <wsdl:part name="nome" type="xsd:string" />
+    <wsdl:part name="sessao" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="comprarViagemResponse">
+    <wsdl:part name="comprarViagemReturn" type="tns1:Viagem" />
+  </wsdl:message>
+  <wsdl:message name="listaPracasPedagioRequest">
+    <wsdl:part name="sessao" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="reemitirViagemRequest">
+    <wsdl:part name="viagem" type="xsd:long" />
+    <wsdl:part name="placa" type="xsd:string" />
+    <wsdl:part name="pracas" type="xsd:string" />
+    <wsdl:part name="sessao" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="cancelarViagemResponse">
+    <wsdl:part name="cancelarViagemReturn" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="obterStatusVeiculoResponse">
+    <wsdl:part name="obterStatusVeiculoReturn" type="impl:ArrayOf_tns1_Veiculo" />
+  </wsdl:message>
+  <wsdl:message name="obterCustoRotaRequest">
+    <wsdl:part name="nomeRota" type="xsd:string" />
+    <wsdl:part name="placa" type="xsd:string" />
+    <wsdl:part name="nEixos" type="xsd:int" />
+    <wsdl:part name="inicioVigencia" type="xsd:date" />
+    <wsdl:part name="fimVigencia" type="xsd:date" />
+    <wsdl:part name="sessao" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="comprarViagemRequest">
+    <wsdl:part name="rota" type="xsd:string" />
+    <wsdl:part name="placa" type="xsd:string" />
+    <wsdl:part name="nEixos" type="xsd:int" />
+    <wsdl:part name="inicioVigencia" type="xsd:date" />
+    <wsdl:part name="fimVigencia" type="xsd:date" />
+    <wsdl:part name="itemFin1" type="xsd:string" />
+    <wsdl:part name="itemFin2" type="xsd:string" />
+    <wsdl:part name="itemFin3" type="xsd:string" />
+    <wsdl:part name="sessao" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="obterReciboViagemResponse">
+    <wsdl:part name="obterReciboViagemReturn" type="tns1:Recibo" />
+  </wsdl:message>
+  <wsdl:message name="consultarStatusViagemResponse">
+    <wsdl:part name="consultarStatusViagemReturn" type="impl:ArrayOf_tns1_StatusViagem" />
+  </wsdl:message>
+  <wsdl:message name="obterValoresPracasRequest">
+    <wsdl:part name="categoria" type="tns1:CategoriaVeiculo" />
+    <wsdl:part name="tipoVeiculo" type="tns1:TipoVeiculo" />
+    <wsdl:part name="sessao" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:portType name="ValePedagio">
+    <wsdl:operation name="cadastrarRotaTemporaria" parameterOrder="pracas nome sessao">
+      <wsdl:input name="cadastrarRotaTemporariaRequest" message="impl:cadastrarRotaTemporariaRequest" />
+      <wsdl:output name="cadastrarRotaTemporariaResponse" message="impl:cadastrarRotaTemporariaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="listarRotas" parameterOrder="sessao">
+      <wsdl:input name="listarRotasRequest" message="impl:listarRotasRequest" />
+      <wsdl:output name="listarRotasResponse" message="impl:listarRotasResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="obterCustoRota" parameterOrder="nomeRota placa nEixos inicioVigencia fimVigencia sessao">
+      <wsdl:input name="obterCustoRotaRequest" message="impl:obterCustoRotaRequest" />
+      <wsdl:output name="obterCustoRotaResponse" message="impl:obterCustoRotaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="obterStatusVeiculo" parameterOrder="placa sessao">
+      <wsdl:input name="obterStatusVeiculoRequest" message="impl:obterStatusVeiculoRequest" />
+      <wsdl:output name="obterStatusVeiculoResponse" message="impl:obterStatusVeiculoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="comprarViagem" parameterOrder="rota placa nEixos inicioVigencia fimVigencia itemFin1 itemFin2 itemFin3 sessao">
+      <wsdl:input name="comprarViagemRequest" message="impl:comprarViagemRequest" />
+      <wsdl:output name="comprarViagemResponse" message="impl:comprarViagemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="obterReciboViagem" parameterOrder="viagem sessao">
+      <wsdl:input name="obterReciboViagemRequest" message="impl:obterReciboViagemRequest" />
+      <wsdl:output name="obterReciboViagemResponse" message="impl:obterReciboViagemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelarViagem" parameterOrder="viagem sessao">
+      <wsdl:input name="cancelarViagemRequest" message="impl:cancelarViagemRequest" />
+      <wsdl:output name="cancelarViagemResponse" message="impl:cancelarViagemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarStatusViagem" parameterOrder="rota idSolicit sessao">
+      <wsdl:input name="consultarStatusViagemRequest" message="impl:consultarStatusViagemRequest" />
+      <wsdl:output name="consultarStatusViagemResponse" message="impl:consultarStatusViagemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="reemitirViagem" parameterOrder="viagem placa pracas sessao">
+      <wsdl:input name="reemitirViagemRequest" message="impl:reemitirViagemRequest" />
+      <wsdl:output name="reemitirViagemResponse" message="impl:reemitirViagemResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="listaPracasPedagio" parameterOrder="sessao">
+      <wsdl:input name="listaPracasPedagioRequest" message="impl:listaPracasPedagioRequest" />
+      <wsdl:output name="listaPracasPedagioResponse" message="impl:listaPracasPedagioResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="autenticarUsuario" parameterOrder="cnpj login senha">
+      <wsdl:input name="autenticarUsuarioRequest" message="impl:autenticarUsuarioRequest" />
+      <wsdl:output name="autenticarUsuarioResponse" message="impl:autenticarUsuarioResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="comprarViagemComObservacoes" parameterOrder="rota placa nEixos inicioVigencia fimVigencia observacoes sessao">
+      <wsdl:input name="comprarViagemComObservacoesRequest" message="impl:comprarViagemComObservacoesRequest" />
+      <wsdl:output name="comprarViagemComObservacoesResponse" message="impl:comprarViagemComObservacoesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="obterExtratoCreditos" parameterOrder="inicio fim sessao">
+      <wsdl:input name="obterExtratoCreditosRequest" message="impl:obterExtratoCreditosRequest" />
+      <wsdl:output name="obterExtratoCreditosResponse" message="impl:obterExtratoCreditosResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="obterValoresPracasRota" parameterOrder="rota categoria tipoVeiculo sessao">
+      <wsdl:input name="obterValoresPracasRotaRequest" message="impl:obterValoresPracasRotaRequest" />
+      <wsdl:output name="obterValoresPracasRotaResponse" message="impl:obterValoresPracasRotaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="obterValoresPracas" parameterOrder="categoria tipoVeiculo sessao">
+      <wsdl:input name="obterValoresPracasRequest" message="impl:obterValoresPracasRequest" />
+      <wsdl:output name="obterValoresPracasResponse" message="impl:obterValoresPracasResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ValePedagioSoapBinding" type="impl:ValePedagio">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="cadastrarRotaTemporaria">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="cadastrarRotaTemporariaRequest">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="cadastrarRotaTemporariaResponse">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarRotas">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="listarRotasRequest">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="listarRotasResponse">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterCustoRota">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="obterCustoRotaRequest">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="obterCustoRotaResponse">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterStatusVeiculo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="obterStatusVeiculoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="obterStatusVeiculoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="comprarViagem">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="comprarViagemRequest">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="comprarViagemResponse">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterReciboViagem">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="obterReciboViagemRequest">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="obterReciboViagemResponse">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelarViagem">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="cancelarViagemRequest">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="cancelarViagemResponse">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarStatusViagem">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="consultarStatusViagemRequest">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="consultarStatusViagemResponse">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reemitirViagem">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="reemitirViagemRequest">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="reemitirViagemResponse">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaPracasPedagio">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="listaPracasPedagioRequest">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="listaPracasPedagioResponse">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="autenticarUsuario">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="autenticarUsuarioRequest">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="autenticarUsuarioResponse">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="comprarViagemComObservacoes">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="comprarViagemComObservacoesRequest">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="comprarViagemComObservacoesResponse">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterExtratoCreditos">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="obterExtratoCreditosRequest">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="obterExtratoCreditosResponse">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterValoresPracasRota">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="obterValoresPracasRotaRequest">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="obterValoresPracasRotaResponse">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterValoresPracas">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="obterValoresPracasRequest">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="obterValoresPracasResponse">
+        <wsdlsoap:body use="encoded" namespace="http://cgmp.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ValePedagioService">
+    <wsdl:port name="ValePedagio" binding="impl:ValePedagioSoapBinding">
+      <wsdlsoap:address location="http://apphom.viafacil.com.br:9443/wsvp/ValePedagio" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

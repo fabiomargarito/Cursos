@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{618FB71D-1BF8-46A6-A686-CDCF5F083C9C}</ProjectGuid>
+    <ProjectGuid>{5599F2C5-B02A-4975-B612-58B30E613719}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TesteJBS</RootNamespace>
-    <AssemblyName>TesteJBS</AssemblyName>
+    <RootNamespace>ExemploFizzBuzzTurmaO4</RootNamespace>
+    <AssemblyName>ExemploFizzBuzzTurmaO4</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -36,7 +36,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -51,21 +50,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="TestesIntegrados.cs" />
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DALVeiculo\DALVeiculo.csproj">
-      <Project>{38db4070-ddc5-46f3-9564-a098377b4f57}</Project>
-      <Name>DALVeiculo</Name>
+    <ProjectReference Include="..\FizzBuzz\FizzBuzz.csproj">
+      <Project>{d9ff36f4-7eba-4796-8268-a6c740406067}</Project>
+      <Name>FizzBuzz</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IntegradorJBSSemParar\IntegradorJBSSemParar.csproj">
-      <Project>{dbaa3ae6-fa55-412f-8139-510b5ac84eec}</Project>
-      <Name>IntegradorJBSSemParar</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -18,6 +18,10 @@ namespace ServicoDeDadosJBS
 
        [OperationContract]
         bool InserirVeiculo(VeiculoDTO veiculo);
+
+
         
+
+
     }    
 }

@@ -10,15 +10,30 @@ using System.Configuration;
 
 namespace JBSDAL
 {
+
+    public class Pessoa {
+        public string Nome { get; set; }
+        public int Idade { get; set; }
+
+        public DateTime DataNascimento { get; set; }
+        
+
+        public void Correr(int km,string cidade, double velocida) {
+
+        }
+
+        public string QualEhSeuNome() {
+            return Nome;
+        }
+    }
+
+
     public class DALVEICULOS
     {
         public IList<VeiculoDTO> RetornarListaDeVeiculos() {
-
-
+           
             string _conectionString = ConfigurationManager.ConnectionStrings["BDJBS"].ConnectionString;
             IList<VeiculoDTO> veiculos = new List<VeiculoDTO>();
-
-
 
             using (OracleConnection conexaoOracle = new OracleConnection(_conectionString)) {
 

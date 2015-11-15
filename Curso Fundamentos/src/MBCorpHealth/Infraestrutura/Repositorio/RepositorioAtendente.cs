@@ -17,9 +17,7 @@ namespace ExemploDeCriacaoDeUmRepositorioTurma4
         {
             Atendente atendente;
 
-               atendente = _sessaoNHibernate.QueryOver<Atendente>().Where(criterio=>criterio.CPF==cpf).SingleOrDefault();                
-            
-
+               atendente = _sessaoNHibernate.QueryOver<Atendente>().Where(criterio=>criterio.CPF==cpf).SingleOrDefault();                           
 
             return atendente;
         }

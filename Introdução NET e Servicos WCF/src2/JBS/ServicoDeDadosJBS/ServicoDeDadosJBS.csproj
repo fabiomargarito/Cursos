@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{660F8A78-9AE1-4D2D-B0D1-9024BF388A35}</ProjectGuid>
+    <ProjectGuid>{EFC7BA99-040E-4D4E-9004-D6389B96694A}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -61,21 +61,22 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ServicoDeDadosJBS.svc" />
+    <Content Include="ServicoDeDadoDeVeiculo.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Service1.svc.cs">
-      <DependentUpon>ServicoDeDadosJBS.svc</DependentUpon>
+    <Compile Include="IIntegradorViaFacil.cs" />
+    <Compile Include="ServicoDeDadoDeVeiculo.svc.cs">
+      <DependentUpon>ServicoDeDadoDeVeiculo.svc</DependentUpon>
     </Compile>
-    <Compile Include="IServicoDeDadosJBS.cs" />
+    <Compile Include="IDadosVeiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\PublishProfiles\IIS.pubxml" />
+    <None Include="Properties\PublishProfiles\ImplantacaoDeServico.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -84,13 +85,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JBSDAL\JBSDAL.csproj">
-      <Project>{a70db43e-993d-4489-844a-9bc2497419f9}</Project>
-      <Name>JBSDAL</Name>
+    <ProjectReference Include="..\DALVeiculo\DALVeiculo.csproj">
+      <Project>{38db4070-ddc5-46f3-9564-a098377b4f57}</Project>
+      <Name>DALVeiculo</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -105,9 +103,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>8667</DevelopmentServerPort>
+          <DevelopmentServerPort>28355</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:8667/</IISUrl>
+          <IISUrl>http://localhost:28355/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
