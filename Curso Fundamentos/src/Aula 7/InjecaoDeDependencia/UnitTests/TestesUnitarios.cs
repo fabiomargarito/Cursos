@@ -96,7 +96,6 @@ namespace ExemploModulo3InjecaoDeDependencia
             }
         
        #endregion Ninject
-
        #region Autofac
 
         [TestMethod]
